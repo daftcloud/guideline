@@ -412,7 +412,9 @@ Sous Humdrum : EST Encoding status. This record indicates the current status of 
 Il ne me semble pas pertinent de conserver ce point. L'objectif d'un guide des bonne pratiques vise à mutualiser les processus d'encodage de partition MEI afin de permettre le moissonnement de différents projets utilisant MEI pour produire ses partitions. Il ne me semble pas pertinent de traiter des informations en lien avec la phase de production qui a vocation à dis^paraitre à la publication. 
 
 Balise : 
+```
 <encodingDesc>
+```
 Exemple :
 ```
 <encodingDes>
@@ -429,13 +431,13 @@ Exemple :
 
 
 Balise : 
-
+```
 <classification>
    <termList>
       <term class="#...">...</term>
    </termList>
 </classification>
-
+```
 Autre option : 
 
 Recommandations : 
@@ -454,6 +456,7 @@ Exemple :
 
 
 Balise : 
+```
 <pubStmt>
    <availability>
      <useRestrict>
@@ -461,7 +464,7 @@ Balise :
      </useRestrict>
    </availability>
 </pubStmt>
-
+```
 Recommandations : 
 
 Exemple :
@@ -488,6 +491,7 @@ Exemple :
 
 
 Balise : 
+```
 <pubStmt>
    <availability>
      <useRestrict>
@@ -499,14 +503,15 @@ Balise :
      </useRestrict>
    </availability>
 </pubStmt>
-
+```
 Autre option : 
+```
 <pubStmt xml : id…>
     <availability xml : id…>
        <useRestrict xml : id…>Licence:... </useRestrict>
     </availability>
 </pubStmt>
-
+```
 Exemple :
 ```
 <pubStmt>
@@ -532,7 +537,9 @@ Exemple :
 
 
 
-Balise : <pubStmt>
+Balise : 
+```
+<pubStmt>
    <availability>
      <useRestrict>
         <persName>...</persName>
@@ -545,6 +552,7 @@ Balise : <pubStmt>
      <date isodate="2024-01-02">01/02/24</date>
    </availability>
 </pubStmt>
+```
 Exemple :
 ```
 <pubStmt>
@@ -1038,13 +1046,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)| Indique la langue originale de l'oeuvre encodée.|TXO|
 
-
-
-
 Définition :
-
-
-
 
 Balise : `<langUsage>/<language>`
 
@@ -1219,13 +1221,13 @@ Exemple :
 
 
 Balise : 
-
+```
 <perfMedium>
    <perfResList>
       <perfRes>...</PerfRes>
    </perfResList>
 </perfMedium>
-
+```
 Recommandations : 
 Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans l'élément perfRes.
 
@@ -1254,7 +1256,9 @@ Exemple :
 
 Balise : 
 
-Autre option : <body>
+Autre option : 
+```
+<body>
    <mdiv label="act" n="1">
       <mdiv label="scene" n="1">
          <score></score>
@@ -1272,7 +1276,7 @@ Autre option : <body>
       </mdiv>
    </mdiv>
 </body>
-
+```
 Recommandations : S'il est bien question d'une précision au sein de <music> : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
 
 Exemple :
@@ -1292,7 +1296,10 @@ Exemple :
 
 Balise : 
 
-Autre option : <body>
+Autre option : 
+
+```
+<body>
    <mdiv label="act" n="1">
       <mdiv label="scene" n="1">
          <score></score>
@@ -1310,7 +1317,7 @@ Autre option : <body>
       </mdiv>
    </mdiv>
 </body>
-
+```
 Recommandations : 
 
 Exemple :
@@ -1330,7 +1337,9 @@ Exemple :
 
 Balise : 
 
-Autre option : <body>
+Autre option : 
+```
+<body>
    <mdiv label="Allegro" n="1">
       <score></score>
    </mdiv>
@@ -1338,7 +1347,7 @@ Autre option : <body>
       <score></score>
    </mdiv>
 </body>
-
+```
 Recommandations : Même commentaire que ci-dessous. Pour le numéro, nous pourrions ajouter dans les différents éléments @n.
 
 Exemple :
@@ -1358,7 +1367,9 @@ Exemple :
 
 Balise : 
 
-Autre option : <body>
+Autre option : 
+```
+<body>
    <mdiv label="Allegro">
       <score></score>
    </mdiv>
@@ -1366,7 +1377,7 @@ Autre option : <body>
       <score></score>
    </mdiv>
 </body> 
-
+```
 Recommandations : S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'oeuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans <music> à l'aide de <mdiv>. 
 
 Exemple :
@@ -1385,7 +1396,7 @@ Exemple :
 
 
 Balise : 
-
+```
 bibliStruc/imprint/respStmt/persName
 <biblStruc>
    <imprint>
@@ -1394,7 +1405,7 @@ bibliStruc/imprint/respStmt/persName
       </respStmt>
    </imprint>
 </biblStruc>
-
+```
 Autre option : 
 
 Recommandations :
@@ -1424,7 +1435,7 @@ Exemple :
 
 
 Balise : 
-
+```
 <biblStruc>
    <imprint>
       <resStmt>
@@ -1432,7 +1443,7 @@ Balise :
       </respStmt>
    </imprint>
 </biblStruc>
-
+```
 Autre option : 
 
 Recommandations :
@@ -1460,7 +1471,9 @@ Exemple :
 
 
 
-Balise : <workList>
+Balise : 
+```
+<workList>
    <work>
       <creation>
          <dedicatee>
@@ -1469,9 +1482,9 @@ Balise : <workList>
       </creation>
    </work>
 <workList>  
-
+```
 Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
-
+```
 <workList>
    <work>
       <creation>
@@ -1485,7 +1498,7 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
       </creation>
    </work>
 <workList>   
-
+```
 Recommandations : 
 
 Exemple :
@@ -1540,11 +1553,13 @@ Exemple :
 Définition :
 
 
-Balise : <creation>
+Balise :
+```
+ <creation>
          <date notbefore="1530" notafter="1550" cert="low">1540</date>
          <country>France</country>
       </creation>
-
+```
 
 Autre option : 
 
@@ -1572,7 +1587,9 @@ Exemple :
 
 
 
-Balise : <workList>
+Balise : 
+```
+<workList>
    <work>
       <creation>
          <date notbefore="1530" notafter="1550" cert="low">1540</date>
@@ -1581,6 +1598,7 @@ Balise : <workList>
       </creation>
    </work>
 </workList>
+```
 Exemple :
 ```
 <workList>
@@ -1607,6 +1625,7 @@ Exemple :
 
 
 Balise : 
+```
 <classification xml :id="…">
    <termList xml:id="…">
       <term>
@@ -1614,7 +1633,7 @@ Balise :
       </term>
    </termList>
 </classification>
-
+```
 Exemple :
 ```
 <classification xml :id="…">
@@ -1635,7 +1654,7 @@ Exemple :
 
 
 Balise : 
-
+```
 <classification xml :id="…">
    <termList xml:id="…">
       <term>
@@ -1644,7 +1663,7 @@ Balise :
       </term>
    </termList>
 </classification>  
-
+```
 Exemple :
 ```
 <workList>
@@ -1668,7 +1687,7 @@ Exemple :
 
 
 Balise : 
-
+```
 <workList>
    <work>
       <key mode="dorian">
@@ -1678,7 +1697,7 @@ Balise :
       </creation>
    </work>
 </workList>  
-
+```
 Autre option : 
 
 Recommandations : En MEI, le mode se désigne dans <key>, donc dans <work> ou <expression>, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
@@ -1730,11 +1749,12 @@ Exemple :
 
 
 Balise : 
+```
 <notesStmt>
    <annot>...</annot>
    <annot>...</annot>
 </notesStmt>
-
+```
 Autre option : 
 
 Recommandations : Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
@@ -1759,11 +1779,11 @@ Exemple :
 
 
 Balise : 
-
+```
 <perfMedium>
       <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
 </perfMedium>
-
+```
 
 Autre option : 
 
@@ -1792,12 +1812,13 @@ Exemple :
 
 
 Balise : 
+```
 <perfMedium>
    <perfRes>
       <persName auth="" auth.uri="" codedval="" >Nom de l'interprète</persName>
       </perfRes>
 </perfMedium>
-
+```
 Recommandations : 
 
 Exemple :
@@ -1820,13 +1841,14 @@ Exemple :
 
 
 
-Balise : Balise : 
+Balise : 
+```
 <perfMedium>
    <perfRes>
       <persName auth="" auth.uri="http://..." codedval="" role="..." cert="high, medium, low ou unknown">Nom de l'interprète</persName>
       </perfRes>
 </perfMedium>
-
+```
 Recommandations : Le niveau de certitude accordé à l'interprète peut être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
@@ -1849,7 +1871,8 @@ Exemple :
 
 
 
-Balise : 
+Balise :
+``` 
 <workList>
    <work>
       <title>...</title>
@@ -1862,8 +1885,9 @@ Balise :
       </history>
    </work>
 </workList>
-
+```
 Autre option : Dans le cas d'une œuvre dont il existe différentes expressions, dans le sens du modèle FRBR, il est possible de renseigner les informations concernants les exécutions/représentations de chaque expression distinctement.
+```
 <workList>
    <work>
       <expressionList>
@@ -1880,7 +1904,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
       </expressionList>
    </work>
 </workList>
-
+```
 Recommandations : Selon la typologie du projet, on va indiquer les informations concernant la représentation dans WorkList ou dans expressionList.
 La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
@@ -1918,7 +1942,7 @@ Exemple :
 
 
 Balise : 
-
+```
 <workList>
    <work>
       <title>...</tite>
@@ -1931,9 +1955,9 @@ Balise :
       </history>
    </work>
 </workList>
-
+```
 Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représentation, nous pouvons utiliser, à la place de l'élément geogName, l'élément adress.
-
+```
 <workList>
    <work>
       <title>...</tite>
@@ -1952,7 +1976,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
       </history>
    </work>
 </workList>
-
+```
 
 Recommandations : 
 
@@ -1990,6 +2014,7 @@ Exemple :
 
 
 Balise :   
+```
 <eventList>
    <event type="premiere">
          <perfMedium>
@@ -2002,7 +2027,7 @@ Balise :
          </PerfMedium>           
    </event>
 </eventList>
-
+```
 Recommandations : 
 
 Exemple :
@@ -2039,6 +2064,7 @@ Exemple :
 
 
 Balise : 
+```
 <workList>
    <work>
       <title>...</title>
@@ -2051,7 +2077,7 @@ Balise :
       </history>
    </work>
 </workList>
-
+```
 Autre option : 
 
 Recommandations : La date de la première exécution d'une oeuvre est à situé, a minima, au niveau de workList, dans une balise <event> dont l'attribut @type prend pour valeur « premiere ». 
@@ -2084,7 +2110,7 @@ Exemple :
 
 
 Balise : 
-
+```
 <work>
    <expressionList>
       <expression>
@@ -2093,7 +2119,7 @@ Balise :
       </expression>
    </expressionList>
 </work>
-
+```
 Recommandations : 
 Les œuvres associées sont, au sens du modèle FRBR, des expressions différentes d'une œuvre. S'il est besoin de renseigner les informations concernant les autres expressions d'une œuvre, ces renseignements se situeront dans un élément expression dédié à chaque œuvre associée.
 
@@ -2132,12 +2158,12 @@ Balise :
 Autre option : 
 
 Recommandations : La collection concerne les manifestations dans le modèles FRBR. C'est une manifestation précise qui fait partie d'une "collection". Cela peut aussi être l'item ou la source.
-
+```
 <sourceDesc>
 <source>
 <series>
 
-
+```
 Exemple :
 ```
 
@@ -2154,11 +2180,12 @@ Exemple :
 
 
 Balise : 
+```
 <sourceDesc>
 <source>
 <series>
 <title>
-
+```
 Exemple :
 ```
 
@@ -2203,6 +2230,7 @@ Exemple :
 
 
 Balise : 
+```
 <sourceDesc>
    <source>
       <bibl>
@@ -2210,6 +2238,7 @@ Balise :
          <title type="subordinate">a cinque voci (1599)</title>  
       </bibl>
    </source>
+   ```
 Exemple :
 ```
 <sourceDesc>
@@ -2230,9 +2259,9 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre du manuscrit|SMS|
 
 
-
+Balise : 
 ```
-Balise : <source recordtype="d">
+<source recordtype="d">
   <bibl>
      <physLoc>
        <repository>
@@ -2379,7 +2408,9 @@ Si c'est une personne :
 
 
 
-Balise : <sourceDesc>
+Balise : 
+```
+<sourceDesc>
    <source>
       <bibl>
          <editor xml:id="E1" n="1" precedes="#E2">
@@ -2390,8 +2421,8 @@ Balise : <sourceDesc>
          </editor>     
       </bibl>
    </source>
-
-Autre option : Même logique s'il s'agit de la maison d'édition en utilisant <imprint>. Des dates peuvent également être ajoutées pour <editor> pour plus de précisions.
+```
+Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
 
 Recommandations : 
 
@@ -2421,6 +2452,7 @@ Exemple :
 
 
 Balise : 
+```
 <sourceDesc>
    <source>
       <bibl>
@@ -2438,7 +2470,7 @@ Balise :
          </edition>     
       </bibl>
    </source>
-
+```
 Autre option : 
 
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
@@ -2474,7 +2506,9 @@ Exemple :
 
 
 
-Balise : <sourceDesc>
+Balise : 
+```
+<sourceDesc>
    <source recordtype="c">
       <bibl>
          <composer>
@@ -2489,6 +2523,7 @@ Balise : <sourceDesc>
          </imprint>
       </bibl>
    </source>
+   ```
 Exemple :
 ```
 <sourceDesc>
@@ -2541,12 +2576,13 @@ Exemple :
 
 
 Balise : 
+```
 <work>
    <identifier auth.uri="http://...">
       ...
    </identifier>
 </work>
-
+```
 
 Autre option : 
 
@@ -2591,7 +2627,9 @@ Exemple :
 
 
 
-Balise : <source>
+Balise :
+```
+ <source>
   <bibl>
       <composer>
           <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">XXX</persName>
@@ -2603,7 +2641,7 @@ Balise : <source>
       <biblScope label="volume">1</biblScope>
    </bibl>
 </source>
-
+```
 Autre option : 
 
 Recommandations : J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
@@ -2633,13 +2671,16 @@ Exemple :
 
 
 
-Balise : <sourceDesc>
+Balise : 
+
+```
+<sourceDesc>
    <source>
       <bibl>
          <unpub>En raison d'un manque de financement</unpub>
       </bibl>
    </source>
-
+```
 Autre option : 
 
 Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre <unpub> est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. <unpub> peut d'ailleurs aussi aller dans <imprint> pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
@@ -2688,7 +2729,9 @@ Exemple :
 
 
 
-Balise : <source recordtype="d">
+Balise :
+```
+ <source recordtype="d">
   <bibl>
      <physLoc>
        <repository>
@@ -2706,8 +2749,10 @@ Balise : <source recordtype="d">
      </relatedItem>
   </bibl>
 </source>
-
-Autre option : <manifestation recordtype="d">
+```
+Autre option : 
+```
+<manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
    </identifier>
@@ -2734,7 +2779,7 @@ Autre option : <manifestation recordtype="d">
          </availability> 
       </item>
    </itemList>
-
+```
 Recommandations : 
 
 Exemple :
@@ -2769,7 +2814,9 @@ Exemple :
 
 
 
-Balise : <source recordtype="d">
+Balise :
+```
+ <source recordtype="d">
   <bibl>
      <physLoc>
        <repository>
@@ -2791,8 +2838,10 @@ Balise : <source recordtype="d">
      </relatedItem>     
   </bibl>
 </source>
-
-Autre option : <manifestation recordtype="d">
+```
+Autre option : 
+```
+<manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
    </identifier>
@@ -2819,7 +2868,7 @@ Autre option : <manifestation recordtype="d">
          </availability> 
       </item>
    </itemList>
-
+```
 Recommandations : 
 
 Exemple :
@@ -2859,6 +2908,7 @@ Exemple :
 
 
 Balise : 
+```
 <fileDesc>
     <sourceDesc>
         <source>
@@ -2870,9 +2920,9 @@ Balise :
         </source>
       </sourceDesc>
 </fileDesc>
-
+```
 Autre option : 
-
+```
  <sourceDesc>
         <source>
           <bibl>
@@ -2880,7 +2930,7 @@ Autre option :
           </bibl>
         </source>
       </sourceDesc>
-
+```
 Recommandations : Nous recommandons d'utiliser une solution plus structuré avec <biblStruct>\<monogr>\<imprint> contenant toutes les informations en lien avec la source.
 
 
@@ -2901,7 +2951,7 @@ Exemple :
 Balise : 
 
 !!! Il faut trouver un role adéquat
-
+```
 <sourceDesc>
    <source>
       <biblStruct>
@@ -2917,8 +2967,9 @@ Balise :
       </biblStruct>
    </source>
 </sourceDesc>
-
+```
 Autre option : 
+```
 <sourceDesc>
    <source>
       <bibl>
@@ -2930,7 +2981,7 @@ Autre option :
       </bibl>
    </source>
 </sourceDesc>
-
+```
 
 Recommandations : recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, bibl est plus libre. À voir.
 
@@ -2948,6 +2999,7 @@ Exemple :
 
 
 Balise : 
+```
 <manifestationList>
    <manifestation>
       <availability>
@@ -2957,6 +3009,7 @@ Balise :
       </availability>
    </manifestation>
 </manifestationList>
+```
 Exemple :
 ```
 <manifestationList>
@@ -2982,6 +3035,7 @@ Exemple :
 
 
 Balise : 
+```
 <fileDesc>
    <sourceDesc>
       <bibl>
@@ -2993,6 +3047,7 @@ Balise :
       </bibl>
    </sourceDesc>
 </fileDesc>
+```
 Exemple :
 ```
 <fileDesc>
