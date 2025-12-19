@@ -1,5 +1,5 @@
 ---
-title: Présentation
+title: Présentation générale de l'approche méthodologique
 layout: home
 nav_order: 1
 ---
