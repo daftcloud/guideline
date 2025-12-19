@@ -154,10 +154,14 @@ Exemple :
 
  Balise : 
  (ancienne propal)
+ ```
 <fileDesc>
   <titleStmt>
     <respStmt>
        <persName xml:id="VB" role="editor" auth="Orcid" auth.uri="..." codedval="...">XXX</persName>
+   </respStmt>
+  </titleStmt>
+</fileDesc> 
     
 <fileDesc>
    <titleStmt>
@@ -166,7 +170,7 @@ Exemple :
       </editor>
    </titleStmt>
 </fileDesc>
-
+```
 Recommandations : 
 
 Exemple :
@@ -189,6 +193,8 @@ Exemple :
 
 
 Balise : 
+
+```
 <fileDesc>
    <pubStmt>
       <availability>
@@ -200,6 +206,7 @@ Balise :
       </availability>
    </pubStmt>
 </fileDesc>
+```
 
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
@@ -227,6 +234,7 @@ Exemple :
 
 
 Balise : 
+```
 <fileDesc>
    <titleStmt>
       <respStmt>
@@ -234,7 +242,7 @@ Balise :
       </respStmt>
    </titleStmt>
 </fileDesc>
-   
+```
 
 Recommandations : 
 
@@ -260,11 +268,13 @@ Exemple :
 
 
 Balise : 
+```
 <fileDesc>
    <pubStmt>
       <date isodate="...">...</date>
    </pubStmt>
 </fileDesc>
+```
 
 Autre option : 
 
@@ -290,13 +300,14 @@ Exemple :
 
 
 Balise : 
+```
 <revisionDesc>
    <change n="X">
    <date isodate="..."/>
    <resp target="#xmlID">...</resp>
    </change>
 </revisionDesc>
-
+```
 Recommandations : À chaque nouvelle édition du fichier, il est recommandé de dresser une description des changements, une date de la nouvelle édition et les personnes ou logiciels impliqué dans les changements. Il est également recommandé que les changements soient présentés dans un ordre anti-chronologique.
 
 Exemple :
@@ -326,16 +337,18 @@ Exemple :
 
 
 Balise : 
+```
 <revisionDesc>
    <change n="X">
    <date/>
    <resp target="#xmlID">...</resp>
    </change>
 </revisionDesc>
-
+```
 Autre option : 
+```
 <encodingDesc n="X"> ???
-
+```
 Recommandations : À chaque nouvelle édition du fichier, il est recommandé de dresser une description des changements, une date de la nouvelle édition et les personnes ou logiciels impliqué dans les changements.
 
 Exemple :
@@ -365,12 +378,13 @@ Exemple :
 
 
 Balise :
+```
  <fileDesc>
  ...
    <seriesStmt @precedes="link vers 3" @follows="link vers 1">
       <title>(titre de la série)</title>
       <identifier>numéro du fichier éléctronique dans cette série</identifier>
-
+```
 Recommandations : 
 Lorsque le fichier mei que nos encodons fait parti d'une suite de fichier, nous recommandons d'indiquer les informations concernant cette suite dans l'élément seriesStmt inclus dans fileDesc.
 
