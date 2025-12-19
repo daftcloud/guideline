@@ -1727,7 +1727,7 @@ Exemple :
 
 Balise : 
 
-<meter>
+`<meter>`
 
 Autre option : 
 
