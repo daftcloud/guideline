@@ -441,7 +441,7 @@ Balise :
 Autre option : 
 
 Recommandations : 
-Que ce soit dans l'élément work, expression, manifestation ou item, la désignation de la forme s'inscrit dans l'élément classification. Nous recommandons de tisser un lien vers des <taxonomy> dans l'élément <classDecls> contenu dans <encodingDesc> vers des vocabulaires controllés.
+Que ce soit dans l'élément work, expression, manifestation ou item, la désignation de la forme s'inscrit dans l'élément classification. Nous recommandons de tisser un lien vers des `<taxonomy>` dans l'élément `<classDecls>` contenu dans `<encodingDesc>` vers des vocabulaires controllés.
 
 Exemple :
 
@@ -636,7 +636,7 @@ Titre simple d'une oeuvre :
 </workList>
 ```
 
-Recommandation : Dans le cas de sections ou de mouvements d'une oeuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'oeuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer <titlePart>. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
+Recommandation : Dans le cas de sections ou de mouvements d'une oeuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'oeuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer `<titlePart>`. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
 
 ##### Titre d'un mouvement d'une oeuvre 
 
@@ -733,7 +733,7 @@ Balise : `<title type="main">` ; `<title type="uniform">`
 
 Autre option : 
 
-Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de <titlePart>, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'oeuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
+Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'oeuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
 
 Exemple :
 ```
@@ -860,7 +860,7 @@ Balise : `<persName>` et `<foreName>`
 
 Autre option : `<foreName>` et `<famName>`
 
-Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de <foreName>.
+Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de `<foreName>`.
 
 Exemple :
 ```
@@ -997,7 +997,7 @@ Balise : `<arranger>`
 
 Autre option : `<persName role="arranger">`
 
-Recommandations : Suivant les guidelines MEI pour <arranger>, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
+Recommandations : Suivant les guidelines MEI pour `<arranger>`, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
 
 Exemple :
 ```
@@ -1026,7 +1026,7 @@ Balise : `<arranger role="orchestrator">`
 
 Autre option : `<persName role="orchestrator">`
 
-Recommandations : Comme dit ci-dessus, <arranger> représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+Recommandations : Comme dit ci-dessus, `<arranger>` représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
 Exemple :
 ```
@@ -1052,7 +1052,7 @@ Balise : `<langUsage>/<language>`
 
 Autre option : -
 
-Recommandations : <langUsage> contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
+Recommandations : `<langUsage>` contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
 
 Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
 
@@ -1081,7 +1081,7 @@ Balise : `<langUsage>/<language>`
 
 Autre option : -
 
-Recommandations : <langUsage> contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
+Recommandations : `<langUsage>` contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
 
 Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
 
@@ -1110,9 +1110,9 @@ Balise : `<langUsage>/<language>`
 
 Autre option : -
 
-Recommandations : En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du <ProfilDesc> de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise <langUsage> trouve véritablement son sens en permettant de lister plusieurs langues. 
+Recommandations : En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du `<ProfilDesc>` de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise `<langUsage>` trouve véritablement son sens en permettant de lister plusieurs langues. 
 
-En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie <music>, dans <verse> ou <syl> à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
+En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie `<music>`, dans `<verse>` ou `<syl>` à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
 
 Exemple :
 ```
@@ -1139,7 +1139,7 @@ Balise (dans le cas d'un traducteur historique, propre à l'oeuvre encodée) : `
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : `<respStmt>`/`<persName>`
 
-Recommandations : Renseigner la personne responsable de la traduction d'une oeuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'oeuvre), celui-ci est renseigné comme un <contributor> au sein de <workList>. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue <language>.
+Recommandations : Renseigner la personne responsable de la traduction d'une oeuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'oeuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
 
 Exemple :
 ```
@@ -1155,9 +1155,9 @@ Exemple :
    </work>
 </workList>
 ```
-Recommandations : Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans <fileDesc>, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans <workList>), via @resp. 
+Recommandations : Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<workList>`), via @resp. 
 
-Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans <language> pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'oeuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
+Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'oeuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 
 Exemple :
 ```
@@ -1195,7 +1195,7 @@ Balise : `<title type="uniform">`/`<title type="subordinate" label="opus">`
 
 Autre option : `<identifier label="opus">`
 
-Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre de l'oeuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise <title> et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier <identifier>, utilisé comme élément enfant de <title>. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément <identifier> ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
+Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre de l'oeuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
 
 Exemple :
 ```
@@ -1277,7 +1277,7 @@ Autre option :
    </mdiv>
 </body>
 ```
-Recommandations : S'il est bien question d'une précision au sein de <music> : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
+Recommandations : S'il est bien question d'une précision au sein de `<music>` : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
 
 Exemple :
 ```
@@ -1378,7 +1378,7 @@ Autre option :
    </mdiv>
 </body> 
 ```
-Recommandations : S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'oeuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans <music> à l'aide de <mdiv>. 
+Recommandations : S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'oeuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans `<music>` à l'aide de `<mdiv>`. 
 
 Exemple :
 ```
@@ -1523,11 +1523,11 @@ Exemple :
 
 
 
-Balise : <creation>/<date>
+Balise : `<creation>/<date>`
 
 Autre option : 
 
-Recommandations : La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+Recommandations : La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
 ```
@@ -1700,7 +1700,7 @@ Balise :
 ```
 Autre option : 
 
-Recommandations : En MEI, le mode se désigne dans <key>, donc dans <work> ou <expression>, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
+Recommandations : En MEI, le mode se désigne dans `<key>`, donc dans `<work>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
 
 Exemple :
 ```
@@ -1906,7 +1906,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
 </workList>
 ```
 Recommandations : Selon la typologie du projet, on va indiquer les informations concernant la représentation dans WorkList ou dans expressionList.
-La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
 ```
@@ -2080,8 +2080,8 @@ Balise :
 ```
 Autre option : 
 
-Recommandations : La date de la première exécution d'une oeuvre est à situé, a minima, au niveau de workList, dans une balise <event> dont l'attribut @type prend pour valeur « premiere ». 
-La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+Recommandations : La date de la première exécution d'une oeuvre est à situé, a minima, au niveau de workList, dans une balise `<event>` dont l'attribut @type prend pour valeur « premiere ». 
+La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
 ```
@@ -2473,7 +2473,7 @@ Balise :
 ```
 Autre option : 
 
-Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
 ```
@@ -2683,7 +2683,7 @@ Balise :
 ```
 Autre option : 
 
-Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre <unpub> est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. <unpub> peut d'ailleurs aussi aller dans <imprint> pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
+Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
 
 Exemple :
 ```
@@ -2931,7 +2931,8 @@ Autre option :
         </source>
       </sourceDesc>
 ```
-Recommandations : Nous recommandons d'utiliser une solution plus structuré avec <biblStruct>\<monogr>\<imprint> contenant toutes les informations en lien avec la source.
+Recommandations : 
+Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>\<imprint>` contenant toutes les informations en lien avec la source.
 
 
 Exemple :
