@@ -86,7 +86,7 @@ La manière de lier les données avec des catalogues d'autorités se retrouve un
 <a id="OTL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre|≈ OTL|
 
@@ -117,7 +117,7 @@ Recommandations : Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre d
 <a id="COM_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique le nom du compositeur de l'œuvre.|COM|
 
@@ -149,7 +149,7 @@ Exemple :
 <a id="COA_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.|COA|
 
@@ -176,7 +176,7 @@ Exemple :
 <a id="YEP_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Éditeur de l'édition électronique |YEP|
  
@@ -212,7 +212,7 @@ Exemple :
 <a id="YEC_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Date et propriétaire du copyright de l'édition électronique|YEC|
 
@@ -250,7 +250,7 @@ Exemple :
 
 
 <a id="ENC_ref1"></a>
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Encodeur de l'édition électronique|ENC|
 
@@ -283,7 +283,7 @@ Exemple :
 <a id="END_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Date d'encodage de l'édition électronique|END|
 
@@ -313,7 +313,7 @@ Exemple :
 <a id="EMD_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.3 Revision Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerRevisionDescription)|Modification du document électronique|EMD|
 
@@ -349,7 +349,7 @@ Exemple :
 <a id="EEV_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.3 Revision Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerRevisionDescription)|Version de l'édition électronique|EEV|
 
@@ -388,7 +388,7 @@ Exemple :
 <a id="EFL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Numéro du fichier électronique|EFL|
 
@@ -416,7 +416,7 @@ Exemple (fictif) :
 <a id="EST_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.2. Encoding Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerEncodingDescription)|État de l'encodage|EST|
 
@@ -438,7 +438,7 @@ Exemple :
 <a id="AFR_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass)|Désignation de la forme|AFR|
 
@@ -463,7 +463,7 @@ Exemple :
 <a id="YER_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Date de mise à disposition de l'édition électronique|YER|
 
@@ -497,7 +497,7 @@ Exemple :
 <a id="YEM_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.3 Publication, Distribution, etc.](https://music-encoding.org/guidelines/v5/content/metadata.html#headerPublicationDistribution)|License|YEM|
 
@@ -542,7 +542,7 @@ Exemple :
 <a id="YEN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Pays de copyright|YEN|
 
@@ -584,7 +584,7 @@ Exemple :
 <a id="OTL_ref2"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre de l'œuvre|≈ OTL|
 
@@ -621,7 +621,7 @@ Exemples :
 <a id="OTL_ref3"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Titre de l'oeuvre encodée.|OTL|
 
@@ -666,7 +666,7 @@ Recommandation : Il est à noter que le renseignement du titre, métadonnée de 
 <a id="OTP_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  | - |Titre populaire de l'oeuvre encodée.|OTP|
 
@@ -697,7 +697,7 @@ Exemple :
 <a id="OTA_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Autre titre de l'oeuvre encodée, distinct du titre principal.|OTA|
 
@@ -731,7 +731,7 @@ Exemple :
 <a id="OPR_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre de l'œuvre globale dans le cas d'une section ou d'un mouvement.|OPR|
 
@@ -759,7 +759,7 @@ Exemple :
 <a id="COM_ref2"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique le nom du compositeur de l'œuvre.|COM|
 
@@ -803,7 +803,7 @@ Dans le cas de plusieurs compositeurs, recourir à une numération dans le cadre
 <a id="COA_ref2"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.  | COA |
 
@@ -830,7 +830,7 @@ Exemple :
 <a id="COS_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Désigne un compositeur soupçonné avec un niveau de certitude.|COS|
 
@@ -858,7 +858,7 @@ Exemple:
 <a id="COL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique un alias ou pseudonyme d’un compositeur.|COL|
 
@@ -888,7 +888,7 @@ Exemple :
 <a id="CDT_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique les dates de naissance et de décès du compositeur.|CDT|
 
@@ -913,7 +913,7 @@ Exemple :
 <a id="CNT_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique la nationalité du compositeur.|CNT|
 
@@ -940,7 +940,7 @@ Exemple :
 <a id="CDL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique le lieu de naissance et de décès d'un compositeur.|CBL et CDL|
 
@@ -970,7 +970,7 @@ Exemple :
 <a id="LIB_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique le nom du librettiste de l'oeuvre. |LIB|
 
@@ -995,7 +995,7 @@ Exemple :
 <a id="LAR_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique le nom de l'arrangeur de l'oeuvre. |LAR|
 
@@ -1022,7 +1022,7 @@ Exemple :
 <a id="LOR_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)| Indique le nom de l'orchestrateur de l'oeuvre. |LOR|
 
@@ -1050,7 +1050,7 @@ Exemple :
 <a id="TXO_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)| Indique la langue originale de l'oeuvre encodée.|TXO|
 
@@ -1085,7 +1085,7 @@ Exemple :
 <a id="TXO_ref2"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  [3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)|Indique la langue originale de l'oeuvre encodée. |TXO|
 
@@ -1114,7 +1114,7 @@ Exemple :
 <a id="TXL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)|Indique la langue de l'oeuvre encodée, si différente de la langue originale (traduction, adaptation, etc). |TXL|
 
@@ -1143,7 +1143,7 @@ Exemple :
 <a id="TRN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'oeuvre. |TRN|
 
@@ -1199,7 +1199,7 @@ Exemple :
 <a id="OPS_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro d'opus de l'oeuvre d'appartenance de l'oeuvre encodée.|OPS|
 
@@ -1228,7 +1228,7 @@ Exemple :
 <a id="AIN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Effectif|AIN|
 
@@ -1262,7 +1262,7 @@ Exemple :
 <a id="OAC_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro d'acte|OAC|
 
@@ -1300,7 +1300,7 @@ Exemple :
 <a id="OSC_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro de scène|OSC|
 
@@ -1338,7 +1338,7 @@ Exemple :
 <a id="OMV_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)| Numéro de mouvement|OMV|
 
@@ -1366,7 +1366,7 @@ Exemple :
 <a id="OMD_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Désignation du mouvement ou nom du mouvement|OMD|
 
@@ -1394,7 +1394,7 @@ Exemple :
 <a id="OCO_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Commanditaire|OCO|
 
@@ -1433,7 +1433,7 @@ Exemple :
 <a id="OCL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Collecteur de la musique|OCL|
 
@@ -1470,7 +1470,7 @@ Exemple :
 <a id="ODE_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Dédicace|ODE|
 
@@ -1520,7 +1520,7 @@ Exemple :
 <a id="ODT_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5 Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date de composition de l'oeuvre encodée.|ODT|
 
@@ -1547,7 +1547,7 @@ Exemple :
 <a id="OCY_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  | [3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Pays dans lequel l'oeuvre encodée à été composée. |OCY|
 
@@ -1582,7 +1582,7 @@ Exemple :
 <a id="OPC_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Ville de composition|OPC|
 
@@ -1616,7 +1616,7 @@ Exemple :
 <a id="AGN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass)|Désignation du genre musical|AGN|
 
@@ -1644,7 +1644,7 @@ Exemple :
 <a id="AST_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass)|Désignation du style/période/typologie de l'œuvre|AST|
 
@@ -1677,7 +1677,7 @@ Exemple :
 <a id="AMD_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter)|Classification du mode (Moyen âge et Renaissance)|AMD|
 
@@ -1716,7 +1716,7 @@ Exemple :
 <a id="AMT_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter)|Classification métrique|AMT|
 
@@ -1739,7 +1739,7 @@ Exemple :
 <a id="ONB_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.5 Notes Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerNotesStatement)|Note de format libre / Nota bene|ONB|
 
@@ -1768,7 +1768,7 @@ Exemple :
 <a id="MGN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Nom du groupe des interprètes|MGN|
 
@@ -1801,7 +1801,7 @@ Exemple :
 <a id="MPN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Nom de l'interprète|MPN|
 
@@ -1830,7 +1830,7 @@ Exemple :
 <a id="MPS_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Interprète soupçonné (?)|MPS|
 
@@ -1859,7 +1859,7 @@ Exemple :
 <a id="MRD_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date d'exécution/représentation|MRD|
 
@@ -1927,7 +1927,7 @@ Exemple :
 <a id="MLC_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Lieu d'exécution/représentation|MLC|
 
@@ -1999,7 +1999,7 @@ Exemple :
 <a id="MCN_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Nom du responsable de l'exécution/représentation (chef d'orchestre)|MCN|
 
@@ -2048,7 +2048,7 @@ Exemple :
 <a id="MPD_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date de la première exécution/représentation|MPD|
 
@@ -2093,7 +2093,7 @@ Exemple :
 <a id="GAW_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.5.1 FRBR Entities in MEI](https://music-encoding.org/guidelines/v5/content/metadata.html#FRBRentities)|Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune)|GAW|
 
@@ -2137,7 +2137,7 @@ Exemple :
 <a id="GCO_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.4 Series Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSeriesStatement)|Désignation de la collection|ACO & GCO|
 
@@ -2163,7 +2163,7 @@ Exemple :
 <a id="GTL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.4 Series Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSeriesStatement)|Titre de la collection|GTL|
 
@@ -2185,7 +2185,7 @@ Exemple :
 <a id="OTL_ref4"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |Titre de la source.|[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription)|OTL|
 
@@ -2212,7 +2212,7 @@ Exemple :
 <a id="PTL_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre de publication|PTL|
 
@@ -2241,7 +2241,7 @@ Exemple :
 <a id="SMS_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre du manuscrit|SMS|
 
@@ -2306,7 +2306,7 @@ Autre option :
 <a id="COM_ref3"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique le nom du compositeur de l'œuvre.|COM|
 
@@ -2336,7 +2336,7 @@ Exemple :
 <a id="PED_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Éditeur de la source utilisée pour l'édition digitale|PED|
 
@@ -2389,7 +2389,7 @@ Si c'est une personne :
 <a id="PPR_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Premier éditeur|PPR|
 
@@ -2430,7 +2430,7 @@ Exemple :
 <a id="PDT_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Date de la première publication|PDT|
 
@@ -2484,7 +2484,7 @@ Exemple :
 <a id="PPP_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Lieu de publication|PPP|
 
@@ -2528,7 +2528,7 @@ Exemple :
 <a id="PC#_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro de catalogue de l'éditeur (ex. cotage)|PC#|
 
@@ -2550,7 +2550,7 @@ Exemple :
 <a id="SCA_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT & SCA|
 
@@ -2582,7 +2582,7 @@ Exemple :
 <a id="ONM_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro|ONM|
 
@@ -2601,7 +2601,7 @@ Exemple :
 <a id="OVM_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Volume|OVM|
 
@@ -2643,7 +2643,7 @@ Exemple :
 <a id="PUB_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|État de publication (ex. publié, pas encore publié, en cours de publication)|PUB|
 
@@ -2698,7 +2698,7 @@ Exemple :
 <a id="SML_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Lieu de conservation du manuscrit|SML|
 
@@ -2779,7 +2779,7 @@ Exemple :
 <a id="SMA_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Info sur l'accès au manuscrit|SMA|
 
@@ -2868,7 +2868,7 @@ Exemple :
 <a id="YOR_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription)|Document d'origine de l'édition électronique|YOR|
 
@@ -2908,7 +2908,7 @@ Exemple :
 <a id="YOO_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Propriétaire du document d'origine|YOO|
 
@@ -2958,7 +2958,7 @@ Exemple :
 <a id="YOY_ref1"></a>
 
 
- Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Année du copyright originaire|YOY|
 
@@ -2991,9 +2991,9 @@ Exemple :
 <a id="YOE_ref1"></a>
 
 
-  Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Éditeur du document d'origine|YOE|
+|Chapitre des Guidelines | Définition | Clé HUMDRUM |
+| :--------------- |:---------------:| -----:|
+|[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Éditeur du document d'origine|YOE|
 
 
 
