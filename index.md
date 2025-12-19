@@ -1,6 +1,7 @@
 ---
 title: Guideline
 layout: home
+nav_order: 2
 ---
 
 ## Approches de la complétion des Headers MEI par les GT1&GT2 du Consortium-HN Musica2
