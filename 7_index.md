@@ -1,5 +1,5 @@
 ---
-title: Guideline
+title: Index
 layout: home
 nav_order: 7
 ---
