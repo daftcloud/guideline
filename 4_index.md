@@ -183,6 +183,7 @@ Exemple :
 
 
 <a id="ENC_ref1"></a>
+
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Encodeur de l'édition électronique|ENC|
