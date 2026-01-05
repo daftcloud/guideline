@@ -27,7 +27,7 @@ Balise :`<title type=main>`/`<title type="subordinate">`
 Autre option : `<title>`
 
 <p style="text-align:justify;">
-Recommandations : Le titre est une information souvent ambiguë dans les éditions numériques en raison de la confusion qui règne entre le titre de l'oeuvre complète, le titre de la partie encodée ou encore le titre de l'édition. D'ailleurs, le vocabulaire Humdrum ne dispose pas de clé spécifique pour cette dernière valeur (OTL est le titre de l'œuvre, pas de l'édition numérique de cette œuvre). En MEI, dans &lt;fileDesc&gt;, les usages sont nombreux et divergent. Pourtant, il est manifeste que la balise &lt;title&gt; à l'intérieur de &lt;fileDesc&gt; se réfère au titre de l'édition numérique qui peut être distinct du titre de l'oeuvre encodée, mais en pratique, ces deux niveaux de titres se superposent souvent. Ainsi, pour distinguer le titre de l'édition et celui de la pièce (proprement encodé dans &lt;workList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines tout en en uniformisant l'encodage. Ainsi, le &lt;title&gt; principal est suivi d'un &lt;title&gt; subordonné précisant que l'objet est ici l'édition numérique et non l'oeuvre en elle-même.
+Recommandations : Le titre est une information souvent ambiguë dans les éditions numériques en raison de la confusion qui règne entre le titre de l'œuvre complète, le titre de la partie encodée ou encore le titre de l'édition. D'ailleurs, le vocabulaire Humdrum ne dispose pas de clé spécifique pour cette dernière valeur (OTL est le titre de l'œuvre, pas de l'édition numérique de cette œuvre). En MEI, dans &lt;fileDesc&gt;, les usages sont nombreux et divergent. Pourtant, il est manifeste que la balise &lt;title&gt; à l'intérieur de &lt;fileDesc&gt; se réfère au titre de l'édition numérique qui peut être distinct du titre de l'œuvre encodée, mais en pratique, ces deux niveaux de titres se superposent souvent. Ainsi, pour distinguer le titre de l'édition et celui de la pièce (proprement encodé dans &lt;workList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines tout en en uniformisant l'encodage. Ainsi, le &lt;title&gt; principal est suivi d'un &lt;title&gt; subordonné précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
 </p>
 
 Exemple :
@@ -39,11 +39,14 @@ Exemple :
    </titleStmt>
 </fileDesc>
 ```
-Recommandations : Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'oeuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir "Titre alternatif de l'oeuvre").
+Recommandations : Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir "Titre alternatif de l'œuvre").
 
 ## b. Compositeur
-### Compositeur de l'édition MEI encodée
+
 <a id="COM_ref1"></a>
+
+### Compositeur de l'édition MEI encodée
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -61,7 +64,7 @@ Balise :
    </titleStmt>
 </fileDesc>
 
-Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'oeuvre encodée dans le fichier MEI et non une oeuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 
 Exemple :
 ```
@@ -74,9 +77,9 @@ Exemple :
 </fileDesc>
 ```
 
-### Compositeur attribué à l'édition MEI encodée
 <a id="COA_ref1"></a>
 
+### Compositeur attribué à l'édition MEI encodée
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -101,8 +104,11 @@ Exemple :
 </fileDesc>
 ```
 ## c. Informations liées à l'édition
-### Éditeur de l'édition électronique 
+
 <a id="YEP_ref1"></a>
+
+### Éditeur de l'édition électronique 
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -141,8 +147,10 @@ Exemple :
     </respStmt>
 ```
 
-### Date et propriétaire du copyright de l'édition électronique
 <a id="YEC_ref1"></a>
+
+### Date et propriétaire du copyright de l'édition électronique
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -184,8 +192,9 @@ Exemple :
 </fileDesc>
 ```
 
-
 <a id="ENC_ref1"></a>
+
+### Encodeur de l'édition électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -217,8 +226,10 @@ Exemple :
 </fileDesc>
 ```
 
-### Date d'encodage de l'édition électronique
 <a id="END_ref1"></a>
+
+### Date d'encodage de l'édition électronique
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -249,9 +260,9 @@ Exemple :
 </fileDesc>
 ```
 
-### Modification du document électronique
 <a id="EMD_ref1"></a>
 
+### Modification du document électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -286,15 +297,13 @@ Exemple :
 </revisionDesc>
 ```
 
-### Version de l'édition électronique
 <a id="EEV_ref1"></a>
 
+### Version de l'édition électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.3 Revision Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerRevisionDescription)|Version de l'édition électronique|EEV|
-
-
 
 Balise : 
 ```
@@ -327,9 +336,9 @@ Exemple :
 </revisionDesc>
 ```
 
-### Numéro du fichier électronique
 <a id="EFL_ref1"></a>
 
+### Numéro du fichier électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -356,8 +365,10 @@ Exemple (fictif) :
       <identifier>11</identifier>
 ```
 
-### État de l'encodage
 <a id="EST_ref1"></a>
+
+### État de l'encodage
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -380,8 +391,10 @@ Exemple :
 <encodingDes>
 ```
 
-### Désignation de la forme
 <a id="AFR_ref1"></a>
+
+### Désignation de la forme
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -405,8 +418,10 @@ Que ce soit dans l'élément work, expression, manifestation ou item, la désign
 
 Exemple :
 
-### Date de mise à disposition de l'édition électronique
 <a id="YER_ref1"></a>
+
+### Date de mise à disposition de l'édition électronique
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -440,8 +455,10 @@ Exemple :
 </pubStmt>
 ```
 
-### License
 <a id="YEM_ref1"></a>
+
+### License
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -487,15 +504,13 @@ Exemple :
 </pubStmt>
 ```
 
-### Pays de copyright
 <a id="YEN_ref1"></a>
 
+### Pays de copyright
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Pays de copyright|YEN|
-
-
 
 Balise : 
 ```
@@ -572,13 +587,13 @@ Exemples :
 ```
 <a id="OTL_ref3"></a>
 
-### Titre de l'oeuvre 
+### Titre de l'œuvre 
 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Titre de l'oeuvre encodée.|OTL|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Titre de l'œuvre encodée.|OTL|
 
 
 
@@ -586,11 +601,11 @@ Balise :`<title>`
 
 Autre option : -
 
-Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des oeuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
 
 Exemple :
 
-Titre simple d'une oeuvre :
+Titre simple d'une œuvre :
 ```
 <workList xml:id="...">
    <work xml:id="...">
@@ -599,9 +614,9 @@ Titre simple d'une oeuvre :
 </workList>
 ```
 
-Recommandation : Dans le cas de sections ou de mouvements d'une oeuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'oeuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer `<titlePart>`. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
+Recommandation : Dans le cas de sections ou de mouvements d'une œuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'œuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer `<titlePart>`. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
 
-### Titre d'un mouvement d'une oeuvre 
+### Titre d'un mouvement d'une œuvre 
 
 ```
 <workList xml:id="...">
@@ -617,13 +632,14 @@ Recommandation : Dans le cas de sections ou de mouvements d'une oeuvre, il est n
 ```
 Recommandation : Il est à noter que le renseignement du titre, métadonnée de première importance, est paradoxalement négligé dans les guidelines MEI. Divers exemples suggèrent une distinction minimale des niveaux de titres et une certaine liberté dans leur troncation. La raison réside certainement dans l'ambiguïté qui dérive des différentes formes de titres et de leurs usages multiples. Bien que @type soit régi par les valeurs contrôlées listées ci-dessus, les guidelines illustrent à l'occasion l'usage non conventionnel de @type="subtitle" pour encoder un syntagme subordonné au titre principal. Nous nous limiterons ici aux seuls vocables contrôlés précisés précédemment.
 
-### Titre courant de l'oeuvre
+
 <a id="OTP_ref1"></a>
 
+### Titre courant de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- | - |Titre populaire de l'oeuvre encodée.|OTP|
+ | - |Titre populaire de l'œuvre encodée.|OTP|
 
 
 
@@ -631,7 +647,7 @@ Balise : `<title type="alternative">`
 
 Autre option : -
 
-Recommandations : Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'oeuvre"
+Recommandations : Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
 
 Exemple :
 ```
@@ -648,13 +664,13 @@ Exemple :
 </workList>
 ```
 
-### Titre alternatif de l'oeuvre
 <a id="OTA_ref1"></a>
 
+### Titre alternatif de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Autre titre de l'oeuvre encodée, distinct du titre principal.|OTA|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA|
 
 
 
@@ -662,7 +678,7 @@ Balise : `<title type="alternative">`
 
 Autre option, en fonction du contexte : `<title type="subordinate">`; `<title type="abbreviated">`; `<title type="translated">`; `<title type="uniform">`; `<title type="desc">`
 
-Recommandations : Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'oeuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'oeuvre globale) ainsi que leurs diverses formes potentielles.
+Recommandations : Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
 
 Exemple :
 ```
@@ -682,9 +698,9 @@ Exemple :
 </workList>
 ```
 
-### Titre de l'œuvre d'appartenance
 <a id="OPR_ref1"></a>
 
+### Titre de l'œuvre d'appartenance
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -696,7 +712,7 @@ Balise : `<title type="main">` ; `<title type="uniform">`
 
 Autre option : 
 
-Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'oeuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
+Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
 
 Exemple :
 ```
@@ -709,9 +725,12 @@ Exemple :
    </work>
 </workList>  
 ```
-## b. Compositeur, librettiste, _etc._
-### Compositeur de l'œuvre musicale
+## b. Compositeur, librettiste, etc.
+
 <a id="COM_ref2"></a>
+
+### Compositeur de l'œuvre musicale
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -724,7 +743,7 @@ Balise : `<composer>`
 
 Autre option : `<persName role="creator">`
 
-Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'oeuvre encodée dans le fichier MEI et non une oeuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 
 Exemples :
 ```
@@ -754,9 +773,9 @@ Dans le cas de plusieurs compositeurs, recourir à une numération dans le cadre
 
 `<persName role="creator1">`
 
-### Compositeur attribué
 <a id="COA_ref2"></a>
 
+### Compositeur attribué
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -781,9 +800,9 @@ Exemple :
 </workList>
 ```
 
-### Compositeur soupçonné
 <a id="COS_ref1"></a>
 
+### Compositeur soupçonné
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -809,15 +828,14 @@ Exemple:
 </workList>
 ```
 
-### Alias ou pseudonyme du compositeur
 <a id="COL_ref1"></a>
+
+### Alias ou pseudonyme du compositeur
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique un alias ou pseudonyme d’un compositeur.|COL|
-
-
 
 Balise : `<persName>` et `<foreName>`
 
@@ -839,8 +857,10 @@ Exemple :
 </workList>
 ```
 
-### Dates de naissance et de décès du compositeur
 <a id="CDT_ref1"></a>
+
+### Dates de naissance et de décès du compositeur
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -864,14 +884,15 @@ Exemple :
 </workList>
 ```
 
-### Nationalité du compositeur
 <a id="CNT_ref1"></a>
+
+### Nationalité du compositeur
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique la nationalité du compositeur.|CNT|
-
 
 
 Balise : `<annot>` 
@@ -890,10 +911,10 @@ Exemple :
 </workList>
 ```
 
-### Lieu de naissance et de décès d'un compositeur
 <a id="CBL_ref1"></a>
 <a id="CDL_ref1"></a>
 
+### Lieu de naissance et de décès d'un compositeur
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -921,15 +942,14 @@ Exemple :
    </work>
 </workList>
 ```
-### Nom du librettiste
+
 <a id="LIB_ref1"></a>
 
+### Nom du librettiste
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique le nom du librettiste de l'oeuvre. |LIB|
-
-
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique le nom du librettiste de l'œuvre. |LIB|
 
 Balise : `<librettist>`
 
@@ -946,15 +966,13 @@ Exemple :
 </workList>
 ```
 
-### Nom de l'arrangeur 
 <a id="LAR_ref1"></a>
 
+### Nom de l'arrangeur 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique le nom de l'arrangeur de l'oeuvre. |LAR|
-
-
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique le nom de l'arrangeur de l'œuvre. |LAR|
 
 Balise : `<arranger>`
 
@@ -973,13 +991,14 @@ Exemple :
 </workList>
 ```
 
-### Nom de l'orchestrateur 
 <a id="LOR_ref1"></a>
+
+### Nom de l'orchestrateur 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)| Indique le nom de l'orchestrateur de l'oeuvre. |LOR|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)| Indique le nom de l'orchestrateur de l'œuvre. |LOR|
 
 
 
@@ -1002,17 +1021,13 @@ Exemple :
 </workList>
 ```
 
-```
-
-<a id="TXO_ref2"></a>
+<a id="TXO_ref1"></a>
 
 ##### Langue originale de la pièce
 
-
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- [3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)|Indique la langue originale de l'oeuvre encodée. |TXO|
+ [3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)|Indique la langue originale de l'œuvre encodée. |TXO|
 
 
 
@@ -1035,15 +1050,13 @@ Exemple :
 </workList>
 ```
 
-### Langue de la pièce encodée (si différente de la langue originale)
 <a id="TXL_ref1"></a>
 
+### Langue de la pièce encodée (si différente de la langue originale)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)|Indique la langue de l'oeuvre encodée, si différente de la langue originale (traduction, adaptation, etc). |TXL|
-
-
+ |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)|Indique la langue de l'œuvre encodée, si différente de la langue originale (traduction, adaptation, etc). |TXL|
 
 Balise : `<langUsage>/<language>`
 
@@ -1064,21 +1077,22 @@ Exemple :
    </work>
 </workList>
 ```
-### Traducteur du texte
+
 <a id="TRN_ref1"></a>
 
+### Traducteur du texte
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'oeuvre. |TRN|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'œuvre. |TRN|
 
  
 
-Balise (dans le cas d'un traducteur historique, propre à l'oeuvre encodée) : `<contributor>`/`<persName>`
+Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : `<contributor>`/`<persName>`
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : `<respStmt>`/`<persName>`
 
-Recommandations : Renseigner la personne responsable de la traduction d'une oeuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'oeuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
+Recommandations : Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
 
 Exemple :
 ```
@@ -1096,7 +1110,7 @@ Exemple :
 ```
 Recommandations : Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<workList>`), via @resp. 
 
-Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'oeuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
+Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 
 Exemple :
 ```
@@ -1120,13 +1134,14 @@ Exemple :
 </workList>
 ```
 ## c. Informations liées à l'œuvre
-### Numéro d'opus
+
 <a id="OPS_ref1"></a>
 
+### Numéro d'opus
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro d'opus de l'oeuvre d'appartenance de l'oeuvre encodée.|OPS|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro d'opus de l'œuvre d'appartenance de l'œuvre encodée.|OPS|
 
 
 
@@ -1134,7 +1149,7 @@ Balise : `<title type="uniform">`/`<title type="subordinate" label="opus">`
 
 Autre option : `<identifier label="opus">`
 
-Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre de l'oeuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
+Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre de l'œuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
 
 Exemple :
 ```
@@ -1149,15 +1164,13 @@ Exemple :
 </worklist> 
 ```
 
-### Effectif
 <a id="AIN_ref1"></a>
 
+### Effectif
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Effectif|AIN|
-
-
 
 Balise : 
 ```
@@ -1183,15 +1196,13 @@ Exemple :
 
 ### Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
 
-### Numéro d'acte (<music?>)
 <a id="OAC_ref1"></a>
 
+### Numéro d'acte (<music?>)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro d'acte|OAC|
-
-
 
 Balise : 
 
@@ -1215,7 +1226,9 @@ Autre option :
       </mdiv>
    </mdiv>
 </body>
+
 ```
+
 Recommandations : S'il est bien question d'une précision au sein de `<music>` : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
 
 Exemple :
@@ -1223,9 +1236,9 @@ Exemple :
 
 ```
 
-### Numéro de scène (<music?>)
 <a id="OSC_ref1"></a>
 
+### Numéro de scène (<music?>)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -1264,9 +1277,9 @@ Exemple :
 
 ```
 
-### Numéro de mouvement (<music?>)
 <a id="OMV_ref1"></a>
 
+### Numéro de mouvement (<music?>)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -1294,9 +1307,9 @@ Exemple :
 
 ```
 
-### Désignation du mouvement ou nom du mouvement
 <a id="OMD_ref1"></a>
 
+### Désignation du mouvement ou nom du mouvement
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -1317,16 +1330,16 @@ Autre option :
    </mdiv>
 </body> 
 ```
-Recommandations : S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'oeuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans `<music>` à l'aide de `<mdiv>`. 
+Recommandations : S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans `<music>` à l'aide de `<mdiv>`. 
 
 Exemple :
 ```
 
 ```
 
-### Commanditaire
 <a id="OCO_ref1"></a>
 
+### Commanditaire
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -1363,8 +1376,10 @@ Exemple :
 
 ```
 
-### Collecteur de la musique
 <a id="OCL_ref1"></a>
+
+### Collecteur de la musique
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -1400,15 +1415,14 @@ Exemple :
 </biblStruc>
 
 ```
-### Dédicace
+
 <a id="ODE_ref1"></a>
 
+### Dédicace
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Dédicace|ODE|
-
-
 
 Balise : 
 ```
@@ -1452,13 +1466,14 @@ Exemple :
    </work>
 <workList>  
 ```
-### Date de composition
+
 <a id="ODT_ref1"></a>
 
+### Date de composition
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.6.5 Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date de composition de l'oeuvre encodée.|ODT|
+ |[3.6.5 Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date de composition de l'œuvre encodée.|ODT|
 
 
 
@@ -1479,15 +1494,13 @@ Exemple :
 </workList>
 ```
 
-### Pays de composition de l'oeuvre encodée
 <a id="OCY_ref1"></a>
 
+### Pays de composition de l'œuvre encodée
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- | [3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Pays dans lequel l'oeuvre encodée à été composée. |OCY|
-
-
+ | [3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Pays dans lequel l'œuvre encodée à été composée. |OCY|
 
 Définition :
 
@@ -1516,15 +1529,13 @@ Exemple :
 </workList>
 ```
 
-### Ville de composition
 <a id="OPC_ref1"></a>
 
+### Ville de composition
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Ville de composition|OPC|
-
-
 
 Balise : 
 ```
@@ -1553,15 +1564,13 @@ Exemple :
 
 ## d. Éléments esthétiques
 
-### Désignation du genre musical
 <a id="AGN_ref1"></a>
 
+### Désignation du genre musical
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass)|Désignation du genre musical|AGN|
-
-
 
 Balise : 
 ```
@@ -1582,15 +1591,13 @@ Exemple :
 </classification>
 ```
 
-### Désignation du style/période/typologie de l'œuvre
 <a id="AST_ref1"></a>
 
+### Désignation du style/période/typologie de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass)|Désignation du style/période/typologie de l'œuvre|AST|
-
-
 
 Balise : 
 ```
@@ -1615,15 +1622,14 @@ Exemple :
 </workList>   
 ```
 
-### Classification du mode (Moyen âge et Renaissance)
 <a id="AMD_ref1"></a>
+
+### Classification du mode (Moyen âge et Renaissance)
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter)|Classification du mode (Moyen âge et Renaissance)|AMD|
-
-
 
 Balise : 
 ```
@@ -1654,14 +1660,13 @@ Exemple :
 </workList>  
 ```
 
-### Classification métrique
 <a id="AMT_ref1"></a>
 
+### Classification métrique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter)|Classification métrique|AMT|
-
 
 
 Balise : 
@@ -1677,14 +1682,13 @@ Exemple :
 
 ```
 
-### Note de format libre / Nota bene
 <a id="ONB_ref1"></a>
 
+### Note de format libre / Nota bene
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.5 Notes Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerNotesStatement)|Note de format libre / Nota bene|ONB|
-
 
 
 Balise : 
@@ -1707,15 +1711,14 @@ Exemple :
 ```
 
 ## e. Interprétation de l'œuvre
-### Nom du groupe des interprètes
+
 <a id="MGN_ref1"></a>
 
+### Nom du groupe des interprètes
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Nom du groupe des interprètes|MGN|
-
-
 
 Balise : 
 ```
@@ -1739,16 +1742,13 @@ Exemple :
 </workList>
 ```
 
-
-### Nom de l'interprète
 <a id="MPN_ref1"></a>
 
+### Nom de l'interprète
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Nom de l'interprète|MPN|
-
-
 
 Balise : 
 ```
@@ -1769,16 +1769,13 @@ Exemple :
 </perfMedium>
 ```
 
-
-### Interprète soupçonné (?)
 <a id="MPS_ref1"></a>
 
+### Interprète soupçonné (?)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Interprète soupçonné (?)|MPS|
-
-
 
 Balise : 
 ```
@@ -1799,16 +1796,13 @@ Exemple :
 </perfMedium>
 ```
 
-
-### Date d'exécution/représentation
 <a id="MRD_ref1"></a>
 
+### Date d'exécution/représentation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date d'exécution/représentation|MRD|
-
-
 
 Balise :
 ``` 
@@ -1869,16 +1863,13 @@ Exemple :
 </workList>
 ```
 
-
-### Lieu d'exécution/représentation
 <a id="MLC_ref1"></a>
 
+### Lieu d'exécution/représentation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Lieu d'exécution/représentation|MLC|
-
-
 
 Balise : 
 ```
@@ -1941,16 +1932,13 @@ Exemple :
 </workList>
 ```
 
-
-### Nom du responsable de l'exécution/représentation (chef d'orchestre)
 <a id="MCN_ref1"></a>
 
+### Nom du responsable de l'exécution/représentation (chef d'orchestre)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium)|Nom du responsable de l'exécution/représentation (chef d'orchestre)|MCN|
-
-
 
 Balise :   
 ```
@@ -1991,16 +1979,13 @@ Exemple :
 </history>
 ```
 
-
-### Date de la première exécution/représentation
 <a id="MPD_ref1"></a>
 
+### Date de la première exécution/représentation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory)|Date de la première exécution/représentation|MPD|
-
-
 
 Balise : 
 ```
@@ -2019,7 +2004,7 @@ Balise :
 ```
 Autre option : 
 
-Recommandations : La date de la première exécution d'une oeuvre est à situé, a minima, au niveau de workList, dans une balise `<event>` dont l'attribut @type prend pour valeur « premiere ». 
+Recommandations : La date de la première exécution d'une œuvre est à situé, a minima, au niveau de workList, dans une balise `<event>` dont l'attribut @type prend pour valeur « premiere ». 
 La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
@@ -2038,15 +2023,13 @@ Exemple :
 </workList>
 ```
 
-### Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune)
 <a id="GAW_ref1"></a>
 
+### Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.5.1 FRBR Entities in MEI](https://music-encoding.org/guidelines/v5/content/metadata.html#FRBRentities)|Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune)|GAW|
-
-
 
 Balise : 
 ```
@@ -2080,17 +2063,13 @@ Exemple :
 </work>
 ```
 
-
-<a id="ACO_ref1"></a>
-<a id="GCO_ref1"></a>
+<a id="A-GCO_ref1"></a>
 
 #### Désignation de la collection
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.4 Series Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSeriesStatement)|Désignation de la collection|ACO & GCO|
-
-
 
 Balise : 
 
@@ -2108,15 +2087,14 @@ Exemple :
 
 ```
 
-### Titre de la collection
 <a id="GTL_ref1"></a>
+
+### Titre de la collection
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.4 Series Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSeriesStatement)|Titre de la collection|GTL|
-
-
 
 Balise : 
 ```
@@ -2129,26 +2107,24 @@ Exemple :
 ```
 
 ```
-<a id="OTL_ref4"></a>
+
 
 ### Description de la source <SourceDesc>
 ## a. Titre
+
+<a id="OTL_ref4"></a>
+
 ### Titre de la source utilisée pour l'édition digitale
-
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |Titre de la source.|[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription)|OTL|
 
-
-
-
 Balise :`<title>`
 
 Autre option : -
 
-Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des oeuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
 
 Exemple :
 ```
@@ -2160,15 +2136,14 @@ Exemple :
    </source>   
 </sourceDesc>"
 ```
-### Titre de publication
+
 <a id="PTL_ref1"></a>
 
+### Titre de publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre de publication|PTL|
-
-
 
 Balise : 
 ```
@@ -2191,9 +2166,9 @@ Exemple :
    </source>
 ```
 
-### Titre du manuscrit
 <a id="SMS_ref1"></a>
 
+### Titre du manuscrit
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -2256,21 +2231,20 @@ Autre option :
 ```
 
 ## b. Compositeur
-### Compositeur de la source utilisée pour l'édition digitale
+
 <a id="COM_ref3"></a>
 
+### Compositeur de la source utilisée pour l'édition digitale
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription)|Indique le nom du compositeur de l'œuvre.|COM|
 
-
-
 Balise : `<composer>`
 
 Autre option : `<persName role="creator">`
 
-Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'oeuvre encodée dans le fichier MEI et non une oeuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 
 Exemple :
 
@@ -2286,15 +2260,14 @@ Exemple :
 </sourceDesc>"
 ```
 ## c. Informations liées à l'édition 
-### Éditeur de la source utilisée pour l'édition digitale
+
 <a id="PED_ref1"></a>
 
+### Éditeur de la source utilisée pour l'édition digitale
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Éditeur de la source utilisée pour l'édition digitale|PED|
-
-
 
 Balise : Si c'est une personne :
 
@@ -2339,15 +2312,13 @@ Si c'est une personne :
    </source>
 ```
 
-### Premier éditeur
 <a id="PPR_ref1"></a>
 
+### Premier éditeur
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Premier éditeur|PPR|
-
-
 
 Balise : 
 ```
@@ -2382,15 +2353,13 @@ Exemple :
    </source>
 ```
 
-### Date de la première publication
 <a id="PDT_ref1"></a>
 
+### Date de la première publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Date de la première publication|PDT|
-
-
 
 Balise : 
 ```
@@ -2437,15 +2406,13 @@ Exemple :
    </source>
 ```
 
-### Lieu de publication
 <a id="PPP_ref1"></a>
 
+### Lieu de publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Lieu de publication|PPP|
-
-
 
 Balise : 
 ```
@@ -2483,17 +2450,13 @@ Exemple :
       </bibl>
    </source>
 ```
-<a id="PC#_ref1"></a>
+<a id="PC_ref1"></a>
 
 ##### Numéro de catalogue de l'éditeur (ex. cotage)
-
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro de catalogue de l'éditeur (ex. cotage)|PC#|
-
-
 
 Balise : 
 
@@ -2506,16 +2469,13 @@ Exemple :
 
 ```
 
-### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117]
-<a id="SCT_ref1"></a>
-<a id="SCA_ref1"></a>
+<a id="SCA-T_ref1"></a>
 
+### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117]
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT & SCA|
-
-
 
 Balise : 
 ```
@@ -2540,15 +2500,13 @@ Exemple :
 </work>
 ```
 
-### Numéro
 <a id="ONM_ref1"></a>
 
+### Numéro
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Numéro|ONM|
-
-
 
 Balise : 
 
@@ -2559,15 +2517,14 @@ Recommandations :
 Exemple :
 ```
 ```
-### Volume
+
 <a id="OVM_ref1"></a>
 
+### Volume
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Volume|OVM|
-
-
 
 Balise :
 ```
@@ -2603,15 +2560,14 @@ Exemple :
    </bibl>
 </source>
 ```
-### Publication
+
 <a id="PUB_ref1"></a>
 
+### Publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|État de publication (ex. publié, pas encore publié, en cours de publication)|PUB|
-
-
 
 Balise : 
 
@@ -2661,15 +2617,13 @@ Exemple :
 </source>
 ```
 
-### Lieu de conservation du manuscrit
 <a id="SML_ref1"></a>
 
+### Lieu de conservation du manuscrit
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Lieu de conservation du manuscrit|SML|
-
-
 
 Balise :
 ```
@@ -2746,15 +2700,13 @@ Exemple :
 </source>
 ```
 
-### Info sur l'accès au manuscrit
 <a id="SMA_ref1"></a>
 
+### Informations sur l'accès au manuscrit
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Info sur l'accès au manuscrit|SMA|
-
-
 
 Balise :
 ```
@@ -2839,15 +2791,13 @@ Exemple :
 </source>
 ```
 
-### Document d'origine de l'édition électronique
 <a id="YOR_ref1"></a>
 
+### Document d'origine de l'édition électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription)|Document d'origine de l'édition électronique|YOR|
-
-
 
 Balise : 
 ```
@@ -2876,20 +2826,18 @@ Autre option :
 Recommandations : 
 Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>\<imprint>` contenant toutes les informations en lien avec la source.
 
-
 Exemple :
 ```
 
 ```
-### Propriétaire du document d'origine
+
 <a id="YOO_ref1"></a>
 
+### Propriétaire du document d'origine
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Propriétaire du document d'origine|YOO|
-
-
 
 Balise : 
 
@@ -2932,13 +2880,14 @@ Exemple :
 ```
 
 ```
-### Année du copyright originaire
+
 <a id="YOY_ref1"></a>
 
+### Année du copyright du document d'origine
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Année du copyright originaire|YOY|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Année du copyright originale|YOY|
 
 
 Balise : 
@@ -2966,10 +2915,9 @@ Exemple :
 </manifestationList>
 ```
 
-### Éditeur du document d'origine
-
 <a id="YOE_ref1"></a>
 
+### Éditeur du document d'origine
 
 |Chapitre des Guidelines | Définition | Clé HUMDRUM |
 | :--------------- |:---------------:| -----:|
