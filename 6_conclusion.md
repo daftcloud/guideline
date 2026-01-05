@@ -7,7 +7,7 @@ nav_order: 6
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
 
-## 6. Conclusion
+# Conclusion
 
 Notre protocole se distingue par une interopérabilité maximale, couplée à une réelle exhaustivité. Bien que sa réalisation puisse être fastidieuse par le nombre important d'éléments à renseigner, le protocole porte une réelle valeur philologique et est ainsi parfaitement adapté à l'édition critique mais aussi au partage de fichiers au sein de la communauté internationale MEI.
 

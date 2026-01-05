@@ -6,7 +6,7 @@ nav_order: 2
 
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
-## 2. Les possibilités supplémentaires du modèle FRBR 
+# Les possibilités supplémentaires du modèle FRBR 
 
 <p style="text-align:justify;">
 L’interopérabilité des éditions critiques encodées en MEI repose sur l’adoption de normes partagées qui garantissent la cohérence et la compatibilité des fichiers produits. Actuellement, la grande liberté laissée aux encodeurs pour le renseignement des métadonnées dans le header MEI peut nuire à cette interopérabilité, en raison de choix individuels et des interprétations subjectives qui en résultent. Une telle hétérogénéité complique non seulement l’échange et l’exploitation des données, mais compromet également la transparence scientifique, un impératif fondamental des éditions critiques. Ce guide propose ainsi des exemples d'encodage standards ayant fait leurs preuves au sein de projets variés, mais également des alternatives s'inspirant de la norme FRBR ainsi que, le cas échéant, des alignements avec les clés de métadonnées HUMDRUM. Pour illustrer concrètement ces recommandations, des exemples détaillés sont intégrés au repository, accompagnés d’un modèle vierge prêt à l’emploi. 

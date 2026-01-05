@@ -6,7 +6,7 @@ nav_order: 5
 
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
-## 5. Quelques remarques 
+# Quelques remarques 
 
 En appui de ces éléments, il nous semble important de ne pas négliger quelques points importants pour favoriser l'interopérabilité des headers MEI. En particulier, le choix de thésaurus de référence est un enjeu important. Il nous semble désormais impensable de choisir un thésaurus n'étant défini selon l'ontologie SKOS, tant cette dernière favorise l'interopérabilité. Recourir aux identifiants du RISM pour les œuvres et leurs sources - ainsi qu'au DIAMM pour les manuscrits, ces derniers étant intégrés au RISM - est une bonne pratique pour l'encodage des œuvres musicales. 
 

@@ -6,7 +6,7 @@ nav_order: 4
 
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
-## 4. Description du fichier MEI encodé <fileDesc>
+# Description du fichier MEI encodé <fileDesc>
 ## a. Titre
 
 <a id="OTL_ref1"></a>
@@ -544,7 +544,7 @@ Exemple :
 </pubStmt>
 ```
 
-### 5. Description de l'œuvre musicale <worklist>
+# Description de l'œuvre musicale <worklist>
 
 ## a. Titre
 
@@ -2109,7 +2109,7 @@ Exemple :
 ```
 
 
-### Description de la source <SourceDesc>
+# Description de la source <SourceDesc>
 ## a. Titre
 
 <a id="OTL_ref4"></a>
