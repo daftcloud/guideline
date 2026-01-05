@@ -33,10 +33,10 @@ Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, 
 - [OPR](#OPR_ref1)
 - [OPS](#OPS_ref1)
 - [OTA](#OTA_ref1)
-- [OTL](#OTL-ref1),[OTL](#OTL-ref2),[OTL](#OTL-ref3),[OTL](#OTL-ref4)
+- [OTL](#OTL_ref1) Titre de l'édition MEI, [OTL](#OTL_ref2) Titre de l'œuvre, [OTL](#OTL_ref3) Titre de l'œuvre musicale, [OTL](#OTL_ref4) Titre de la source
 - [OTP](#OTP_ref1)
 - [OVM](#OVM_ref1)
-- [PC#](#PC#_ref1)
+- [PC#](#PC_ref1)
 - [PDT](#PDT_ref1)
 - [PED](#PED_ref1)
 - [PPP](#PPP_ref1)
@@ -49,7 +49,7 @@ Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, 
 - [SMS](#SMS_ref1)
 - [TRN](#TRN_ref1)
 - [TXL](#TXL_ref1)
-- [TXO](#TXO_ref1)[TXO](#TXO_ref2)
+- [TXO](#TXO_ref1) Langue originale de l'œuvre
 - [YEC](#YEC_ref1)
 - [YEM](#YEM_ref1)
 - [YEN](#YEN_ref1)

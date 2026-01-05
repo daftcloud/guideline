@@ -995,37 +995,9 @@ Exemple :
    </work>
 </workList>
 ```
-##### Langue originaire du texte
-<a id="TXO_ref1"></a>
-
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage)| Indique la langue originale de l'oeuvre encodée.|TXO|
-
-Définition :
-
-Balise : `<langUsage>/<language>`
-
-Autre option : -
-
-Recommandations : `<langUsage>` contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
-
-Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
-
-Exemple :
-```
-<workList xml:id="...">
-   <work xml:id="...">
-      <langUsage>
-         <language xml:id="..." auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="fra" uri="ISO 639">French</language>
-     </langUsage>         
-   </work>
-</workList>
-```
 
 ##### Langue originale de la pièce
-<a id="TXO_ref2"></a>
+<a id="TXO_ref1"></a>
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -2098,10 +2070,11 @@ Exemple :
 </work>
 ```
 
-
-#### Désignation de la collection
 <a id="ACO_ref1"></a>
 <a id="GCO_ref1"></a>
+
+#### Désignation de la collection
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -2147,6 +2120,7 @@ Exemple :
 ```
 
 ```
+
 ### Description de la source <SourceDesc>
 #### a. Titre
 ##### Titre de la source utilisée pour l'édition digitale
@@ -2499,9 +2473,9 @@ Exemple :
       </bibl>
    </source>
 ```
-
+<a id="PC_ref1"></a>
 ##### Numéro de catalogue de l'éditeur (ex. cotage)
-<a id="PC#_ref1"></a>
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -3021,68 +2995,3 @@ Exemple :
 </fileDesc>
 ```
 
-### 4. Quelques remarques 
-
-En appui de ces éléments, il nous semble important de ne pas négliger quelques points importants pour favoriser l'interopérabilité des headers MEI. En particulier, le choix de thésaurus de référence est un enjeu important. Il nous semble désormais impensable de choisir un thésaurus n'étant défini selon l'ontologie SKOS, tant cette dernière favorise l'interopérabilité. Recourir aux identifiants du RISM pour les œuvres et leurs sources - ainsi qu'au DIAMM pour les manuscrits, ces derniers étant intégrés au RISM - est une bonne pratique pour l'encodage des œuvres musicales. 
-
-_ThB présentation générale de LRM + un paragraphe sur la réflexion entre BDD sémantique centralisée vs l’information sémantisée dans les headers MEI
-il nous est nécessaire de concevoir une batterie de types E55 pour typer les différents niveaux des sources d'après le modèle FRBR_
-
-### 5. Pour conclure
-
-Notre protocole se distingue par une interopérabilité maximale, couplée à une réelle exhaustivité. Bien que sa réalisation puisse être fastidieuse par le nombre important d'éléments à renseigner, le protocole porte une réelle valeur philologique et est ainsi parfaitement adapté à l'édition critique mais aussi au partage de fichiers au sein de la communauté internationale MEI.
-
-En conclusion, il nous semble particulièrement important d'insister sur l'importance de _sourceDesc_ au sein du header MEI. Comme nous avons pu le démontrer à travers un nombre important d'exemples, il est le lieu le plus approprié pour l'expression de la source et les éventuelles opérations ayant permis la _recensio_.
-
-### Index des trigrammes Humdrum
-
-- [ACO](#ACO_ref1)
-- [AFR](#AFR_ref1)
-- [CBL](#CBL_ref1)
-- [CDT](#CDT_ref1)
-- [COA](#COA_ref1)
-- [COL](#COL_ref1)
-- [COM](#COM_ref1),[COM](#COM_ref2),[COM](#COM_ref3)
-- [COS](#COS_ref1)
-- [EEV](#EEV_ref1)
-- [EFL](#EFL_ref1)
-- [EMD](#EMD_ref1)
-- [ENC](#ENC_ref1)
-- [END](#END_ref1)
-- [EST](#EST_ref1)
-- [GAW](#GAW_ref1)
-- [GCO](#GCO_ref1)
-- [GTL](#GTL_ref1)
-- [LAR](#LAR_ref1)
-- [LIB](#LIB_ref1)
-- [LOR](#LOR_ref1)
-- [ONM](#ONM_ref1)
-- [OPR](#OPR_ref1)
-- [OPS](#OPS_ref1)
-- [OTA](#OTA_ref1)
-- [OTL](#OTL-ref1),[OTL](#OTL-ref2),[OTL](#OTL-ref3),[OTL](#OTL-ref4)
-- [OTP](#OTP_ref1)
-- [OVM](#OVM_ref1)
-- [PC#](#PC#_ref1)
-- [PDT](#PDT_ref1)
-- [PED](#PED_ref1)
-- [PPP](#PPP_ref1)
-- [PPR](#PPR_ref1)
-- [PUB](#PUB_ref1)
-- [SCA](#SCA_ref1)
-- [SCT](#SCT_ref1)
-- [SMA](#SMA_ref1)
-- [SML](#SML_ref1)
-- [SMS](#SMS_ref1)
-- [TRN](#TRN_ref1)
-- [TXL](#TXL_ref1)
-- [TXO](#TXO_ref1)[TXO](#TXO_ref2)
-- [YEC](#YEC_ref1)
-- [YEM](#YEM_ref1)
-- [YEN](#YEN_ref1)
-- [YEP](#YEP_ref1)
-- [YER](#YER_ref1)
-- [YOE](#YOE-ref1)
-- [YOO](#YOO-ref1)
-- [YOR](#YOR-ref1)
-- [YOY](#YOY_ref1)
