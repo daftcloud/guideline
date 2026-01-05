@@ -1,35 +1,18 @@
-
-
-/* --- Sidebar plus étroite en version desktop --- */
-@media (min-width: 50rem) {
-  .side-bar {
-    width: 18rem;
-  }
-
   .main {
     margin-left: 18rem;
   }
-}
 
-/* --- Header : autoriser la hauteur --- */
+
 .side-bar {
   overflow: visible;
 }
 
-.site-header {
-  min-height: auto;
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-  display: flex;
-  align-items: flex-start;
-}
 
-/* --- Titre des guidelines --- */
 .site-title.lh-tight {
   white-space: normal;
   display: block;
   max-width: 100%;
-  padding-right: 2.5rem; /* espace bouton menu */
+  padding-right: 0.5rem; /* espace bouton menu */
   font-size: 1.05rem;
-  line-height: 1.35;
+  line-height: 1;
 }
