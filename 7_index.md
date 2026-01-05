@@ -1,13 +1,12 @@
 ---
-title: Guideline
+title: Index
 layout: home
 nav_order: 7
 ---
 
-## Approches de la complétion des Headers MEI par les GT1&GT2 du Consortium-HN Musica2
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
-### Index des trigrammes Humdrum
+## Index des trigrammes Humdrum
 
 - [ACO](#ACO_ref1)
 - [AFR](#AFR_ref1)

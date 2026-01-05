@@ -4,12 +4,11 @@ layout: home
 nav_order: 4
 ---
 
-## Approches de la complétion des Headers MEI par les GT1&GT2 du Consortium-HN Musica2
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
-### 4. Description du fichier MEI encodé <fileDesc>
-#### a. Titre
-##### Titre de l'édition MEI
+## 4. Description du fichier MEI encodé <fileDesc>
+## a. Titre
+### Titre de l'édition MEI
 <a id="OTL_ref1"></a>
 
 
@@ -39,8 +38,8 @@ Exemple :
 ```
 Recommandations : Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'oeuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir "Titre alternatif de l'oeuvre").
 
-#### b. Compositeur
-##### Compositeur de l'édition MEI encodée
+## b. Compositeur
+### Compositeur de l'édition MEI encodée
 <a id="COM_ref1"></a>
 
 
@@ -72,7 +71,7 @@ Exemple :
 </fileDesc>
 ```
 
-##### Compositeur attribué à l'édition MEI encodée
+### Compositeur attribué à l'édition MEI encodée
 <a id="COA_ref1"></a>
 
 
@@ -98,8 +97,8 @@ Exemple :
    </titleStmt>
 </fileDesc>
 ```
-#### c. Informations liées à l'édition
-##### Éditeur de l'édition électronique 
+## c. Informations liées à l'édition
+### Éditeur de l'édition électronique 
 <a id="YEP_ref1"></a>
 
 
@@ -139,7 +138,7 @@ Exemple :
     </respStmt>
 ```
 
-##### Date et propriétaire du copyright de l'édition électronique
+### Date et propriétaire du copyright de l'édition électronique
 <a id="YEC_ref1"></a>
 
 
@@ -184,6 +183,7 @@ Exemple :
 
 
 <a id="ENC_ref1"></a>
+
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement)|Encodeur de l'édition électronique|ENC|
@@ -214,7 +214,7 @@ Exemple :
 </fileDesc>
 ```
 
-##### Date d'encodage de l'édition électronique
+### Date d'encodage de l'édition électronique
 <a id="END_ref1"></a>
 
 
@@ -246,7 +246,7 @@ Exemple :
 </fileDesc>
 ```
 
-##### Modification du document électronique
+### Modification du document électronique
 <a id="EMD_ref1"></a>
 
 
@@ -283,7 +283,7 @@ Exemple :
 </revisionDesc>
 ```
 
-##### Version de l'édition électronique
+### Version de l'édition électronique
 <a id="EEV_ref1"></a>
 
 
@@ -324,7 +324,7 @@ Exemple :
 </revisionDesc>
 ```
 
-##### Numéro du fichier électronique
+### Numéro du fichier électronique
 <a id="EFL_ref1"></a>
 
 
@@ -353,7 +353,7 @@ Exemple (fictif) :
       <identifier>11</identifier>
 ```
 
-##### État de l'encodage
+### État de l'encodage
 <a id="EST_ref1"></a>
 
 
@@ -377,7 +377,7 @@ Exemple :
 <encodingDes>
 ```
 
-##### Désignation de la forme
+### Désignation de la forme
 <a id="AFR_ref1"></a>
 
 
@@ -402,7 +402,7 @@ Que ce soit dans l'élément work, expression, manifestation ou item, la désign
 
 Exemple :
 
-##### Date de mise à disposition de l'édition électronique
+### Date de mise à disposition de l'édition électronique
 <a id="YER_ref1"></a>
 
 
@@ -437,7 +437,7 @@ Exemple :
 </pubStmt>
 ```
 
-##### License
+### License
 <a id="YEM_ref1"></a>
 
 
@@ -484,7 +484,7 @@ Exemple :
 </pubStmt>
 ```
 
-##### Pays de copyright
+### Pays de copyright
 <a id="YEN_ref1"></a>
 
 
@@ -528,8 +528,8 @@ Exemple :
 
 ### 5. Description de l'œuvre musicale <worklist>
 
-#### a. Titre
-##### Titre de l'œuvre musicale
+## a. Titre
+### Titre de l'œuvre musicale
 <a id="OTL_ref2"></a>
 
 
@@ -566,7 +566,7 @@ Exemples :
 </workList>"
 ```
 
-##### Titre de l'oeuvre 
+### Titre de l'oeuvre 
 <a id="OTL_ref3"></a>
 
 
@@ -595,7 +595,7 @@ Titre simple d'une oeuvre :
 
 Recommandation : Dans le cas de sections ou de mouvements d'une oeuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'oeuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer `<titlePart>`. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
 
-##### Titre d'un mouvement d'une oeuvre 
+### Titre d'un mouvement d'une oeuvre 
 
 ```
 <workList xml:id="...">
@@ -611,7 +611,7 @@ Recommandation : Dans le cas de sections ou de mouvements d'une oeuvre, il est n
 ```
 Recommandation : Il est à noter que le renseignement du titre, métadonnée de première importance, est paradoxalement négligé dans les guidelines MEI. Divers exemples suggèrent une distinction minimale des niveaux de titres et une certaine liberté dans leur troncation. La raison réside certainement dans l'ambiguïté qui dérive des différentes formes de titres et de leurs usages multiples. Bien que @type soit régi par les valeurs contrôlées listées ci-dessus, les guidelines illustrent à l'occasion l'usage non conventionnel de @type="subtitle" pour encoder un syntagme subordonné au titre principal. Nous nous limiterons ici aux seuls vocables contrôlés précisés précédemment.
 
-##### Titre courant de l'oeuvre
+### Titre courant de l'oeuvre
 <a id="OTP_ref1"></a>
 
 
@@ -642,7 +642,7 @@ Exemple :
 </workList>
 ```
 
-##### Titre alternatif de l'oeuvre
+### Titre alternatif de l'oeuvre
 <a id="OTA_ref1"></a>
 
 
@@ -676,7 +676,7 @@ Exemple :
 </workList>
 ```
 
-##### Titre de l'œuvre d'appartenance
+### Titre de l'œuvre d'appartenance
 <a id="OPR_ref1"></a>
 
 
@@ -703,8 +703,8 @@ Exemple :
    </work>
 </workList>  
 ```
-#### b. Compositeur, librettiste, _etc._
-##### Compositeur de l'œuvre musicale
+## b. Compositeur, librettiste, _etc._
+### Compositeur de l'œuvre musicale
 <a id="COM_ref2"></a>
 
 
@@ -748,7 +748,7 @@ Dans le cas de plusieurs compositeurs, recourir à une numération dans le cadre
 
 `<persName role="creator1">`
 
-##### Compositeur attribué
+### Compositeur attribué
 <a id="COA_ref2"></a>
 
 
@@ -775,7 +775,7 @@ Exemple :
 </workList>
 ```
 
-##### Compositeur soupçonné
+### Compositeur soupçonné
 <a id="COS_ref1"></a>
 
 
@@ -803,7 +803,7 @@ Exemple:
 </workList>
 ```
 
-##### Alias ou pseudonyme du compositeur
+### Alias ou pseudonyme du compositeur
 <a id="COL_ref1"></a>
 
 
@@ -833,7 +833,7 @@ Exemple :
 </workList>
 ```
 
-##### Dates de naissance et de décès du compositeur
+### Dates de naissance et de décès du compositeur
 <a id="CDT_ref1"></a>
 
 
@@ -858,7 +858,7 @@ Exemple :
 </workList>
 ```
 
-##### Nationalité du compositeur
+### Nationalité du compositeur
 <a id="CNT_ref1"></a>
 
 
@@ -884,7 +884,7 @@ Exemple :
 </workList>
 ```
 
-##### Lieu de naissance et de décès d'un compositeur
+### Lieu de naissance et de décès d'un compositeur
 <a id="CBL_ref1"></a>
 <a id="CDL_ref1"></a>
 
@@ -915,7 +915,7 @@ Exemple :
    </work>
 </workList>
 ```
-##### Nom du librettiste
+### Nom du librettiste
 <a id="LIB_ref1"></a>
 
 
@@ -940,7 +940,7 @@ Exemple :
 </workList>
 ```
 
-##### Nom de l'arrangeur 
+### Nom de l'arrangeur 
 <a id="LAR_ref1"></a>
 
 
@@ -967,7 +967,7 @@ Exemple :
 </workList>
 ```
 
-##### Nom de l'orchestrateur 
+### Nom de l'orchestrateur 
 <a id="LOR_ref1"></a>
 
 
@@ -996,8 +996,12 @@ Exemple :
 </workList>
 ```
 
+```
+
+<a id="TXO_ref2"></a>
+
 ##### Langue originale de la pièce
-<a id="TXO_ref1"></a>
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -1025,7 +1029,7 @@ Exemple :
 </workList>
 ```
 
-##### Langue de la pièce encodée (si différente de la langue originale)
+### Langue de la pièce encodée (si différente de la langue originale)
 <a id="TXL_ref1"></a>
 
 
@@ -1054,7 +1058,7 @@ Exemple :
    </work>
 </workList>
 ```
-##### Traducteur du texte
+### Traducteur du texte
 <a id="TRN_ref1"></a>
 
 
@@ -1109,8 +1113,8 @@ Exemple :
    </work>
 </workList>
 ```
-#### c. Informations liées à l'œuvre
-##### Numéro d'opus
+## c. Informations liées à l'œuvre
+### Numéro d'opus
 <a id="OPS_ref1"></a>
 
 
@@ -1139,7 +1143,7 @@ Exemple :
 </worklist> 
 ```
 
-##### Effectif
+### Effectif
 <a id="AIN_ref1"></a>
 
 
@@ -1173,7 +1177,7 @@ Exemple :
 
 ### Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
 
-##### Numéro d'acte (<music?>)
+### Numéro d'acte (<music?>)
 <a id="OAC_ref1"></a>
 
 
@@ -1213,7 +1217,7 @@ Exemple :
 
 ```
 
-##### Numéro de scène (<music?>)
+### Numéro de scène (<music?>)
 <a id="OSC_ref1"></a>
 
 
@@ -1254,7 +1258,7 @@ Exemple :
 
 ```
 
-##### Numéro de mouvement (<music?>)
+### Numéro de mouvement (<music?>)
 <a id="OMV_ref1"></a>
 
 
@@ -1284,7 +1288,7 @@ Exemple :
 
 ```
 
-##### Désignation du mouvement ou nom du mouvement
+### Désignation du mouvement ou nom du mouvement
 <a id="OMD_ref1"></a>
 
 
@@ -1314,7 +1318,7 @@ Exemple :
 
 ```
 
-##### Commanditaire
+### Commanditaire
 <a id="OCO_ref1"></a>
 
 
@@ -1353,7 +1357,7 @@ Exemple :
 
 ```
 
-##### Collecteur de la musique
+### Collecteur de la musique
 <a id="OCL_ref1"></a>
 
 
@@ -1390,7 +1394,7 @@ Exemple :
 </biblStruc>
 
 ```
-##### Dédicace
+### Dédicace
 <a id="ODE_ref1"></a>
 
 
@@ -1442,7 +1446,7 @@ Exemple :
    </work>
 <workList>  
 ```
-##### Date de composition
+### Date de composition
 <a id="ODT_ref1"></a>
 
 
@@ -1469,7 +1473,7 @@ Exemple :
 </workList>
 ```
 
-##### Pays de composition de l'oeuvre encodée
+### Pays de composition de l'oeuvre encodée
 <a id="OCY_ref1"></a>
 
 
@@ -1506,7 +1510,7 @@ Exemple :
 </workList>
 ```
 
-##### Ville de composition
+### Ville de composition
 <a id="OPC_ref1"></a>
 
 
@@ -1541,9 +1545,9 @@ Exemple :
 </workList>
 ```
 
-#### d. Éléments esthétiques
+## d. Éléments esthétiques
 
-##### Désignation du genre musical
+### Désignation du genre musical
 <a id="AGN_ref1"></a>
 
 
@@ -1572,7 +1576,7 @@ Exemple :
 </classification>
 ```
 
-##### Désignation du style/période/typologie de l'œuvre
+### Désignation du style/période/typologie de l'œuvre
 <a id="AST_ref1"></a>
 
 
@@ -1605,7 +1609,7 @@ Exemple :
 </workList>   
 ```
 
-##### Classification du mode (Moyen âge et Renaissance)
+### Classification du mode (Moyen âge et Renaissance)
 <a id="AMD_ref1"></a>
 
 
@@ -1644,7 +1648,7 @@ Exemple :
 </workList>  
 ```
 
-##### Classification métrique
+### Classification métrique
 <a id="AMT_ref1"></a>
 
 
@@ -1667,7 +1671,7 @@ Exemple :
 
 ```
 
-##### Note de format libre / Nota bene
+### Note de format libre / Nota bene
 <a id="ONB_ref1"></a>
 
 
@@ -1696,8 +1700,8 @@ Exemple :
 
 ```
 
-#### e. Interprétation de l'œuvre
-##### Nom du groupe des interprètes
+## e. Interprétation de l'œuvre
+### Nom du groupe des interprètes
 <a id="MGN_ref1"></a>
 
 
@@ -1730,7 +1734,7 @@ Exemple :
 ```
 
 
-##### Nom de l'interprète
+### Nom de l'interprète
 <a id="MPN_ref1"></a>
 
 
@@ -1760,7 +1764,7 @@ Exemple :
 ```
 
 
-##### Interprète soupçonné (?)
+### Interprète soupçonné (?)
 <a id="MPS_ref1"></a>
 
 
@@ -1790,7 +1794,7 @@ Exemple :
 ```
 
 
-##### Date d'exécution/représentation
+### Date d'exécution/représentation
 <a id="MRD_ref1"></a>
 
 
@@ -1860,7 +1864,7 @@ Exemple :
 ```
 
 
-##### Lieu d'exécution/représentation
+### Lieu d'exécution/représentation
 <a id="MLC_ref1"></a>
 
 
@@ -1932,7 +1936,7 @@ Exemple :
 ```
 
 
-##### Nom du responsable de l'exécution/représentation (chef d'orchestre)
+### Nom du responsable de l'exécution/représentation (chef d'orchestre)
 <a id="MCN_ref1"></a>
 
 
@@ -1982,7 +1986,7 @@ Exemple :
 ```
 
 
-##### Date de la première exécution/représentation
+### Date de la première exécution/représentation
 <a id="MPD_ref1"></a>
 
 
@@ -2028,7 +2032,7 @@ Exemple :
 </workList>
 ```
 
-#### Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune)
+### Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune)
 <a id="GAW_ref1"></a>
 
 
@@ -2070,12 +2074,11 @@ Exemple :
 </work>
 ```
 
+
 <a id="ACO_ref1"></a>
 <a id="GCO_ref1"></a>
 
 #### Désignation de la collection
-
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -2099,7 +2102,7 @@ Exemple :
 
 ```
 
-#### Titre de la collection
+### Titre de la collection
 <a id="GTL_ref1"></a>
 
 
@@ -2122,8 +2125,8 @@ Exemple :
 ```
 
 ### Description de la source <SourceDesc>
-#### a. Titre
-##### Titre de la source utilisée pour l'édition digitale
+## a. Titre
+### Titre de la source utilisée pour l'édition digitale
 <a id="OTL_ref4"></a>
 
 
@@ -2150,7 +2153,7 @@ Exemple :
    </source>   
 </sourceDesc>"
 ```
-##### Titre de publication
+### Titre de publication
 <a id="PTL_ref1"></a>
 
 
@@ -2181,7 +2184,7 @@ Exemple :
    </source>
 ```
 
-##### Titre du manuscrit
+### Titre du manuscrit
 <a id="SMS_ref1"></a>
 
 
@@ -2245,8 +2248,8 @@ Autre option :
    </itemList>
 ```
 
-#### b. Compositeur
-##### Compositeur de la source utilisée pour l'édition digitale
+## b. Compositeur
+### Compositeur de la source utilisée pour l'édition digitale
 <a id="COM_ref3"></a>
 
 
@@ -2275,8 +2278,8 @@ Exemple :
    </source>
 </sourceDesc>"
 ```
-#### c. Informations liées à l'édition 
-##### Éditeur de la source utilisée pour l'édition digitale
+## c. Informations liées à l'édition 
+### Éditeur de la source utilisée pour l'édition digitale
 <a id="PED_ref1"></a>
 
 
@@ -2329,7 +2332,7 @@ Si c'est une personne :
    </source>
 ```
 
-##### Premier éditeur
+### Premier éditeur
 <a id="PPR_ref1"></a>
 
 
@@ -2372,7 +2375,7 @@ Exemple :
    </source>
 ```
 
-##### Date de la première publication
+### Date de la première publication
 <a id="PDT_ref1"></a>
 
 
@@ -2427,7 +2430,7 @@ Exemple :
    </source>
 ```
 
-##### Lieu de publication
+### Lieu de publication
 <a id="PPP_ref1"></a>
 
 
@@ -2473,7 +2476,8 @@ Exemple :
       </bibl>
    </source>
 ```
-<a id="PC_ref1"></a>
+<a id="PC#_ref1"></a>
+
 ##### Numéro de catalogue de l'éditeur (ex. cotage)
 
 
@@ -2495,7 +2499,7 @@ Exemple :
 
 ```
 
-##### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117]
+### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117]
 <a id="SCT_ref1"></a>
 <a id="SCA_ref1"></a>
 
@@ -2529,7 +2533,7 @@ Exemple :
 </work>
 ```
 
-##### Numéro
+### Numéro
 <a id="ONM_ref1"></a>
 
 
@@ -2548,7 +2552,7 @@ Recommandations :
 Exemple :
 ```
 ```
-##### Volume
+### Volume
 <a id="OVM_ref1"></a>
 
 
@@ -2592,7 +2596,7 @@ Exemple :
    </bibl>
 </source>
 ```
-##### Publication
+### Publication
 <a id="PUB_ref1"></a>
 
 
@@ -2650,7 +2654,7 @@ Exemple :
 </source>
 ```
 
-##### Lieu de conservation du manuscrit
+### Lieu de conservation du manuscrit
 <a id="SML_ref1"></a>
 
 
@@ -2735,7 +2739,7 @@ Exemple :
 </source>
 ```
 
-##### Info sur l'accès au manuscrit
+### Info sur l'accès au manuscrit
 <a id="SMA_ref1"></a>
 
 
@@ -2828,7 +2832,7 @@ Exemple :
 </source>
 ```
 
-##### Document d'origine de l'édition électronique
+### Document d'origine de l'édition électronique
 <a id="YOR_ref1"></a>
 
 
@@ -2870,7 +2874,7 @@ Exemple :
 ```
 
 ```
-##### Propriétaire du document d'origine
+### Propriétaire du document d'origine
 <a id="YOO_ref1"></a>
 
 
@@ -2921,7 +2925,7 @@ Exemple :
 ```
 
 ```
-##### Année du copyright originaire
+### Année du copyright originaire
 <a id="YOY_ref1"></a>
 
 
@@ -2955,7 +2959,7 @@ Exemple :
 </manifestationList>
 ```
 
-##### Éditeur du document d'origine
+### Éditeur du document d'origine
 
 <a id="YOE_ref1"></a>
 
