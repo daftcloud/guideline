@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Index des Clés Humdrum
 layout: home
 nav_order: 7
 ---

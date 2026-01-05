@@ -11,3 +11,7 @@ markdown: kramdown
 
 kramdown:
   input: GFM
+
+just_the_docs:
+  custom_css:
+    - assets/css/just-the-docs-custom.css
