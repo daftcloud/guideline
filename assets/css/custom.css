@@ -1,13 +1,9 @@
 .site-header {
   overflow: visible;
-}
-
-.site-header {
   min-height: auto;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-
 
 .site-title.lh-tight {
   white-space: normal;
