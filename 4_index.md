@@ -8,8 +8,11 @@ Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, 
 
 ## 4. Description du fichier MEI encodé <fileDesc>
 ## a. Titre
-### Titre de l'édition MEI
+
 <a id="OTL_ref1"></a>
+
+### Titre de l'édition MEI
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -529,8 +532,10 @@ Exemple :
 ### 5. Description de l'œuvre musicale <worklist>
 
 ## a. Titre
-### Titre de l'œuvre musicale
+
 <a id="OTL_ref2"></a>
+
+### Titre de l'œuvre musicale
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -565,9 +570,10 @@ Exemples :
    </work>
 </workList>"
 ```
+<a id="OTL_ref3"></a>
 
 ### Titre de l'oeuvre 
-<a id="OTL_ref3"></a>
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -2123,11 +2129,12 @@ Exemple :
 ```
 
 ```
+<a id="OTL_ref4"></a>
 
 ### Description de la source <SourceDesc>
 ## a. Titre
 ### Titre de la source utilisée pour l'édition digitale
-<a id="OTL_ref4"></a>
+
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |

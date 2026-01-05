@@ -6,7 +6,7 @@ nav_order: 7
 
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
 
-4_index.html#4_index.html# Index des trigrammes Humdrum
+## Index des trigrammes Humdrum
 
 - [ACO](4_index.html#ACO_ref1)
 - [AFR](4_index.html#AFR_ref1)
@@ -32,7 +32,7 @@ Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, 
 - [OPR](4_index.html#OPR_ref1)
 - [OPS](4_index.html#OPS_ref1)
 - [OTA](4_index.html#OTA_ref1)
-- [OTL](4_index.html#OTL_ref1) Titre de l'édition MEI, [OTL](4_index.html#OTL_ref2) Titre de l'œuvre, [OTL](4_index.html#OTL_ref3) Titre de l'œuvre musicale, [OTL](4_index.html#OTL_ref4) Titre de la source
+- [OTL, Titre de l'édition MEI](4_index.html#OTL_ref1), [OTL, Titre de l'œuvre](4_index.html#OTL_ref2), [OTL, Titre de l'œuvre musicale](4_index.html#OTL_ref3), [OTL, Titre de la source](4_index.html#OTL_ref4) 
 - [OTP](4_index.html#OTP_ref1)
 - [OVM](4_index.html#OVM_ref1)
 - [PC#](4_index.html#PC_ref1)
@@ -48,7 +48,7 @@ Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, 
 - [SMS](4_index.html#SMS_ref1)
 - [TRN](4_index.html#TRN_ref1)
 - [TXL](4_index.html#TXL_ref1)
-- [TXO](4_index.html#TXO_ref1) Langue originale de l'œuvre
+- [TXO, Langue originale de l'œuvre](4_index.html#TXO_ref1) 
 - [YEC](4_index.html#YEC_ref1)
 - [YEM](4_index.html#YEM_ref1)
 - [YEN](4_index.html#YEN_ref1)
