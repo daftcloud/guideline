@@ -1,0 +1,31 @@
+@media print {
+  body {
+    font-family: "Times New Roman", serif;
+    color: #000;
+    background: #fff;
+  }
+
+  .side-bar,
+  .site-footer,
+  .search,
+  .menu-button {
+    display: none !important;
+  }
+
+  .main {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  h2, h3 {
+    page-break-before: always;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}

@@ -10,3 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
     searchLabel.textContent = "Rechercher dans les guidelines MEI";
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("export-pdf");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      window.print();
+    });
+  }
+});
