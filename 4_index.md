@@ -2923,8 +2923,6 @@ Exemple :
 | :--------------- |:---------------:| -----:|
 |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Éditeur du document d'origine|YOE|
 
-
-
 Balise : 
 ```
 <fileDesc>
