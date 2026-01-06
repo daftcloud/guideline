@@ -50,9 +50,9 @@ jobs:
 
       #  Commit le PDF généré dans le repo 
       - name: Commit PDF
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          force: false
-          commit_message: "Auto-generate PDF"
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add assets/pdf/guideline.pdf
+          git commit -m "Auto-generate PDF" || echo "No changes to commit"
+          git push
