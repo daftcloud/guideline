@@ -1,0 +1,10 @@
+{
+  "name": "guideline-pdf",
+  "version": "1.0.0",
+  "scripts": {
+    "build-pdf": "node generate-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.1"
+  }
+}
