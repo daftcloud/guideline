@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.className = "site-button";
   btn.textContent = "Exporter en PDF";
 
-  const sidebar= document.querySelector(".side-bar");
+  const sitefooter= document.querySelector(".site-footer");
 
-  if (sidebar) {
+  if (sitefooter) {
     const footerDiv = document.createElement("div");
     footerDiv.className = "sidebar-footer";
     footerDiv.appendChild(btn);
-    sidebar.appendChild(footerDiv);
+    sitefooter.insertBefore(footerDiv);
     }
   btn.addEventListener("click", () => 
     window.print());
