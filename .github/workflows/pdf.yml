@@ -1,0 +1,58 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ main, Test-Génération-PDF ] 
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout du code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # Setup Ruby et cache des gems
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true  # cache automatique des gems
+
+      - name: Install Jekyll dependencies
+        run: bundle install
+
+      #  Build Jekyll
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      #  Setup Node et cache npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Node dependencies
+        run: npm install
+
+      #  Génère le PDF avec Puppeteer
+      - name: Generate PDF
+        run: npm run build-pdf
+
+      #  Commit le PDF généré dans le repo 
+      - name: Commit PDF
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add assets/pdf/guideline.pdf
+          git commit -m "Auto-generate PDF" || echo "No changes to commit"
+          git push
