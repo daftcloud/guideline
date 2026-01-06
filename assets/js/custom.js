@@ -17,15 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.className = "site-button";
   btn.textContent = "Exporter en PDF";
 
-  const sitefooter= document.querySelector(".site-footer");
-  const dmd = document.querySelector(".d-md-block d-none");
+  const footerDiv = document.createElement("div");
+  footerDiv.className = "sidebar-footer";
+  footerDiv.appendChild(btn);
 
-  if (sitefooter && dmd) {
-    const footerDiv = document.createElement("div");
-    footerDiv.className = "sidebar-footer";
-    footerDiv.appendChild(btn);
-    dmd.replaceChild(footerDiv, sitefooter);
-    }
+  const footerWrapper = document.querySelector(".d-md-block.d-none");
+
+  if (footerWrapper && footerWrapper.parentNode) {
+    footerWrapper.parentNode.insertBefore(footerDiv, footerWrapper);
+  }
   btn.addEventListener("click", () => 
     window.print());
   }
