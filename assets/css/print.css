@@ -1,22 +1,30 @@
 @media print {
-  body {
-    font-family: "Times New Roman", serif;
-    color: #000;
-    background: #fff;
+
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
   }
 
-  footer,
-  footer .d-md-none,
-  .site-footer,
   .side-bar,
+  .site-header,
+  .site-footer,
   .search,
-  .menu-button {
+  .aux-nav,
+  .menu-button,
+  nav,
+  footer,
+  footer * {
     display: none !important;
+    visibility: hidden !important;
   }
 
-  .main {
+  .main,
+  .main-content,
+  .main-content-wrap {
     margin: 0 !important;
+    padding: 0 !important;
     width: 100% !important;
+    max-width: 100% !important;
   }
 
   h1, h2, h3 {
