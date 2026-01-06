@@ -18,12 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.textContent = "Exporter en PDF";
 
   const sitefooter= document.querySelector(".site-footer");
+  const dmd = document.querySelector(".d-md-block d-none");
 
-  if (sitefooter) {
+  if (sitefooter && dmd) {
     const footerDiv = document.createElement("div");
     footerDiv.className = "sidebar-footer";
     footerDiv.appendChild(btn);
-    sitefooter.replaceChild(footerDiv, sitefooter);
+    dmd.replaceChild(footerDiv, sitefooter);
     }
   btn.addEventListener("click", () => 
     window.print());
