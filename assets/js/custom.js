@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerDiv = document.createElement("div");
     footerDiv.className = "sidebar-footer";
     footerDiv.appendChild(btn);
-    sitefooter.insertBefore(footerDiv);
+    sitefooter.replaceChild(footerDiv);
     }
   btn.addEventListener("click", () => 
     window.print());
