@@ -13,7 +13,7 @@ const pages = [
 ];
 
 const baseURL = "https://just-the-docs.github.io/guideline/"; 
-const outputPath = path.join(__dirname, "_site", "guideline.pdf");
+const outputPath = path.join(__dirname, "assets", "pdf", "guideline.pdf");
 
 (async () => {
   const browser = await puppeteer.launch({

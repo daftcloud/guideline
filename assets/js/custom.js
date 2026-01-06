@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     footerWrapper.parentNode.insertBefore(footerDiv, footerWrapper);
   }
   btn.addEventListener("click", () => 
-    window.location.href = "/guideline/guideline.pdf")
+    window.location.href = "/guideline/assets/pdf/guideline.pdf")
   }
 );
