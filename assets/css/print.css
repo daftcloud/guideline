@@ -5,8 +5,9 @@
     background: #fff;
   }
 
-  .side-bar,
+  .d-md-none,
   .site-footer,
+  .side-bar,
   .search,
   .menu-button {
     display: none !important;
