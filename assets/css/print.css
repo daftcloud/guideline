@@ -5,11 +5,8 @@
     background: #fff;
   }
 
-.main footer .d-md-none {
-  display: none;
-}
-
-
+  footer,
+  footer .d-md-none,
   .site-footer,
   .side-bar,
   .search,
