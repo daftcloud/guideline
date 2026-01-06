@@ -5,7 +5,11 @@
     background: #fff;
   }
 
-  .d-md-none,
+.main footer .d-md-none {
+  display: none;
+}
+
+
   .site-footer,
   .side-bar,
   .search,
