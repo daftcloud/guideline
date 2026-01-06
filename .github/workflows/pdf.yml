@@ -50,6 +50,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add _assets/pdf/guideline.pdf
+          git add assets/pdf/guideline.pdf
           git commit -m "Update PDF" || echo "No changes to commit"
           git push
