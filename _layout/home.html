@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% unless page.print == true %}
-    {% include_relative site-credits.html %}
+{% unless page.pdf %}
+    {% include site-credits.html %}
   {% endunless %}
 
 {{ content }}
