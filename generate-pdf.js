@@ -12,7 +12,7 @@ const pages = [
   "7_index.html"
 ];
 
-const baseURL = "https://just-the-docs.github.io/guideline/";
+const baseURL = "https://daftcloud.github.io/guideline/";
 
 const rootDir = process.cwd();
 const outputDir = path.join(rootDir, "assets", "pdf");
