@@ -2,6 +2,7 @@
 title: Présentation générale de l'approche méthodologique
 layout: home
 nav_order: 1
+permalink: /
 ---
 
 Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
