@@ -2,8 +2,10 @@
 layout: default
 ---
 
-{% unless page.pdf %}
-    {% include site-credits.html %}
-  {% endunless %}
+<main>
+  {% unless page.pdf %}
+      {% include site-credits.html %}
+    {% endunless %}
 
-{{ content }}
+  {{ content }}
+</main>
