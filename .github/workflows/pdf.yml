@@ -2,7 +2,7 @@ name: Build PDF
 
 on:
   push:
-    branches: [ main ] 
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -14,41 +14,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-
-      # Setup Ruby et cache des gems
-      - uses: ruby/setup-ruby@v1
+      # Setup Ruby + cache Bundler
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2
-          bundler-cache: true  # cache automatique des gems
+          bundler-cache: true
 
-      - name: Install Jekyll dependencies
-        run: bundle install
-
-      #  Build Jekyll
+      # Build Jekyll
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      #  Setup Node et cache npm
-      - uses: actions/setup-node@v6
+      # Setup Node.js + cache npm (méthode officielle)
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Cache Node modules
-        uses: actions/cache@v5
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
+      # Install Node dependencies (rapide & déterministe)
       - name: Install Node dependencies
-        run: npm install
+        run: npm ci
 
-      #  Génère le PDF avec Puppeteer
+      # Génère le PDF avec Puppeteer
       - name: Generate PDF
         run: npm run build-pdf
 
-      #  Commit le PDF généré dans le repo 
+      # Commit du PDF généré
       - name: Commit PDF
         run: |
           git config user.name "github-actions"
