@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% unless page.print == true %}
+    {% include_relative site-credits.html %}
+  {% endunless %}
+
+{{ content }}

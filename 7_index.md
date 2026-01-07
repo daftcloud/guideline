@@ -4,8 +4,6 @@ layout: home
 nav_order: 7
 ---
 
-Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
-
 # Index des trigrammes Humdrum
 
 - [ACO : Désignation de la collection](4_index.html#A-GCO_ref1)

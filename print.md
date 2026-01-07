@@ -2,12 +2,89 @@
 layout: default
 title: Export PDF
 nav_exclude: true
+print: true
 ---
 
-{% include_relative 1_presentation.md %}
-{% include_relative 2_FRBR.md %}
-{% include_relative 3_autorite.md %}
-{% include_relative 4_index.md %}
-{% include_relative 5_remarques.md %}
-{% include_relative 6_conclusion.md %}
-{% include_relative 7_index.md %}
+{% include_relative 1_presentation.html %}
+{% include_relative 2_FRBR.html %}
+{% include_relative 3_autorite.html %}
+{% include_relative 4_index.html %}
+{% include_relative 5_remarques.html %}
+{% include_relative 6_conclusion.html %}
+
+- [ACO : Désignation de la collection](#A-GCO_ref1)
+- [AFR : Désignation de la forme](#AFR_ref1)
+- [AGN : Désignation du genre musical](#AGN_ref1)
+- [AIN : Effectif](#AIN_ref1)
+- [AMD : Classification du mode (Moyen âge et Renaissance)](#AMD_ref1)
+- [AMT : Classification métrique](#AMT_ref1)
+- [AST : Désignation du style/période/typologie de l'œuvre](#AST_ref1)
+- [CBL : Lieu de naissance (et de décès) d'un compositeur](#CBL_ref1)
+- [CDL : Lieu (de naissance et) de décès d'un compositeur](#CBL_ref1)
+- [CDT : Dates de naissance et de décès du compositeur](#CDT_ref1)
+- [CNT : Nationalité du compostieur](#CNT-ref1)
+- [COA : Compositeur attribué à l'édition MEI encodée](#COA_ref1) / [COA : Compositeur attribué à l'œuvre musicale](#COA_ref2) 
+- [COL : Alias ou pseudonyme du compositeur](#COL_ref1)
+- [COM : Compositeur de l'édition MEI encodée](#COM_ref1) / [COM : Compositeur de l'œuvre musicale](#COM_ref2) / [COM : Compositeur de la source utilisée pour l'édition digitale](#COM_ref3)
+- [COS : Compositeur soupçonné](#COS_ref1)
+- [EEV : Version de l'édition électronique](#EEV_ref1)
+- [EFL : Numéro du fichier électronique](#EFL_ref1)
+- [EMD : Modification du document électronique](#EMD_ref1)
+- [ENC : Encodeur de l'édition électronique](#ENC_ref1)
+- [END : Date d'encodage de l'édition électronique](#END_ref1)
+- [EST : État de l'encodage](#EST_ref1)
+- [GAW : Œuvre associée](#GAW_ref1)
+- [GCO : Désignation de la collection](#A-GCO_ref1)
+- [GTL : Titre de la collection](#GTL_ref1)
+- [LAR : Nom de l'arrangeur](#LAR_ref1)
+- [LIB : Nom du librettiste](#LIB_ref1)
+- [LOR : Nom de l'orchestrateur](#LOR_ref1)
+- [MCN : Nom du responsable de l'exécution/représentation (chef d'orchestre)](#MCN_ref1)
+- [MGN : Nom du groupe des interprètes](#MGN_ref1)
+- [MLC : Lieu d'exécution/représentation](#MLC_ref1)
+- [MPD : Date de la première exécution/représentation](#MPN_ref1)
+- [MPN : Nom de l'interprète](#MPN_ref1)
+- [MRD : Date d'exécution/représentation](#MRD_ref1)
+- [MPS : Nom de l'interprète soupçonné](#MPS_ref1)
+- [OAC : Numéro d'acte](#OAC_ref1)
+- [OCO : Commanditaire](#OCO_ref1)
+- [OCL : Collecteur de la musique](#OCL_ref1)
+- [OCY : Pays de composition de l'œuvre encodée](#OCY_ref1)
+- [ODE : Dédicace](#ODE_ref1)
+- [ODT : Date de composition](#ODT_ref1)
+- [OMV : Numéro de mouvement](#OMV_ref1)
+- [OMD : Désignation du mouvement ou nom du mouvement](#OMD_ref1)
+- [ONB : Note de format libre / Nota bene](#ONM_ref1)
+- [ONM : Numéro](#ONM_ref1)
+- [OPR : Titre de l'œuvre d'appartenance](#OPR_ref1)
+- [OPC : Ville de composition](#OPC_ref1)
+- [OPS : Numéro d'opus](#OPS_ref1)
+- [OSC : Numéro de scène](#OSC_ref1)
+- [OTA : Titre alternatif de l'œuvre](#OTA_ref1)
+- [OTL : Titre de l'édition MEI](#OTL_ref1) / [OTL : Titre de l'œuvre](#OTL_ref2) / [OTL : Titre de l'œuvre musicale](#OTL_ref3) / [OTL : Titre de la source](#OTL_ref4) 
+- [OTP : Titre courant de l'œuvre](#OTP_ref1)
+- [OVM : Volume](#OVM_ref1)
+- [PC# : Numéro de catalogue de l'éditeur](#PC_ref1)
+- [PDT : Date de la première publication](#PDT_ref1)
+- [PED : Éditeur de la source utilisée pour l'édition digitale](#PED_ref1)
+- [PPP : Lieu de publication](#PPP_ref1)
+- [PPR : Premier éditeur](#PPR_ref1)
+- [PTL : Titre de la publication](#PTL_ref1)
+- [PUB : Publication](#PUB_ref1)
+- [SCA : Numéro de catalogue scientifique](#SCA-T_ref1)
+- [SCT : Numéro de catalogue scientifique](#SCA-T_ref1)
+- [SMA : Informations sur l'accès au manuscrit](#SMA_ref1)
+- [SML : Lieu de conservation du manuscrit](#SML_ref1)
+- [SMS : Titre du manuscrit](#SMS_ref1)
+- [TRN : Traducteur du texte](#TRN_ref1)
+- [TXL : Langue de la pièce encodée (si différente de la langue originale)](#TXL_ref1)
+- [TXO : Langue originale de l'œuvre](#TXO_ref1) 
+- [YEC : Date et propriétaire du copyright de l'édition électronique](#YEC_ref1)
+- [YEM : Licence](#YEM_ref1)
+- [YEN : Pays de copyright](#YEN_ref1)
+- [YEP : Éditeur de l'édition électronique](#YEP_ref1)
+- [YER : Date de mise à disposition de l'édition électronique](#YER_ref1)
+- [YOE : Éditeur du document d'origine](#YOE-ref1)
+- [YOO : Propriétaire du document d'origine](#YOO-ref1)
+- [YOR : Document d'origine de l'édition électronique](#YOR-ref1)
+- [YOY : Année du copyright du document d'origine](#YOY_ref1)

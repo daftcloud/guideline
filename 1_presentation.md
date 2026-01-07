@@ -5,8 +5,6 @@ nav_order: 1
 permalink: /
 ---
 
-Balland Chatignon, A. (CNRS, Musica2, IReMus & MSH Lorraine) Bottini, T. (CNRS, IReMus), Braud, A. (CNRS, RicercarLab), Gurrieri, M. (CNRS, IReMus), Roger, K. (ULorraine, CRULH)
-
 # Présentation générale de l'approche méthodologique
 <p style="text-align:justify;">
 Ce document didactique élaboré dans le cadre du consortium Huma-Num Musica2 vise à proposer un protocole détaillé de renseignement des métadonnées au sein des headers MEI (Music Encoding Initiative), plus particulièrement dans le cadre d'éditions critiques numériques. L’objectif est d'établir un guide dédié aux éditions encodées en MEI et de préciser où disposer les informations éditoriales et philologiques nécessaires, en proposant des choix raisonnés palliant diverses ambiguïtés présentes dans les guidelines MEI. Fixer des paramètres partagés et reconnus par la communauté musicologique permettra de créer des fichiers MEI qui pourront être contrôlés, vérifiés et échangés au profit de la transparence scientifique et de l'interopérabilité. 
