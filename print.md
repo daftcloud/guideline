@@ -5,12 +5,12 @@ nav_exclude: true
 print: true
 ---
 
-{% include_relative 1_presentation.html %}
-{% include_relative 2_FRBR.html %}
-{% include_relative 3_autorite.html %}
-{% include_relative 4_index.html %}
-{% include_relative 5_remarques.html %}
-{% include_relative 6_conclusion.html %}
+{% include_relative 1_presentation.md %}
+{% include_relative 2_FRBR.md %}
+{% include_relative 3_autorite.md %}
+{% include_relative 4_index.md %}
+{% include_relative 5_remarques.md %}
+{% include_relative 6_conclusion.md %}
 
 - [ACO : Désignation de la collection](#A-GCO_ref1)
 - [AFR : Désignation de la forme](#AFR_ref1)
