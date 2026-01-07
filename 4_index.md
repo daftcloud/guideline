@@ -1,6 +1,6 @@
 ---
 title: Guideline
-layout: home
+layout: custom
 nav_order: 4
 ---
 

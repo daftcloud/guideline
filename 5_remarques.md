@@ -1,6 +1,6 @@
 ---
 title: Quelques remarques
-layout: home
+layout: custom
 nav_order: 5
 ---
 

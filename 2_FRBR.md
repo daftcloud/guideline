@@ -1,6 +1,6 @@
 ---
 title: Les possibilités supplémentaires du modèle FRBR 
-layout: home
+layout: custom
 nav_order: 2
 ---
 

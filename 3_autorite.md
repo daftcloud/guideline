@@ -1,6 +1,6 @@
 ---
 title: L'autorité
-layout: home
+layout: custom
 nav_order: 3
 ---
 

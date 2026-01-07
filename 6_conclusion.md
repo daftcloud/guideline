@@ -1,6 +1,6 @@
 ---
 title: Conclusion
-layout: home
+layout: custom
 nav_order: 6
 ---
 

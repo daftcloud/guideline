@@ -1,6 +1,6 @@
 ---
 title: Présentation générale de l'approche méthodologique
-layout: home
+layout: custom
 nav_order: 1
 permalink: /
 ---
