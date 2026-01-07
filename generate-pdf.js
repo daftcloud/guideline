@@ -21,10 +21,6 @@ const outputPath = path.join(outputDir, "guideline.pdf");
   
   await page.goto(url, { waitUntil: "networkidle0" });
 
-   const outputDir = path.dirname(outputPath);
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
-  }
 
   await page.pdf({
     path: outputPath,
