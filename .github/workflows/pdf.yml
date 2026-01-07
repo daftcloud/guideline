@@ -12,7 +12,7 @@ jobs:
     steps:
       # Checkout du code
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
 
       # Setup Ruby et cache des gems
@@ -29,12 +29,12 @@ jobs:
         run: bundle exec jekyll build
 
       #  Setup Node et cache npm
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v6
         with:
           node-version: 20
 
       - name: Cache Node modules
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
