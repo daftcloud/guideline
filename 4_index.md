@@ -363,32 +363,6 @@ Exemple (fictif) :
       <identifier>11</identifier>
 ```
 
-<a id="EST_ref1"></a>
-
-### État de l'encodage
-
-
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.4.2. Encoding Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerEncodingDescription)|État de l'encodage|EST|
-
-
-
-# ¿ ! ? État de l'encodage est-il pertinent à garder ?
-Sous Humdrum : EST Encoding status. This record indicates the current status of the document as it is being produced. Free-format text may indicate that the encoding is in-progress, list tasks remaining, or indicate that the encoding is complete. EST records are normally eliminated prior to distribution of the document.
-
-Il ne me semble pas pertinent de conserver ce point. L'objectif d'un guide des bonne pratiques vise à mutualiser les processus d'encodage de partition MEI afin de permettre le moissonnement de différents projets utilisant MEI pour produire ses partitions. Il ne me semble pas pertinent de traiter des informations en lien avec la phase de production qui a vocation à dis^paraitre à la publication. 
-
-Balise : 
-```
-<encodingDesc>
-```
-Exemple :
-```
-<encodingDes>
-```
-
 <a id="AFR_ref1"></a>
 
 ### Désignation de la forme

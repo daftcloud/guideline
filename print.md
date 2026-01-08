@@ -37,7 +37,6 @@ print: true
 - [EMD : Modification du document électronique](#EMD_ref1)
 - [ENC : Encodeur de l'édition électronique](#ENC_ref1)
 - [END : Date d'encodage de l'édition électronique](#END_ref1)
-- [EST : État de l'encodage](#EST_ref1)
 - [GAW : Œuvre associée](#GAW_ref1)
 - [GCO : Désignation de la collection](#A-GCO_ref1)
 - [GTL : Titre de la collection](#GTL_ref1)

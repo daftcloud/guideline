@@ -27,7 +27,6 @@ print: false
 - [EMD : Modification du document électronique](4_index.html#EMD_ref1)
 - [ENC : Encodeur de l'édition électronique](4_index.html#ENC_ref1)
 - [END : Date d'encodage de l'édition électronique](4_index.html#END_ref1)
-- [EST : État de l'encodage](4_index.html#EST_ref1)
 - [GAW : Œuvre associée](4_index.html#GAW_ref1)
 - [GCO : Désignation de la collection](4_index.html#A-GCO_ref1)
 - [GTL : Titre de la collection](4_index.html#GTL_ref1)
