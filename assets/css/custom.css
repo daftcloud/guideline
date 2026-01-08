@@ -7,21 +7,13 @@
   line-height: 1;
 }
 
-.main-content {
-  flex: 1;
-}
-
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+main {
+  min-height: calc(100vh - 4rem);
 }
 
 
 .credits {
-  padding: 1rem 0;
-  border-top: 1px solid #ddd;
-  font-size: 0.85rem;
+  margin-top: auto;
 }
 
 .site-button{
