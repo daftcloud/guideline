@@ -28,5 +28,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   btn.addEventListener("click", () => 
     window.location.href = "/guideline/assets/pdf/guideline.pdf")
+
+
+  
+  const main = document.getElementById("main-content");
+  const credits = document.getElementById("credits");
+
+  if (!main || !credits) return;
+
+  function checkCollision() {
+    const mainRect = main.getBoundingClientRect();
+    const creditsRect = credits.getBoundingClientRect();
+
+    if (mainRect.bottom > creditsRect.top) {
+      // le contenu chevauche les crédits → on cache
+      credits.style.display = "none";
+    } else {
+      credits.style.display = "block";
+    }
+  }
+
+  // Vérifie au chargement
+  checkCollision();
+
+  // Et si la fenêtre est redimensionnée
+  window.addEventListener("resize", checkCollision);
+
   }
 );

@@ -13,10 +13,8 @@ main {
 
 
 .credits {
-  position: fixed;   /* toujours à la même place */
-  bottom: 0;         /* collé au bas de l’écran */
-  left: 0;
-  width: 100%;       /* toute la largeur */
+  position: fixed;   
+  bottom: 0;         
   background: #fff;  /* couleur de fond pour éviter chevauchement */
   padding: 1rem;
   border-top: 1px solid #ddd;
