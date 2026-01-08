@@ -2,6 +2,7 @@
 title: Index des Clés Humdrum
 layout: custom
 nav_order: 7
+print: false
 ---
 
 # Index des trigrammes Humdrum
