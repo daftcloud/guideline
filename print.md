@@ -1,16 +1,21 @@
 ---
-layout: default
+layout: print
 title: Export PDF
 nav_exclude: true
 print: true
 ---
 
-{% include_relative 1_presentation.md %}
-{% include_relative 2_FRBR.md %}
-{% include_relative 3_autorite.md %}
-{% include_relative 4_index.md %}
-{% include_relative 5_remarques.md %}
-{% include_relative 6_conclusion.md %}
+{% assign pages = site.pages | sort: "nav_order" %}
+
+{% for p in pages %}
+  {% if p.nav_order and p.title and p.url != "/print.html" and p.print != false %}
+    <section class="print-section">
+      <h1>{{ p.title }}</h1>
+      {{ p.content }}
+    </section>
+    <div style="page-break-after: always;"></div>
+  {% endif %}
+{% endfor %}
 
 - [ACO : Désignation de la collection](#A-GCO_ref1)
 - [AFR : Désignation de la forme](#AFR_ref1)
