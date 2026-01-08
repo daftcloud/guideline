@@ -8,12 +8,20 @@
 }
 
 main {
-  min-height: calc(100vh - 4rem);
+  padding-bottom: 4rem; /* ajuster selon la hauteur des crédits */
 }
 
 
 .credits {
-  margin-top: auto;
+  position: fixed;   /* toujours à la même place */
+  bottom: 0;         /* collé au bas de l’écran */
+  left: 0;
+  width: 100%;       /* toute la largeur */
+  background: #fff;  /* couleur de fond pour éviter chevauchement */
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  z-index: 9999;     /* au-dessus du contenu */
 }
 
 .site-button{
