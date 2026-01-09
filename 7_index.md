@@ -1,6 +1,6 @@
 ---
 title: Index des Clés Humdrum
-layout: custom
+layout: default
 nav_order: 7
 print: false
 ---
