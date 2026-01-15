@@ -1,5 +1,5 @@
 ---
-title: Description du fichier MEI encodé "<fileDesc>"
+title: Description du fichier MEI encodé &lt;fileDesc&gt;
 layout: default
 nav_order: 1
 parent: Guideline
