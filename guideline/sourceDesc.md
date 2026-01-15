@@ -1,8 +1,8 @@
 ---
-title: Guideline
+title: Description de la source <SourceDesc>
 layout: default
 nav_order: 3
-parent: fileDesc
+parent: Description du fichier MEI encodé <fileDesc>
 
 ---
 
