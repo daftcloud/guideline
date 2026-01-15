@@ -16,7 +16,7 @@ has_toc: true
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement)|Titre|≈ OTL|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre|≈ OTL|
 
 
 
