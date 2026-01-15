@@ -9,7 +9,7 @@
 
 .site-button{
   margin-right : 4rem;
-  color: #7253ed;
+  color: #29367c;
   text-decoration: none;
   background-image: linear-gradient(-90deg, #ebedf5 0%, rgba(235,237,245,0.8) 80%, rgba(235,237,245,0) 100%);
   font-weight: bold;
@@ -17,6 +17,14 @@
 
 .site-button:hover {
   cursor: pointer;
-  border-color: #5f3ceb;
-  color: #5f3ceb;  
+  border-color: #29367c;
+  color: #29367c;  
+}
+
+.nav-list-link.active {
+  color: #29367c;
+}
+
+a {
+  color: #29367c;
 }
