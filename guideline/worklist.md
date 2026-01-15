@@ -1,8 +1,8 @@
 ---
-title: Description de l'œuvre musicale <worklist>
+title: Description de l'œuvre musicale "<worklist>"
 layout: default
 nav_order: 2
-parent: Description du fichier MEI encodé <fileDesc>
+parent: Guideline
 
 ---
 
