@@ -1,5 +1,5 @@
 ---
-title: Description de la source  &lt;SourceDesc> &gt;
+title: Description de la source  &lt;SourceDesc &gt;
 layout: default
 nav_order: 3
 parent: Guideline

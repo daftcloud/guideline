@@ -1,6 +1,7 @@
 ---
 layout: print
 title: Export PDF
+search_exclude: true
 nav_exclude: true
 print: true
 ---
