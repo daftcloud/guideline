@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const btn = document.createElement("button");
   btn.id = "export-pdf";
   btn.className = "site-button";
-  btn.textContent = "Exporter en PDF";
+
+  const span= document.createElement("span");
+  span.textContent = "Exporter en PDF";
+  btn.appendChild(span);
 
   const footerDiv = document.createElement("div");
   footerDiv.className = "sidebar-footer";

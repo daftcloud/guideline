@@ -5,20 +5,56 @@
   padding-right: 0.5rem; /* espace bouton menu */
   font-size: 1.05rem;
   line-height: 1;
+  color: #be362a;
+  text-shadow: 1px 1px 5px #f3c144;
 }
 
 .site-button{
+
   margin-right : 4rem;
-  color: #29367c;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 12px 24px;
+  color: #be362a;
   text-decoration: none;
-  background-image: linear-gradient(-90deg, #ebedf5 0%, rgba(235,237,245,0.8) 80%, rgba(235,237,245,0) 100%);
+  border: solid;
+  border-color: #be362a;
   font-weight: bold;
+  border-radius: 16px;
+  text-shadow: 1px 1px 5px #f3c144;
+  position: relative;
+  z-index: 0;
+}
+
+.site-button::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f3c14499;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.8s ease;
+  border-radius: inherit;
+  z-index: 0;
+
 }
 
 .site-button:hover {
   cursor: pointer;
-  border-color: #29367c;
-  color: #29367c;  
+  text-shadow: none;
+  background-image: none;     
+}
+
+.site-button span{
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.site-button:hover::before {
+  transform: scale(1);
 }
 
 .nav-list-link.active {
