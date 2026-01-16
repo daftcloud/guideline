@@ -1,6 +1,6 @@
 ---
 redirect_from:
-   - /guideline/guideline.html
+   - /guideline/guideline.md
 
 title: Description du fichier MEI encodé &lt;fileDesc&gt;
 layout: default
