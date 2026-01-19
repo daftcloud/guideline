@@ -18,11 +18,16 @@ Historiquement, les besoins de l'édition critique textuelle se sont structurés
 <p style="text-align:justify;">
 Les quatre états de l'œuvre en FRBR sont légérèment adaptés en MEI, puisque "manifestation" devient *source*, tandis que *work*, *expression* et *item* restent inchangés. Chacun de ces éléments possède des balises "enfants" permettant de lister les différentes instanciations :
 </p>
+<!-- 
 <p style="text-align:justify;">
+-->
    - *expressionList* : il s'agit de nommer et détailler les différentes expressions, cette étape correspondant dans notre protocole à la *recensio*. Nous avons fait le choix de nommer l'expression de tradition directe *expression 0*. On utilise 0 lorsque l'on est en presence de la source originale (normalement l'autographe de l'œuvre) et *omega* "⍵" lorsque la source originale de l'œuvre ne nous est pas parvenue, lorsqu'elle est *supposée*. Les expressions indirectes se déploient ensuite avec des chiffres (1,2 *etc*) ou bien des noms en toutes lettres. Pour chaque expression il convient d'utiliser une instance de *expressionList* et pour chaque manifestation un *sourceList*. Dans le cadre de manuscrits, la manifestation et l'item ne font qu'un.
    - *sourceList* : de manière similaire à *expressionList*, nous nommons le manuscrit autographe (ou l'*omega* issu du *stemma codicum* si l'on ne possède pas l'autographe) *source 0*. 
    - *itemList* : il n'y a pas, pour des raisons de catalogage évidentes, d'*item 0* ; nous partons donc du principe que la dénomination des items fait appel au bon sens des chercheur·euse·s, de la tradition et des nomenclatures en usage.
+   <!-- 
 </p>
+-->
+
 <p style="text-align:justify;">
 Le fichier MEI que nous sommes en train de renseigner constitue d'ailleurs une autre manifestation de l'œuvre, et doit par conséquent faire partie de la *sourceList*. Des xmlID seront utilisés pour chaque manifestation et item, afin d'assurer une inter-opérabilité maximale. Les normes FRBR ainsi intégrées de la MEI correspondent précisement à la *recensio* la plus complète possible, ce qui est la promesse méthodologique de chaque édition critique. L'emploi du modèle FRBR est ainsi particulièrement adapté à des œuvres éditées sous forme de conducteur d'orchestre puis de parties séparées, qui nécessitent par exemple de détailler les caractéristiques de chacune des éditions, ici qualifiées de "sources" (équivalent FRBR - MEI). Pour des éditions plus simples, il convient de faire preuve de bon sens et de privilégier les solutions natives à la MEI.
 </p>
