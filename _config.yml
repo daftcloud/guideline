@@ -4,6 +4,15 @@ remote_theme: just-the-docs/just-the-docs
 
 url: https://just-the-docs.github.io
 
+# Footer content
+# appears at the bottom of every page's main content
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: 'Ceci est un footer ?'
+
 #aux_links:
 # Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
