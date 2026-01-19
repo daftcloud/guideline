@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   span.textContent = "Exporter en PDF";
   btn.appendChild(span);
 
-  const footerDiv = document.createElement("div");
-  footerDiv.className = "sidebar-footer";
+ /* const footerDiv = document.createElement("div");
+  /*footerDiv.className = "sidebar-footer";
   footerDiv.appendChild(btn);
 
   const footerWrapper = document.querySelector(".d-md-block.d-none");
@@ -33,6 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "/guideline/assets/pdf/guideline.pdf")
 
 
-
+*/
   }
 );
