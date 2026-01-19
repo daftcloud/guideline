@@ -7,13 +7,12 @@ print: true
 ---
 
 {% assign pages = site.pages | sort: "nav_order" %}
-
 {% for p in pages %}
   {% if p.nav_order and p.title and p.url != "/print.html" and p.print != false %}
     <section class="print-page">
-      {{ p.content }}
+      <h1>{{ p.title }}</h1>
+      {{ p.content | raw }}
     </section>
-    <div style="page-break-after: always;"></div>
   {% endif %}
 {% endfor %}
 

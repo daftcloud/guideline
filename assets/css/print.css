@@ -1,20 +1,21 @@
 html, body {
     background: #fff !important;
-    color: #000000 !important;
+    color: #000 !important;
     font-family: serif;
     line-height: 1.5;
 }
 
 .print-page {
-  page-break-after: always;
+    page-break-after: always;
 }
 
+/* Pas de saut de page sur la dernière section */
 .print-page:last-child {
-  page-break-after: auto;
+    page-break-after: auto;
 }
 
 nav,
 .sidebar,
 .footer {
-  display: none;
+    display: none;
 }
