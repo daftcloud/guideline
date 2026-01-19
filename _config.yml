@@ -12,7 +12,6 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-plugins:
 
 
 
