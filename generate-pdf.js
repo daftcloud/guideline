@@ -15,11 +15,13 @@ const outputPath = path.join(outputDir, "guideline.pdf");
   const browser = await puppeteer.launch({
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    
   });
 
   const page = await browser.newPage();
   
   await page.goto(url, { waitUntil: "networkidle0" });
+  await page.waitForTimeout(1000);
 
 
   await page.pdf({

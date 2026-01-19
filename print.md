@@ -10,7 +10,7 @@ print: true
 
 {% for p in pages %}
   {% if p.nav_order and p.title and p.url != "/print.html" and p.print != false %}
-    <section class="print-section">
+    <section class="print-page">
       <h1>{{ p.title }}</h1>
       {{ p.content }}
     </section>
