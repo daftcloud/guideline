@@ -6,7 +6,6 @@
   font-size: 1.05rem;
   line-height: 1;
   color: #be362a;
-  text-shadow: 1px 1px 5px #f3c144;
 }
 
 .site-button{
@@ -22,45 +21,18 @@
   border-color: #be362a;
   font-weight: bold;
   border-radius: 16px;
-  text-shadow: 1px 1px 5px #f3c144;
   position: relative;
-  z-index: 0;
 }
 
-.site-button::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #f3c14499;
-  transform: scale(0);
-  transform-origin: center;
-  transition: transform 0.8s ease;
-  border-radius: inherit;
-  z-index: 0;
-
-}
-
-.site-button:hover {
-  cursor: pointer;
-  text-shadow: none;
-  background-image: none;     
-}
-
-.site-button span{
-  position: relative;
-  z-index: 1;
-}
-
-
-
-.site-button:hover::before {
-  transform: scale(1);
-}
-
-.nav-list-link.active {
-  color: #29367c;
+.nav-list .nav-list-item .nav-list-link.active {
+color: #29367c;
 }
 
 a {
   color: #29367c;
 }
+
+.side-bar{
+background-color: #f3c144;
+}
+
