@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
 
-const url = "https://daftcloud.github.io/guideline/print.html"
+const url = `file://${path.join(process.cwd(), "_site", "print.html")}`;
 
 const rootDir = process.cwd();
 const outputDir = path.join(rootDir, "assets", "pdf");
