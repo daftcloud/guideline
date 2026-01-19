@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
 
-const url = "https://daftcloud.github.io/guideline/print.html"
+const url = `file://${path.join(process.cwd(), "_site", "print.html")}`;
 
 const rootDir = process.cwd();
 const outputDir = path.join(rootDir, "assets", "pdf");
@@ -15,11 +15,13 @@ const outputPath = path.join(outputDir, "guideline.pdf");
   const browser = await puppeteer.launch({
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    
   });
 
   const page = await browser.newPage();
   
   await page.goto(url, { waitUntil: "networkidle0" });
+  await page.waitForTimeout(1000);
 
 
   await page.pdf({
