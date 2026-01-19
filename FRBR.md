@@ -1,7 +1,7 @@
 ---
 title: Les possibilités supplémentaires du modèle FRBR 
 layout: default
-nav__order: 2
+nav_order: 2
 ---
 
 # Les possibilités supplémentaires du modèle FRBR 
