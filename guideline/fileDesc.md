@@ -41,7 +41,9 @@ Exemple :
    </titleStmt>
 </fileDesc>
 ```
+<p style="text-align:justify;">
 Recommandations : Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir "Titre alternatif de l'œuvre").
+</p>
 
 ## b. Compositeur
 
@@ -66,7 +68,9 @@ Balise :
    </titleStmt>
 </fileDesc>
 
+<p style="text-align:justify;">
 Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+</p>
 
 Exemple :
 ```xml
@@ -93,7 +97,9 @@ Balise : `<composer evidence="...">`
 
 Autre option : `<persName>`
 
+<p style="text-align:justify;">
 Recommandations : La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
+</p>
 
 Exemple :
 ```xml
@@ -176,8 +182,9 @@ Balise :
    </pubStmt>
 </fileDesc>
 ```
-
+<p style="text-align:justify;">
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+</p>
 
 Exemple :
 ```xml
@@ -251,7 +258,9 @@ Balise :
 
 Autre option : 
 
+<p style="text-align:justify;">
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension.
+</p>
 
 Exemple :
 ```xml
@@ -281,7 +290,10 @@ Balise :
    </change>
 </revisionDesc>
 ```
+
+<p style="text-align:justify;">
 Recommandations : À chaque nouvelle édition du fichier, il est recommandé de dresser une description des changements, une date de la nouvelle édition et les personnes ou logiciels impliqué dans les changements. Il est également recommandé que les changements soient présentés dans un ordre anti-chronologique.
+</p>
 
 Exemple :
 ```xml
@@ -320,7 +332,10 @@ Autre option :
 ```xml
 <encodingDesc n="X"> ???
 ```
+
+<p style="text-align:justify;">
 Recommandations : À chaque nouvelle édition du fichier, il est recommandé de dresser une description des changements, une date de la nouvelle édition et les personnes ou logiciels impliqué dans les changements.
+</p>
 
 Exemple :
 ```xml
@@ -349,16 +364,18 @@ Exemple :
 
 
 Balise :
-```
+
+```xml
  <fileDesc>
  ...
    <seriesStmt @precedes="link vers 3" @follows="link vers 1">
       <title>(titre de la série)</title>
       <identifier>numéro du fichier éléctronique dans cette série</identifier>
 ```
-Recommandations : 
-Lorsque le fichier mei que nos encodons fait parti d'une suite de fichier, nous recommandons d'indiquer les informations concernant cette suite dans l'élément seriesStmt inclus dans fileDesc.
 
+<p style="text-align:justify;"> 
+Recommandations : Lorsque le fichier mei que nos encodons fait parti d'une suite de fichier, nous recommandons d'indiquer les informations concernant cette suite dans l'élément seriesStmt inclus dans fileDesc.
+</p>
 
 Exemple (fictif) :
 ```xml
@@ -389,8 +406,10 @@ Balise :
 ```
 Autre option : 
 
-Recommandations : 
-Que ce soit dans l'élément work, expression, manifestation ou item, la désignation de la forme s'inscrit dans l'élément classification. Nous recommandons de tisser un lien vers des `<taxonomy>` dans l'élément `<classDecls>` contenu dans `<encodingDesc>` vers des vocabulaires controllés.
+
+<p style="text-align:justify;"> 
+Recommandations : Que ce soit dans l'élément work, expression, manifestation ou item, la désignation de la forme s'inscrit dans l'élément classification. Nous recommandons de tisser un lien vers des `<taxonomy>` dans l'élément `<classDecls>` contenu dans `<encodingDesc>` vers des vocabulaires controllés.
+</p>
 
 Exemple :
 
@@ -399,11 +418,9 @@ Exemple :
 ### Date de mise à disposition de l'édition électronique
 
 
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date de mise à disposition de l'édition électronique|YER|
-
 
 
 Balise : 
@@ -416,6 +433,7 @@ Balise :
    </availability>
 </pubStmt>
 ```
+
 Recommandations : 
 
 Exemple :

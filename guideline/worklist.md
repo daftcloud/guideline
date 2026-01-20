@@ -23,22 +23,25 @@ Balise :`<title type=main>`/`<title type="subordinate">`
 
 Autre option : `<title>`
 
+<p style="text-align:justify;"> 
 Recommandations : Les deux exemples ci-dessous explicitent l'inscription du titre de l'œuvre dans un premier temps au niveau de l'œuvre elle-même, puis au niveau de son expression.
+</p>
 
 Exemples :
-```
-"<workList xml:id=""..."">
-   <work xml:id=""..."">
-      <title xml:id=""..."">...</title>
+```xml
+"<workList xml:id="...">
+   <work xml:id="...">
+      <title xml:id="...">...</title>
    </work>
 </workList>"
 ```
-```
-"<workList xml:id=""..."">
-   <work xml:id=""..."">
-      <title xml:id=""..."">  
-      <expressionList xml:id=""..."">  
-        <expression xml:id=""..."">
+
+```xml
+"<workList xml:id="...">
+   <work xml:id="...">
+      <title xml:id="...">  
+      <expressionList xml:id="...">  
+        <expression xml:id="...">
         </expression>
       </expressionList>
       </title>
@@ -62,7 +65,9 @@ Balise :`<title>`
 
 Autre option : -
 
+<p style="text-align:justify;"> 
 Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+</p>
 
 Exemple :
 
@@ -75,7 +80,9 @@ Titre simple d'une œuvre :
 </workList>
 ```
 
+<p style="text-align:justify;"> 
 Recommandation : Dans le cas de sections ou de mouvements d'une œuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'œuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer `<titlePart>`. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
+</p>
 
 ### Titre d'un mouvement d'une œuvre 
 
@@ -91,8 +98,9 @@ Recommandation : Dans le cas de sections ou de mouvements d'une œuvre, il est n
    </work>
 </workList>
 ```
+<p style="text-align:justify;"> 
 Recommandation : Il est à noter que le renseignement du titre, métadonnée de première importance, est paradoxalement négligé dans les guidelines MEI. Divers exemples suggèrent une distinction minimale des niveaux de titres et une certaine liberté dans leur troncation. La raison réside certainement dans l'ambiguïté qui dérive des différentes formes de titres et de leurs usages multiples. Bien que @type soit régi par les valeurs contrôlées listées ci-dessus, les guidelines illustrent à l'occasion l'usage non conventionnel de @type="subtitle" pour encoder un syntagme subordonné au titre principal. Nous nous limiterons ici aux seuls vocables contrôlés précisés précédemment.
-
+</p>
 
 <a id="OTP_ref1"></a>
 
@@ -108,7 +116,9 @@ Balise : `<title type="alternative">`
 
 Autre option : -
 
+<p style="text-align:justify;"> 
 Recommandations : Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
+</p>
 
 Exemple :
 ```xml
@@ -139,7 +149,9 @@ Balise : `<title type="alternative">`
 
 Autre option, en fonction du contexte : `<title type="subordinate">`; `<title type="abbreviated">`; `<title type="translated">`; `<title type="uniform">`; `<title type="desc">`
 
+<p style="text-align:justify;"> 
 Recommandations : Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
+</p>
 
 Exemple :
 ```xml
@@ -173,7 +185,9 @@ Balise : `<title type="main">` ; `<title type="uniform">`
 
 Autre option : 
 
+<p style="text-align:justify;"> 
 Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
+</p>
 
 Exemple :
 ```xml
@@ -186,6 +200,7 @@ Exemple :
    </work>
 </workList>  
 ```
+
 ## b. Compositeur, librettiste, etc.
 
 <a id="COM_ref2"></a>
@@ -204,30 +219,34 @@ Balise : `<composer>`
 
 Autre option : `<persName role="creator">`
 
+<p style="text-align:justify;"> 
 Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+</p>
+
 
 Exemples :
 ```xml
-<workList xml:id=""..."">
-   <work xml:id=""..."">
-      <composer xml:id=""..."">
-          <persName role=""creator"" ("composer") auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">...</persName>
+<workList xml:id="...">
+   <work xml:id="...">
+      <composer xml:id="...">
+          <persName role="creator" ("composer") auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">...</persName>
       </composer>
    </work>
 </workList>
 ```
-```
-"<workList xml:id=""..."">
-   <work xml:id=""..."">
-      <expressionList xml:id=""..."">  
-        <expression xml:id=""..."">
-          <composer xml:id=""..."">
-            <persName role=""creator"" ("composer"?) auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..." >...</persName>
+
+```xml
+<workList xml:id="...">
+   <work xml:id="...">
+      <expressionList xml:id="...">  
+        <expression xml:id="...">
+          <composer xml:id="...">
+            <persName role="creator" ("composer"?) auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..." >...</persName>
           </composer>
         </expression>
       </expressionList>
    </work>
-</workList>"
+</workList>
 ```
 
 Dans le cas de plusieurs compositeurs, recourir à une numération dans le cadre de role ou de l'xml id. Ex :
@@ -248,13 +267,15 @@ Balise : `<composer evidence="...">`
 
 Autre option : `<persName>`
 
+<p style="text-align:justify;"> 
 Recommandations : La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
+</p>
 
 Exemple :
 ```xml
-<workList xml:id=""..."">
-   <work xml:id=""..."">
-      <composer xml:id=""..."" evidence=""..."" (internal, external or conjecture)>
+<workList xml:id="...">
+   <work xml:id="...">
+      <composer xml:id="..." evidence="..." (internal, external or conjecture)>
           <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
       </composer>
    </work>
@@ -275,8 +296,10 @@ Balise : `<composer>`
 
 Autre option : `<persName>`
 
+<p style="text-align:justify;"> 
 Recommandations : Il est conseillé d’utiliser l’attribut @cert pour indiquer le degré de certitude. Les valeurs autorisées sont : high, 
 medium, low ou unknown.
+</p>
 
 Exemple:
 ```xml
@@ -302,7 +325,9 @@ Balise : `<persName>` et `<foreName>`
 
 Autre option : `<foreName>` et `<famName>`
 
+<p style="text-align:justify;"> 
 Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de `<foreName>`.
+</p>
 
 Exemple :
 ```xml
@@ -332,7 +357,9 @@ Exemple :
 
 Balise : `<persName>` avec les attributs @startdate et @enddate.
 
+<p style="text-align:justify;"> 
 Recommandations : Peut être omis si le compositeur est référencé avec une URI externe.
+</p>
 
 Exemple :
 ```xml
@@ -358,7 +385,9 @@ Exemple :
 
 Balise : `<annot>` 
 
+<p style="text-align:justify;"> 
 Recommandations : Peut être omis si le compositeur est référencé avec une URI externe.
+</p>
 
 Exemple :
 ```xml
@@ -385,18 +414,20 @@ Exemple :
 
 Balise : `<persName>` et `<date>` avec les attributs @startdate et @enddate.
 
+<p style="text-align:justify;"> 
 Recommandations : Peut être omis si le compositeur est référencé avec un URI externe. Il est conseillé d'utiliser un URI, via @auth.uri, pour préciser le lieu. Nous préconisons l'usage d'un URI GeoNames.  
+</p>
 
 Exemple :
 ```xml
-<workList xml:id=""..."">
-   <work xml:id=""..."">
-      <composer xml:id=""..."">
+<workList xml:id="...">
+   <work xml:id="...">
+      <composer xml:id="...">
           <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-          <date stardate=""..."">
+          <date stardate="...">
              <country auth="..." auth.uri="..." codedval="...">XXX</country>
           </date>
-          <date enddate=""..."">
+          <date enddate="...">
              <country>XXX</country>
          </date>     
       </composer>
@@ -418,8 +449,8 @@ Autre option : `<persName role="librettist">`
 
 Exemple :
 ```xml
-<workList xml:id=""..."">
-   <work xml:id=""..."">
+<workList xml:id="...">
+   <work xml:id="...">
       <librettist>
          <persName auth="..." auth.uri="..." codedval="..."></persName>
       </librettist>   
@@ -1215,7 +1246,7 @@ Balise :
 ```xml
 <perfMedium>
    <perfRes>
-      <persName auth="" auth.uri="" codedval="" >Nom de l'interprète</persName>
+      <persName auth="..." auth.uri="..." codedval="..." >Nom de l'interprète</persName>
       </perfRes>
 </perfMedium>
 ```
@@ -1242,7 +1273,7 @@ Balise :
 ```xml
 <perfMedium>
    <perfRes>
-      <persName auth="" auth.uri="http://..." codedval="" role="..." cert="high, medium, low ou unknown">Nom de l'interprète</persName>
+      <persName auth="..." auth.uri="http://..." codedval="..." role="..." cert="high, medium, low ou unknown">Nom de l'interprète</persName>
       </perfRes>
 </perfMedium>
 ```
@@ -1564,10 +1595,9 @@ Balise :
 <series>
 <title>
 ```
-Exemple :
-```
 
-```
+Exemple :
+
 
 
 # Description de la source <SourceDesc>
@@ -1585,14 +1615,16 @@ Balise :`<title>`
 
 Autre option : -
 
+<p style="text-align:justify;"> 
 Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+</p>
 
 Exemple :
-```
-"<sourceDesc xml:id=""..."">
-   <source xml:id=""..."">
-      <bibl xml:id=""..."">
-         <title xml:id=""..."">...</title>
+```xml
+"<sourceDesc xml:id="...">
+   <source xml:id="...">
+      <bibl xml:id="...">
+         <title xml:id="...">...</title>
       </bibl>
    </source>   
 </sourceDesc>"
@@ -1660,8 +1692,7 @@ Balise :
 
 Autre option : 
 
-```
-
+```xml
 <manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
@@ -1705,20 +1736,22 @@ Balise : `<composer>`
 
 Autre option : `<persName role="creator">`
 
+<p style="text-align:justify;"> 
 Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+</p>
 
 Exemple :
 
-```
-"<sourceDesc xml:id=""..."">
-   <source xml:id=""..."">
-      <bibl xml:id=""..."">
-         <composer xml:id=""..."">
-            <persName role=""creator"" auth="..." auth.uri=""http://..."" codedval="...">...</persName>
+```xml
+<sourceDesc xml:id="...">
+   <source xml:id="...">
+      <bibl xml:id="...">
+         <composer xml:id="...">
+            <persName role="creator" auth="..." auth.uri="http://..." codedval="...">...</persName>
          </composer>
       </bibl>
    </source>
-</sourceDesc>"
+</sourceDesc>
 ```
 ## c. Informations liées à l'édition 
 
@@ -1761,7 +1794,7 @@ Autre option : Si c'est une maison d'édition (cumulable) :
 Recommandations : 
 
 Exemple :
-```
+```xml
 Si c'est une personne :
 <sourceDesc>
    <source>
@@ -1844,7 +1877,9 @@ Balise :
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+</p>
 
 Exemple :
 ```xml
@@ -1893,6 +1928,7 @@ Balise :
       </bibl>
    </source>
    ```
+
 Exemple :
 ```xml
 <sourceDesc>
@@ -1950,8 +1986,9 @@ Balise :
 
 Autre option : 
 
-Recommandations : 
-Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
+<p style="text-align:justify;"> 
+Recommandations : Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
+</p>
 
 Exemple :
 ```xml
@@ -1989,7 +2026,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Volume|OVM|
 
 Balise :
-```
+```xml
  <source>
   <bibl>
       <composer>
@@ -2005,7 +2042,9 @@ Balise :
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
 Recommandations : J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
+</p>
 
 Exemple :
 ```xml
@@ -2043,7 +2082,9 @@ Balise :
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
 Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
+</p>
 
 Exemple :
 ```xml
@@ -2088,7 +2129,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de conservation du manuscrit|SML|
 
 Balise :
-```
+```xml
  <source recordtype="d">
   <bibl>
      <physLoc>
@@ -2108,6 +2149,7 @@ Balise :
   </bibl>
 </source>
 ```
+
 Autre option : 
 ```xml
 <manifestation recordtype="d">
@@ -2171,7 +2213,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Info sur l'accès au manuscrit|SMA|
 
 Balise :
-```
+```xml
  <source recordtype="d">
   <bibl>
      <physLoc>
@@ -2275,8 +2317,9 @@ Balise :
       </sourceDesc>
 </fileDesc>
 ```
+
 Autre option : 
-```
+```xml
  <sourceDesc>
         <source>
           <bibl>
@@ -2285,13 +2328,14 @@ Autre option :
         </source>
       </sourceDesc>
 ```
+
+<p style="text-align:justify;"> 
 Recommandations : 
 Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>\<imprint>` contenant toutes les informations en lien avec la source.
+</p>
 
 Exemple :
-```
 
-```
 
 <a id="YOO_ref1"></a>
 
@@ -2321,6 +2365,7 @@ Balise :
    </source>
 </sourceDesc>
 ```
+
 Autre option : 
 ```xml
 <sourceDesc>
@@ -2336,12 +2381,12 @@ Autre option :
 </sourceDesc>
 ```
 
+<p style="text-align:justify;"> 
 Recommandations : recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, bibl est plus libre. À voir.
+</p>
 
 Exemple :
-```
 
-```
 
 <a id="YOY_ref1"></a>
 
@@ -2364,6 +2409,7 @@ Balise :
    </manifestation>
 </manifestationList>
 ```
+
 Exemple :
 ```xml
 <manifestationList>
@@ -2399,6 +2445,7 @@ Balise :
    </sourceDesc>
 </fileDesc>
 ```
+
 Exemple :
 ```xml
 <fileDesc>
