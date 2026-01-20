@@ -382,7 +382,7 @@ Exemple :
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT & SCA|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT et SCA|
 
 Balise : 
 ```xml
@@ -862,7 +862,7 @@ Exemple :
       <bibl>
          <imprint>
             <editor>
-               <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="268466075">A. Durand & Fils, Éditeurs</corpName>
+               <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="268466075">A. Durand &amp; Fils, Éditeurs</corpName>
             </editor>
          </imprint>
       </bibl>

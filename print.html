@@ -11,7 +11,7 @@ print: true
   {% if p.nav_order and p.title and p.url != "/print.html" and p.print != false  and p.has_children != true %}
     <section class="print-page">
       <div class="md-break"></div>
-      {{ p.content }}
+      {{ p.content | markdownify}}
     </section>
   {% endif %}
 {% endfor %}
