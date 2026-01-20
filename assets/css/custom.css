@@ -8,19 +8,19 @@
   color: #be362a;
 }
 
-.site-button{
+.export-button{
 
   margin-right : 4rem;
+  margin-bottom: 1rem;
   font-size: 16px;
   cursor: pointer;
   overflow: hidden;
   padding: 12px 24px;
-  color: #be362a;
   text-decoration: none;
-  border: solid;
-  border-color: #be362a;
+  color: #29367c;
   font-weight: bold;
-  border-radius: 16px;
+  
+  border-radius: 6px;
   position: relative;
 }
 

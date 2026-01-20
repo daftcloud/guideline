@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ajoute et gère le bouton Exporter en PDF
   const btn = document.createElement("button");
   btn.id = "export-pdf";
-  btn.className = "site-button";
+  btn.className = "export-button";
 
   const span= document.createElement("span");
   span.textContent = "Exporter en PDF";
