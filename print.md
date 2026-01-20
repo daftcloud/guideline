@@ -9,7 +9,7 @@ print: true
 {% assign pages = site.pages | sort: "nav_order" %}
 {% for p in pages %}
   {% if p.nav_order and p.title and p.url != "/print.html" and p.print != false %}  
-      {{ p.content | raw }}
+      {{ p.content }}
   {% endif %}
 {% endfor %}
 
