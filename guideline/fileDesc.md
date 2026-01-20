@@ -6,7 +6,6 @@ title: Description du fichier MEI encodé &lt;fileDesc&gt;
 layout: default
 nav_order: 5
 parent: Guideline
-print: false
 
 ---
 
