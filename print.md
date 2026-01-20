@@ -1,5 +1,5 @@
 ---
-layout: print
+layout: default
 title: Export PDF
 search_exclude: true
 nav_exclude: true
