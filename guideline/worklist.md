@@ -47,6 +47,7 @@ Exemples :
    </work>
 </workList>"
 ```
+
 <a id="OTL_ref3"></a>
 
 ### Titre de l'œuvre 
@@ -68,7 +69,7 @@ Recommandations : Cette manière minimale de renseigner le titre convient surtou
 Exemple :
 
 Titre simple d'une œuvre :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <title xml:id="...">Pavane pour une infante défunte</title>
@@ -80,7 +81,7 @@ Recommandation : Dans le cas de sections ou de mouvements d'une œuvre, il est n
 
 ### Titre d'un mouvement d'une œuvre 
 
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <title type="main">Rondo alla Turca</title>
@@ -112,7 +113,7 @@ Autre option : -
 Recommandations : Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <title type="main">Rondo alla Turca</title>
@@ -143,7 +144,7 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
 Recommandations : Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <title type="main">Rondo alla Turca</title>
@@ -177,7 +178,7 @@ Autre option :
 Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <title type="main">Rondo alla Turca</title>
@@ -208,7 +209,7 @@ Autre option : `<persName role="creator">`
 Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 
 Exemples :
-```
+```xml
 <workList xml:id=""..."">
    <work xml:id=""..."">
       <composer xml:id=""..."">
@@ -252,7 +253,7 @@ Autre option : `<persName>`
 Recommandations : La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
 
 Exemple :
-```
+```xml
 <workList xml:id=""..."">
    <work xml:id=""..."">
       <composer xml:id=""..."" evidence=""..."" (internal, external or conjecture)>
@@ -280,7 +281,7 @@ Recommandations : Il est conseillé d’utiliser l’attribut @cert pour indique
 medium, low ou unknown.
 
 Exemple:
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="..." cert="low">
@@ -306,7 +307,7 @@ Autre option : `<foreName>` et `<famName>`
 Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de `<foreName>`.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="...">
@@ -336,7 +337,7 @@ Balise : `<persName>` avec les attributs @startdate et @enddate.
 Recommandations : Peut être omis si le compositeur est référencé avec une URI externe.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="...">
@@ -362,7 +363,7 @@ Balise : `<annot>`
 Recommandations : Peut être omis si le compositeur est référencé avec une URI externe.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="...">
@@ -389,7 +390,7 @@ Balise : `<persName>` et `<date>` avec les attributs @startdate et @enddate.
 Recommandations : Peut être omis si le compositeur est référencé avec un URI externe. Il est conseillé d'utiliser un URI, via @auth.uri, pour préciser le lieu. Nous préconisons l'usage d'un URI GeoNames.  
 
 Exemple :
-```
+```xml
 <workList xml:id=""..."">
    <work xml:id=""..."">
       <composer xml:id=""..."">
@@ -418,7 +419,7 @@ Balise : `<librettist>`
 Autre option : `<persName role="librettist">`
 
 Exemple :
-```
+```xml
 <workList xml:id=""..."">
    <work xml:id=""..."">
       <librettist>
@@ -443,7 +444,7 @@ Autre option : `<persName role="arranger">`
 Recommandations : Suivant les guidelines MEI pour `<arranger>`, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <arranger>
@@ -473,7 +474,7 @@ Autre option : `<persName role="orchestrator">`
 Recommandations : Comme dit ci-dessus, `<arranger>` représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <arranger>
@@ -502,7 +503,7 @@ Recommandations : `<langUsage>` contient l'ensemble des langues devant être dé
 Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <langUsage>
@@ -529,7 +530,7 @@ Recommandations : En cas de langue traduite utilisée au sein du fichier, il sem
 En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie `<music>`, dans `<verse>` ou `<syl>` à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <langUsage>
@@ -557,7 +558,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
 Recommandations : Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
 
 Exemple :
-```
+```xml
 <workList xml:id="...">
    <work xml:id="...">
       <contributor>
@@ -575,7 +576,7 @@ Recommandations : Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la tra
 Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 
 Exemple :
-```
+```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
        <respStmt xml:id="...">
@@ -614,7 +615,7 @@ Autre option : `<identifier label="opus">`
 Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre de l'œuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <title type="main">Prélude en do majeur</title>
@@ -635,7 +636,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Effectif|AIN|
 
 Balise : 
-```
+```xml
 <perfMedium>
    <perfResList>
       <perfRes>...</PerfRes>
@@ -646,7 +647,7 @@ Recommandations :
 Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans l'élément perfRes.
 
 Exemple :
-```
+```xml
 <perfMedium>
 <perfResList>
 <perfRes count="2">Violons</perfRes>
@@ -669,7 +670,7 @@ Exemple :
 Balise : 
 
 Autre option : 
-```
+```xml
 <body>
    <mdiv label="act" n="1">
       <mdiv label="scene" n="1">
@@ -712,7 +713,7 @@ Balise :
 
 Autre option : 
 
-```
+```xml
 <body>
    <mdiv label="act" n="1">
       <mdiv label="scene" n="1">
@@ -752,7 +753,7 @@ Exemple :
 Balise : 
 
 Autre option : 
-```
+```xml
 <body>
    <mdiv label="Allegro" n="1">
       <score></score>
@@ -782,7 +783,7 @@ Exemple :
 Balise : 
 
 Autre option : 
-```
+```xml
 <body>
    <mdiv label="Allegro">
       <score></score>
@@ -827,7 +828,7 @@ Recommandations :
  L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "sponsor"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
 Exemple :
-```
+```xml
 <biblStruc>
    <imprint>
       <resStmt>
@@ -851,7 +852,7 @@ Exemple :
 
 
 Balise : 
-```
+```xml
 <biblStruc>
    <imprint>
       <resStmt>
@@ -867,7 +868,7 @@ Recommandations :
  Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
 Exemple :
-```
+```xml
 <biblStruc>
    <imprint>
       <resStmt>
@@ -887,7 +888,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Dédicace|ODE|
 
 Balise : 
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -899,7 +900,7 @@ Balise :
 <workList>  
 ```
 Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -917,7 +918,7 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
 Recommandations : 
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -946,7 +947,7 @@ Autre option :
 Recommandations : La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -980,7 +981,7 @@ Autre option :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -1000,7 +1001,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Ville de composition|OPC|
 
 Balise : 
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -1012,7 +1013,7 @@ Balise :
 </workList>
 ```
 Exemple :
-```
+```xml
 <workList>
    <work>
       <creation>
@@ -1035,7 +1036,7 @@ Exemple :
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass){:target="_blank"}|Désignation du genre musical|AGN|
 
 Balise : 
-```
+```xml
 <classification xml :id="…">
    <termList xml:id="…">
       <term>
@@ -1045,7 +1046,7 @@ Balise :
 </classification>
 ```
 Exemple :
-```
+```xml
 <classification xml :id="…">
    <termList xml:id="…">
       <term label="music genre" xml:id="…">...</term>
@@ -1062,7 +1063,7 @@ Exemple :
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass){:target="_blank"}|Désignation du style/période/typologie de l'œuvre|AST|
 
 Balise : 
-```
+```xml
 <classification xml :id="…">
    <termList xml:id="…">
       <term>
@@ -1073,7 +1074,7 @@ Balise :
 </classification>  
 ```
 Exemple :
-```
+```xml
 <workList>
    <work>
       <creation xml:id="…">
@@ -1094,7 +1095,7 @@ Exemple :
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter){:target="_blank"}|Classification du mode (Moyen âge et Renaissance){:target="_blank"}|AMD|
 
 Balise : 
-```
+```xml
 <workList>
    <work>
       <key mode="dorian">
@@ -1110,7 +1111,7 @@ Autre option :
 Recommandations : En MEI, le mode se désigne dans `<key>`, donc dans `<work>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <key mode="dorian">
@@ -1154,7 +1155,7 @@ Exemple :
 
 
 Balise : 
-```
+```xml
 <notesStmt>
    <annot>...</annot>
    <annot>...</annot>
@@ -1165,7 +1166,7 @@ Autre option :
 Recommandations : Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
 
 Exemple :
-```
+```xml
 <notesStmt>
    <annot>This is the encoding of the 1st movement of K. 157 according to the Neue Mozart-Ausgabe VIII/20/1/1.</annot>
 </notesStmt>
@@ -1183,7 +1184,7 @@ Exemple :
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium){:target="_blank"}|Nom du groupe des interprètes|MGN|
 
 Balise : 
-```
+```xml
 <perfMedium>
       <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
 </perfMedium>
@@ -1194,7 +1195,7 @@ Autre option :
 Recommandations : Je ne crois pas que cela soit nécessaire dans un header d'une édition critique.
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <perfMedium>
@@ -1213,7 +1214,7 @@ Exemple :
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium){:target="_blank"}|Nom de l'interprète|MPN|
 
 Balise : 
-```
+```xml
 <perfMedium>
    <perfRes>
       <persName auth="" auth.uri="" codedval="" >Nom de l'interprète</persName>
@@ -1223,7 +1224,7 @@ Balise :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <perfMedium>
    <perfRes>
       <persName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="302774677" role="violist">Guillaume Becker</persName>
@@ -1240,7 +1241,7 @@ Exemple :
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium){:target="_blank"}|Interprète soupçonné (?){:target="_blank"}|MPS|
 
 Balise : 
-```
+```xml
 <perfMedium>
    <perfRes>
       <persName auth="" auth.uri="http://..." codedval="" role="..." cert="high, medium, low ou unknown">Nom de l'interprète</persName>
@@ -1250,7 +1251,7 @@ Balise :
 Recommandations : Le niveau de certitude accordé à l'interprète peut être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
-```
+```xml
 <perfMedium>
    <perfRes>
       <persName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="302774677" role="violist" cert="high">Guillaume Becker</persName>
@@ -1282,7 +1283,7 @@ Balise :
 </workList>
 ```
 Autre option : Dans le cas d'une œuvre dont il existe différentes expressions, dans le sens du modèle FRBR, il est possible de renseigner les informations concernants les exécutions/représentations de chaque expression distinctement.
-```
+```xml
 <workList>
    <work>
       <expressionList>
@@ -1304,7 +1305,7 @@ Recommandations : Selon la typologie du projet, on va indiquer les informations 
 La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <history>   
@@ -1334,7 +1335,7 @@ Exemple :
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory){:target="_blank"}|Lieu d'exécution/représentation|MLC|
 
 Balise : 
-```
+```xml
 <workList>
    <work>
       <title>...</tite>
@@ -1349,7 +1350,7 @@ Balise :
 </workList>
 ```
 Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représentation, nous pouvons utiliser, à la place de l'élément geogName, l'élément adress.
-```
+```xml
 <workList>
    <work>
       <title>...</tite>
@@ -1373,7 +1374,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
 Recommandations : 
 
 Exemple :
-```
+```xml
 <workList>
    <work>
       <title>...</tite>
@@ -1403,7 +1404,7 @@ Exemple :
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium){:target="_blank"}|Nom du responsable de l'exécution/représentation (chef d'orchestre){:target="_blank"}|MCN|
 
 Balise :   
-```
+```xml
 <eventList>
    <event type="premiere">
          <perfMedium>
@@ -1450,7 +1451,7 @@ Exemple :
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory){:target="_blank"}|Date de la première exécution/représentation|MPD|
 
 Balise : 
-```
+```xml
 <workList>
    <work>
       <title>...</title>
@@ -1470,7 +1471,7 @@ Recommandations : La date de la première exécution d'une œuvre est à situé,
 La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
-```
+```xml
 <workList>
   <work>
     <title>Pelléas et Mélisande</title>
@@ -1494,7 +1495,7 @@ Exemple :
  |[3.5.1 FRBR Entities in MEI](https://music-encoding.org/guidelines/v5/content/metadata.html#FRBRentities){:target="_blank"}|Œuvre associée (ex. Stéphane Mallarmé, L’Après-midi d’un faune){:target="_blank"}|GAW|
 
 Balise : 
-```
+```xml
 <work>
    <expressionList>
       <expression>
@@ -1508,7 +1509,7 @@ Recommandations :
 Les œuvres associées sont, au sens du modèle FRBR, des expressions différentes d'une œuvre. S'il est besoin de renseigner les informations concernant les autres expressions d'une œuvre, ces renseignements se situeront dans un élément expression dédié à chaque œuvre associée.
 
 Exemple :
-```
+```xml
 <work>
    <expressionList>
       <expression>
@@ -1538,7 +1539,7 @@ Balise :
 Autre option : 
 
 Recommandations : La collection concerne les manifestations dans le modèles FRBR. C'est une manifestation précise qui fait partie d'une "collection". Cela peut aussi être l'item ou la source.
-```
+```xml
 <sourceDesc>
 <source>
 <series>
@@ -1559,7 +1560,7 @@ Exemple :
  |[3.4.1.4 Series Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSeriesStatement){:target="_blank"}|Titre de la collection|GTL|
 
 Balise : 
-```
+```xml
 <sourceDesc>
 <source>
 <series>
@@ -1608,7 +1609,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|PTL|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1618,7 +1619,7 @@ Balise :
    </source>
    ```
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1638,7 +1639,7 @@ Exemple :
 
 
 Balise : 
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -1733,7 +1734,7 @@ Exemple :
 
 Balise : Si c'est une personne :
 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1746,7 +1747,7 @@ Balise : Si c'est une personne :
 
 Autre option : Si c'est une maison d'édition (cumulable) :
 
-```
+```xml
 <sourceDesc>
      <source>
          <bibl>
@@ -1783,7 +1784,7 @@ Si c'est une personne :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1801,7 +1802,7 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 Recommandations : 
 
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1824,7 +1825,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Date de la première publication|PDT|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1848,7 +1849,7 @@ Autre option :
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -1877,7 +1878,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de publication|PPP|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source recordtype="c">
       <bibl>
@@ -1895,7 +1896,7 @@ Balise :
    </source>
    ```
 Exemple :
-```
+```xml
 <sourceDesc>
    <source recordtype="c">
       <bibl>
@@ -1912,6 +1913,7 @@ Exemple :
       </bibl>
    </source>
 ```
+
 <a id="PC_ref1"></a>
 
 ##### Numéro de catalogue de l'éditeur (ex. cotage)
@@ -1940,7 +1942,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT & SCA|
 
 Balise : 
-```
+```xml
 <work>
    <identifier auth.uri="http://...">
       ...
@@ -1954,7 +1956,7 @@ Recommandations :
 Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
 
 Exemple :
-```
+```xml
 <work>
    <identifier auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
       157
@@ -2008,7 +2010,7 @@ Autre option :
 Recommandations : J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
 
 Exemple :
-```
+```xml
 <source>
   <bibl>
       <composer>
@@ -2033,7 +2035,7 @@ Exemple :
 
 Balise : 
 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -2046,7 +2048,7 @@ Autre option :
 Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
 
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -2058,7 +2060,7 @@ Exemple :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -2109,7 +2111,7 @@ Balise :
 </source>
 ```
 Autre option : 
-```
+```xml
 <manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
@@ -2141,7 +2143,7 @@ Autre option :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -2196,7 +2198,7 @@ Balise :
 </source>
 ```
 Autre option : 
-```
+```xml
 <manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
@@ -2228,7 +2230,7 @@ Autre option :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -2262,7 +2264,7 @@ Exemple :
  |[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|Document d'origine de l'édition électronique|YOR|
 
 Balise : 
-```
+```xml
 <fileDesc>
     <sourceDesc>
         <source>
@@ -2304,7 +2306,7 @@ Exemple :
 Balise : 
 
 !!! Il faut trouver un role adéquat
-```
+```xml
 <sourceDesc>
    <source>
       <biblStruct>
@@ -2322,7 +2324,7 @@ Balise :
 </sourceDesc>
 ```
 Autre option : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -2353,7 +2355,7 @@ Exemple :
 
 
 Balise : 
-```
+```xml
 <manifestationList>
    <manifestation>
       <availability>
@@ -2365,7 +2367,7 @@ Balise :
 </manifestationList>
 ```
 Exemple :
-```
+```xml
 <manifestationList>
    <manifestation>
       <availability>
@@ -2386,7 +2388,7 @@ Exemple :
 |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur du document d'origine|YOE|
 
 Balise : 
-```
+```xml
 <fileDesc>
    <sourceDesc>
       <bibl>
@@ -2400,7 +2402,7 @@ Balise :
 </fileDesc>
 ```
 Exemple :
-```
+```xml
 <fileDesc>
    <sourceDesc>
       <bibl>

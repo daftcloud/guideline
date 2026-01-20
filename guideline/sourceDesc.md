@@ -43,7 +43,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|PTL|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -53,7 +53,7 @@ Balise :
    </source>
    ```
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -73,7 +73,7 @@ Exemple :
 
 
 Balise : 
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -168,7 +168,7 @@ Exemple :
 
 Balise : Si c'est une personne :
 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -181,7 +181,7 @@ Balise : Si c'est une personne :
 
 Autre option : Si c'est une maison d'édition (cumulable) :
 
-```
+```xml
 <sourceDesc>
      <source>
          <bibl>
@@ -218,7 +218,7 @@ Si c'est une personne :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -236,7 +236,7 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 Recommandations : 
 
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -259,7 +259,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Date de la première publication|PDT|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -283,7 +283,7 @@ Autre option :
 Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -312,7 +312,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de publication|PPP|
 
 Balise : 
-```
+```xml
 <sourceDesc>
    <source recordtype="c">
       <bibl>
@@ -330,7 +330,7 @@ Balise :
    </source>
    ```
 Exemple :
-```
+```xml
 <sourceDesc>
    <source recordtype="c">
       <bibl>
@@ -347,6 +347,7 @@ Exemple :
       </bibl>
    </source>
 ```
+
 <a id="PC_ref1"></a>
 
 ##### Numéro de catalogue de l'éditeur (ex. cotage)
@@ -375,7 +376,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT & SCA|
 
 Balise : 
-```
+```xml
 <work>
    <identifier auth.uri="http://...">
       ...
@@ -389,7 +390,7 @@ Recommandations :
 Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
 
 Exemple :
-```
+```xml
 <work>
    <identifier auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
       157
@@ -443,7 +444,7 @@ Autre option :
 Recommandations : J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
 
 Exemple :
-```
+```xml
 <source>
   <bibl>
       <composer>
@@ -468,7 +469,7 @@ Exemple :
 
 Balise : 
 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -481,7 +482,7 @@ Autre option :
 Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
 
 Exemple :
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -493,7 +494,7 @@ Exemple :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -544,7 +545,7 @@ Balise :
 </source>
 ```
 Autre option : 
-```
+```xml
 <manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
@@ -576,7 +577,7 @@ Autre option :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -631,7 +632,7 @@ Balise :
 </source>
 ```
 Autre option : 
-```
+```xml
 <manifestation recordtype="d">
    <identifier>
       <title>Le Roman de Fauvel</title>
@@ -663,7 +664,7 @@ Autre option :
 Recommandations : 
 
 Exemple :
-```
+```xml
 <source recordtype="d">
   <bibl>
      <physLoc>
@@ -697,7 +698,7 @@ Exemple :
  |[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|Document d'origine de l'édition électronique|YOR|
 
 Balise : 
-```
+```xml
 <fileDesc>
     <sourceDesc>
         <source>
@@ -739,7 +740,7 @@ Exemple :
 Balise : 
 
 !!! Il faut trouver un role adéquat
-```
+```xml
 <sourceDesc>
    <source>
       <biblStruct>
@@ -757,7 +758,7 @@ Balise :
 </sourceDesc>
 ```
 Autre option : 
-```
+```xml
 <sourceDesc>
    <source>
       <bibl>
@@ -788,7 +789,7 @@ Exemple :
 
 
 Balise : 
-```
+```xml
 <manifestationList>
    <manifestation>
       <availability>
@@ -800,7 +801,7 @@ Balise :
 </manifestationList>
 ```
 Exemple :
-```
+```xml
 <manifestationList>
    <manifestation>
       <availability>
@@ -821,7 +822,7 @@ Exemple :
 |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur du document d'origine|YOE|
 
 Balise : 
-```
+```xml
 <fileDesc>
    <sourceDesc>
       <bibl>
@@ -835,7 +836,7 @@ Balise :
 </fileDesc>
 ```
 Exemple :
-```
+```xml
 <fileDesc>
    <sourceDesc>
       <bibl>
