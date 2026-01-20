@@ -1,12 +1,12 @@
 ---
-title: Description de la source  &lt;SourceDesc &gt;
+title: Description de la source  &lt;SourceDesc&gt;
 layout: default
 nav_order: 6
 parent: Guideline
 
 ---
 
-# Description de la source <SourceDesc>
+# Description de la source &lt;SourceDesc&gt;
 ## a. Titre
 
 <a id="OTL_ref4"></a>

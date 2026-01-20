@@ -9,7 +9,7 @@ parent: Guideline
 
 ---
 
-# Description du fichier MEI encodé <fileDesc>
+# Description du fichier MEI encodé &lt;fileDesc&gt
 ## a. Titre
 
 <a id="OTL_ref1"></a>

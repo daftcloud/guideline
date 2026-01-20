@@ -6,7 +6,7 @@ parent: Guideline
 
 ---
 
-# Description de l'œuvre musicale <worklist>
+# Description de l'œuvre musicale &lt;worklist&gt;
 
 ## a. Titre
 
