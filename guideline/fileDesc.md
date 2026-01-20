@@ -97,7 +97,7 @@ Recommandations : La provenance de l’attribution doit être précisée à l'ai
 
 Exemple :
 ```xml
-<fileDesc xml:id="...">```
+<fileDesc xml:id="...">
    <titleStmt xml:id="...">
       <composer xml:id="..." evidence="..." (internal, external or conjecture)>
           <persName role="attributed creator" ("attributed composer"?) auth="..." auth.uri="http://..." codedval="...">...</persName>
