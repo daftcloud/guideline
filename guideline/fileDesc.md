@@ -9,7 +9,7 @@ parent: Guideline
 
 ---
 
-# Description du fichier MEI encodé &lt;fileDesc&gt
+# Description du fichier MEI encodé &lt;fileDesc&gt;
 ## a. Titre
 
 <a id="OTL_ref1"></a>
@@ -21,6 +21,7 @@ parent: Guideline
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre|≈ OTL|
+
 
 
 Balise :`<title type=main>`/`<title type="subordinate">`

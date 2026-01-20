@@ -3,11 +3,9 @@ title: Description de l'œuvre musicale &lt;worklist&gt;
 layout: default
 nav_order: 6
 parent: Guideline
-
 ---
 
 # Description de l'œuvre musicale &lt;worklist&gt;
-
 ## a. Titre
 
 <a id="OTL_ref2"></a>

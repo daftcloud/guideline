@@ -19,3 +19,8 @@ nav,
 .footer {
     display: none;
 }
+
+.md-break {
+  display: block;
+  height: 0;
+}
