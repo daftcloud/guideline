@@ -33,7 +33,13 @@ const outputPath = path.join(outputDir, "guideline.pdf");
       bottom: "2cm",
       left: "2cm",
       right: "2cm"
-   },
+    },
+  headerTemplate: `<div>Guideline MEI</div>`, // vide si pas d'en-tête
+  footerTemplate: `
+    <div style="width:100%; text-align:center; font-size:10px; color: #666;">
+      Page <span class="pageNumber"></span> / <span class="totalPages"></span>
+    </div>
+  `
 });
 
   await browser.close();
