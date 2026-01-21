@@ -41,7 +41,58 @@ print: true
   .print-toc a {
     text-decoration: none;
     color: black;
+    font-size: 18pt;
+
   }
+
+   .print-cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 3cm;
+  }
+
+  .cover-title {
+    font-size: 36pt;
+    margin-bottom: 0.5cm;
+  }
+
+  .cover-subtitle {
+    font-size: 16pt;
+    margin-bottom: 2cm;
+    opacity: 0.8;
+  }
+  
+  .cover-main-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto; 
+  }
+
+  #cover-image {
+    max-width: 8cm;
+    max-height: 4cm;
+    object-fit: contain;
+  }
+
+  
+  .footer-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5cm;
+    margin-top: 2cm;
+  }
+
+  .footer-images img {
+    max-height: 2.5cm;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+  }
+
     h1,
     h2,
     h3 {
@@ -112,6 +163,21 @@ print: true
 </style>
 
 {% assign pages = site.pages | sort: "nav_order" %}
+<section class="print-cover">
+
+  <h1 class="cover-title">Guideline MEI proposé par Musica2</h1>
+  <p class="cover-subtitle">recommandations d’encodage proposé par </p>
+  <div class="cover-main-logo">
+    <img id="cover-image" src="assets\images\musica2.png" alt="Musica2">
+  </div>
+  <div class="footer-images">
+    <img src="assets\images\HN_LOGO_COULEUR-RVB_Logo-scaled.jpg" alt="logo d'Huma-num">
+    <img src="assets\images\mshLorraine.png" alt="logo de la msh Lorraine">
+  </div>
+
+</section>
+
+<div class="page-break"></div>
 
 <section class="print-toc">
   <h1>Sommaire</h1>
