@@ -28,7 +28,6 @@ const outputPath = path.join(outputDir, "guideline.pdf");
     path: outputPath,
     format: "A4",
     printBackground: true,
-    displayHeaderFooter: true,
     margin: {
       top: "2cm",
       bottom: "2cm",
