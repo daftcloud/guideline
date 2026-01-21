@@ -1,11 +1,11 @@
 ---
-title: Description de l'œuvre musicale &lt;worklist&gt;
+title: Description de l'œuvre musicale &lt;workList&gt;
 layout: default
 nav_order: 6
 parent: Guideline
 ---
 
-# Description de l'œuvre musicale &lt;worklist&gt;
+# Description de l'œuvre musicale &lt;workList&gt;
 ## a. Titre
 
 <a id="OTL_ref2"></a>
