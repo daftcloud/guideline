@@ -3,6 +3,7 @@ title: Description de l'œuvre musicale &lt;workList&gt;
 layout: default
 nav_order: 6
 parent: Guideline
+permalink: /guideline/workList
 ---
 
 # Description de l'œuvre musicale &lt;workList&gt;
@@ -653,7 +654,7 @@ Exemple :
          <title type="subordinate" label="opus">28</title>
       <titlePart>
    </work>
-</worklist> 
+</workList> 
 ```
 
 <a id="AIN_ref1"></a>

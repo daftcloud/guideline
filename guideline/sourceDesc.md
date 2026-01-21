@@ -3,6 +3,7 @@ title: Description de la source  &lt;SourceDesc&gt;
 layout: default
 nav_order: 7
 parent: Guideline
+permalink: guideline/sourceDesc
 
 ---
 
