@@ -28,6 +28,7 @@ const outputPath = path.join(outputDir, "guideline.pdf");
     path: outputPath,
     format: "A4",
     printBackground: true,
+    displayHeaderFooter: true,
     margin: {
       top: "2cm",
       bottom: "2cm",
@@ -36,8 +37,12 @@ const outputPath = path.join(outputDir, "guideline.pdf");
     },
   headerTemplate: `<div>Guideline MEI</div>`, // vide si pas d'en-tête
   footerTemplate: `
-    <div style="width:100%; text-align:center; font-size:10px; color: #666;">
-      Page <span class="pageNumber"></span> / <span class="totalPages"></span>
+    <div style="
+    width:100%; 
+    text-align:center; 
+    font-size:10px; 
+    color: #666;">
+    Page <span class="pageNumber"></span> / <span class="totalPages"></span>
     </div>
   `
 });
