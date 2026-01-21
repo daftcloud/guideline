@@ -96,6 +96,18 @@ print: true
     opacity: 0.9;
   }
 
+  .print-page:not(:first-of-type)::after {
+    content: url('assets\images\musica2.png');
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 15cm;
+    height: auto;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+  }
     h1,
     h2,
     h3 {
