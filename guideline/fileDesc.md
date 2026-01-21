@@ -24,7 +24,7 @@ parent: Guideline
 
 
 
-Balise :`<title type=main>`/`<title type="subordinate">`
+`<title type=main>`/`<title type="subordinate">`
 
 Autre option : `<title>`
 
@@ -59,7 +59,7 @@ Recommandations : Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre d
 
 
 
-Balise :
+
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
       <composer xml:id="...">
@@ -93,7 +93,7 @@ Exemple :
 
 
 
-Balise : `<composer evidence="...">` 
+ `<composer evidence="...">` 
 
 Autre option : `<persName>`
 
@@ -125,7 +125,7 @@ Exemple :
  
  
 
- Balise : 
+  
  (ancienne propal)
  ```xml
 <fileDesc>
@@ -167,7 +167,7 @@ Exemple :
 
 
 
-Balise : 
+ 
 
 ```xml
 <fileDesc>
@@ -211,7 +211,7 @@ Exemple :
 
 
 
-Balise : 
+ 
 ```xml
 <fileDesc>
    <titleStmt>
@@ -247,7 +247,7 @@ Exemple :
 
 
 
-Balise : 
+ 
 ```xml
 <fileDesc>
    <pubStmt>
@@ -281,7 +281,7 @@ Exemple :
 
 
 
-Balise : 
+ 
 ```xml
 <revisionDesc>
    <change n="X">
@@ -319,7 +319,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.4.3 Revision Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerRevisionDescription){:target="_blank"}|Version de l'édition électronique|EEV|
 
-Balise : 
+ 
 ```xml
 <revisionDesc>
    <change n="X">
@@ -363,7 +363,7 @@ Exemple :
 
 
 
-Balise :
+
 
 ```xml
  <fileDesc>
@@ -396,7 +396,7 @@ Exemple (fictif) :
 
 
 
-Balise : 
+ 
 ```xml
 <classification>
    <termList>
@@ -423,7 +423,7 @@ Exemple :
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date de mise à disposition de l'édition électronique|YER|
 
 
-Balise : 
+ 
 ```xml
 <pubStmt>
    <availability>
@@ -461,7 +461,7 @@ Exemple :
 
 
 
-Balise : 
+ 
 ```xml
 <pubStmt>
    <availability>
@@ -506,7 +506,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Pays de copyright|YEN|
 
-Balise : 
+ 
 ```xml
 <pubStmt>
    <availability>
