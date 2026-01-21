@@ -9,77 +9,130 @@ print: true
 <style>
   @media print {
 
-  html, body {
-    background: #fff !important;
-    color: #000 !important;
-    font-family: serif;
-    font-size: 11pt;
-    line-height: 1.5;
-  }
+    html,
+    body {
+      background: #fff !important;
+      color: #000 !important;
+      font-family: serif;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
 
-  section.print-page {
+    section.print-page {
+      page-break-after: always;
+    }
+
+    section.print-page:last-child {
+      page-break-after: auto;
+    }
+  .print-toc {
     page-break-after: always;
   }
 
-  section.print-page:last-child {
-    page-break-after: auto;
+  .print-toc ul {
+    list-style: none;
+    padding-left: 0;
   }
 
-  h1 {
-    font-size: 24pt;
-    margin-top: 2cm;
-    margin-bottom: 1cm;
+  .print-toc li {
+    margin-bottom: 0.4em;
   }
 
-  h2 {
-    font-size: 18pt;
-    margin-top: 1.2cm;
-    margin-bottom: 0.6cm;
-  }
-
-  h3 {
-    font-size: 14pt;
-    margin-top: 0.8cm;
-    margin-bottom: 0.4cm;
-  }
-
-  p, li {
-    font-size: 11pt;
-    text-align: justify;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    font-size: 10pt;
-  }
-
-  th, td {
-    border: 1px solid #000;
-    padding: 0.3em 0.5em;
-    vertical-align: top;
-  }
-
-  a {
-    color: #000;
+  .print-toc a {
     text-decoration: none;
+    color: black;
   }
+    h1,
+    h2,
+    h3 {
+      break-after: avoid;
+      page-break-after: avoid;
+      break-before: avoid;
+      page-break-before: avoid;
+    }
 
-  nav, .sidebar, .footer {
-    display: none !important;
+    h1 {
+      font-size: 24pt;
+      margin-top: 2cm;
+      margin-bottom: 1cm;
+    }
+
+    h2 {
+      font-size: 18pt;
+      margin-top: 1.2cm;
+      margin-bottom: 0.6cm;
+    }
+
+    h3 {
+      font-size: 14pt;
+      margin-top: 0.8cm;
+      margin-bottom: 0.4cm;
+      orphans: 3;
+      widows: 3;
+    }
+
+    p,
+    li {
+      font-size: 11pt;
+      text-align: justify;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 10pt;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    th,
+    td {
+      border: 1px solid #000;
+      padding: 0.3em 0.5em;
+      vertical-align: top;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    nav,
+    .sidebar,
+    .footer {
+      display: none !important;
+    }
   }
-}
 </style>
 
 {% assign pages = site.pages | sort: "nav_order" %}
+
+<section class="print-toc">
+  <h1>Sommaire</h1>
+
+  <ul class="toc-level-1">
+    {% assign pages = site.pages | sort: "nav_order" %}
+    {% for p in pages %}
+    {% if p.nav_order and p.title and p.print != false and p.has_children != true %}
+    <li class="toc-h{{ p.level | default: 2 }}">
+      <a href="#{{ p.title | slugify }}">{{ p.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<div class="page-break"></div>
+
 {% for p in pages %}
-  {% if p.nav_order and p.title and p.url != "/print.html" and p.print != false  and p.has_children != true %}
-    <section class="print-page">
-      {{ p.content | markdownify}}
-      <div class="md-break"></div>
-    </section>
-  {% endif %}
+{% if p.nav_order and p.title and p.url != "/print.html" and p.print != false and p.has_children != true %}
+<section class="print-page" id="{{ p.title | slugify }}">
+  {{ p.content | markdownify }}
+  <div class="md-break"></div>
+</section>
+
+{% endif %}
 {% endfor %}
 
 - [ACO : Désignation de la collection](#A-GCO_ref1)
@@ -93,9 +146,11 @@ print: true
 - [CDL : Lieu (de naissance et) de décès d'un compositeur](#CBL_ref1)
 - [CDT : Dates de naissance et de décès du compositeur](#CDT_ref1)
 - [CNT : Nationalité du compostieur](#CNT-ref1)
-- [COA : Compositeur attribué à l'édition MEI encodée](#COA_ref1) / [COA : Compositeur attribué à l'œuvre musicale](#COA_ref2) 
+- [COA : Compositeur attribué à l'édition MEI encodée](#COA_ref1) / [COA : Compositeur attribué à l'œuvre
+musicale](#COA_ref2)
 - [COL : Alias ou pseudonyme du compositeur](#COL_ref1)
-- [COM : Compositeur de l'édition MEI encodée](#COM_ref1) / [COM : Compositeur de l'œuvre musicale](#COM_ref2) / [COM : Compositeur de la source utilisée pour l'édition digitale](#COM_ref3)
+- [COM : Compositeur de l'édition MEI encodée](#COM_ref1) / [COM : Compositeur de l'œuvre musicale](#COM_ref2) / [COM :
+Compositeur de la source utilisée pour l'édition digitale](#COM_ref3)
 - [COS : Compositeur soupçonné](#COS_ref1)
 - [EEV : Version de l'édition électronique](#EEV_ref1)
 - [EFL : Numéro du fichier électronique](#EFL_ref1)
@@ -130,7 +185,8 @@ print: true
 - [OPS : Numéro d'opus](#OPS_ref1)
 - [OSC : Numéro de scène](#OSC_ref1)
 - [OTA : Titre alternatif de l'œuvre](#OTA_ref1)
-- [OTL : Titre de l'édition MEI](#OTL_ref1) / [OTL : Titre de l'œuvre](#OTL_ref2) / [OTL : Titre de l'œuvre musicale](#OTL_ref3) / [OTL : Titre de la source](#OTL_ref4) 
+- [OTL : Titre de l'édition MEI](#OTL_ref1) / [OTL : Titre de l'œuvre](#OTL_ref2) / [OTL : Titre de l'œuvre
+musicale](#OTL_ref3) / [OTL : Titre de la source](#OTL_ref4)
 - [OTP : Titre courant de l'œuvre](#OTP_ref1)
 - [OVM : Volume](#OVM_ref1)
 - [PC# : Numéro de catalogue de l'éditeur](#PC_ref1)
@@ -147,7 +203,7 @@ print: true
 - [SMS : Titre du manuscrit](#SMS_ref1)
 - [TRN : Traducteur du texte](#TRN_ref1)
 - [TXL : Langue de la pièce encodée (si différente de la langue originale)](#TXL_ref1)
-- [TXO : Langue originale de l'œuvre](#TXO_ref1) 
+- [TXO : Langue originale de l'œuvre](#TXO_ref1)
 - [YEC : Date et propriétaire du copyright de l'édition électronique](#YEC_ref1)
 - [YEM : Licence](#YEM_ref1)
 - [YEN : Pays de copyright](#YEN_ref1)
