@@ -17,10 +17,8 @@ const outputPath = path.join(outputDir, "guideline.pdf");
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
     
   });
-  
+
   const page = await browser.newPage();
-  const css = fs.readFileSync(path.join(rootDir, 'assets', 'css', 'print.css'), 'utf8');
-  await page.addStyleTag({ content: css });
   
   
   await page.goto(url, { waitUntil: "networkidle0" });
