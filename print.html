@@ -46,10 +46,11 @@ print: true
   }
 
    .print-cover {
-    height: 100vh;
+    height: calc(297mm - 4cm); /*les 4cm correspondent aux marges indiqués dans generate-pdf.js*/
     display: flex;
     flex-direction: column;
-    padding: 2.5cm;
+    justify-content: space-between; /* Titre en haut, footer en bas */
+    padding: 2cm;
     page-break-after: always;
     break-after: page;
     page-break-inside: avoid;
@@ -70,7 +71,7 @@ print: true
   .cover-main-logo {
     display: flex;
     justify-content: center;
-    margin-bottom: auto; 
+    margin: 2cm 0;
   }
 
   #cover-image {
@@ -83,11 +84,9 @@ print: true
   .footer-images {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 1.5cm;
     page-break-inside: avoid;
     break-inside: avoid;
-    
   }
 
   .footer-images img {
@@ -176,8 +175,11 @@ print: true
   </div>
 
   <div class="footer-images">
-    <img src="assets\images\HN_LOGO_COULEUR-RVB_Logo-scaled.jpg" alt="logo d'Huma-num">
-    <img src="assets\images\mshLorraine.png" alt="logo de la msh Lorraine">
+    <img src="assets\images\HN_LOGO_COULEUR-RVB_Logo-scaled.jpg" alt="Logo d'Huma-num.">
+    <img src="assets\images\cnrs.png" alt="Logo du CNRS">
+    <img src="assets\images\mshLorraine.png" alt="Logo de la msh Lorraine">
+    <img src="assets\images\mei-logo-full-light.png" alt="Logo de la MEI. Logo crée par Craig Sapp.">
+
   </div>
 </section>
 
