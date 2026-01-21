@@ -49,9 +49,11 @@ print: true
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 3cm;
+    padding: 2.5cm;
+    page-break-after: always;
+    break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .cover-title {
@@ -83,8 +85,9 @@ print: true
     justify-content: center;
     align-items: center;
     gap: 1.5cm;
-    margin-top: 2cm;
-    page-break-before: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    
   }
 
   .footer-images img {
@@ -165,20 +168,18 @@ print: true
 
 {% assign pages = site.pages | sort: "nav_order" %}
 <section class="print-cover">
-
   <h1 class="cover-title">Guideline MEI</h1>
   <p class="cover-subtitle">recommandations d’encodage proposé par </p>
+
   <div class="cover-main-logo">
     <img id="cover-image" src="assets\images\musica2.png" alt="Musica2">
   </div>
+
   <div class="footer-images">
     <img src="assets\images\HN_LOGO_COULEUR-RVB_Logo-scaled.jpg" alt="logo d'Huma-num">
     <img src="assets\images\mshLorraine.png" alt="logo de la msh Lorraine">
   </div>
-
 </section>
-
-<div class="page-break"></div>
 
 <section class="print-toc">
   <h1>Sommaire</h1>
