@@ -12,25 +12,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Ajoute et gère le bouton Exporter en PDF
-  const btn = document.createElement("button");
-  btn.id = "export-pdf";
-  btn.className = "export-button";
 
-  const span= document.createElement("span");
-  span.textContent = "Exporter en PDF";
-  btn.appendChild(span);
+const btn = document.createElement("button");
+btn.id = "export-pdf";
+btn.className = "export-button nav-list-link";
 
-  const footerDiv = document.createElement("div");
-  footerDiv.className = "sidebar-footer";
-  footerDiv.appendChild(btn);
+const span = document.createElement("span");
+span.textContent = "Exporter en PDF";
+btn.appendChild(span);
 
-  const footerWrapper = document.querySelector(".d-md-block.d-none");
+const li = document.createElement("li");
+li.className = "nav-list-item";
+li.appendChild(btn);
 
-  if (footerWrapper && footerWrapper.parentNode) {
-    footerWrapper.parentNode.insertBefore(footerDiv, footerWrapper);
-  }
-  btn.addEventListener("click", () => 
-    window.location.href = "/guideline/assets/pdf/guideline.pdf")
+const mainNavList = document.querySelector("#site-nav > .nav-list");
+
+if (mainNavList) {
+  mainNavList.appendChild(li);
+}
+
+btn.addEventListener("click", () => {
+  window.location.href = "/guideline/assets/pdf/guideline.pdf";
+});
 
 
 
