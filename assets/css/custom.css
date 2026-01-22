@@ -9,20 +9,51 @@
   color: #be362a;
 }
 
-
-.export-button{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
-  margin-right: 1rem;
+/* Base des boutons */
+.export-button {
   cursor: pointer;
-  overflow: hidden;
-  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+/* bouton version desktop */
+.export-desktop {
+  margin: 1rem 1rem 1rem 2rem;
+  padding: 0.5rem 0.75rem;
   color: #29367c;
   border-radius: 6px;
-  position: relative;
-  background-image: linear-gradient(-90deg, rgb(242, 214, 145) 15%, rgba(242, 214, 145, 0.8) 40%, rgba(242, 214, 145, 0.6) 100%);
+  background-image: linear-gradient(
+    -90deg,
+    rgb(242, 214, 145) 15%,
+    rgba(242, 214, 145, 0.8) 40%,
+    rgba(242, 214, 145, 0.6) 100%
+  );
 }
+
+/* bouton version mobile */
+.export-mobile {
+  display: none;
+  margin-left: auto;
+  padding: 0.25rem;
+}
+
+.export-mobile .pdf-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* responsive */
+@media (max-width: 50rem) {
+  .export-desktop {
+    display: none;
+  }
+
+  .export-mobile {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
 
  .d-md-block {
   display: none !important;
