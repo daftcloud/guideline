@@ -9,40 +9,7 @@
   color: #be362a;
 }
 
-.export-button {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font: inherit;
-}
 
-.export-button .export-icon {
-  display: none;
-}
-
-.export-button.is-mobile {
-  padding: 0.25rem;
-}
-
-.export-button.is-mobile .export-text {
-  display: none;
-}
-
-.export-button.is-mobile .export-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-}
-
-.site-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-/*
 .export-button{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -56,7 +23,7 @@
   position: relative;
   background-image: linear-gradient(-90deg, rgb(242, 214, 145) 15%, rgba(242, 214, 145, 0.8) 40%, rgba(242, 214, 145, 0.6) 100%);
 }
-*/
+
  .d-md-block {
   display: none !important;
 }
