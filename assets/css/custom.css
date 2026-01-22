@@ -54,6 +54,10 @@
   }
 }
 
+/*couleur du bouton burger*/
+.icon{
+  color: #29367c;
+}
 
  .d-md-block {
   display: none !important;
