@@ -12,7 +12,7 @@
 .export-button{
  margin-right: 4rem;
   margin-bottom: 1rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   cursor: pointer;
   overflow: hidden;
   padding: 12px 24px;
@@ -40,7 +40,6 @@ a {
 
 .side-bar{
 background-color: #f3c144;
-width: calc(100% / 3);
 
 }
 
