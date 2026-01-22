@@ -11,52 +11,37 @@ document.addEventListener("DOMContentLoaded", function () {
     searchLabel.textContent = "Rechercher dans les guidelines MEI";
   }
 
-  // Ajoute et gère le bouton Exporter en PDF
+  // Ajoute et gère le bouton Exporter en PDF. Il y a deux boutons, un en dessous de la nav-list (navbtn) pour la version ordinateur et un à côté du menu burger pour la version mobile (mobtn).
 
-const btn = document.createElement("button");
-btn.id = "export-pdf";
-btn.className = "export-button nav-list-link";
-btn.setAttribute("aria-label", "Exporter en PDF");
+  const navbtn = document.createElement("button");
+  navbtn.id = "export-pdf";
+  navbtn.className = "export-button nav-list-link";
 
-btn.innerHTML = `
-  <span class="export-text">Exporter en PDF</span>
-  <svg class="export-icon" viewBox="0 0 24 24" aria-hidden="true">
-    <use xlink:href="#svg-download"></use>
-  </svg>
-`;
+  const navspan = document.createElement("span");
+  navspan.textContent = "Exporter en PDF";
+  navbtn.appendChild(navspan);
 
+  const li = document.createElement("li");
+  li.className = "nav-list-item";
+  li.appendChild(navbtn);
 
-btn.addEventListener("click", () => {
-  window.location.href = "/guideline/assets/pdf/guideline.pdf";
+  const mainNavList = document.querySelector("#site-nav > .nav-list");
+
+  if (mainNavList) {
+    mainNavList.appendChild(li);
+  }
+
+  navbtn.addEventListener("click", () => {
+    window.location.href = "/guideline/assets/pdf/guideline.pdf";
+
+    const mobtn = document.createElement("button");
+    mobtn.id = "export-pdf";
+    mobtn.className = "export-button site-header";
+
+    const mobspan = document.createElement("span");
+    mobspan.backgroundImage = "assets\images\PDF Download Icon Logo PNG - 3000x3000.png";
+    mobtn.appendChild(mobspan);
+    
+
+  });
 });
-
-const li = document.createElement("li");
-li.className = "nav-list-item";
-li.appendChild(btn);
-
-const mainNavList = document.querySelector("#site-nav > .nav-list");
-const siteHeader = document.querySelector(".site-header");
-
-// Fonction responsive
-function placeExportButton() {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    // MOBILE → à côté du burger
-    if (siteHeader && btn.parentNode !== siteHeader) {
-      siteHeader.appendChild(btn);
-    }
-    btn.classList.add("is-mobile");
-  } else {
-    // DESKTOP → dans la nav-list
-    if (mainNavList && btn.parentNode !== li) {
-      li.appendChild(btn);
-      mainNavList.appendChild(li);
-    }
-    btn.classList.remove("is-mobile");
-  }
-}
-
-placeExportButton();
-window.addEventListener("resize", placeExportButton);
-
-  }
-);
