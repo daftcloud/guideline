@@ -34,7 +34,6 @@
 .export-mobile {
   display: inline-flex;
   align-items: center;
-  order: 2;              /* avant le burger */
   margin-right: 0.5rem;
 }
 

@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (navList) navList.appendChild(li);
   
   /* Bouton Mobile */
+  const header = document.querySelector(".site-header");
   const mobBtn = document.createElement("button");
   const burger = header.querySelector(".menu-button");
   mobBtn.className = "export-button export-mobile";
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mobBtn.appendChild(icon);
 
-  const header = document.querySelector(".site-header");
+  
   if (header && burger) {
   header.insertBefore(mobBtn, burger);
 }
