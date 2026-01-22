@@ -47,10 +47,17 @@
   .export-desktop {
     display: none !important;
   }
+  
 
   .export-mobile {
     display: inline-flex;
     align-items: center;
+  }
+}
+
+@media (min-width: 50rem) {
+  .export-mobile {
+    display: none !important;
   }
 }
 
