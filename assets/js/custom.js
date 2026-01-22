@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   /* Bouton Mobile */
   const mobBtn = document.createElement("button");
+  const burger = header.querySelector(".menu-button");
   mobBtn.className = "export-button export-mobile";
   mobBtn.setAttribute("aria-label", "Exporter en PDF");
   mobBtn.onclick = () => window.location.href = pdfUrl;
@@ -42,5 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   mobBtn.appendChild(icon);
 
   const header = document.querySelector(".site-header");
-  if (header) header.appendChild(mobBtn);
+  if (header && burger) {
+  header.insertBefore(mobBtn, burger);
+}
 });
