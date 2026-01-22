@@ -41,10 +41,13 @@ a {
 
 .side-bar{
 background-color: #f3c144;
-max-width: 33%;
-
 }
 
+@media (min-width: 50rem) {
+.side-bar {
+  max-width: 33%;
+}
+}
 .site-title:hover {
   background-image: none;
 }
