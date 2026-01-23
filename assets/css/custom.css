@@ -1,5 +1,6 @@
 main::before {
-  background-image: href="{{ '/assets/images/musica2.png' | relative_url }}";
+  background: none;
+  background-image: url("/guideline/assets/images/musica2.png");
   background-repeat: no-repeat;  background-position: center;
   background-size: 60%;
   background-attachment: scroll;
