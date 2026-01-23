@@ -1,4 +1,5 @@
 main::before {
+background: none;
   background-image: href="{{ '/assets/images/musica2.png' | relative_url }}";
   background-repeat: no-repeat;  background-position: center;
   background-size: 60%;
