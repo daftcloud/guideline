@@ -1,9 +1,14 @@
+/*Musica2 en filigrane*/
 main::before {
-  background: none;
-  background-image: url("/guideline/assets/images/musica2.png");
-  background-repeat: no-repeat;  background-position: center;
-  background-size: 60%;
+ content: "";
+  position: absolute;
   background-attachment: scroll;
+  background-position: center;
+  inset: 0;
+  background: url("/guideline/assets/images/musica2.png") center / 60% no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .site-title.lh-tight {
