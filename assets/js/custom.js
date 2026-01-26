@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       footer.appendChild(logos);
     }
   }
+}
 
   target.appendChild(logos);
 
