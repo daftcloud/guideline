@@ -46,6 +46,19 @@ print: true
 
   }
 
+  /*Musica2 en filigrane*/
+  main::before {
+  content: "";
+  position: absolute;
+  background-attachment: scroll;
+  background-position: center;
+  inset: 0;
+  background: url("/guideline/assets/images/-filigrane.png") center / 60% no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
   /*Page de garde*/
 
    .print-cover {
@@ -173,22 +186,7 @@ print: true
 </style>
 
 {% assign pages = site.pages | sort: "nav_order" %}
-<section class="print-cover">
-  <h1 class="cover-title">Guideline MEI</h1>
-  <p class="cover-subtitle">recommandations d’encodage proposé par </p>
 
-  <div class="cover-main-logo">
-    <img id="cover-image" src="assets\images\musica2.png" alt="Musica2">
-  </div>
-
-  <div class="footer-images">
-    <img src="assets\images\HN_LOGO_COULEUR-RVB_Logo-scaled.jpg" alt="Logo d'Huma-num.">
-    <img src="assets\images\cnrs.png" alt="Logo du CNRS">
-    <img src="assets\images\mshLorraine.png" alt="Logo de la msh Lorraine">
-    <img src="assets\images\mei-logo-full-light.png" alt="Logo de la MEI. Logo crée par Craig Sapp.">
-
-  </div>
-</section>
 
 <section class="print-toc">
   <h1>Sommaire</h1>

@@ -1,11 +1,11 @@
 /*Musica2 en filigrane*/
 main::before {
- content: "";
+  content: "";
   position: absolute;
   background-attachment: scroll;
   background-position: center;
   inset: 0;
-  background: url("/guideline/assets/images/musica2.png") center / 60% no-repeat;
+  background: url("/guideline/assets/images/-filigrane.png") center / 60% no-repeat;
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
@@ -98,6 +98,20 @@ a {
 
 .side-bar{
 background-color: #f3c144;
+}
+
+.footer-logos {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logos img {
+  max-height: 50px;
+  width: auto;
 }
 /*
 @media (min-width: 50rem) {
