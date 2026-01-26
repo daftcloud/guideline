@@ -110,6 +110,15 @@ background-color: #f3c144;
   }
 }
 
+@media (min-width: 31.25rem) {
+  .footer-content {
+     margin-left: 0;
+  }
+  .d-md-block {
+  display: none !important;
+  }
+}
+
 .footer-content {
   position: fixed;
   margin-left: Max(16.5rem, calc((100% - 66.5rem) / 2 + 16.5rem));
