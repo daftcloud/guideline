@@ -125,14 +125,13 @@ background-color: #f3c144;
 .footer-logos {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   align-items: center;
   justify-items: center;
 }
 
 .footer-logos img {
-  max-height: 50px;
   width: auto;
 }
 
