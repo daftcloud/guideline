@@ -110,17 +110,16 @@ background-color: #f3c144;
     height: 220px;
   }
 
-  .site-content {
-    height: calc(100vh - 220px);
+  .main-content {
+    height: calc(100vh - 16rem);
   }
 }
 
 .footer-content {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
+  margin-left: Max(16.5rem, calc((100% - 66.5rem) / 2 + 16.5rem));
+  bottom: 0;  right: 0;
+  height: 16rem;
   padding: 1rem;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
   background: var(--body-background-color);
@@ -130,10 +129,10 @@ background-color: #f3c144;
 }
 
 .footer-logos {
-  margin-top: 1.2rem;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
   justify-items: center;
 }
