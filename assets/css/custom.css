@@ -11,6 +11,11 @@ main::before {
   z-index: 0;
 }
 
+.main-content {
+  height: calc(100vh - 180px); /*180 px correspond à la hauteur du footer*/
+  overflow-y: auto;
+}
+
 .site-title.lh-tight {
   white-space: normal;
   display: block;
@@ -100,13 +105,37 @@ a {
 background-color: #f3c144;
 }
 
+@media (max-width: 600px) {
+  .site-footer {
+    height: 220px;
+  }
+
+  .site-content {
+    height: calc(100vh - 220px);
+  }
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  padding: 1rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  background: var(--body-background-color);
+  border-top: 1px solid var(--border-color);
+
+  z-index: 100;
+}
+
 .footer-logos {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
   align-items: center;
+  justify-items: center;
 }
 
 .footer-logos img {
