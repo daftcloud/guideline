@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const navList = document.querySelector("#site-nav > .nav-list");
   if (navList) navList.appendChild(li);
-  
+
   /* Bouton Mobile */
   const header = document.querySelector(".site-header");
   const mobBtn = document.createElement("button");
@@ -43,8 +43,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mobBtn.appendChild(icon);
 
-  
+
   if (header && burger) {
-  header.insertBefore(mobBtn, burger);
-}
+    header.insertBefore(mobBtn, burger);
+  }
+
+  // Ajout des logos des institutions en dessous de la side bar.
+
+  const logos = document.querySelector(".footer-logos");
+  const target = document.querySelector(".d-md-block");
+  const footer = document.querySelector(".site-footer");
+
+  if (!logos || !target) return;
+
+  target.appendChild(logos);
+
+  function moveLogos() {
+    if (window.innerWidth >= 768) {
+      target.appendChild(logos);
+    } else {
+      footer.appendChild(logos);
+    }
+  }
+
+  moveLogos();
+  window.addEventListener("resize", moveLogos);
+
 });
