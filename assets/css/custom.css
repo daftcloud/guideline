@@ -75,12 +75,6 @@ main::before {
   }
 }
 
-@media (min-width: 50rem) {
-  .export-mobile {
-    display: none !important;
-  }
-}
-
 /*couleur du bouton burger*/
 .icon{
   color: #29367c;
@@ -108,9 +102,6 @@ background-color: #f3c144;
   .main-content {
     height: calc(100vh - 7rem);
   }
-}
-
-@media (min-width: 31.25rem) {
   .footer-content {
      margin-left: 0;
   }
