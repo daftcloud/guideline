@@ -106,7 +106,7 @@ background-color: #f3c144;
 }
 
 @media (max-width: 600px) {
-  .site-footer {
+  .footer-content {
     height: 220px;
   }
 
@@ -115,7 +115,7 @@ background-color: #f3c144;
   }
 }
 
-.site-footer {
+.footer-content {
   position: fixed;
   bottom: 0;
   left: 0;
