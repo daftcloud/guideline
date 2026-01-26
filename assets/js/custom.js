@@ -54,10 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const target = document.querySelector(".d-md-block");
   const footer = document.querySelector(".site-footer");
 
-  if (!logos || !target) return;
-
-  target.appendChild(logos);
-
+  if (logos && target && footer) {
   function moveLogos() {
     if (window.innerWidth >= 768) {
       target.appendChild(logos);
@@ -65,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
       footer.appendChild(logos);
     }
   }
+
+  target.appendChild(logos);
+
 
   moveLogos();
   window.addEventListener("resize", moveLogos);
