@@ -54,18 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const target = document.querySelector(".d-md-block");
   const footer = document.querySelector(".footer-content");
 
-  if (logos && target && footer) {
-  function moveLogos() {
-    if (window.innerWidth >= 768) {
-      target.appendChild(logos);
-    } else {
-      footer.appendChild(logos);
-    }
+ function moveLogos() {
+  if (!logos || !target || !footer) return;
+
+  if (window.innerWidth >= 768) {
+    target.appendChild(logos);
+  } else {
+    footer.appendChild(logos);
   }
 }
 
-
-  moveLogos();
-  window.addEventListener("resize", moveLogos);
+moveLogos();
+window.addEventListener("resize", moveLogos);
 
 });
