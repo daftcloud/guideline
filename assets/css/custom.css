@@ -61,6 +61,12 @@ main::before {
   margin-right: inherit;
 }
 
+@media (min-width: 50rem) {
+  .export-mobile {
+    display: none !important;
+  }
+}
+
 
 /* responsive */
 @media (max-width: 50rem) {
@@ -109,6 +115,19 @@ background-color: #f3c144;
   display: none !important;
   }
 }
+
+@media (min-width:800px) and (max-width:1063px){
+  .footer-content{
+    margin-left: Max(15.5rem, calc((100% - 66.5rem) / 2 + 15.5rem));
+  }
+}
+
+@media (min-width:1064px){
+  .footer-content{
+    margin-left: Max(16.5rem, calc((100% - 66.5rem) / 2 + 16.5rem));
+  }
+}
+
 
 .footer-content {
   position: fixed;
