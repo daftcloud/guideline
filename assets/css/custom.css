@@ -105,6 +105,16 @@ background-color: #f3c144;
     height: 220px;
   }
 
+  .footer-logos {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-logos img {
+  width: 10rem;
+}
+
+
+
   .main-content {
     height: calc(100vh - 7rem);
   }
