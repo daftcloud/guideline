@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const logos = document.querySelector(".footer-logos");
   const target = document.querySelector(".d-md-block");
-  const footer = document.querySelector(".site-footer");
+  const footer = document.querySelector(".footer-content");
 
   if (logos && target && footer) {
   function moveLogos() {
