@@ -103,6 +103,7 @@ background-color: #f3c144;
 @media (max-width: 800px) {
   .footer-content {
     height: 220px;
+    position: relative;
   }
 
   .footer-logos {
@@ -130,7 +131,7 @@ background-color: #f3c144;
   .footer-logos{
     grid-template-columns: repeat(2, 1fr);
   }
-}
+
 
 @media (min-width:1064px){
   .footer-content{

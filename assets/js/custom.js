@@ -64,8 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 }
 
-  target.appendChild(logos);
-
 
   moveLogos();
   window.addEventListener("resize", moveLogos);
