@@ -26,15 +26,15 @@ const url = `file://${path.join(rootDir, "_site", "print.html")}`;
 
 
   await page.pdf({
-    path: outputPath,
-    format: "A4",
-    printBackground: true,
-    margin: {
-      top: "2cm",
-      bottom: "2cm",
-      left: "2cm",
-      right: "2cm"
-    },
+  path: tempPdfPath, 
+  format: "A4",
+  printBackground: true,
+  margin: {
+    top: "2cm",
+    bottom: "2cm",
+    left: "2cm",
+    right: "2cm"
+  },
 });
 
   await browser.close();
