@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "puppeteer": "^24.15.0",
-    "pdf-lib": "^1.20.0"
+    "pdf-lib": "^1.17.1"
   }
 }
