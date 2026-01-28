@@ -135,6 +135,11 @@ background-color: #f3c144;
 
 
 @media (min-width:1064px){
+  .site-footer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 15vw;
+  }
   .footer-content{
     margin-left: Max(16.5rem, calc((100% - 66.5rem) / 2 + 16.5rem));
   }
