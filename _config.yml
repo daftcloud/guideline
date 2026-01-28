@@ -13,6 +13,6 @@ kramdown:
   input: GFM
   parse_block_html: true
 
-
+locale: fr_FR
 
 
