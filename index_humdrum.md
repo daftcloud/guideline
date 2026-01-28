@@ -19,7 +19,7 @@ nav_order: 10
  | CBL | Lieu de naissance (et de décès) d'un compositeur | [Dans la description de l'œuvre](guideline/workList.html#CBL_ref1) |
  | CDL | Lieu (de naissance et) de décès d'un compositeur | [Dans la description de l'œuvre](guideline/workList.html#CBL_ref1) |
  | CDT | Dates de naissance et de décès du compositeur | [Dans la description de l'œuvre](guideline/workList.html#CDT_ref1) |
- | CNT | Nationalité du compositeur | [Dans la description de l'œuvre](guideline/workList.html#CNT-ref1) |
+ | CNT | Nationalité du compositeur | [Dans la description de l'œuvre](guideline/workList.html#CNT_ref1) |
  | COA | Compositeur attribué | [Dans la description du fichier](guideline/fileDesc.html#COA_ref1) / [Dans la description de l'œuvre](guideline/workList.html#COA_ref2) |
  | COL | Alias ou pseudonyme du compositeur | [Dans la description de l'œuvre](guideline/workList.html#COL_ref1) |
  | COM | Compositeur | [Dans la description du fichier](guideline/fileDesc.html#COM_ref1) / [Dans la description de l'œuvre](guideline/workList.html#COM_ref2) / [Dans la description de la source](guideline/sourceDesc.html#COM_ref3) |
@@ -80,9 +80,9 @@ nav_order: 10
  | YEN | Pays de copyright | [Dans la description du fichier](guideline/fileDesc.html#YEN_ref1) |
  | YEP | Éditeur de l'édition électronique | [YEP : Éditeur](guideline/fileDesc.html#YEP_ref1) |
  | YER | Date de mise à disposition | [Dans la description du fichier](guideline/fileDesc.html#YER_ref1) |
- | YOE | Éditeur du document d'origine | [Dans la description de la source](guideline/sourceDesc.html#YOE-ref1) |
- | YOO | Propriétaire du document d'origine | [Dans la description de la source](guideline/sourceDesc.html#YOO-ref1) |
- | YOR | Document d'origine | [Dans la description de la source](guideline/sourceDesc.html#YOR-ref1) |
+ | YOE | Éditeur du document d'origine | [Dans la description de la source](guideline/sourceDesc.html#YOE_ref1) |
+ | YOO | Propriétaire du document d'origine | [Dans la description de la source](guideline/sourceDesc.html#YOO_ref1) |
+ | YOR | Document d'origine | [Dans la description de la source](guideline/sourceDesc.html#YOR_ref1) |
  | YOY | Année du copyright | [Dans la description de la source](guideline/sourceDesc.html#YOY_ref1) |
 
 
