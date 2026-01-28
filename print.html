@@ -9,6 +9,18 @@ print: true
 <style>
  @media print {
 
+    /*Musica2 en filigrane*/
+  main::before {
+   content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: url("/guideline/assets/images/musica2.png") center / 60% no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
     html,
     body {
       background: #ffffff !important;
@@ -45,17 +57,7 @@ print: true
 
   }
 
-  /*Musica2 en filigrane*/
-  main::before {
-  content: "";
-  position: absolute;
-  background-position: center;
-  inset: 0;
-  background: url("/guideline/assets/images/musica2.png") center / 60% no-repeat;
-  opacity: 0.08;
-  pointer-events: none;
-  z-index: 0;
-}
+
 
   /*Page de garde*/
 
