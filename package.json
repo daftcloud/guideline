@@ -5,6 +5,7 @@
     "build-pdf": "node generate-pdf.js"
   },
   "dependencies": {
-    "puppeteer": "^24.15.0"
+    "puppeteer": "^24.15.0",
+    "pdf-lib": "^1.20.0"
   }
 }
