@@ -151,6 +151,7 @@ background-color: #f3c144;
 
 .footer-content {
   position: fixed;
+  font-size: 0.8em;
   bottom: 0;  right: 0;
   height: 7rem;
   padding-left: 1rem;
