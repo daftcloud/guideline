@@ -1,4 +1,8 @@
 /*Musica2 en filigrane*/
+:root {
+  --sidebar-width: 16.5rem;
+}
+
 main::before {
   content: "";
   position: absolute;
@@ -98,12 +102,14 @@ a {
 
 .side-bar{
 background-color: #f3c144;
+width: var(--sidebar-width);
 }
 
 @media (max-width: 800px) {
   .footer-content {
     height: 220px;
     position: relative;
+    left: 0;
   }
 
   .footer-logos {
@@ -141,7 +147,7 @@ background-color: #f3c144;
     width: 15vw;
   }
   .footer-content{
-    margin-left: Max(16.5rem, calc((100% - 66.5rem) / 2 + 16.5rem));
+    left: var(--sidebar-width);
   }
   .footer-logos{
     grid-template-columns: repeat(2, 1fr);
@@ -154,6 +160,7 @@ background-color: #f3c144;
   bottom: 0;  right: 0;
   height: 7rem;
   padding-left: 1rem;
+  padding-right: 2 em;
   background: white;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 
