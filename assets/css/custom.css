@@ -16,6 +16,10 @@ main::before {
   overflow-y: auto;
 }
 
+.main-content-wrap {
+  flex:1;
+}
+
 .site-title.lh-tight {
   white-space: normal;
   display: block;
@@ -146,9 +150,11 @@ background-color: #f3c144;
 .footer-content {
   position: fixed;
   bottom: 0; 
+  padding-left: 1em;
+  padding-right: 1em;
   height: auto;
   background: white;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -2px rgba(0, 0, 0, 0.05);
 
   z-index: 100;
 }
