@@ -1,11 +1,23 @@
 /*Déclaration de variables*/
 
 html, body {
+  margin:0;
   height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 main {
-  position: relative;
+  display: flex; 
+  flex: 1 0 auto;
+}
+
+.main-content-wrap {
+  flex: 1;
 }
 
 .side-bar {
@@ -31,15 +43,13 @@ main::before {
 }
 
 .footer-content {
-  position: sticky;
-  bottom: 0;
   font-size: 0.8em;
-  height: 7rem;
-
-  padding: 0 1rem;
+  /*height: 7rem;*/
+  padding: 1rem;
   background: white;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-  z-index: 10;
+  margin-top: auto;
+  /*z-index: 10;*/
 }
 
 @media (max-width: 800px) {
