@@ -125,9 +125,6 @@ background-color: #f3c144;
 }
 
 @media (min-width:800px) and (max-width:1063px){
- /* .footer-content{
-    margin-left: Max(15.5rem, calc((100% - 66.5rem) / 2 + 15.5rem));
-  }*/
   .footer-logos{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -140,9 +137,6 @@ background-color: #f3c144;
     padding-right: 1rem;
     width: 15vw;
   }
-  /*.footer-content{
-    margin-left: Max(16.5rem, calc((100% - 66.5rem) / 2 + 16.5rem));
-  }*/
   .footer-logos{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -151,9 +145,8 @@ background-color: #f3c144;
 
 .footer-content {
   position: fixed;
-  bottom: 0;  right: 0;
-  height: 7rem;
-  /*padding-left: 1rem;*/
+  bottom: 0; 
+  height: auto;
   background: white;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
 
