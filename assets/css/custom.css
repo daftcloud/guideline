@@ -1,8 +1,23 @@
-/*Musica2 en filigrane*/
+/*Déclaration de variables*/
+
 :root {
   --sidebar-width: 16.5rem;
 }
 
+html, body {
+  height: 100%;
+}
+
+main {
+  position: relative;
+}
+
+.side-bar {
+  background-color: #f3c144;
+  width: var(--sidebar-width);
+}
+
+/*Musica2 en filigrane*/
 main::before {
   content: "";
   position: absolute;
@@ -16,8 +31,52 @@ main::before {
 }
 
 .main-content {
-  height: calc(100vh - 16rem ); /*180 px correspond à la hauteur du footer*/
+ flex: 1 0 auto;
   overflow-y: auto;
+}
+
+.footer-content {
+  position: sticky;
+  bottom: 0;
+  font-size: 0.8em;
+  height: 7rem;
+
+  padding: 0 1rem;
+  background: white;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+@media (max-width: 800px) {
+  .footer-content {
+    position: relative;
+    height: 220px;
+  }
+
+  .footer-logos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-logos img {
+    width: 10rem;
+  }
+   .d-md-block {
+  display: none !important;
+  }
+}
+
+.footer-logos {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 800px) {
+  .footer-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .site-title.lh-tight {
@@ -102,84 +161,8 @@ a {
 
 .side-bar{
 background-color: #f3c144;
-width: var(--sidebar-width);
 }
 
-@media (max-width: 800px) {
-  .footer-content {
-    height: 220px;
-    position: relative;
-    left: 0;
-  }
-
-  .footer-logos {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.footer-logos img {
-  width: 10rem;
-}
-  .main-content {
-    height: calc(100vh - 16rem);
-  }
-  .footer-content {
-     margin-left: 0;
-  }
-  .d-md-block {
-  display: none !important;
-  }
-}
-
-@media (min-width:800px) and (max-width:1063px){
-  .footer-content{
-    margin-left: Max(15.5rem, calc((100% - 66.5rem) / 2 + 15.5rem));
-  }
-  .footer-logos{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-@media (min-width:1064px){
-  .site-footer{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 15vw;
-  }
-  .footer-content{
-    left: var(--sidebar-width);
-  }
-  .footer-logos{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-.footer-content {
-  position: fixed;
-  font-size: 0.8em;
-  bottom: 0;  right: 0;
-  height: 7rem;
-  padding-left: 1rem;
-  padding-right: 2 em;
-  background: white;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
-
-  z-index: 100;
-}
-
-.footer-logos {
-  margin-top: 1rem;
-  display: grid;
-  
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.footer-logos img {
-  width: auto;
-}
 
 .site-title:hover {
   background-image: none;
