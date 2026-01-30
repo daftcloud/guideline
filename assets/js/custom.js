@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
  function moveLogos() {
   if (!logos || !target || !footer) return;
 
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 800) {
     target.appendChild(logos);
   } else {
     footer.appendChild(logos);
