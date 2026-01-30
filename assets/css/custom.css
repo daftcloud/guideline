@@ -148,21 +148,16 @@ background-color: #f3c144;
 
 
 .footer-content {
-  position: fixed;
-  bottom: 0; 
   padding-left: 1em;
   padding-right: 1em;
   height: auto;
   background: white;
   box-shadow: 0 -2px rgba(0, 0, 0, 0.05);
-
-  z-index: 100;
 }
 
 .footer-logos {
   margin-top: 1rem;
   display: grid;
-
   gap: 1rem;
   align-items: center;
   justify-items: center;
