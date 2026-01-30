@@ -61,7 +61,7 @@ topDiv.appendChild(footer);
   const target = document.querySelector(".d-md-block");
   const footerContent = document.querySelector(".footer-content");
 
- function moveLogos() {
+ /*function moveLogos() {
   if (!logos || !target || !footerContent) return;
 
   if (window.innerWidth >= 800) {
@@ -73,5 +73,5 @@ topDiv.appendChild(footer);
 
 moveLogos();
 window.addEventListener("resize", moveLogos);
-
+*/
 });
