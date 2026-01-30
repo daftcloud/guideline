@@ -1,9 +1,5 @@
 /*Déclaration de variables*/
 
-:root {
-  --sidebar-width: 16.5rem;
-}
-
 html, body {
   height: 100%;
 }
@@ -14,7 +10,6 @@ main {
 
 .side-bar {
   background-color: #f3c144;
-  width: var(--sidebar-width);
 }
 
 /*Musica2 en filigrane*/
