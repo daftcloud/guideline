@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     searchLabel.textContent = "Rechercher dans les guidelines MEI";
   }
 
+  // Déplacement du footer pour qu'il soit enfant direct 
+
+  const footer = document.querySelector('footer');
+  const topDiv = document.querySelector('#top.main');
+
+topDiv.appendChild(footer);
+
   // Ajoute et gère le bouton Exporter en PDF. Il y a deux boutons, un en dessous de la nav-list (navbtn) pour la version ordinateur et un à côté du menu burger pour la version mobile (mobtn).
 
   const pdfUrl = "/guideline/assets/pdf/guideline.pdf";
@@ -52,15 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const logos = document.querySelector(".footer-logos");
   const target = document.querySelector(".d-md-block");
-  const footer = document.querySelector(".footer-content");
+  const footerContent = document.querySelector(".footer-content");
 
  function moveLogos() {
-  if (!logos || !target || !footer) return;
+  if (!logos || !target || !footerContent) return;
 
   if (window.innerWidth >= 800) {
     target.appendChild(logos);
   } else {
-    footer.appendChild(logos);
+    footerContent.appendChild(logos);
   }
 }
 
