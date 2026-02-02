@@ -105,6 +105,19 @@ a {
 background-color: #f3c144;
 }
 
+.footer-logos {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer-logos img {
+  width: auto;
+}
+
 @media (max-width: 800px) {
   .footer-content {
     height: 220px;
@@ -156,17 +169,7 @@ background-color: #f3c144;
   box-shadow: 0 -2px rgba(0, 0, 0, 0.05);
 }
 
-.footer-logos {
-  margin-top: 1rem;
-  display: grid;
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-}
 
-.footer-logos img {
-  width: auto;
-}
 
 .site-title:hover {
   background-image: none;
