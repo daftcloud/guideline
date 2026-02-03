@@ -17,18 +17,18 @@ main::before {
 }
 
 .main-content {
-  height: calc(100vh - 16rem ); /*180 px correspond à la hauteur du footer*/
+  height: calc(100vh - 12rem ); 
   overflow-y: auto;
   padding-right: 1em;
-  padding-bottom: 0 !important;
+  padding-bottom: 2 !important;
   mask-image: linear-gradient(
     to bottom,
-    black 85%,
+    black 95%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 85%,
+    black 95%,
     transparent 100%
   );
 }
@@ -148,9 +148,6 @@ background-color: #f3c144;
 .footer-logos img {
   width: 10rem;
 }
-  .main-content {
-    height: calc(100vh - 16rem);
-  }
   .footer-content {
      margin-left: 0;
   }
