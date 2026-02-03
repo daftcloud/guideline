@@ -37,7 +37,7 @@ En MEI, dans la partie &lt;fileDesc&gt;, on constate des usages nombreux et dive
 ```
 <p style="text-align:justify;">
 
-Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir [Titre alternatif de l'œuvre](guideline/workList.html#OTA_ref1).
+Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir [Titre alternatif de l'œuvre](guideline/workList.html#OTA_ref1)).
 </p>
 
 ## b. Compositeur
@@ -118,8 +118,6 @@ Il est possible de préciser la provenance de l’attribution d'un compositeur �
 </fileDesc>
 ```
  
-
-
 ```xml
 <fileDesc>
   <titleStmt>
@@ -179,22 +177,7 @@ Il est possible de préciser la provenance de l’attribution d'un compositeur �
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Encodeur de l'édition électronique|ENC|
 
-
-
  
-```xml
-<fileDesc>
-   <titleStmt>
-      <respStmt>
-         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="..." codedval="...">XXX</persName>
-      </respStmt>
-   </titleStmt>
-</fileDesc>
-```
-
- 
-
-
 ```xml
 <fileDesc>
    <titleStmt>
@@ -214,8 +197,6 @@ Il est possible de préciser la provenance de l’attribution d'un compositeur �
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date d'encodage de l'édition électronique|END|
-
-
 
  
 ```xml
@@ -248,8 +229,6 @@ Autre option :
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.3 Revision Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerRevisionDescription){:target="_blank"}|Modification du document électronique|EMD|
-
-
 
  
 ```xml
@@ -330,9 +309,6 @@ Autre option :
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Numéro du fichier électronique|EFL|
-
-
-
 
 
 ```xml
@@ -453,19 +429,6 @@ Autre option :
 </pubStmt>
 ```
 
-```xml
-<pubStmt>
-   <availability>
-     <useRestrict>
-        <persName>...</persName>
-        <corpName>...</corpName>
-        <date isodate="2024">2024</date>
-        <head>Licence</head>
-        <p>CC-BY-NC</p>
-     </useRestrict>
-   </availability>
-</pubStmt>
-```
 
 <a id="YEN_ref1"></a>
 
@@ -492,18 +455,4 @@ Autre option :
 </pubStmt>
 ```
 
-```xml
-<pubStmt>
-   <availability>
-     <useRestrict>
-        <persName>...</persName>
-        <corpName>...</corpName>
-        <country>France</country>
-        <date isodate="2024">2024</date>
-        <head>Licence</head>
-        <p>CC-BY-NC</P>
-     </useRestrict>
-   </availability>
-</pubStmt>
-```
 
