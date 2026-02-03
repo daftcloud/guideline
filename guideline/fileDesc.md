@@ -46,8 +46,6 @@ Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granu
 
 ### Compositeur de l'édition MEI encodée
 
-
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
@@ -60,7 +58,7 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
        <composer xml:id="...">
-          <persName role="creator" auth="..." auth.uri="http://..." codedval="...">...</persName>
+          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
        </composer>
    </titleStmt>
 </fileDesc>
@@ -75,18 +73,19 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.|COA|
 
 <p style="text-align:justify;">
-La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
+Il est possible de préciser la provenance de l’attribution d'un compositeur à l'aide de l'attribut @evidence et des valeurs suivantes : "internal", "external" ou "conjecture".  
 </p>
 
 ```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
-      <composer xml:id="..." evidence="..." (internal, external or conjecture)>
-          <persName role="attributed creator" ("attributed composer"?) auth="..." auth.uri="http://..." codedval="...">...</persName>
+      <composer xml:id="...">
+          <persName evidence="..."(internal, external ou conjecture) role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
       </composer>
    </titleStmt>
 </fileDesc>
 ```
+
 ## c. Informations liées à l'édition
 
 <a id="YEP_ref1"></a>
@@ -100,8 +99,6 @@ La provenance de l’attribution doit être précisée à l'aide de l'attribut @
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de l'édition électronique |YEP|
  
  
-
-  
  (ancienne propal)
  ```xml
 <fileDesc>
@@ -136,14 +133,10 @@ La provenance de l’attribution doit être précisée à l'aide de l'attribut @
 ### Date et propriétaire du copyright de l'édition électronique
 
 
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date et propriétaire du copyright de l'édition électronique|YEC|
 
-
-
- 
 
 ```xml
 <fileDesc>
@@ -158,6 +151,7 @@ La provenance de l’attribution doit être précisée à l'aide de l'attribut @
    </pubStmt>
 </fileDesc>
 ```
+
 <p style="text-align:justify;">
  La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise <date> est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
@@ -353,7 +347,6 @@ Autre option :
  Lorsque le fichier mei que nos encodons fait parti d'une suite de fichier, nous recommandons d'indiquer les informations concernant cette suite dans l'élément seriesStmt inclus dans fileDesc.
 </p>
 
-Exemple (fictif) :
 ```xml
 <seriesStmt @precedes="Bieber_Sonates_du_Rosaire/Ascension.mei" @follows="Bieber_Sonates_du_Rosaire/Crucifixion.mei">
       <title>Les Sonates du Rosaire</title>

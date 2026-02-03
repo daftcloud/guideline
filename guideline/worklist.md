@@ -25,10 +25,10 @@ permalink: /guideline/workList
 Autre option : `<title>`
 
 <p style="text-align:justify;"> 
-Recommandations : Les deux exemples ci-dessous explicitent l'inscription du titre de l'œuvre dans un premier temps au niveau de l'œuvre elle-même, puis au niveau de son expression.
+ Les deux exemples ci-dessous explicitent l'inscription du titre de l'œuvre dans un premier temps au niveau de l'œuvre elle-même, puis au niveau de son expression.
 </p>
 
-Exemples :
+
 ```xml
 "<workList xml:id="...">
    <work xml:id="...">
@@ -67,7 +67,7 @@ Exemples :
 Autre option : -
 
 <p style="text-align:justify;"> 
-Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+ Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
 </p>
 
 
@@ -118,7 +118,7 @@ Titre simple d'une œuvre :
 Autre option : -
 
 <p style="text-align:justify;"> 
-Recommandations : Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
+ Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
 </p>
 
 
@@ -151,7 +151,7 @@ Recommandations : Le titre courant peut facilement se confondre avec le titre al
 Autre option, en fonction du contexte : `<title type="subordinate">`; `<title type="abbreviated">`; `<title type="translated">`; `<title type="uniform">`; `<title type="desc">`
 
 <p style="text-align:justify;"> 
-Recommandations : Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
+ Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
 </p>
 
 
@@ -187,7 +187,7 @@ Recommandations : Comme dit plus haut, l'attribut "alternative" demeure le plus 
 Autre option : 
 
 <p style="text-align:justify;"> 
-Recommandations : Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
+ Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
 </p>
 
 
@@ -218,19 +218,18 @@ Recommandations : Comme dit précédemment, si diverses formes de titre sont ret
 
  `<composer>`
 
-Autre option : `<persName role="creator">`
+Autre option : `<persName role="composer">`
 
 <p style="text-align:justify;"> 
-Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 </p>
 
 
-Exemples :
 ```xml
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="...">
-          <persName role="creator" ("composer") auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">...</persName>
+          <persName role="composer" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">...</persName>
       </composer>
    </work>
 </workList>
@@ -242,7 +241,7 @@ Exemples :
       <expressionList xml:id="...">  
         <expression xml:id="...">
           <composer xml:id="...">
-            <persName role="creator" ("composer"?) auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..." >...</persName>
+            <persName role="composer" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..." >...</persName>
           </composer>
         </expression>
       </expressionList>
@@ -250,9 +249,6 @@ Exemples :
 </workList>
 ```
 
-Dans le cas de plusieurs compositeurs, recourir à une numération dans le cadre de role ou de l'xml id. Ex :
-
-`<persName role="creator1">`
 
 <a id="COA_ref2"></a>
 
@@ -269,7 +265,7 @@ Dans le cas de plusieurs compositeurs, recourir à une numération dans le cadre
 Autre option : `<persName>`
 
 <p style="text-align:justify;"> 
-Recommandations : La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
+ La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
 </p>
 
 
@@ -298,16 +294,16 @@ Recommandations : La provenance de l’attribution doit être précisée à l'ai
 Autre option : `<persName>`
 
 <p style="text-align:justify;"> 
-Recommandations : Il est conseillé d’utiliser l’attribut @cert pour indiquer le degré de certitude. Les valeurs autorisées sont : high, 
-medium, low ou unknown.
+ Il est conseillé d’utiliser l’attribut @cert pour indiquer le degré de certitude. Les valeurs autorisées sont : high, 
+medium, low ou unknown. (?Est-il pertinent de mettre le degré de certitude dans la balise composer? Dans la balise persName, si on fait une récupération de tous les persName, on garde le niveau de certitude.)
 </p>
 
-Exemple:
+
 ```xml
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="..." cert="low">
-          <persName role="suspected creator" auth="..." auth.uri="http://..." codedval="...">Nom soupçonné</persName>
+          <persName role="composer" cert="low" auth="..." auth.uri="http://..." codedval="...">Nom soupçonné</persName>
       </composer>
    </work>
 </workList>
@@ -327,7 +323,7 @@ Exemple:
 Autre option : `<foreName>` et `<famName>`
 
 <p style="text-align:justify;"> 
-Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de `<foreName>`.
+ Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de `<foreName>`.
 </p>
 
 
@@ -335,7 +331,7 @@ Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plu
 <workList xml:id="...">
    <work xml:id="...">
       <composer xml:id="...">
-          <persName role="creator" auth="..." auth.uri="http://..." codedval="...">Nom réel</persName>
+          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">Nom réel</persName>
           <persName>
             <foreName>Alias</foreName>
           </persName>  
@@ -359,7 +355,7 @@ Recommandations : Peut être utilisé pour les noms d’emprunt, les noms de plu
  `<persName>` avec les attributs @startdate et @enddate.
 
 <p style="text-align:justify;"> 
-Recommandations : Peut être omis si le compositeur est référencé avec une URI externe.
+ Peut être omis si le compositeur est référencé avec une URI externe.
 </p>
 
 
@@ -387,7 +383,7 @@ Recommandations : Peut être omis si le compositeur est référencé avec une UR
  `<annot>` 
 
 <p style="text-align:justify;"> 
-Recommandations : Peut être omis si le compositeur est référencé avec une URI externe.
+ Peut être omis si le compositeur est référencé avec une URI externe.
 </p>
 
 
@@ -416,7 +412,7 @@ Recommandations : Peut être omis si le compositeur est référencé avec une UR
  `<persName>` et `<date>` avec les attributs @startdate et @enddate.
 
 <p style="text-align:justify;"> 
-Recommandations : Peut être omis si le compositeur est référencé avec un URI externe. Il est conseillé d'utiliser un URI, via @auth.uri, pour préciser le lieu. Nous préconisons l'usage d'un URI GeoNames.  
+ Peut être omis si le compositeur est référencé avec un URI externe. Il est conseillé d'utiliser un URI, via @auth.uri, pour préciser le lieu. Nous préconisons l'usage d'un URI GeoNames.  
 </p>
 
 
@@ -471,7 +467,7 @@ Autre option : `<persName role="librettist">`
 
 Autre option : `<persName role="arranger">`
 
-Recommandations : Suivant les guidelines MEI pour `<arranger>`, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
+ Suivant les guidelines MEI pour `<arranger>`, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
 
 
 ```xml
@@ -501,7 +497,7 @@ Définition :
 
 Autre option : `<persName role="orchestrator">`
 
-Recommandations : Comme dit ci-dessus, `<arranger>` représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ Comme dit ci-dessus, `<arranger>` représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
 
 ```xml
@@ -528,7 +524,7 @@ Recommandations : Comme dit ci-dessus, `<arranger>` représente uniquement le se
 
 Autre option : -
 
-Recommandations : `<langUsage>` contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
+ `<langUsage>` contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
 
 Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
 
@@ -555,7 +551,7 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 
 Autre option : -
 
-Recommandations : En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du `<ProfilDesc>` de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise `<langUsage>` trouve véritablement son sens en permettant de lister plusieurs langues. 
+ En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du `<ProfilDesc>` de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise `<langUsage>` trouve véritablement son sens en permettant de lister plusieurs langues. 
 
 En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie `<music>`, dans `<verse>` ou `<syl>` à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
 
@@ -585,7 +581,7 @@ Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : `
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : `<respStmt>`/`<persName>`
 
-Recommandations : Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
+ Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
 
 
 ```xml
@@ -601,7 +597,7 @@ Recommandations : Renseigner la personne responsable de la traduction d'une œuv
    </work>
 </workList>
 ```
-Recommandations : Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<workList>`), via @resp. 
+ Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<workList>`), via @resp. 
 
 Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 
@@ -642,7 +638,7 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 
 Autre option : `<identifier label="opus">`
 
-Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre de l'œuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
+ Nous envisageons le numéro d'opus comme un syntagme du titre de l'œuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
 
 
 ```xml
@@ -673,7 +669,7 @@ Recommandations : Nous envisageons le numéro d'opus comme un syntagme du titre 
    </perfResList>
 </perfMedium>
 ```
-Recommandations : 
+ 
 Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans l'élément perfRes.
 
 
@@ -722,7 +718,7 @@ Autre option :
 
 ```
 
-Recommandations : S'il est bien question d'une précision au sein de `<music>` : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
+ S'il est bien question d'une précision au sein de `<music>` : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
 
 
 ```
@@ -763,7 +759,7 @@ Autre option :
    </mdiv>
 </body>
 ```
-Recommandations : 
+ 
 
 
 ```
@@ -793,7 +789,7 @@ Autre option :
    </mdiv>
 </body>
 ```
-Recommandations : Même commentaire que ci-dessous. Pour le numéro, nous pourrions ajouter dans les différents éléments @n.
+ Même commentaire que ci-dessous. Pour le numéro, nous pourrions ajouter dans les différents éléments @n.
 
 
 ```
@@ -823,7 +819,7 @@ Autre option :
    </mdiv>
 </body> 
 ```
-Recommandations : S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans `<music>` à l'aide de `<mdiv>`. 
+ S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans `<music>` à l'aide de `<mdiv>`. 
 
 
 ```
@@ -853,7 +849,7 @@ bibliStruc/imprint/respStmt/persName
 ```
 Autre option : 
 
-Recommandations :
+
 
  L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "sponsor"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
@@ -893,7 +889,7 @@ Recommandations :
 ```
 Autre option : 
 
-Recommandations :
+
 
  Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
@@ -945,7 +941,7 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
    </work>
 <workList>   
 ```
-Recommandations : 
+ 
 
 
 ```xml
@@ -974,7 +970,7 @@ Recommandations :
 
 Autre option : 
 
-Recommandations : La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+ La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 
 ```xml
@@ -1008,7 +1004,7 @@ Définition :
 
 Autre option : 
 
-Recommandations : 
+ 
 
 
 ```xml
@@ -1138,7 +1134,7 @@ Recommandations :
 ```
 Autre option : 
 
-Recommandations : En MEI, le mode se désigne dans `<key>`, donc dans `<work>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
+ En MEI, le mode se désigne dans `<key>`, donc dans `<work>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
 
 
 ```xml
@@ -1168,7 +1164,7 @@ Recommandations : En MEI, le mode se désigne dans `<key>`, donc dans `<work>` o
 
 Autre option : 
 
-Recommandations : 
+ 
 
 
 ```
@@ -1193,7 +1189,7 @@ Recommandations :
 ```
 Autre option : 
 
-Recommandations : Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
+ Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
 
 
 ```xml
@@ -1222,7 +1218,7 @@ Recommandations : Selon les besoins, un élément notesStmt peut se trouver dans
 
 Autre option : 
 
-Recommandations : Je ne crois pas que cela soit nécessaire dans un header d'une édition critique.
+ Je ne crois pas que cela soit nécessaire dans un header d'une édition critique.
 
 
 ```xml
@@ -1251,7 +1247,7 @@ Recommandations : Je ne crois pas que cela soit nécessaire dans un header d'une
       </perfRes>
 </perfMedium>
 ```
-Recommandations : 
+ 
 
 
 ```xml
@@ -1278,7 +1274,7 @@ Recommandations :
       </perfRes>
 </perfMedium>
 ```
-Recommandations : Le niveau de certitude accordé à l'interprète peut être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+ Le niveau de certitude accordé à l'interprète peut être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 
 ```xml
@@ -1331,7 +1327,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
    </work>
 </workList>
 ```
-Recommandations : Selon la typologie du projet, on va indiquer les informations concernant la représentation dans WorkList ou dans expressionList.
+ Selon la typologie du projet, on va indiquer les informations concernant la représentation dans WorkList ou dans expressionList.
 La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 
@@ -1401,7 +1397,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
 </workList>
 ```
 
-Recommandations : 
+ 
 
 
 ```xml
@@ -1448,7 +1444,7 @@ Recommandations :
    </event>
 </eventList>
 ```
-Recommandations : 
+ 
 
 
 ```
@@ -1497,7 +1493,7 @@ Recommandations :
 ```
 Autre option : 
 
-Recommandations : La date de la première exécution d'une œuvre est à situé, a minima, au niveau de workList, dans une balise `<event>` dont l'attribut @type prend pour valeur « premiere ». 
+ La date de la première exécution d'une œuvre est à situé, a minima, au niveau de workList, dans une balise `<event>` dont l'attribut @type prend pour valeur « premiere ». 
 La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 
@@ -1535,7 +1531,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
    </expressionList>
 </work>
 ```
-Recommandations : 
+ 
 Les œuvres associées sont, au sens du modèle FRBR, des expressions différentes d'une œuvre. S'il est besoin de renseigner les informations concernant les autres expressions d'une œuvre, ces renseignements se situeront dans un élément expression dédié à chaque œuvre associée.
 
 
@@ -1568,7 +1564,7 @@ Les œuvres associées sont, au sens du modèle FRBR, des expressions différent
 
 Autre option : 
 
-Recommandations : La collection concerne les manifestations dans le modèles FRBR. C'est une manifestation précise qui fait partie d'une "collection". Cela peut aussi être l'item ou la source.
+ La collection concerne les manifestations dans le modèles FRBR. C'est une manifestation précise qui fait partie d'une "collection". Cela peut aussi être l'item ou la source.
 ```xml
 <sourceDesc>
 <source>
