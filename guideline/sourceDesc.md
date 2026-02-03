@@ -19,15 +19,15 @@ permalink: guideline/sourceDesc
  | :--------------- |:---------------:| -----:|
  |Titre de la source.|[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|OTL|
 
-Balise :`<title>`
+`<title>`
 
 Autre option : -
 
 <p style="text-align:justify;"> 
-Recommandations : Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+ Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
 </p>
 
-Exemple :
+
 ```
 "<sourceDesc xml:id=""..."">
    <source xml:id=""..."">
@@ -48,7 +48,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|PTL|
 
 
-Balise : 
+ 
 ```xml
 <sourceDesc>
    <source>
@@ -59,7 +59,7 @@ Balise :
    </source>
    ```
 
-Exemple :
+
 ```xml
 <sourceDesc>
    <source>
@@ -79,7 +79,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre du manuscrit|SMS|
 
 
-Balise : 
+ 
 ```xml
 <source recordtype="d">
   <bibl>
@@ -143,15 +143,15 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
 
-Balise : `<composer>`
+ `<composer>`
 
 Autre option : `<persName role="creator">`
 
 <p style="text-align:justify;"> 
-Recommandations : Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
+ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 </p>
 
-Exemple :
+
 
 ```xml
 "<sourceDesc xml:id=""..."">
@@ -174,7 +174,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de la source utilisée pour l'édition digitale|PED|
 
-Balise : Si c'est une personne :
+ Si c'est une personne :
 
 ```xml
 <sourceDesc>
@@ -202,9 +202,9 @@ Autre option : Si c'est une maison d'édition (cumulable) :
      </source>
 ```
 
-Recommandations : 
+ 
 
-Exemple :
+
 ```xml
 Si c'est une personne :
 <sourceDesc>
@@ -225,7 +225,7 @@ Si c'est une personne :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
 
-Balise : 
+ 
 ```xml
 <sourceDesc>
    <source>
@@ -241,9 +241,9 @@ Balise :
 ```
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
 
-Recommandations : 
+ 
 
-Exemple :
+
 ```xml
 <sourceDesc>
    <source>
@@ -266,7 +266,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Date de la première publication|PDT|
 
-Balise : 
+ 
 ```xml
 <sourceDesc>
    <source>
@@ -289,10 +289,10 @@ Balise :
 Autre option : 
 
 <p style="text-align:justify;"> 
-Recommandations : La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
 
-Exemple :
+
 ```xml
 <sourceDesc>
    <source>
@@ -321,7 +321,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de publication|PPP|
 
-Balise : 
+ 
 ```xml
 <sourceDesc>
    <source recordtype="c">
@@ -339,7 +339,7 @@ Balise :
       </bibl>
    </source>
    ```
-Exemple :
+
 ```xml
 <sourceDesc>
    <source recordtype="c">
@@ -366,13 +366,13 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue de l'éditeur (ex. cotage){:target="_blank"}|PC#|
 
-Balise : 
+ 
 
 Autre option : 
 
-Recommandations : 
+ 
 
-Exemple :
+
 ```
 
 ```
@@ -385,7 +385,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT et SCA|
 
-Balise : 
+ 
 ```xml
 <work>
    <identifier auth.uri="http://...">
@@ -397,10 +397,10 @@ Balise :
 Autre option : 
 
 <p style="text-align:justify;"> 
-Recommandations : Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
+ Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
 </p>
 
-Exemple :
+
 ```xml
 <work>
    <identifier auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
@@ -417,13 +417,13 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro|ONM|
 
-Balise : 
+ 
 
 Autre option : 
 
-Recommandations : 
+ 
 
-Exemple :
+
 ```
 ```
 
@@ -435,7 +435,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Volume|OVM|
 
-Balise :
+
 ```xml
  <source>
   <bibl>
@@ -453,10 +453,10 @@ Balise :
 Autre option : 
 
 <p style="text-align:justify;"> 
-Recommandations : J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
+ J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
 </p>
 
-Exemple :
+
 ```xml
 <source>
   <bibl>
@@ -480,7 +480,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|État de publication (ex. publié, pas encore publié, en cours de publication){:target="_blank"}|PUB|
 
-Balise : 
+ 
 
 ```xml
 <sourceDesc>
@@ -493,10 +493,10 @@ Balise :
 Autre option : 
 
 <p style="text-align:justify;"> 
-Recommandations : En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
+ En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
 </p>
 
-Exemple :
+
 ```xml
 <sourceDesc>
    <source>
@@ -506,9 +506,9 @@ Exemple :
    </source>
 ```
 
-Recommandations : 
+ 
 
-Exemple :
+
 ```xml
 <source recordtype="d">
   <bibl>
@@ -538,7 +538,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de conservation du manuscrit|SML|
 
-Balise :
+
 ```xml
  <source recordtype="d">
   <bibl>
@@ -591,9 +591,9 @@ Autre option :
    </itemList>
 ```
 
-Recommandations : 
+ 
 
-Exemple :
+
 ```xml
 <source recordtype="d">
   <bibl>
@@ -623,7 +623,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Info sur l'accès au manuscrit|SMA|
 
-Balise :
+
 ```xml
  <source recordtype="d">
   <bibl>
@@ -679,9 +679,9 @@ Autre option :
       </item>
    </itemList>
 ```
-Recommandations : 
+ 
 
-Exemple :
+
 ```xml
 <source recordtype="d">
   <bibl>
@@ -715,7 +715,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|Document d'origine de l'édition électronique|YOR|
 
-Balise : 
+ 
 ```xml
 <fileDesc>
     <sourceDesc>
@@ -741,11 +741,11 @@ Autre option :
 ```
 
 <p style="text-align:justify;"> 
-Recommandations : 
+ 
 Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>\<imprint>` contenant toutes les informations en lien avec la source.
 </p>
 
-Exemple :
+
 
 
 <a id="YOO_ref1"></a>
@@ -756,7 +756,7 @@ Exemple :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Propriétaire du document d'origine|YOO|
 
-Balise : 
+ 
 
 !!! Il faut trouver un role adéquat
 ```xml
@@ -793,10 +793,10 @@ Autre option :
 ```
 
 <p style="text-align:justify;"> 
-Recommandations : recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, bibl est plus libre. À voir.
+ recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, bibl est plus libre. À voir.
 </p>
 
-Exemple :
+
 
 
 <a id="YOY_ref1"></a>
@@ -808,7 +808,7 @@ Exemple :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Année du copyright originale|YOY|
 
 
-Balise : 
+ 
 ```xml
 <manifestationList>
    <manifestation>
@@ -820,7 +820,7 @@ Balise :
    </manifestation>
 </manifestationList>
 ```
-Exemple :
+
 ```xml
 <manifestationList>
    <manifestation>
@@ -841,7 +841,7 @@ Exemple :
 | :--------------- |:---------------:| -----:|
 |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur du document d'origine|YOE|
 
-Balise : 
+ 
 ```xml
 <fileDesc>
    <sourceDesc>
@@ -856,7 +856,7 @@ Balise :
 </fileDesc>
 ```
 
-Exemple :
+
 ```xml
 <fileDesc>
    <sourceDesc>
