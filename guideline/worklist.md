@@ -889,8 +889,6 @@ Autre option :
 ```
 Autre option : 
 
-
-
  Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
 
