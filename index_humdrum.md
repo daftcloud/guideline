@@ -7,6 +7,16 @@ nav_order: 10
 
 # Index des trigrammes Humdrum
 
+## Qu'est-ce que Humdrum ?
+
+<p style="text-align:justify;">
+Humdrum est un ensemble d'outils informatique dédié à l'analyse de la musique. Développé par David Huron dans les années 1980, ces outils s'articulent autour d'un système de notation dont le format se nomme « **kern ». Dans ce système, les différentess métadonnées des partitions encodés sont organisés avec différentes « Clé », les <i>Reference records</i>, se présentant sous la forme de trois points d'exclamations et de trois caractères. « !!!COM » indique, par exemple, que l'information qui va suivre est l'identité du compositeur.
+La liste de ces différentes clés, témoin des usages en édition numérique, a pu structurer l'étude conduisant aux guidelines que nous vous proposons.
+
+Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences entre ces clés et les entrées dans nos guidelines.
+
+</p>
+
  |Clé Humdrum | Définition | Lien dans fileDesc | Lien dans SourceDesc | Lien dans workList |
  | :--------------- |:---------------| :-----|
  | ACO | Désignation de la collection ||| [Dans la description de l'œuvre](guideline/workList.html#A-GCO_ref1) |
