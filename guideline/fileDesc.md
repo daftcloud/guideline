@@ -73,7 +73,15 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.|COA|
 
 <p style="text-align:justify;">
-Il est possible de préciser la provenance de l’attribution d'un compositeur à l'aide de l'attribut @evidence et des valeurs suivantes : "internal", "external" ou "conjecture".  
+Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un compositeur. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
+</p>
+<ul>
+<li><strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.</li>
+<li><strong>"external"</strong> </li> quand cette attribution provient d'une information externe à la source de votre édition.</li>
+<li><strong>"conjecture"</strong> </li> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.</li>
+</ul>
+<p style="text-align:justify;">
+Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plusfaible. Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
 </p>
 
 ```xml
@@ -91,8 +99,6 @@ Il est possible de préciser la provenance de l’attribution d'un compositeur �
 <a id="YEP_ref1"></a>
 
 ### Éditeur de l'édition électronique 
-
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
