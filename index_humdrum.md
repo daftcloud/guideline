@@ -36,9 +36,9 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | COS | Compositeur soupçonné ||| [Dans la description de l'œuvre](guideline/workList.html#COS_ref1) |
  | EEV | Version de l'édition électronique | [Dans la description du fichier](guideline/fileDesc.html#EEV_ref1) |||
  | EFL | Numéro du fichier électronique | [Dans la description du fichier](guideline/fileDesc.html#EFL_ref1) |||
- | EMD | Modification du document électronique | [Dans la description du fichier](guideline/fileDesc.html#EMD_ref1) |||
+ | EMD | Modification du document électronique | [Dans la description du fichier](guideline/fileDesc.html#EEV_ref1) |||
  | ENC | Encodeur de l'édition électronique | [Dans la description du fichier](guideline/fileDesc.html#ENC_ref1) |||
- | END | Date d'encodage de l'édition électronique | [Dans la description du fichier](guideline/fileDesc.html#END_ref1) |||
+ | END | Date d'encodage de l'édition électronique | [Dans la description du fichier](guideline/fileDesc.html#YER_ref1) |||
  | GAW | Œuvre associée ||| [Dans la description de l'œuvre](guideline/workList.html#GAW_ref1) |
  | GCO | Désignation de la collection ||| [Dans la description de l'œuvre](guideline/workList.html#A-GCO_ref1) |
  | GTL | Titre de la collection ||| [Dans la description de l'œuvre](guideline/workList.html#GTL_ref1) |
