@@ -32,3 +32,152 @@ En MEI, dans la partie &lt;fileDesc&gt;, on constate des usages nombreux et dive
    </titleStmt>
 </fileDesc>
 ```
+<p style="text-align:justify;">
+
+Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans &lt;workList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir [Titre alternatif de l'œuvre](guideline/workList.html#OTA_ref1)).
+</p>
+
+## b. Compositeur
+
+<a id="COM_ref1"></a>
+
+### Compositeur de l'édition MEI encodée
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
+
+<p style="text-align:justify;">
+Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html). Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)). 
+</p>
+
+```xml
+<fileDesc xml:id="...">
+   <titleStmt xml:id="...">
+      <title xml:id="...">...</title>
+       <composer xml:id="...">
+          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
+       </composer>
+   </titleStmt>
+</fileDesc>
+```
+
+<a id="COA_ref1"></a>
+
+### Compositeur attribué à l'édition MEI encodée
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.|COA|
+
+<p style="text-align:justify;">
+Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un compositeur. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
+</p>
+<ul>
+<li><strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.</li>
+<li><strong>"external"</strong> </li> quand cette attribution provient d'une information externe à la source de votre édition.</li>
+<li><strong>"conjecture"</strong> </li> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.</li>
+</ul>
+<p style="text-align:justify;">
+Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible. Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
+
+</p>
+<!-- ABC : J'ai choisi @role="composer" plutôt que @role="creator", pour permettre, en extrayant tous les <persName/> d'un fichier MEI d'avoir le rôle directement dans l'élément plutôt que dans son contexte (Sans cela, il faudrait remonter les balises parents pour récupérer cette information.) Pour la même raison, je préconise de toujours mettre les attributs d'evidence et de certitude sur le <persName/> -->
+```xml
+<fileDesc xml:id="...">
+   <titleStmt xml:id="...">
+   <title xml:id="...">...</title>
+      <composer xml:id="...">
+          <persName evidence="(internal, external ou conjecture)" role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName> 
+      </composer>
+   </titleStmt>
+</fileDesc>
+```
+<p style="text-align:justify;">
+Lorsque l'attribution est faite par conjecture, il est important de renseigner l'identité du responsable de cette attribution. Il convient donc de renseigner son identité dans &lt;respStmt&gt; contenu dans &lt;titleStmt&gt; avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Une fois cela fait, nous pouvons le relier à l'identité du compositeur qu'il attribue en inscrivant dans @resp la valeur de l'attribut @xml:id.
+Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheur qui a attribué le compositeur. On a donc reporté son "ID" précédé d'un "#" dans l'attribut @resp du compositeur.
+</p>
+
+```xml
+<fileDesc xml:id="...">
+   <titleStmt xml:id="...">
+      <title xml:id="...">...</title>
+       <respStmt xml:id="...">
+          <persName xml:id="ID" role="scholar" auth="..." auth.uri="http://..." codedval="...">(Nom du responsable de l'attribution)</persName>
+       </respStmt>
+       <composer xml:id="...">
+         <persName xml:id="..." evidence="conjecture" cert="high" resp="#ID">(Nom du compositeur)</persName>
+       </composer>
+   </titleStmt>
+</fileDesc>
+
+```
+
+## c. Informations liées à l'édition
+
+<a id="YEP_ref1"></a>
+
+### Éditeur de l'édition électronique 
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de l'édition électronique |YEP|
+ 
+<p style="text-align:justify;">
+L'identité de l'éditeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans le &lt;titleStmtt&gt; de &lt;fileDesc&gt;.
+</p>
+
+<!-- ABC : À l'instar de la balise <composer>, j'imagine qu'il est mieux de conserver la balise <editor>. -->
+
+ ```xml
+<fileDesc>
+  <titleStmt>
+   <title>...</title>
+    <respStmt>
+      <editor>
+       <persName xml:id="VB" role="editor" auth="Orcid" auth.uri="..." codedval="...">XXX</persName>
+       </editor>
+   </respStmt>
+  </titleStmt>
+</fileDesc> 
+```
+
+<a id="YEC_ref1"></a>
+
+### Date et propriétaire du copyright de l'édition électronique
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date et propriétaire du copyright de l'édition électronique|YEC|
+
+<p style="text-align:justify;">
+Dans le cas d'une édition électronique sous copyright, toutes les informations relevant de cette restriction juridique sont à inscrire dans la balise &lt;useRestrict&gt; contenu dans &lt;avaibility&gt; de &lt;pubStmt&gt;.
+</p>
+
+```xml
+<fileDesc>
+   ...
+   <pubStmt>
+      <availability>
+         <useRestrict>
+            <persName/>
+            <corpName/>
+            <date isodate="...">...</date>
+         </useRestrict>
+      </availability>
+   </pubStmt>
+</fileDesc>
+```
+
+<p style="text-align:justify;">
+ Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
+</p>
+
+```xml
+<date isodate="2022">2022</date>
+<date isodate="2022-02">Février 2022</date>
+<date isodate="2022-02-22">22 Février 2022</date>
+```
+
+<a id="ENC_ref1"></a>
+
