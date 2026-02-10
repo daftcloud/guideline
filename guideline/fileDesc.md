@@ -338,9 +338,7 @@ Votre édition électronique peut être soumise à des restrictions d'utilisatio
 Le pays dans lequel le document électronique a été créé, ou depuis lequel le droit d'auteur a été établi, correspond au pays selon la législation duquel la déclaration de droit doit être interprétée. Cette information est renseignée au moyen de la balise &lt;country&gt;, placée à l'intérieur de &lt;useRestrict&gt;.
 
 Il est important de distinguer &lt;useRestrict&gt;, qui concerne les conditions d'utilisations, de &lt;acessRestrict&gt;, qui précise les modalités d'accès à une ressource.
-</p>
 
-<p style="text-align:justify;">
  Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
 </p>
 
@@ -358,7 +356,3 @@ Il est important de distinguer &lt;useRestrict&gt;, qui concerne les conditions 
    </availability>
 </pubStmt>
 ```
-
-
-
-
