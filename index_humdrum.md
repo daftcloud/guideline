@@ -87,7 +87,7 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | TXO | Langue originale ||| [Dans la description de l'œuvre](guideline/workList.html#TXO_ref1) |
  | YEC | Copyright (édition électronique) | [Dans la description du fichier](guideline/fileDesc.html#YEC_ref1) |||
  | YEM | Licence | [Dans la description du fichier](guideline/fileDesc.html#YEM_ref1) |||
- | YEN | Pays de copyright | [Dans la description du fichier](guideline/fileDesc.html#YEN_ref1) |||
+ | YEN | Pays de copyright | [Dans la description du fichier](guideline/fileDesc.html#YEM_ref1) |||
  | YEP | Éditeur de l'édition électronique | [YEP : Éditeur](guideline/fileDesc.html#YEP_ref1) |||
  | YER | Date de mise à disposition | [Dans la description du fichier](guideline/fileDesc.html#YER_ref1) |||
  | YOE | Éditeur du document d'origine || [Dans la description de la source](guideline/sourceDesc.html#YOE_ref1) ||

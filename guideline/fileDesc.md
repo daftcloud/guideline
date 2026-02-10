@@ -302,76 +302,63 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
  |[3.6.12 Classification](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkClass){:target="_blank"}|Désignation de la forme|AFR|
 
  <p style="text-align:justify;"> 
- Que ce soit dans l'élément work, expression, manifestation ou item, la désignation de la forme s'inscrit dans l'élément classification. Nous recommandons de tisser un lien vers des &lt;taxonomy&gt; dans l'élément &lt;classDecls&gt; contenu dans &lt;encodingDesc&gt; vers des vocabulaires controllés.
+ Que ce soit dans l'élément &lt;work&gt;, &lt;expression&gt;, &lt;manifestation&gt; ou &lt;item&gt;, la désignation de la forme s'inscrit dans l'élément classification. Nous recommandons de tisser un lien vers des &lt;taxonomy&gt; dans l'élément &lt;classDecls&gt; contenu dans &lt;encodingDesc&gt; vers des vocabulaires controllés.
 </p>
 
 ```xml
-<classification>
-   <termList>
-      <term class="#...">...</term>
-   </termList>
-</classification>
+<encodingDesc>
+   <classDecls>
+      <taxonomy auth="DOREMUS" auth.uri="http://data.doremus.org/vocabulary/diabolo/genre/">
+         <head>Vocabulaire controllé des genres</head>
+         <desc>   
+            Liste des genres musicaux provenant de Diabolo de Radio France.
+         </desc>
+      </taxonomy>
+   </classDecls>
+</encodingDesc>
+
+   <classification>
+      <termList>
+         <term class='https://data.doremus.org/vocabulary/diabolo/genre/opera'>Opéra</term>
+      </termList>
+   </classification>
+
 ```
 
 <a id="YEM_ref1"></a>
 
-### License
-
+### License et pays du copyright
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.3 Publication, Distribution, etc.](https://music-encoding.org/guidelines/v5/content/metadata.html#headerPublicationDistribution){:target="_blank"}|License|YEM|
-
-
-
  
+ <p style="text-align:justify;"> 
+Votre édition électronique peut être soumise à des restrictions d'utilisation, telles que des limitations concernant sa reproduction, sa publication ou la citation de son contenu, notamment pour des raisons liées aux droits d’auteur. Dans ce cas, vous pouvez indiquer ces restrictions dans la balise &lt;useRestrict&gt;, intégrée à l'élément &lt;avaibility&gt; de &lt;pubStmt&gt;. À l'inverse, l'absence de restrictions peut également y être signalée, par exemple lorsque les droits sont tombés dans le domaine public.
+
+Le pays dans lequel le document électronique a été créé, ou depuis lequel le droit d'auteur a été établi, correspond au pays selon la législation duquel la déclaration de droit doit être interprétée. Cette information est renseignée au moyen de la balise &lt;country&gt;, placée à l'intérieur de &lt;useRestrict&gt;.
+
+Il est important de distinguer &lt;useRestrict&gt;, qui concerne les conditions d'utilisations, de &lt;acessRestrict&gt;, qui précise les modalités d'accès à une ressource.
+</p>
+
 ```xml
 <pubStmt>
    <availability>
      <useRestrict>
-        <persName>...</persName>
-        <corpName>...</corpName>
-        <date isodate="2024">2024</date>
-        <head>Licence</head>
-        <p>CC-BY-NC</p>
+         <persName>...</persName>
+         <corpName>...</corpName>
+         <country>France</country>
+         <date isodate="2024">2024</date>
+         <head>Licence</head>
+         <p>CC-BY-NC</p>
      </useRestrict>
    </availability>
 </pubStmt>
 ```
-Autre option : 
-```xml
-<pubStmt xml : id…>
-    <availability xml : id…>
-       <useRestrict xml : id…>Licence:... </useRestrict>
-    </availability>
-</pubStmt>
-```
 
-
-<a id="YEN_ref1"></a>
-
-### Pays de copyright
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Pays de copyright|YEN|
-
- 
-```xml
-<pubStmt>
-   <availability>
-     <useRestrict>
-        <persName>...</persName>
-        <corpName>...</corpName>
-        <country>France</country>
-        <date isodate="2024">2024</date>
-        <head>Licence</head>
-        <p>CC-BY-NC</P>
-     </useRestrict>
-     <date isodate="2024-01-02">01/02/24</date>
-   </availability>
-</pubStmt>
-```
+<p style="text-align:justify;">
+ Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
+</p>
 
 
