@@ -75,9 +75,9 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 </p>
 
 
-* <strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.
-* <strong>"external"</strong> quand cette attribution provient d'une information externe à la source de votre édition.
-* <strong>"conjecture"</strong> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.
+<strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.
+<strong>"external"</strong> quand cette attribution provient d'une information externe à la source de votre édition.
+<strong>"conjecture"</strong> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.
 
 
 <p style="text-align:justify;">
@@ -207,15 +207,22 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 <a id="YER_ref1"></a>
 
+
 ### Date d'encodage / de mise à disposition de l'édition électronique
 
+
 <!-- ABC : J'ai fusionné les concepts Humdrum de date d'encodage et celle de mise à disposition de l'édition électronique.  -->
+
+
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date d'encodage de l'édition électronique|END & YER|
 
+
 <p style="text--align:justify;">
 La date de l'encodage initial de votre édition électronique peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant.</p> [Modification du document électronique](EMD_ref1).
+</p>
+
 
 ```xml
 <fileDesc>
@@ -229,6 +236,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
  Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
 </p>
 
+
 ```xml
 <date isodate="2022">2022</date>
 <date isodate="2022-02">Février 2022</date>
@@ -237,7 +245,9 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 
 <a id="EEV_ref1"></a>
 
+
 ### Modification / Version du document électronique
+
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
