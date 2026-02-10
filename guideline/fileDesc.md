@@ -74,17 +74,12 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
 Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un compositeur. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
 </p>
 
-<ul>
-   <li><strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.</li>
-   <li><strong>"external"</strong> </li> quand cette attribution provient d'une information externe à la source de votre édition.</li>
-   <li><strong>"conjecture"</strong> </li> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.</li>
-</ul>
 
 <p style="text-align:justify;">
 Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible. Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
 </p>
 
-
+<!-- ABC : J'ai choisi @role="composer" plutôt que @role="creator", pour permettre, en extrayant tous les <persName/> d'un fichier MEI d'avoir le rôle directement dans l'élément plutôt que dans son contexte (Sans cela, il faudrait remonter les balises parents pour récupérer cette information.) Pour la même raison, je préconise de toujours mettre les attributs d'evidence et de certitude sur le <persName/> -->
 
 ```xml
 <fileDesc xml:id="...">
