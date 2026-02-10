@@ -113,36 +113,7 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
 
 ```
 
-## c. Informations liées à l'édition
 
-<a id="YEP_ref1"></a>
-
-### Éditeur de l'édition électronique 
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de l'édition électronique |YEP|
- 
-<p style="text-align:justify;">
-L'identité de l'éditeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans le &lt;titleStmtt&gt; de &lt;fileDesc&gt;.
-</p>
-
-<!-- ABC : À l'instar de la balise <composer>, j'imagine qu'il est mieux de conserver la balise <editor>. -->
-
- ```xml
-<fileDesc>
-  <titleStmt>
-   <title>...</title>
-    <respStmt>
-      <editor>
-       <persName xml:id="VB" role="editor" auth="Orcid" auth.uri="..." codedval="...">XXX</persName>
-       </editor>
-   </respStmt>
-  </titleStmt>
-</fileDesc> 
-```
-
-<a id="YEC_ref1"></a>
 
 
 
