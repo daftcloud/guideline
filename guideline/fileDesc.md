@@ -144,40 +144,5 @@ L'identité de l'éditeur de l'édition numérique est à inscrire dans la balis
 
 <a id="YEC_ref1"></a>
 
-### Date et propriétaire du copyright de l'édition électronique
 
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date et propriétaire du copyright de l'édition électronique|YEC|
-
-<p style="text-align:justify;">
-Dans le cas d'une édition électronique sous copyright, toutes les informations relevant de cette restriction juridique sont à inscrire dans la balise &lt;useRestrict&gt; contenu dans &lt;avaibility&gt; de &lt;pubStmt&gt;.
-</p>
-
-```xml
-<fileDesc>
-   ...
-   <pubStmt>
-      <availability>
-         <useRestrict>
-            <persName/>
-            <corpName/>
-            <date isodate="...">...</date>
-         </useRestrict>
-      </availability>
-   </pubStmt>
-</fileDesc>
-```
-
-<p style="text-align:justify;">
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
-</p>
-
-```xml
-<date isodate="2022">2022</date>
-<date isodate="2022-02">Février 2022</date>
-<date isodate="2022-02-22">22 Février 2022</date>
-```
-
-<a id="ENC_ref1"></a>
 
