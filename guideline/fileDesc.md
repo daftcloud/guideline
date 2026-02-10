@@ -76,8 +76,8 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 
 <ul>
    <li><strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.</li>
-   <li><strong>"external"</strong> </li> quand cette attribution provient d'une information externe à la source de votre édition.</li>
-   <li><strong>"conjecture"</strong> </li> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.</li>
+   <li><strong>"external"</strong> quand cette attribution provient d'une information externe à la source de votre édition.</li>
+   <li><strong>"conjecture"</strong> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.</li>
 </ul>
 
 <p style="text-align:justify;">
