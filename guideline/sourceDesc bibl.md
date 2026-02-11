@@ -31,13 +31,9 @@ L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent l
 
 ```xml
 <source xml:id="...">
-   <biblStruct xml:id="...">
-      <monogr>
-         <imprint>
-         <title xml:id="...">...</title>
-         </imprint>
-      </monogr>
-   </biblStruct>
+   <bibl xml:id="...">
+      <title xml:id="...">...</title>
+   </bibl>
 </source>   
 ```
 
@@ -54,41 +50,69 @@ L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent l
 <!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
 
  <p style="text-align:justify;"> 
-Le titre sous lequel le document source est préssenté se renseigne sous 
-
- Ainsi, pour distinguer le titre de l'édition de celui de la pièce (proprement encodé dans &lt;workList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines de music-encoding.org, tout en en uniformisant l'encodage. Le &lt;title&gt; principal, avec l'attribut @type="main", doit être suivi d'un &lt;title&gt; subordonné, avec un @type="subordinate",  précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
+Le titre sous lequel la source a été publié se renseigne sous 
 </p>
 
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-         <title type="main"> Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci (1599)</title> 
-         </imprint>
-      </monogr> 
-   </biblStruct>
+   <bibl>
+      <title type="main"> Il nono libro de madrigali</title>
+      <title type="subordinate">a cinque voci (1599)</title>  
+   </bibl>
 </source>
    ```
  
 ```xml
 <source recordtype="d">
-  <biblStruct>
+  <bibl>
+     <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>Bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
+     </physLoc>
      <relatedItem>
-       <biblStruct>
+       <bibl>
           <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-       </biblStruct>
+       </bibl>
      </relatedItem>
-  </biblStruct>
+  </bibl>
 </source>
+```
+
+Autre option : 
+
+```xml
+<manifestation recordtype="d">
+   <identifier>
+      <title>Le Roman de Fauvel</title>
+   </identifier>
+   <langUsage>
+      <language n="1">Français</language>
+      <language n="2">Latin</language>
+   </langUsage>   
+   <itemList>
+      <item recordtype="d">
+         <physLoc>
+            <repository>
+               <corpName>Bibliothèque nationale de France</corpName>
+               <abbr>BnF</abbr>
+            </repository>
+         </physLoc>
+         <identifier>
+            <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
+            <abbr>Fr. 146</abbr>
+            <title type="alternative">Roman de Fauvel</title>
+            <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
+         </identifier>  
+         <availability>
+            <accessRestrict>Non consultable en bibliothèque</accessRestrict>
+         </availability> 
+      </item>
+   </itemList>
 ```
 
 ## b. Compositeur
@@ -101,19 +125,23 @@ Le titre sous lequel le document source est préssenté se renseigne sous
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
 
+ `<composer>`
+
+Autre option : `<persName role="creator">`
+
 <p style="text-align:justify;"> 
- Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser).
+ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser). 
 </p>
 
-<!-- Comment indiquer le nom d'un compositeur attribué par la source, mais qui se révèle être faux ? -->
+
 
 ```xml
 <source xml:id="...">
-   <biblStruct xml:id="...">
+   <bibl xml:id="...">
       <composer xml:id="...">
          <persName role="creator" auth="..." auth.uri="http://..." codedval="...">...</persName>
       </composer>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 ## c. Informations liées à l'édition 
@@ -130,15 +158,11 @@ Le titre sous lequel le document source est préssenté se renseigne sous
 
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-         <editor>
-            <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
-         </editor>
-         </imprint>
-      </monogr>
-   </biblStruct>
+   <bibl>
+      <editor>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
+      </editor>
+   </bibl>
 </source>
 ```
 
@@ -146,15 +170,13 @@ Autre option : Si c'est une maison d'édition (cumulable) :
 
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-            <corpName>Edizioni Suvini Zerboni</corpName>
-            <date isodate="2000">2000</date>
-            <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-         </imprint>
-      </monogr>
-   </biblStruct>
+   <bibl>
+      <imprint>
+         <corpName>Edizioni Suvini Zerboni</corpName>
+         <date isodate="2000">2000</date>
+         <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
+      </imprint>
+   </bibl>
 </source>
 ```
 
@@ -163,15 +185,11 @@ Si c'est une personne :
 
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <editor>
          <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
       </editor>
-      </imprint>
-      </monogr>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 
@@ -186,18 +204,14 @@ Si c'est une personne :
  
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <editor xml:id="E1" n="1" precedes="#E2">
          <persName></persName>
       </editor>
       <editor xml:id="E2" n="2" follows="#E1">>
          <persName></persName>
       </editor>     
-      </imprint>
-      </monogr>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
@@ -207,18 +221,14 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <editor xml:id="E1" n="1" precedes="#E2">
          <persName></persName>
       </editor>
       <editor xml:id="E2" n="2" follows="#E1">>
          <persName></persName>
-      </editor>  
-      </imprint>  
-      </monogr> 
-   </biblStruct>
+      </editor>     
+   </bibl>
 </source>
 ```
 
@@ -233,9 +243,7 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
  
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <edition xml:id="E1" n="1" precedes="#E2">
          <editor  n="1">
             <persName></persName>
@@ -247,10 +255,8 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
             <persName></persName>
          </editor> 
          <date isodate="1999">1999</date> 
-      </edition>   
-      </imprint>
-      </monogr>  
-   </biblStruct>
+      </edition>     
+   </bibl>
 </source>
 ```
 
@@ -264,9 +270,7 @@ Autre option :
 
 ```xml
 <source>
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <edition xml:id="E1" n="1" precedes="#E2">
          <editor  n="1">
             <persName></persName>
@@ -278,10 +282,8 @@ Autre option :
             <persName></persName>
          </editor> 
          <date isodate="1999">1999</date> 
-      </edition> 
-      </imprint>
-      </monogr>   
-   </biblStruct>
+      </edition>     
+   </bibl>
 </source>
 ```
 
@@ -296,9 +298,7 @@ Autre option :
  
 ```xml
 <source recordtype="c">
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <composer>
          <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905/">Luca Marenzio</persName>
       </composer>
@@ -309,16 +309,13 @@ Autre option :
          <date isodate="2000">2000</date>
          <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
       </imprint>
-      </monogr>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 
 ```xml
 <source recordtype="c">
-   <biblStruct>
-      <monogr>
-         <imprint>
+   <bibl>
       <composer>
          <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905">Luca Marenzio</persName>
       </composer>
@@ -329,18 +326,36 @@ Autre option :
          <date isodate="2000">2000</date>
          <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
       </imprint>
-      </monogr>
-   </biblStruct>
+   </bibl>
 </source>
+```
+
+<a id="PC_ref1"></a>
+
+##### Numéro de catalogue de l'éditeur (ex. cotage)
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue de l'éditeur (ex. cotage){:target="_blank"}|PC#|
+
+ 
+
+Autre option : 
+
+ 
+
+
+```
+
 ```
 
 <a id="SCA_ref1"></a>
 
-### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117] ou de l'éditeur (ex. cotage)
+### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117]
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|PC#, SCT et SCA|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|SCT et SCA|
 
  
 ```xml
@@ -395,7 +410,7 @@ Autre option :
 
 ```xml
  <source>
-  <biblStruct>
+  <bibl>
       <composer>
           <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">XXX</persName>
       </composer>
@@ -403,8 +418,8 @@ Autre option :
       <editor>
           <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..."></persName>
       </editor>
-      <biblStructScope label="volume">1</biblStructScope>
-   </biblStruct>
+      <biblScope label="volume">1</biblScope>
+   </bibl>
 </source>
 ```
 
@@ -417,7 +432,7 @@ Autre option :
 
 ```xml
 <source>
-  <biblStruct>
+  <bibl>
       <composer>
           <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">XXX</persName>
       </composer>
@@ -425,8 +440,8 @@ Autre option :
       <editor>
           <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..."></persName>
       </editor>
-      <biblStructScope label="volume">1</biblStructScope>
-   </biblStruct>
+      <biblScope label="volume">1</biblScope>
+   </bibl>
 </source>
 ```
 
@@ -442,9 +457,9 @@ Autre option :
 
 ```xml
 <source>
-   <biblStruct>
+   <bibl>
       <unpub>En raison d'un manque de financement</unpub>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 
@@ -457,9 +472,9 @@ Autre option :
 
 ```xml
 <source>
-   <biblStruct>
+   <bibl>
       <unpub>En raison d'un manque de financement</unpub>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 
@@ -468,22 +483,22 @@ Autre option :
 
 ```xml
 <source recordtype="d">
-  <biblStruct>
+  <bibl>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>Bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
      <relatedItem>
-       <biblStruct>
+       <bibl>
           <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-       </biblStruct>
+       </bibl>
      </relatedItem>
-  </biblStruct>
+  </bibl>
 </source>
 ```
 
@@ -498,22 +513,22 @@ Autre option :
 
 ```xml
  <source recordtype="d">
-  <biblStruct>
+  <bibl>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>Bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
      <relatedItem>
-       <biblStruct>
+       <bibl>
           <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-       </biblStruct>
+       </bibl>
      </relatedItem>
-  </biblStruct>
+  </bibl>
 </source>
 ```
 
@@ -532,7 +547,7 @@ Autre option :
       <item recordtype="d">
          <physLoc>
             <repository>
-               <corpName>biblStructiothèque nationale de France</corpName>
+               <corpName>Bibliothèque nationale de France</corpName>
                <abbr>BnF</abbr>
             </repository>
          </physLoc>
@@ -543,7 +558,7 @@ Autre option :
             <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
          </identifier>  
          <availability>
-            <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+            <accessRestrict>Non consultable en bibliothèque</accessRestrict>
          </availability> 
       </item>
    </itemList>
@@ -554,22 +569,22 @@ Autre option :
 
 ```xml
 <source recordtype="d">
-  <biblStruct>
+  <bibl>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>Bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
      <relatedItem>
-       <biblStruct>
+       <bibl>
           <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-       </biblStruct>
+       </bibl>
      </relatedItem>
-  </biblStruct>
+  </bibl>
 </source>
 ```
 
@@ -584,26 +599,26 @@ Autre option :
 
 ```xml
  <source recordtype="d">
-  <biblStruct>
+  <bibl>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>Bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
      <relatedItem>
-       <biblStruct>
+       <bibl>
           <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
           <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
           <availability>
-             <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
           </availability>
-       </biblStruct>
+       </bibl>
      </relatedItem>     
-  </biblStruct>
+  </bibl>
 </source>
 ```
 
@@ -623,7 +638,7 @@ Autre option :
       <item recordtype="d">
          <physLoc>
             <repository>
-               <corpName>biblStructiothèque nationale de France</corpName>
+               <corpName>Bibliothèque nationale de France</corpName>
                <abbr>BnF</abbr>
             </repository>
          </physLoc>
@@ -634,7 +649,7 @@ Autre option :
             <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
          </identifier>  
          <availability>
-            <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+            <accessRestrict>Non consultable en bibliothèque</accessRestrict>
          </availability> 
       </item>
    </itemList>
@@ -642,26 +657,26 @@ Autre option :
 
 ```xml
 <source recordtype="d">
-  <biblStruct>
+  <bibl>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>Bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
      <relatedItem>
-       <biblStruct>
+       <bibl>
           <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval"cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
           <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
           <availability>
-             <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
           </availability>
-       </biblStruct>
+       </bibl>
      </relatedItem>     
-  </biblStruct>
+  </bibl>
 </source>
 ```
 
@@ -678,9 +693,7 @@ Autre option :
 <source>
    <biblStruct>
    <monogr>
-      <imprint>
-         ...
-      </imprint>
+   <imprint>...</imprint>
    </monogr>
    </biblStruct>
 </source>
@@ -691,16 +704,15 @@ Autre option :
 
 ```xml
 <source>
-   <biblStruct>
+   <bibl>
    ... Sans structure
-   </biblStruct>
+   </bibl>
 </source>
 ```
 
 <p style="text-align:justify;"> 
  
-Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>
-         <imprint>\<imprint>` contenant toutes les informations en lien avec la source.
+Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>\<imprint>` contenant toutes les informations en lien avec la source.
 </p>
 
 
@@ -736,18 +748,18 @@ Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<mo
 Autre option : 
 ```xml
 <source>
-   <biblStruct>
+   <bibl>
       <availability>
          <useRestrict>
             <persName role="owner ou qqchose comme ça"></persName>
          </useRestrict>
       </availability>
-   </biblStruct>
+   </bibl>
 </source>
 ```
 
 <p style="text-align:justify;"> 
- recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, biblStruct est plus libre. À voir.
+ recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, bibl est plus libre. À voir.
 </p>
 
 

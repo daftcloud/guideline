@@ -67,21 +67,21 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | OPS | Numéro d'opus ||| [Dans la description de l'œuvre](guideline/workList.html#OPS_ref1) |
  | OSC | Numéro de scène ||| [Dans la description de l'œuvre](guideline/workList.html#OSC_ref1) |
  | OTA | Titre alternatif ||| [Dans la description de l'œuvre](guideline/workList.html#OTA_ref1) |
- | OTL | Titres | [Dans la description du fichier](guideline/fileDesc.html#OTL_ref1) |||
+ | OTL | Titres | [Dans la description du fichier](guideline/fileDesc.html#OTL_ref1) |[Dans la description de la source](guideline/sourceDesc.html#OTL_ref4)|[Dans la description de l'œuvre](guideline/workList.html#OTL_ref2), [Dans la description de l'œuvre](guideline/workList.html#OTL_ref3)|
  | OTP | Titre courant ||| [Dans la description de l'œuvre](guideline/workList.html#OTP_ref1) |
  | OVM | Volume || [Dans la description de la source](guideline/sourceDesc.html#OVM_ref1) ||
- | PC# | Numéro de catalogue || [Dans la description de la source](guideline/sourceDesc.html#PC_ref1) ||
+ | PC# | Numéro de catalogue || [Dans la description de la source](guideline/sourceDesc.html#SCA_ref1) ||
  | PDT | Date de publication || [Dans la description de la source](guideline/sourceDesc.html#PDT_ref1) ||
  | PED | Éditeur de la source || [Dans la description de la source](guideline/sourceDesc.html#PED_ref1) ||
  | PPP | Lieu de publication || [Dans la description de la source](guideline/sourceDesc.html#PPP_ref1) ||
  | PPR | Premier éditeur || [Dans la description de la source](guideline/sourceDesc.html#PPR_ref1) ||
  | PTL | Titre de la publication || [Dans la description de la source](guideline/sourceDesc.html#PTL_ref1) ||
  | PUB | Publication || [Dans la description de la source](guideline/sourceDesc.html#PUB_ref1) ||
- | SCA | Catalogue scientifique || [Dans la description de la source](guideline/sourceDesc.html#SCA-T_ref1) ||
- | SCT | Catalogue scientifique || [Dans la description de la source](guideline/sourceDesc.html#SCA-T_ref1) ||
+ | SCA | Catalogue scientifique || [Dans la description de la source](guideline/sourceDesc.html#SCA_ref1) ||
+ | SCT | Catalogue scientifique || [Dans la description de la source](guideline/sourceDesc.html#SCA_ref1) ||
  | SMA | Accès au manuscrit || [Dans la description de la source](guideline/sourceDesc.html#SMA_ref1) ||
  | SML | Lieu de conservation || [Dans la description de la source](guideline/sourceDesc.html#SML_ref1) ||
- | SMS | Titre du manuscrit || [Dans la description de la source](guideline/sourceDesc.html#SMS_ref1) ||
+ | SMS | Titre du manuscrit || [Dans la description de la source](guideline/sourceDesc.html#PTL_ref1) ||
  | TRN | Traducteur ||| [Dans la description de l'œuvre](guideline/workList.html#TRN_ref1) |
  | TXL | Langue de la pièce ||| [Dans la description de l'œuvre](guideline/workList.html#TXL_ref1) |
  | TXO | Langue originale ||| [Dans la description de l'œuvre](guideline/workList.html#TXO_ref1) |
