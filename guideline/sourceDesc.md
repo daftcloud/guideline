@@ -8,6 +8,11 @@ permalink: guideline/sourceDesc
 ---
 
 # Description de la source &lt;SourceDesc&gt;
+
+<p style="text-align:justify;"> 
+L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il conviendra de séparer chaque source dans un &lt;source&gt; différent.
+</p>
+
 ## a. Titre
 
 <a id="OTL_ref4"></a>
@@ -19,23 +24,17 @@ permalink: guideline/sourceDesc
  | :--------------- |:---------------:| -----:|
  |Titre de la source.|[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|OTL|
 
-`<title>`
-
-Autre option : -
-
 <p style="text-align:justify;"> 
- Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+ Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres, des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
 </p>
 
 
-```
-"<sourceDesc xml:id=""..."">
-   <source xml:id=""..."">
-      <bibl xml:id=""..."">
-         <title xml:id=""..."">...</title>
-      </bibl>
-   </source>   
-</sourceDesc>"
+```xml
+<source xml:id="...">
+   <bibl xml:id="...">
+      <title xml:id="...">...</title>
+   </bibl>
+</source>   
 ```
 
 <a id="PTL_ref1"></a>
@@ -48,27 +47,22 @@ Autre option : -
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|PTL|
 
 
- 
+<!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
+
+ <p style="text-align:justify;"> 
+Le titre sous lequel la source a été publié se renseigne sous 
+</p>
+
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <title type="main"> Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci (1599)</title>  
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <title type="main"> Il nono libro de madrigali</title>
+      <title type="subordinate">a cinque voci (1599)</title>  
+   </bibl>
+</source>
    ```
 
 
-```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <title type="main"> Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci (1599)</title>  
-      </bibl>
-   </source>
-```
 
 <a id="SMS_ref1"></a>
 
@@ -154,15 +148,13 @@ Autre option : `<persName role="creator">`
 
 
 ```xml
-"<sourceDesc xml:id=""..."">
-   <source xml:id=""..."">
-      <bibl xml:id=""..."">
-         <composer xml:id=""..."">
-            <persName role=""creator"" auth="..." auth.uri=""http://..."" codedval="...">...</persName>
-         </composer>
-      </bibl>
-   </source>
-</sourceDesc>"
+<source xml:id="...">
+   <bibl xml:id="...">
+      <composer xml:id="...">
+         <persName role="creator" auth="..." auth.uri="http://..." codedval="...">...</persName>
+      </composer>
+   </bibl>
+</source>
 ```
 ## c. Informations liées à l'édition 
 
@@ -177,44 +169,40 @@ Autre option : `<persName role="creator">`
  Si c'est une personne :
 
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <editor>
-           <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
-         </editor>
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <editor>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
+      </editor>
+   </bibl>
+</source>
 ```
 
 Autre option : Si c'est une maison d'édition (cumulable) :
 
 ```xml
-<sourceDesc>
-     <source>
-         <bibl>
-            <imprint>
-               <corpName>Edizioni Suvini Zerboni</corpName>
-               <date isodate="2000">2000</date>
-               <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-            </imprint>
-         </bibl>
-     </source>
+<source>
+   <bibl>
+      <imprint>
+         <corpName>Edizioni Suvini Zerboni</corpName>
+         <date isodate="2000">2000</date>
+         <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
+      </imprint>
+   </bibl>
+</source>
 ```
 
  
-
+Si c'est une personne :
 
 ```xml
-Si c'est une personne :
-<sourceDesc>
-   <source>
-      <bibl>
-         <editor>
-           <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
-         </editor>
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <editor>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
+      </editor>
+   </bibl>
+</source>
 ```
 
 <a id="PPR_ref1"></a>
@@ -227,17 +215,16 @@ Si c'est une personne :
 
  
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <editor xml:id="E1" n="1" precedes="#E2">
-            <persName></persName>
-         </editor>
-         <editor xml:id="E2" n="2" follows="#E1">>
-            <persName></persName>
-         </editor>     
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <editor xml:id="E1" n="1" precedes="#E2">
+         <persName></persName>
+      </editor>
+      <editor xml:id="E2" n="2" follows="#E1">>
+         <persName></persName>
+      </editor>     
+   </bibl>
+</source>
 ```
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
 
@@ -245,17 +232,16 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 
 
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <editor xml:id="E1" n="1" precedes="#E2">
-            <persName></persName>
-         </editor>
-         <editor xml:id="E2" n="2" follows="#E1">>
-            <persName></persName>
-         </editor>     
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <editor xml:id="E1" n="1" precedes="#E2">
+         <persName></persName>
+      </editor>
+      <editor xml:id="E2" n="2" follows="#E1">>
+         <persName></persName>
+      </editor>     
+   </bibl>
+</source>
 ```
 
 <a id="PDT_ref1"></a>
@@ -268,24 +254,25 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 
  
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <edition xml:id="E1" n="1" precedes="#E2">
-            <editor  n="1">
-               <persName></persName>
-            </editor>
-            <date isodate="1940">1940</date>
-         </edition>
-         <edition xml:id="E2" n="2" follows="#E1">   
-            <editor n="2">
-               <persName></persName>
-            </editor> 
-            <date isodate="1999">1999</date> 
-         </edition>     
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <edition xml:id="E1" n="1" precedes="#E2">
+         <editor  n="1">
+            <persName></persName>
+         </editor>
+         <date isodate="1940">1940</date>
+      </edition>
+      <edition xml:id="E2" n="2" follows="#E1">   
+         <editor n="2">
+            <persName></persName>
+         </editor> 
+         <date isodate="1999">1999</date> 
+      </edition>     
+   </bibl>
+</source>
 ```
+
+
 Autre option : 
 
 <p style="text-align:justify;"> 
@@ -294,23 +281,22 @@ Autre option :
 
 
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <edition xml:id="E1" n="1" precedes="#E2">
-            <editor  n="1">
-               <persName></persName>
-            </editor>
-            <date isodate="1940">1940</date>
-         </edition>
-         <edition xml:id="E2" n="2" follows="#E1">   
-            <editor n="2">
-               <persName></persName>
-            </editor> 
-            <date isodate="1999">1999</date> 
-         </edition>     
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <edition xml:id="E1" n="1" precedes="#E2">
+         <editor  n="1">
+            <persName></persName>
+         </editor>
+         <date isodate="1940">1940</date>
+      </edition>
+      <edition xml:id="E2" n="2" follows="#E1">   
+         <editor n="2">
+            <persName></persName>
+         </editor> 
+         <date isodate="1999">1999</date> 
+      </edition>     
+   </bibl>
+</source>
 ```
 
 <a id="PPP_ref1"></a>
@@ -323,39 +309,37 @@ Autre option :
 
  
 ```xml
-<sourceDesc>
-   <source recordtype="c">
-      <bibl>
-         <composer>
-           <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905/">Luca Marenzio</persName>
-         </composer>
-         <title type="main"> Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci (1599)</title>
-         <imprint>
-            <corpName>Edizioni Suvini Zerboni</corpName>
-            <date isodate="2000">2000</date>
-            <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-         </imprint>
-      </bibl>
-   </source>
-   ```
+<source recordtype="c">
+   <bibl>
+      <composer>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905/">Luca Marenzio</persName>
+      </composer>
+      <title type="main"> Il nono libro de madrigali</title>
+      <title type="subordinate">a cinque voci (1599)</title>
+      <imprint>
+         <corpName>Edizioni Suvini Zerboni</corpName>
+         <date isodate="2000">2000</date>
+         <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
+      </imprint>
+   </bibl>
+</source>
+```
 
 ```xml
-<sourceDesc>
-   <source recordtype="c">
-      <bibl>
-         <composer>
-           <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905">Luca Marenzio</persName>
-         </composer>
-         <title type="main"> Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci (1599)</title>
-         <imprint>
-            <corpName>Edizioni Suvini Zerboni</corpName>
-            <date isodate="2000">2000</date>
-            <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-         </imprint>
-      </bibl>
-   </source>
+<source recordtype="c">
+   <bibl>
+      <composer>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905">Luca Marenzio</persName>
+      </composer>
+      <title type="main"> Il nono libro de madrigali</title>
+      <title type="subordinate">a cinque voci (1599)</title>
+      <imprint>
+         <corpName>Edizioni Suvini Zerboni</corpName>
+         <date isodate="2000">2000</date>
+         <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
+      </imprint>
+   </bibl>
+</source>
 ```
 
 <a id="PC_ref1"></a>
@@ -450,6 +434,7 @@ Autre option :
    </bibl>
 </source>
 ```
+
 Autre option : 
 
 <p style="text-align:justify;"> 
@@ -483,13 +468,13 @@ Autre option :
  
 
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <unpub>En raison d'un manque de financement</unpub>
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <unpub>En raison d'un manque de financement</unpub>
+   </bibl>
+</source>
 ```
+
 Autre option : 
 
 <p style="text-align:justify;"> 
@@ -498,12 +483,11 @@ Autre option :
 
 
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <unpub>En raison d'un manque de financement</unpub>
-      </bibl>
-   </source>
+<source>
+   <bibl>
+      <unpub>En raison d'un manque de financement</unpub>
+   </bibl>
+</source>
 ```
 
  
@@ -561,6 +545,7 @@ Autre option :
 ```
 
 Autre option : 
+
 ```xml
 <manifestation recordtype="d">
    <identifier>
@@ -650,6 +635,8 @@ Autre option :
 ```
 
 Autre option : 
+
+
 ```xml
 <manifestation recordtype="d">
    <identifier>
@@ -679,8 +666,6 @@ Autre option :
       </item>
    </itemList>
 ```
- 
-
 
 ```xml
 <source recordtype="d">
@@ -717,27 +702,24 @@ Autre option :
 
  
 ```xml
-<fileDesc>
-    <sourceDesc>
-        <source>
-          <biblStruct>
-           <monogr>
-            <imprint>...</imprint>
-           </monogr>
-          </biblStruct>
-        </source>
-      </sourceDesc>
-</fileDesc>
+<source>
+   <biblStruct>
+   <monogr>
+   <imprint>...</imprint>
+   </monogr>
+   </biblStruct>
+</source>
 ```
+
 Autre option : 
+
+
 ```xml
- <sourceDesc>
-        <source>
-          <bibl>
-          ... Sans structure
-          </bibl>
-        </source>
-      </sourceDesc>
+<source>
+   <bibl>
+   ... Sans structure
+   </bibl>
+</source>
 ```
 
 <p style="text-align:justify;"> 
@@ -760,36 +742,32 @@ Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<mo
 
 !!! Il faut trouver un role adéquat
 ```xml
-<sourceDesc>
-   <source>
-      <biblStruct>
-         <monogr>
-            <imprint>
-               <availability>
-                  <useRestrict>
-                     <persName role="owner ou qqchose comme ça"></persName>
-                  </useRestrict>
-               </availability>
-            </imprint>
-         </monogr>
-      </biblStruct>
-   </source>
-</sourceDesc>
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <availability>
+               <useRestrict>
+                  <persName role="owner ou qqchose comme ça"></persName>
+               </useRestrict>
+            </availability>
+         </imprint>
+      </monogr>
+   </biblStruct>
+</source>
 ```
 
 Autre option : 
 ```xml
-<sourceDesc>
-   <source>
-      <bibl>
-         <availability>
-            <useRestrict>
-               <persName role="owner ou qqchose comme ça"></persName>
-            </useRestrict>
-         </availability>
-      </bibl>
-   </source>
-</sourceDesc>
+<source>
+   <bibl>
+      <availability>
+         <useRestrict>
+            <persName role="owner ou qqchose comme ça"></persName>
+         </useRestrict>
+      </availability>
+   </bibl>
+</source>
 ```
 
 <p style="text-align:justify;"> 
@@ -843,31 +821,28 @@ Autre option :
 
  
 ```xml
-<fileDesc>
-   <sourceDesc>
-      <bibl>
-         <imprint>
-            <editor>
-               <corpName auth="..." auth.uri="http://..." codedval="...">...</corpName>
-            </editor>
-         </imprint>
-      </bibl>
-   </sourceDesc>
-</fileDesc>
+<source>
+   <bibl>
+      <imprint>
+         <editor>
+            <corpName auth="..." auth.uri="http://..." codedval="...">...</corpName>
+         </editor>
+      </imprint>
+   </bibl>
+</source>
 ```
 
 
 ```xml
-<fileDesc>
-   <sourceDesc>
-      <bibl>
-         <imprint>
-            <editor>
-               <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="268466075">A. Durand &amp; Fils, Éditeurs</corpName>
-            </editor>
-         </imprint>
-      </bibl>
-   </sourceDesc>
-</fileDesc>
+<source>
+   <bibl>
+      <imprint>
+         <editor>
+            <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="268466075">A. Durand &amp; Fils, Éditeurs</corpName>
+         </editor>
+      </imprint>
+   </bibl>
+</source>
+
 ```
 

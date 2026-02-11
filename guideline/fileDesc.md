@@ -8,6 +8,11 @@ permalink: guideline/fileDesc
 ---
 
 # Description du fichier MEI encodé &lt;fileDesc&gt;
+
+<p style="text-align:justify;"> 
+L'élément &lt;fileDesc&gt; comprends toutes les informations qui concernent le fichier MEI lui-même.
+</p>
+
 ## a. Titre
 
 <a id="OTL_ref1"></a>
@@ -27,8 +32,12 @@ En MEI, dans la partie &lt;fileDesc&gt;, on constate des usages nombreux et dive
 ```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
-      <title type="main">Pavane</title>
-      <title type="subordinate">A Digital Edition</title>
+      <title type="main">
+         Pavane
+      </title>
+      <title type="subordinate">
+         A Digital Edition
+      </title>
    </titleStmt>
 </fileDesc>
 ```
@@ -54,9 +63,13 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
 ```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
-      <title xml:id="...">...</title>
+      <title xml:id="...">
+         ...
+      </title>
        <composer xml:id="...">
-          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
+          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">
+            ...
+         </persName>
        </composer>
    </titleStmt>
 </fileDesc>
@@ -66,9 +79,11 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
 
 ### Compositeur attribué à l'édition MEI encodée
 
+
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.|COA|
+
 
 <p style="text-align:justify;">
 Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un compositeur. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
@@ -76,7 +91,11 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 
 
 <strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.
+
+
 <strong>"external"</strong> quand cette attribution provient d'une information externe à la source de votre édition.
+
+
 <strong>"conjecture"</strong> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.
 
 
@@ -84,14 +103,20 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible. Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
 </p>
 
+
 <!-- ABC : J'ai choisi @role="composer" plutôt que @role="creator", pour permettre, en extrayant tous les <persName/> d'un fichier MEI d'avoir le rôle directement dans l'élément plutôt que dans son contexte (Sans cela, il faudrait remonter les balises parents pour récupérer cette information.) Pour la même raison, je préconise de toujours mettre les attributs d'evidence et de certitude sur le <persName/> -->
+
 
 ```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
-   <title xml:id="...">...</title>
+      <title xml:id="...">
+         ...
+      </title>
       <composer xml:id="...">
-          <persName evidence="(internal, external ou conjecture)" role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName> 
+         <persName evidence="(internal, external ou conjecture)" role="composer" auth="..." auth.uri="http://..." codedval="...">
+            ...
+         </persName> 
       </composer>
    </titleStmt>
 </fileDesc>
@@ -221,7 +246,7 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 <p style="text--align:justify;">
 La date de l'encodage initial de votre édition électronique peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant.</p> [Modification du document électronique](EMD_ref1).
-</p>
+
 
 
 ```xml
@@ -370,3 +395,9 @@ Il est important de distinguer &lt;useRestrict&gt;, qui concerne les conditions 
 <p style="text-align:justify;"> 
  Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
 </p>
+
+```xml
+<date isodate="2022">2022</date>
+<date isodate="2022-02">Février 2022</date>
+<date isodate="2022-02-22">22 Février 2022</date>
+```
