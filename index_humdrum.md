@@ -90,7 +90,7 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | YEN | Pays de copyright | [Dans la description du fichier](guideline/fileDesc.html#YEM_ref1) |||
  | YEP | Éditeur de l'édition électronique | [YEP : Éditeur](guideline/fileDesc.html#YEP_ref1) |||
  | YER | Date de mise à disposition | [Dans la description du fichier](guideline/fileDesc.html#YER_ref1) |||
- | YOE | Éditeur du document d'origine || [Dans la description de la source](guideline/sourceDesc.html#YOE_ref1) ||
+ | YOE | Éditeur du document d'origine || [Dans la description de la source](guideline/sourceDesc.html#PED_ref1) ||
  | YOO | Propriétaire du document d'origine || [Dans la description de la source](guideline/sourceDesc.html#YOO_ref1) ||
  | YOR | Document d'origine || [Dans la description de la source](guideline/sourceDesc.html#YOR_ref1) ||
  | YOY | Année du copyright || [Dans la description de la source](guideline/sourceDesc.html#YOY_ref1) ||

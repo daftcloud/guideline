@@ -811,38 +811,5 @@ Autre option :
 </manifestationList>
 ```
 
-<a id="YOE_ref1"></a>
 
-### Éditeur du document d'origine
-
-|Chapitre des Guidelines | Définition | Clé HUMDRUM |
-| :--------------- |:---------------:| -----:|
-|[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur du document d'origine|YOE|
-
- 
-```xml
-<source>
-   <bibl>
-      <imprint>
-         <editor>
-            <corpName auth="..." auth.uri="http://..." codedval="...">...</corpName>
-         </editor>
-      </imprint>
-   </bibl>
-</source>
-```
-
-
-```xml
-<source>
-   <bibl>
-      <imprint>
-         <editor>
-            <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="268466075">A. Durand &amp; Fils, Éditeurs</corpName>
-         </editor>
-      </imprint>
-   </bibl>
-</source>
-
-```
 
