@@ -10,7 +10,8 @@ permalink: guideline/sourceDesc
 # Description de la source &lt;SourceDesc&gt;
 
 <p style="text-align:justify;"> 
-L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il conviendra de séparer chaque source dans un &lt;source&gt; différent.
+   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il conviendra de séparer chaque source dans un &lt;source&gt; différent.
+   La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt;, dont le cadre plus strict favorise la normalisation des données.
 </p>
 
 ## a. Titre
@@ -25,7 +26,7 @@ L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent l
  |Titre de la source.|[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|OTL|
 
 <p style="text-align:justify;"> 
- Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres, des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
+   Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres, des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
 </p>
 
 
@@ -33,9 +34,7 @@ L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent l
 <source xml:id="...">
    <biblStruct xml:id="...">
       <monogr>
-         <imprint>
          <title xml:id="...">...</title>
-         </imprint>
       </monogr>
    </biblStruct>
 </source>   
@@ -50,33 +49,50 @@ L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent l
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|PTL & SMS|
 
-
-<!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
-
  <p style="text-align:justify;"> 
-Le titre sous lequel le document source est préssenté se renseigne sous 
+   Le titre sous lequel le document source est présenté se renseigne sous la balise &lt;title&gt; de l'élément &lt;monogr&gt;. 
+   Il convient de faire bon usage des deux attributs principaux de la balise &lt;title&gt;, @level et @type. 
+   
+   @level permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
+   
+   "m" dans le cas d'une monographie, 
+   "u" pour une ressource inédite, 
+   "a" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil.
+   "c" pour une collection n'ayant pas, à l'origine, été publié, produit ou distribué ensemble comme un fonds d'archives ou un recueil factice.
+   </p>
 
- Ainsi, pour distinguer le titre de l'édition de celui de la pièce (proprement encodé dans &lt;workList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines de music-encoding.org, tout en en uniformisant l'encodage. Le &lt;title&gt; principal, avec l'attribut @type="main", doit être suivi d'un &lt;title&gt; subordonné, avec un @type="subordinate",  précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
+   Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
+
+   
+
+
+
+   @type permet de caractériser le titre selon :
+   "main" pour le titre principale.
+   "subordinate" pour un sous-titre ou le titre d'une partie.
+   "abbreviated" pour la forme abrégée d'un titre.
+   "alternative" pour un titre alternatif.
+   "translated"  pour une version traduite du titre.
+   "uniform" pour un titre conventionnels ou normalisés.
+   "desc" pour un titre descriptif.
 </p>
 
 ```xml
 <source>
    <biblStruct>
       <monogr>
-         <imprint>
          <title type="main"> Il nono libro de madrigali</title>
          <title type="subordinate">a cinque voci (1599)</title> 
-         </imprint>
       </monogr> 
    </biblStruct>
 </source>
-   ```
+```
  
 ```xml
 <source recordtype="d">
   <biblStruct>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      <relatedItem>
@@ -89,7 +105,13 @@ Le titre sous lequel le document source est préssenté se renseigne sous
      </relatedItem>
   </biblStruct>
 </source>
-```
+``` 
+
+<p style="text-align:justify;"> 
+Le titre sous lequel le document source est présenté se renseigne sous 
+
+ Ainsi, pour distinguer le titre de l'édition de celui de la pièce (proprement encodé dans &lt;workList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines de music-encoding.org, tout en en uniformisant l'encodage. Le &lt;title&gt; principal, avec l'attribut @type="main", doit être suivi d'un &lt;title&gt; subordonné, avec un @type="subordinate", précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
+</p>
 
 ## b. Compositeur
 
@@ -213,7 +235,7 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
       <editor xml:id="E1" n="1" precedes="#E2">
          <persName></persName>
       </editor>
-      <editor xml:id="E2" n="2" follows="#E1">>
+      <editor xml:id="E2" n="2" follows="#E1">
          <persName></persName>
       </editor>  
       </imprint>  
@@ -342,29 +364,20 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|PC#, SCT et SCA|
 
+<p style="text-align:justify;"> 
+ Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
+</p>
  
 ```xml
-<work>
-   <identifier auth.uri="http://...">
-      ...
-   </identifier>
-</work>
+<source>
+   <biblStruct>
+      <identifier auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
+         157
+      </identifier>
+   </biblStruct>
+</source>
 ```
 
-Autre option : 
-
-<p style="text-align:justify;"> 
- Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automùatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
-</p>
-
-
-```xml
-<work>
-   <identifier auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
-      157
-   </identifier>
-</work>
-```
 
 <a id="ONM_ref1"></a>
 

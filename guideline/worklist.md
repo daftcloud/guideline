@@ -19,6 +19,7 @@ permalink: /guideline/workList
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre|≈ OTL|
 
 
+<!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
 
 `<title type=main>`/`<title type="subordinate">`
 
@@ -38,7 +39,7 @@ Autre option : `<title>`
 ```
 
 ```xml
-"<workList xml:id="...">
+<workList xml:id="...">
    <work xml:id="...">
       <title xml:id="...">  
       <expressionList xml:id="...">  
@@ -47,7 +48,7 @@ Autre option : `<title>`
       </expressionList>
       </title>
    </work>
-</workList>"
+</workList>
 ```
 
 <a id="OTL_ref3"></a>
