@@ -625,6 +625,109 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 ```
 ## c. Informations liées à l'œuvre
 
+<a id="PPR_ref2"></a>
+
+### Date et éditeur de la première publication
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
+
+ 
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <editor xml:id="E1" n="1" precedes="#E2">
+         <persName></persName>
+      </editor>
+      <editor xml:id="E2" n="2" follows="#E1">
+         <persName></persName>
+      </editor>     
+      </imprint>
+      </monogr>
+   </biblStruct>
+</source>
+```
+
+Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
+
+ 
+
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <editor xml:id="E1" n="1" precedes="#E2">
+         <persName></persName>
+      </editor>
+      <editor xml:id="E2" n="2" follows="#E1">
+         <persName></persName>
+      </editor>  
+      </imprint>  
+      </monogr> 
+   </biblStruct>
+</source>
+```
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <edition xml:id="E1" n="1" precedes="#E2">
+         <editor  n="1">
+            <persName></persName>
+         </editor>
+         <date isodate="1940">1940</date>
+      </edition>
+      <edition xml:id="E2" n="2" follows="#E1">   
+         <editor n="2">
+            <persName></persName>
+         </editor> 
+         <date isodate="1999">1999</date> 
+      </edition>   
+      </imprint>
+      </monogr>  
+   </biblStruct>
+</source>
+```
+
+
+Autre option : 
+
+<p style="text-align:justify;"> 
+ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+</p>
+
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <edition xml:id="E1" n="1" precedes="#E2">
+         <editor  n="1">
+            <persName></persName>
+         </editor>
+         <date isodate="1940">1940</date>
+      </edition>
+      <edition xml:id="E2" n="2" follows="#E1">   
+         <editor n="2">
+            <persName></persName>
+         </editor> 
+         <date isodate="1999">1999</date> 
+      </edition> 
+      </imprint>
+      </monogr>   
+   </biblStruct>
+</source>
+```
+
+
 <a id="OPS_ref1"></a>
 
 ### Numéro d'opus

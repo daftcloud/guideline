@@ -16,38 +16,14 @@ permalink: guideline/sourceDesc
 
 ## a. Titre
 
-<a id="OTL_ref4"></a>
-
-### Titre de la source utilisée pour l'édition digitale
-
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |Titre de la source.|[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|OTL|
-
-<p style="text-align:justify;"> 
-   Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres, des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
-</p>
-
-
-```xml
-<source xml:id="...">
-   <biblStruct xml:id="...">
-      <monogr>
-         <title xml:id="...">...</title>
-      </monogr>
-   </biblStruct>
-</source>   
-```
-
 <a id="PTL_ref1"></a>
 
-### Titre d'une publication ou d'un manuscrit servant de source à l'édition MEI 
+### Titre d'une source utilisée pour l'édition digitale (publication, manuscrit, etc.) 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|PTL & SMS|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de publication|OTL, PTL & SMS|
 
  <p style="text-align:justify;"> 
    Le titre sous lequel le document source est présenté se renseigne sous la balise &lt;title&gt; de l'élément &lt;monogr&gt;. 
@@ -64,9 +40,7 @@ permalink: guideline/sourceDesc
    Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
 
    
-
-
-
+<p style="text-align:justify;"> 
    @type permet de caractériser le titre selon :
    "main" pour le titre principale.
    "subordinate" pour un sous-titre ou le titre d'une partie.
@@ -81,12 +55,23 @@ permalink: guideline/sourceDesc
 <source>
    <biblStruct>
       <monogr>
-         <title type="main"> Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci (1599)</title> 
+         <title level="m" type="main">Il nono libro de madrigali</title>
+         <title type="subordinate">a cinque voci</title> 
       </monogr> 
    </biblStruct>
 </source>
 ```
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <title level="u" type="desc">Lettre daté du ...</title>
+      </monogr> 
+   </biblStruct>
+</source>
+```
+
  
 ```xml
 <source recordtype="d">
@@ -107,12 +92,6 @@ permalink: guideline/sourceDesc
 </source>
 ``` 
 
-<p style="text-align:justify;"> 
-Le titre sous lequel le document source est présenté se renseigne sous 
-
- Ainsi, pour distinguer le titre de l'édition de celui de la pièce (proprement encodé dans &lt;workList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines de music-encoding.org, tout en en uniformisant l'encodage. Le &lt;title&gt; principal, avec l'attribut @type="main", doit être suivi d'un &lt;title&gt; subordonné, avec un @type="subordinate", précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
-</p>
-
 ## b. Compositeur
 
 <a id="COM_ref3"></a>
@@ -127,17 +106,47 @@ Le titre sous lequel le document source est présenté se renseigne sous
  Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser).
 </p>
 
-<!-- Comment indiquer le nom d'un compositeur attribué par la source, mais qui se révèle être faux ? -->
+<p style="text-align:justify;">
+Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un compositeur. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
+</p>
+
+
+<strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.
+
+
+<strong>"external"</strong> quand cette attribution provient d'une information externe à la source de votre édition.
+
+
+<strong>"conjecture"</strong> quand cette attribution provient d'un éditeur ou d'un chercheur sur la base de son expertise.
+
+
+<p style="text-align:justify;">
+Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible. Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
+</p>
 
 ```xml
 <source xml:id="...">
    <biblStruct xml:id="...">
       <composer xml:id="...">
-         <persName role="creator" auth="..." auth.uri="http://..." codedval="...">...</persName>
+         <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
       </composer>
    </biblStruct>
 </source>
 ```
+<p style="text-align:justify;">
+Il est possible que la source indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" pour montrer le faible crédit que nous portons à cette information, @evidence="internal" pour préciser que cette attribution provient directement de la source et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
+</p>
+
+<source xml:id="...">
+   <biblStruct xml:id="...">
+      <composer xml:id="...">
+         <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="low" evidence="internal" resp="#XYZ123">Nom erroné de la source</persName>
+         <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="high" evidence="external">Nom certifié par une preuve extérieur</persName>
+      </composer>
+   </biblStruct>
+</source>
+
+
 ## c. Informations liées à l'édition 
 
 <a id="PED_ref1"></a>
@@ -156,7 +165,7 @@ Le titre sous lequel le document source est présenté se renseigne sous
       <monogr>
          <imprint>
          <editor>
-            <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
+            <persName xml:id="..." auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
          </editor>
          </imprint>
       </monogr>
@@ -199,13 +208,13 @@ Si c'est une personne :
 
 <a id="PPR_ref1"></a>
 
-### Premier éditeur
+### Date et éditeur de la première publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
 
- 
+ <!-- Est-ce bien nécessaire dans le cadre de la description d'une source? Ou seulement dans la partie plus FRBR que représente WorkList ?  -->
 ```xml
 <source>
    <biblStruct>
@@ -214,7 +223,7 @@ Si c'est une personne :
       <editor xml:id="E1" n="1" precedes="#E2">
          <persName></persName>
       </editor>
-      <editor xml:id="E2" n="2" follows="#E1">>
+      <editor xml:id="E2" n="2" follows="#E1">
          <persName></persName>
       </editor>     
       </imprint>
@@ -222,6 +231,7 @@ Si c'est une personne :
    </biblStruct>
 </source>
 ```
+
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
 
  
@@ -244,15 +254,6 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 </source>
 ```
 
-<a id="PDT_ref1"></a>
-
-### Date de la première publication
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Date de la première publication|PDT|
-
- 
 ```xml
 <source>
    <biblStruct>
