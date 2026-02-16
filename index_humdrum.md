@@ -88,7 +88,7 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | YEC | Copyright (édition électronique) | [Dans la description du fichier](guideline/fileDesc.html#YEC_ref1) |||
  | YEM | Licence | [Dans la description du fichier](guideline/fileDesc.html#YEM_ref1) |||
  | YEN | Pays de copyright | [Dans la description du fichier](guideline/fileDesc.html#YEM_ref1) |||
- | YEP | Éditeur de l'édition électronique | [YEP : Éditeur](guideline/fileDesc.html#YEP_ref1) |||
+ | YEP | Éditeur de l'édition électronique | [Dans la description du fichier](guideline/fileDesc.html#YEP_ref1) |||
  | YER | Date de mise à disposition | [Dans la description du fichier](guideline/fileDesc.html#YER_ref1) |||
  | YOE | Éditeur du document d'origine || [Dans la description de la source](guideline/sourceDesc.html#PED_ref1) ||
  | YOO | Propriétaire du document d'origine || [Dans la description de la source](guideline/sourceDesc.html#YOO_ref1) ||
