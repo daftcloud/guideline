@@ -7,10 +7,12 @@ permalink: guideline/sourceDesc
 
 ---
 
+<a id="YOR_ref1"></a>
+
 # Description de la source &lt;SourceDesc&gt;
 
 <p style="text-align:justify;"> 
-   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il conviendra de séparer chaque source dans un &lt;source&gt; différent.
+   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il conviendra de séparer chaque source dans un élément &lt;source&gt; différent.
    La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt;, dont le cadre plus strict favorise la normalisation des données.
 </p>
 
@@ -27,29 +29,32 @@ permalink: guideline/sourceDesc
 
  <p style="text-align:justify;"> 
    Le titre sous lequel le document source est présenté se renseigne sous la balise &lt;title&gt; de l'élément &lt;monogr&gt;. 
-   Il convient de faire bon usage des deux attributs principaux de la balise &lt;title&gt;, @level et @type. 
+   Il convient de faire bon usage des deux attributs principaux de la balise &lt;title&gt;, <strong>@level</strong> et <strong>@type</strong>.
    
-   @level permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
+   <strong>@level</strong> permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
+</p>
    
-   "m" dans le cas d'une monographie, 
-   "u" pour une ressource inédite, 
-   "a" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil.
-   "c" pour une collection n'ayant pas, à l'origine, été publié, produit ou distribué ensemble comme un fonds d'archives ou un recueil factice.
+   "**m**" dans le cas d'une monographie, 
+   "**u**" pour une ressource inédite, 
+   "**a**" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil.
+   "**c**" pour une collection n'ayant pas, à l'origine, été publié, produit ou distribué ensemble comme un fonds d'archives ou un recueil factice.
    </p>
 
    Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
 
    
 <p style="text-align:justify;"> 
-   @type permet de caractériser le titre selon :
-   "main" pour le titre principale.
-   "subordinate" pour un sous-titre ou le titre d'une partie.
-   "abbreviated" pour la forme abrégée d'un titre.
-   "alternative" pour un titre alternatif.
-   "translated"  pour une version traduite du titre.
-   "uniform" pour un titre conventionnels ou normalisés.
-   "desc" pour un titre descriptif.
+   <strong>@type</strong> permet de caractériser le titre selon :
 </p>
+
+   "**main**" pour le titre principale.
+   "**subordinate**" pour un sous-titre ou le titre d'une partie.
+   "**abbreviated**" pour la forme abrégée d'un titre.
+   "**alternative**" pour un titre alternatif.
+   "**translated**"  pour une version traduite du titre.
+   "**uniform**" pour un titre conventionnels ou normalisés.
+   "**desc**" pour un titre descriptif.
+
 
 ```xml
 <source>
@@ -103,7 +108,7 @@ permalink: guideline/sourceDesc
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
 
 <p style="text-align:justify;"> 
- Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre. Toutefois, il est conseillé de suivre un thesaurus ou un vocabulaire contrôlé dans un souci de standardisation tels que [VIAF](https://www.oclc.org/fr/viaf.html) Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées (ici aussi, préciser).
+ Le ou les compositeurs renseignés ici ne concernent que la source concernée et non une œuvre tierce. À noter également que la valeur de @role est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer".
 </p>
 
 <p style="text-align:justify;">
@@ -134,18 +139,24 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
 </source>
 ```
 <p style="text-align:justify;">
-Il est possible que la source indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" pour montrer le faible crédit que nous portons à cette information, @evidence="internal" pour préciser que cette attribution provient directement de la source et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
+Il est possible que la source indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" ; pour montrer le faible crédit que nous portons à cette information, @evidence="internal" ; pour préciser que cette attribution provient directement de la source, et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
 </p>
 
 <source xml:id="...">
    <biblStruct xml:id="...">
       <composer xml:id="...">
-         <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="low" evidence="internal" resp="#XYZ123">Nom erroné de la source</persName>
-         <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="high" evidence="external">Nom certifié par une preuve extérieur</persName>
+         <monogr>
+            <composer>
+               <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="low" evidence="internal" resp="#XYZ123">Nom erroné de la source</persName>
+               <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="high" evidence="external">Nom certifié par une preuve extérieur</persName>
+            </composer>
+            <editor>
+               <persName xml:id="XYZ123" role="editor" auth="..." auth.uri="http://..." codedval="...">
+            </editor>
+         </monogr>
       </composer>
    </biblStruct>
 </source>
-
 
 ## c. Informations liées à l'édition 
 
@@ -157,154 +168,94 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de la source utilisée pour l'édition digitale|PED|
 
- Si c'est une personne :
+<p style="text-align:justify;">
+L'éditeur d'une source publiée peut être une personne ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas et &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;imprint&gt;.  
+</p>
 
 ```xml
 <source>
    <biblStruct>
       <monogr>
          <imprint>
-         <editor>
-            <persName xml:id="..." auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
-         </editor>
+            <editor>
+               <persName xml:id="..." auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
+            </editor>
          </imprint>
       </monogr>
    </biblStruct>
 </source>
 ```
 
-Autre option : Si c'est une maison d'édition (cumulable) :
-
 ```xml
 <source>
    <biblStruct>
       <monogr>
          <imprint>
-            <corpName>Edizioni Suvini Zerboni</corpName>
+            <editor>
+            <corpName role="editor">Edizioni Suvini Zerboni</corpName>
             <date isodate="2000">2000</date>
             <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
+            </editor>
          </imprint>
       </monogr>
    </biblStruct>
 </source>
 ```
 
- 
-Si c'est une personne :
+<a id="PUB_ref1"></a>
 
-```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <editor>
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
-      </editor>
-      </imprint>
-      </monogr>
-   </biblStruct>
-</source>
-```
-
-<a id="PPR_ref1"></a>
-
-### Date et éditeur de la première publication
+### Publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
-
- <!-- Est-ce bien nécessaire dans le cadre de la description d'une source? Ou seulement dans la partie plus FRBR que représente WorkList ?  -->
-```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <editor xml:id="E1" n="1" precedes="#E2">
-         <persName></persName>
-      </editor>
-      <editor xml:id="E2" n="2" follows="#E1">
-         <persName></persName>
-      </editor>     
-      </imprint>
-      </monogr>
-   </biblStruct>
-</source>
-```
-
-Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|État de publication (ex. publié, pas encore publié, en cours de publication){:target="_blank"}|PUB|
 
  
 
-
 ```xml
 <source>
    <biblStruct>
-      <monogr>
-         <imprint>
-      <editor xml:id="E1" n="1" precedes="#E2">
-         <persName></persName>
-      </editor>
-      <editor xml:id="E2" n="2" follows="#E1">
-         <persName></persName>
-      </editor>  
-      </imprint>  
-      </monogr> 
+      <unpub>En raison d'un manque de financement</unpub>
    </biblStruct>
 </source>
 ```
-
-```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <edition xml:id="E1" n="1" precedes="#E2">
-         <editor  n="1">
-            <persName></persName>
-         </editor>
-         <date isodate="1940">1940</date>
-      </edition>
-      <edition xml:id="E2" n="2" follows="#E1">   
-         <editor n="2">
-            <persName></persName>
-         </editor> 
-         <date isodate="1999">1999</date> 
-      </edition>   
-      </imprint>
-      </monogr>  
-   </biblStruct>
-</source>
-```
-
 
 Autre option : 
 
 <p style="text-align:justify;"> 
- La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+ En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
 </p>
 
 
 ```xml
 <source>
    <biblStruct>
-      <monogr>
-         <imprint>
-      <edition xml:id="E1" n="1" precedes="#E2">
-         <editor  n="1">
-            <persName></persName>
-         </editor>
-         <date isodate="1940">1940</date>
-      </edition>
-      <edition xml:id="E2" n="2" follows="#E1">   
-         <editor n="2">
-            <persName></persName>
-         </editor> 
-         <date isodate="1999">1999</date> 
-      </edition> 
-      </imprint>
-      </monogr>   
+      <unpub>En raison d'un manque de financement</unpub>
    </biblStruct>
+</source>
+```
+
+ 
+
+
+```xml
+<source recordtype="d">
+  <biblStruct>
+     <physLoc>
+       <repository>
+          <corpName>bibliothèque nationale de France</corpName>
+          <abbr>BnF</abbr>
+       </repository>
+     </physLoc>
+     <relatedItem>
+       <biblStruct>
+          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
+          <abbr>Fr. 146</abbr>
+          <title type="alternative">Roman de Fauvel</title>
+          <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
+       </biblStruct>
+     </relatedItem>
+  </biblStruct>
 </source>
 ```
 
@@ -388,12 +339,6 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro|ONM|
 
- 
-
-Autre option : 
-
- 
-
 
 ```
 ```
@@ -444,62 +389,7 @@ Autre option :
 </source>
 ```
 
-<a id="PUB_ref1"></a>
 
-### Publication
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|État de publication (ex. publié, pas encore publié, en cours de publication){:target="_blank"}|PUB|
-
- 
-
-```xml
-<source>
-   <biblStruct>
-      <unpub>En raison d'un manque de financement</unpub>
-   </biblStruct>
-</source>
-```
-
-Autre option : 
-
-<p style="text-align:justify;"> 
- En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
-</p>
-
-
-```xml
-<source>
-   <biblStruct>
-      <unpub>En raison d'un manque de financement</unpub>
-   </biblStruct>
-</source>
-```
-
- 
-
-
-```xml
-<source recordtype="d">
-  <biblStruct>
-     <physLoc>
-       <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
-          <abbr>BnF</abbr>
-       </repository>
-     </physLoc>
-     <relatedItem>
-       <biblStruct>
-          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
-          <abbr>Fr. 146</abbr>
-          <title type="alternative">Roman de Fauvel</title>
-          <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-       </biblStruct>
-     </relatedItem>
-  </biblStruct>
-</source>
-```
 
 <a id="SML_ref1"></a>
 
@@ -515,7 +405,7 @@ Autre option :
   <biblStruct>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
@@ -546,7 +436,7 @@ Autre option :
       <item recordtype="d">
          <physLoc>
             <repository>
-               <corpName>biblStructiothèque nationale de France</corpName>
+               <corpName>bibliothèque nationale de France</corpName>
                <abbr>BnF</abbr>
             </repository>
          </physLoc>
@@ -557,13 +447,11 @@ Autre option :
             <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
          </identifier>  
          <availability>
-            <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+            <accessRestrict>Non consultable en bibliothèque</accessRestrict>
          </availability> 
       </item>
    </itemList>
 ```
-
- 
 
 
 ```xml
@@ -571,7 +459,7 @@ Autre option :
   <biblStruct>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
@@ -601,7 +489,7 @@ Autre option :
   <biblStruct>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
@@ -613,16 +501,13 @@ Autre option :
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
           <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
           <availability>
-             <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
           </availability>
        </biblStruct>
      </relatedItem>     
   </biblStruct>
 </source>
 ```
-
-Autre option : 
-
 
 ```xml
 <manifestation recordtype="d">
@@ -637,7 +522,7 @@ Autre option :
       <item recordtype="d">
          <physLoc>
             <repository>
-               <corpName>biblStructiothèque nationale de France</corpName>
+               <corpName>bibliothèque nationale de France</corpName>
                <abbr>BnF</abbr>
             </repository>
          </physLoc>
@@ -648,7 +533,7 @@ Autre option :
             <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
          </identifier>  
          <availability>
-            <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+            <accessRestrict>Non consultable en bibliothèque</accessRestrict>
          </availability> 
       </item>
    </itemList>
@@ -659,7 +544,7 @@ Autre option :
   <biblStruct>
      <physLoc>
        <repository>
-          <corpName>biblStructiothèque nationale de France</corpName>
+          <corpName>bibliothèque nationale de France</corpName>
           <abbr>BnF</abbr>
        </repository>
      </physLoc>
@@ -671,54 +556,13 @@ Autre option :
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
           <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
           <availability>
-             <accessRestrict>Non consultable en biblStructiothèque</accessRestrict>
+             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
           </availability>
        </biblStruct>
      </relatedItem>     
   </biblStruct>
 </source>
 ```
-
-<a id="YOR_ref1"></a>
-
-### Document d'origine de l'édition électronique
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.4.1.6 Source Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerSourceDescription){:target="_blank"}|Document d'origine de l'édition électronique|YOR|
-
- 
-```xml
-<source>
-   <biblStruct>
-   <monogr>
-      <imprint>
-         ...
-      </imprint>
-   </monogr>
-   </biblStruct>
-</source>
-```
-
-Autre option : 
-
-
-```xml
-<source>
-   <biblStruct>
-   ... Sans structure
-   </biblStruct>
-</source>
-```
-
-<p style="text-align:justify;"> 
- 
-Nous recommandons d'utiliser une solution plus structuré avec `<biblStruct>\<monogr>
-         <imprint>\<imprint>` contenant toutes les informations en lien avec la source.
-</p>
-
-
-
 
 <a id="YOO_ref1"></a>
 
@@ -765,8 +609,6 @@ Autre option :
 </p>
 
 
-
-
 <a id="YOY_ref1"></a>
 
 ### Année du copyright du document d'origine
@@ -801,5 +643,103 @@ Autre option :
 </manifestationList>
 ```
 
+<a id="PPR_ref1"></a>
 
+### Date et éditeur de la première publication
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
+
+ <!-- Est-ce bien nécessaire dans le cadre de la description d'une source? Ou seulement dans la partie plus FRBR que représente WorkList ?  -->
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <editor xml:id="E1" n="1" precedes="#E2">
+         <persName></persName>
+      </editor>
+      <editor xml:id="E2" n="2" follows="#E1">
+         <persName></persName>
+      </editor>     
+      </imprint>
+      </monogr>
+   </biblStruct>
+</source>
+```
+
+Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
+
+ 
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <editor xml:id="E1" n="1" precedes="#E2">
+         <persName></persName>
+      </editor>
+      <editor xml:id="E2" n="2" follows="#E1">
+         <persName></persName>
+      </editor>  
+      </imprint>  
+      </monogr> 
+   </biblStruct>
+</source>
+```
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <edition xml:id="E1" n="1" precedes="#E2">
+         <editor  n="1">
+            <persName></persName>
+         </editor>
+         <date isodate="1940">1940</date>
+      </edition>
+      <edition xml:id="E2" n="2" follows="#E1">   
+         <editor n="2">
+            <persName></persName>
+         </editor> 
+         <date isodate="1999">1999</date> 
+      </edition>   
+      </imprint>
+      </monogr>  
+   </biblStruct>
+</source>
+```
+
+
+Autre option : 
+
+<p style="text-align:justify;"> 
+ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+</p>
+
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+      <edition xml:id="E1" n="1" precedes="#E2">
+         <editor  n="1">
+            <persName></persName>
+         </editor>
+         <date isodate="1940">1940</date>
+      </edition>
+      <edition xml:id="E2" n="2" follows="#E1">   
+         <editor n="2">
+            <persName></persName>
+         </editor> 
+         <date isodate="1999">1999</date> 
+      </edition> 
+      </imprint>
+      </monogr>   
+   </biblStruct>
+</source>
+```
 
