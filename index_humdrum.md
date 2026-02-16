@@ -74,7 +74,7 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | PDT | Date de publication || [Dans la description de la source](guideline/sourceDesc.html#PPR_ref1) |[Dans la description de l'œuvre](guideline/workList.html#PPR_ref2)|
  | PED | Éditeur de la source || [Dans la description de la source](guideline/sourceDesc.html#PED_ref1) ||
  | PPP | Lieu de publication || [Dans la description de la source](guideline/sourceDesc.html#PPP_ref1) ||
- | PPR | Premier éditeur || [Dans la description de la source](guideline/sourceDesc.html#PPR_ref1) |Premier éditeur || [Dans la description de l'œuvre](guideline/workList.html#PPR_ref2)|
+ | PPR | Premier éditeur || [Dans la description de la source](guideline/sourceDesc.html#PPR_ref1) | [Dans la description de l'œuvre](guideline/workList.html#PPR_ref2)|
  | PTL | Titre de la publication || [Dans la description de la source](guideline/sourceDesc.html#PTL_ref1) ||
  | PUB | Publication || [Dans la description de la source](guideline/sourceDesc.html#PUB_ref1) ||
  | SCA | Catalogue scientifique || [Dans la description de la source](guideline/sourceDesc.html#SCA_ref1) ||
