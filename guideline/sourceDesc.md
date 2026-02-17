@@ -133,6 +133,16 @@ Exemple d'une lettre inédite.
   </biblStruct>
 </source>
 ``` 
+<a id="ONM_ref1"></a>
+
+### Numéro
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro|ONM|
+
+<!-- Je ne comprends pas de quoi il est question ici. Du numéro d'opus ? -->
+
 
 ## b. Compositeur
 
@@ -208,7 +218,7 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de la source utilisée pour l'édition digitale|PED|
 
 <p style="text-align:justify;">
-L'éditeur d'une source publiée peut être une personne ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas et &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;imprint&gt;.  
+L'éditeur d'une source publiée peut être une personne ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas ou &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;imprint&gt;.  
 </p>
 
 ```xml
@@ -249,11 +259,9 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|État de publication (ex. publié, pas encore publié, en cours de publication){:target="_blank"}|PUB|
 
-
-
 <p style="text-align:justify;">
-La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publié, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
-Cette balise, limité à du texte, permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide, comme balise auto-fermante. (&lt;unpub/&gt;)
+La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publiée, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
+Cette balise limité à du texte permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
 </p>
 
 Exemple d'une source dont le projet de publication avorta.
@@ -316,7 +324,12 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de publication|PPP|
 
+<p style="text-align:justify;">
+La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publiée, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
+Cette balise limité à du texte permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
+</p>
  
+
 ```xml
 <source recordtype="c">
    <biblStruct>
@@ -366,7 +379,7 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|PC#, SCT et SCA|
 
 <p style="text-align:justify;"> 
- Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéro de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
+ Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéros de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
 </p>
  
 ```xml
@@ -380,17 +393,7 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
 ```
 
 
-<a id="ONM_ref1"></a>
 
-### Numéro
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro|ONM|
-
-
-```
-```
 
 <a id="OVM_ref1"></a>
 
