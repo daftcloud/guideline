@@ -253,9 +253,7 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 
 <p style="text-align:justify;">
 La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publié, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
-Cette balise, limité à du texte, permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise vide, comme balise auto-fermante.
-Il existe, toutefois, la balise &lt;unpub&gt; qui permet de rédiger une explications sur les raisons de la non-publication d'une source.
- En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
+Cette balise, limité à du texte, permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide, comme balise auto-fermante. (&lt;unpub/&gt;)
 </p>
 
 Exemple d'une source dont le projet de publication avorta.
