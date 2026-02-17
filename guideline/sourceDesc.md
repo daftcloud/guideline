@@ -16,6 +16,20 @@ permalink: guideline/sourceDesc
    La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt;, dont le cadre plus strict favorise la normalisation des données.
 </p>
 
+Structure d'une source.
+```xml
+<source xml:id="">
+   <biblStruct xml:id="">
+      <monogr>
+         <title level="" type="">
+         <imprint>
+            
+         </imprint>
+      </mongr>
+   </biblStruct>
+</source>
+```
+
 ## a. Titre
 
 <a id="PTL_ref1"></a>
@@ -92,6 +106,9 @@ Exemple d'une lettre inédite.
    <biblStruct>
       <monogr>
          <title level="u" type="desc">Lettre daté du ...</title>
+         <imprint>
+            <unpub/>
+         </imprint>
       </monogr> 
    </biblStruct>
 </source>
@@ -226,7 +243,7 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 
 <a id="PUB_ref1"></a>
 
-### Publication
+### État de publication d'une source
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -234,17 +251,40 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 
 
 
-Autre option : 
-
-<p style="text-align:justify;"> 
+<p style="text-align:justify;">
+La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publié, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
+Cette balise, limité à du texte, permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise vide, comme balise auto-fermante.
+Il existe, toutefois, la balise &lt;unpub&gt; qui permet de rédiger une explications sur les raisons de la non-publication d'une source.
  En MEI, l'approche est à l'évidence très binaire : publié ou non. Nul besoin de le préciser si l'entité est bel et bien publiée (assez logique), mais par contre `<unpub>` est assez limité. Seul du texte est possible, expliquant les raisons de la non-publication. `<unpub>` peut d'ailleurs aussi aller dans `<imprint>` pour plus de précision sur le contexte de la non-publication (si celle-ci dépend de la maison d'édition).
 </p>
 
-
+Exemple d'une source dont le projet de publication avorta.
 ```xml
 <source>
    <biblStruct>
-      <unpub>En raison d'un manque de financement</unpub>
+      <monogr>
+         <title level="u" type="main">Titre de la source non publié</title>
+         <imprint>
+            <editor>
+               <corpName>Nom de la maison d'édition</corpName>
+               </editor>
+            <unpub>En raison d'un manque de financement</unpub>
+         </imprint>
+      </monogr>
+   </biblStruct>
+</source>
+```
+
+Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas vocation à être publiée.
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <title level="u" type="desc">Lettre daté du ...</title>
+         <imprint>
+            <unpub/>
+         </imprint>
+      </monogr> 
    </biblStruct>
 </source>
 ```
