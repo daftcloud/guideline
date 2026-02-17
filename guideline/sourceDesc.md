@@ -35,27 +35,46 @@ permalink: guideline/sourceDesc
 </p>
    
    "**m**" dans le cas d'une monographie, 
+
+
    "**u**" pour une ressource inédite, 
+
+
    "**a**" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil.
+
+
    "**c**" pour une collection n'ayant pas, à l'origine, été publié, produit ou distribué ensemble comme un fonds d'archives ou un recueil factice.
-   </p>
 
+ <p style="text-align:justify;"> 
    Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
-
+</p>
    
 <p style="text-align:justify;"> 
    <strong>@type</strong> permet de caractériser le titre selon :
 </p>
 
    "**main**" pour le titre principale.
+
+
    "**subordinate**" pour un sous-titre ou le titre d'une partie.
+
+
    "**abbreviated**" pour la forme abrégée d'un titre.
+
+
    "**alternative**" pour un titre alternatif.
+
+
    "**translated**"  pour une version traduite du titre.
+
+
    "**uniform**" pour un titre conventionnels ou normalisés.
+
+
    "**desc**" pour un titre descriptif.
 
 
+Exemple d'une monographie.
 ```xml
 <source>
    <biblStruct>
@@ -67,6 +86,7 @@ permalink: guideline/sourceDesc
 </source>
 ```
 
+Exemple d'une lettre inédite.
 ```xml
 <source>
    <biblStruct>
@@ -77,7 +97,7 @@ permalink: guideline/sourceDesc
 </source>
 ```
 
- 
+
 ```xml
 <source recordtype="d">
   <biblStruct>
@@ -142,6 +162,7 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
 Il est possible que la source indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" ; pour montrer le faible crédit que nous portons à cette information, @evidence="internal" ; pour préciser que cette attribution provient directement de la source, et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
 </p>
 
+```xml
 <source xml:id="...">
    <biblStruct xml:id="...">
       <composer xml:id="...">
@@ -157,6 +178,7 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
       </composer>
    </biblStruct>
 </source>
+```
 
 ## c. Informations liées à l'édition 
 
@@ -210,15 +232,7 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|État de publication (ex. publié, pas encore publié, en cours de publication){:target="_blank"}|PUB|
 
- 
 
-```xml
-<source>
-   <biblStruct>
-      <unpub>En raison d'un manque de financement</unpub>
-   </biblStruct>
-</source>
-```
 
 Autre option : 
 
@@ -234,9 +248,6 @@ Autre option :
    </biblStruct>
 </source>
 ```
-
- 
-
 
 ```xml
 <source recordtype="d">
