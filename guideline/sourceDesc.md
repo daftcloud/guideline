@@ -207,49 +207,7 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
 </source>
 ```
 
-## c. Informations liées à l'édition 
-
-<a id="PED_ref1"></a>
-
-### Éditeur de la source utilisée pour l'édition digitale
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de la source utilisée pour l'édition digitale|PED|
-
-<p style="text-align:justify;">
-L'éditeur d'une source publiée peut être une personne ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas ou &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;imprint&gt;.  
-</p>
-
-```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-            <editor>
-               <persName xml:id="..." auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
-            </editor>
-         </imprint>
-      </monogr>
-   </biblStruct>
-</source>
-```
-
-```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-            <editor>
-            <corpName role="editor">Edizioni Suvini Zerboni</corpName>
-            <date isodate="2000">2000</date>
-            <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-            </editor>
-         </imprint>
-      </monogr>
-   </biblStruct>
-</source>
-```
+## c. Informations liées à l'édition
 
 <a id="PUB_ref1"></a>
 
@@ -316,6 +274,51 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
 </source>
 ```
 
+<a id="PED_ref1"></a>
+
+### Éditeur de la source utilisée pour l'édition digitale
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de la source utilisée pour l'édition digitale|PED|
+
+<p style="text-align:justify;">
+La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source.
+L'éditeur d'une source publiée peut être une personne ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas ou &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;editor&gt;.  
+</p>
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <editor>
+               <persName xml:id="..." auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="12395760">Paolo Fabri</persName>
+            </editor>
+         </imprint>
+      </monogr>
+   </biblStruct>
+</source>
+```
+
+```xml
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <editor>
+            <corpName role="editor">Edizioni Suvini Zerboni</corpName>
+            <date isodate="2000">2000</date>
+            <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
+            </editor>
+         </imprint>
+      </monogr>
+   </biblStruct>
+</source>
+```
+
+
+
 <a id="PPP_ref1"></a>
 
 ### Lieu de publication
@@ -325,8 +328,7 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de publication|PPP|
 
 <p style="text-align:justify;">
-La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publiée, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
-Cette balise limité à du texte permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
+La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Le lieu de publication 
 </p>
  
 
@@ -441,8 +443,39 @@ Autre option :
 </source>
 ```
 
+<a id="YOY_ref1"></a>
+
+### Année du copyright du document d'origine
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Année du copyright originale|YOY|
 
 
+ 
+```xml
+<manifestationList>
+   <manifestation>
+      <availability>
+         <useRestrict>
+            <date isodate="...">...</date>
+         </useRestrict>
+      </availability>
+   </manifestation>
+</manifestationList>
+```
+
+```xml
+<manifestationList>
+   <manifestation>
+      <availability>
+         <useRestrict>
+            <date isodate="1891-01-01">1891</date>
+         </useRestrict>
+      </availability>
+   </manifestation>
+</manifestationList>
+```
 <a id="SML_ref1"></a>
 
 ### Lieu de conservation du manuscrit
@@ -659,41 +692,6 @@ Autre option :
 <p style="text-align:justify;"> 
  recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, biblStruct est plus libre. À voir.
 </p>
-
-
-<a id="YOY_ref1"></a>
-
-### Année du copyright du document d'origine
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Année du copyright originale|YOY|
-
-
- 
-```xml
-<manifestationList>
-   <manifestation>
-      <availability>
-         <useRestrict>
-            <date isodate="...">...</date>
-         </useRestrict>
-      </availability>
-   </manifestation>
-</manifestationList>
-```
-
-```xml
-<manifestationList>
-   <manifestation>
-      <availability>
-         <useRestrict>
-            <date isodate="1891-01-01">1891</date>
-         </useRestrict>
-      </availability>
-   </manifestation>
-</manifestationList>
-```
 
 <a id="PPR_ref1"></a>
 
