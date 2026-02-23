@@ -6,7 +6,12 @@ parent: Guideline
 permalink: /guideline/workList
 ---
 
-# Description de l'œuvre musicale &lt;workList&gt;
+# Description de l'œuvre musicale &lt;workList&gt
+
+<p style="text-align:justify;"> 
+ &lt;workList&gt; est 
+</p>
+
 ## a. Titre
 
 <a id="OTL_ref2"></a>
@@ -31,7 +36,7 @@ Autre option : `<title>`
 
 
 ```xml
-"<workList xml:id="...">
+<workList xml:id="...">
    <work xml:id="...">
       <title xml:id="...">...</title>
    </work>
@@ -60,12 +65,6 @@ Autre option : `<title>`
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Titre de l'œuvre encodée.|OTL|
-
-
-
-`<title>`
-
-Autre option : -
 
 <p style="text-align:justify;"> 
  Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
@@ -113,11 +112,6 @@ Titre simple d'une œuvre :
  | - |Titre populaire de l'œuvre encodée.|OTP|
 
 
-
- `<title type="alternative">`
-
-Autre option : -
-
 <p style="text-align:justify;"> 
  Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
 </p>
@@ -145,9 +139,6 @@ Autre option : -
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA|
 
-
-
- `<title type="alternative">`
 
 Autre option, en fonction du contexte : `<title type="subordinate">`; `<title type="abbreviated">`; `<title type="translated">`; `<title type="uniform">`; `<title type="desc">`
 
@@ -181,12 +172,6 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre globale dans le cas d'une section ou d'un mouvement.|OPR|
 
-
-
- `<title type="main">` ; `<title type="uniform">`
-
-Autre option : 
-
 <p style="text-align:justify;"> 
  Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
 </p>
@@ -210,14 +195,10 @@ Autre option :
 ### Compositeur de l'œuvre musicale
 
 
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
 
-
-
- `<composer>`
 
 Autre option : `<persName role="composer">`
 
@@ -261,10 +242,6 @@ Autre option : `<persName role="composer">`
 
 
 
- `<composer evidence="...">` 
-
-Autre option : `<persName>`
-
 <p style="text-align:justify;"> 
  La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
 </p>
@@ -290,10 +267,6 @@ Autre option : `<persName>`
 
 
 
- `<composer>`
-
-Autre option : `<persName>`
-
 <p style="text-align:justify;"> 
  Il est conseillé d’utiliser l’attribut @cert pour indiquer le degré de certitude. Les valeurs autorisées sont : high, 
 medium, low ou unknown. (?Est-il pertinent de mettre le degré de certitude dans la balise composer? Dans la balise persName, si on fait une récupération de tous les persName, on garde le niveau de certitude.)
@@ -303,7 +276,7 @@ medium, low ou unknown. (?Est-il pertinent de mettre le degré de certitude dans
 ```xml
 <workList xml:id="...">
    <work xml:id="...">
-      <composer xml:id="..." cert="low">
+      <composer xml:id="..." >
           <persName role="composer" cert="low" auth="..." auth.uri="http://..." codedval="...">Nom soupçonné</persName>
       </composer>
    </work>
@@ -742,8 +715,9 @@ Autre option :
 
 Autre option : `<identifier label="opus">`
 
+<p style="text-align:justify;"> 
  Nous envisageons le numéro d'opus comme un syntagme du titre de l'œuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
-
+</p> 
 
 ```xml
 <workList>
@@ -774,8 +748,10 @@ Autre option : `<identifier label="opus">`
 </perfMedium>
 ```
  
+ 
+<p style="text-align:justify;"> 
 Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans l'élément perfRes.
-
+</p> 
 
 ```xml
 <perfMedium>
@@ -822,8 +798,9 @@ Autre option :
 
 ```
 
+<p style="text-align:justify;"> 
  S'il est bien question d'une précision au sein de `<music>` : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
-
+</p>
 
 ```
 
@@ -923,8 +900,10 @@ Autre option :
    </mdiv>
 </body> 
 ```
- S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans `<music>` à l'aide de `<mdiv>`. 
 
+<p style="text-align:justify;"> 
+ S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans &lt;music&gt; à l'aide de &lt;mdiv&gt;. 
+</p>
 
 ```
 
@@ -941,8 +920,7 @@ Autre option :
 
 
  
-```
-bibliStruc/imprint/respStmt/persName
+```xml
 <biblStruc>
    <imprint>
       <resStmt>
@@ -993,7 +971,9 @@ Autre option :
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
  Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ </p>
 
 
 ```xml
@@ -1027,7 +1007,9 @@ Autre option :
    </work>
 <workList>  
 ```
+
 Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
+
 ```xml
 <workList>
    <work>
@@ -1072,8 +1054,9 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
 
 Autre option : 
 
+<p style="text-align:justify;"> 
  La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
-
+</p>
 
 ```xml
 <workList>
@@ -1097,7 +1080,7 @@ Définition :
 
 
 
-```
+```xml
  <creation>
          <date notbefore="1530" notafter="1550" cert="low">1540</date>
          <country>France</country>
@@ -1236,8 +1219,9 @@ Autre option :
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
  En MEI, le mode se désigne dans `<key>`, donc dans `<work>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
-
+</p>
 
 ```xml
 <workList>
@@ -1259,14 +1243,11 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter){:target="_blank"}|Classification métrique|AMT|
 
-
  
 
 `<meter>`
 
 Autre option : 
-
- 
 
 
 ```
@@ -1291,8 +1272,9 @@ Autre option :
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
  Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
-
+</p>
 
 ```xml
 <notesStmt>
@@ -1320,7 +1302,7 @@ Autre option :
 
 Autre option : 
 
- Je ne crois pas que cela soit nécessaire dans un header d'une édition critique.
+ <!-- Je ne crois pas que cela soit nécessaire dans un header d'une édition critique. -->
 
 
 ```xml
@@ -1396,7 +1378,7 @@ Autre option :
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory){:target="_blank"}|Date d'exécution/représentation|MRD|
 
 
-``` 
+```xml
 <workList>
    <work>
       <title>...</title>
@@ -1410,7 +1392,9 @@ Autre option :
    </work>
 </workList>
 ```
+
 Autre option : Dans le cas d'une œuvre dont il existe différentes expressions, dans le sens du modèle FRBR, il est possible de renseigner les informations concernants les exécutions/représentations de chaque expression distinctement.
+
 ```xml
 <workList>
    <work>
@@ -1429,8 +1413,11 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
    </work>
 </workList>
 ```
+
+<p style="text-align:justify;"> 
  Selon la typologie du projet, on va indiquer les informations concernant la représentation dans WorkList ou dans expressionList.
 La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+</p>
 
 
 ```xml
@@ -1549,7 +1536,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
  
 
 
-```
+```xml
  <history>   
    <eventList>
       <event type="premiere">
@@ -1595,9 +1582,10 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
 ```
 Autre option : 
 
+<p style="text-align:justify;"> 
  La date de la première exécution d'une œuvre est à situé, a minima, au niveau de workList, dans une balise `<event>` dont l'attribut @type prend pour valeur « premiere ». 
 La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
-
+</p>
 
 ```xml
 <workList>
@@ -1634,8 +1622,9 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 </work>
 ```
  
+ <p style="text-align:justify;"> 
 Les œuvres associées sont, au sens du modèle FRBR, des expressions différentes d'une œuvre. S'il est besoin de renseigner les informations concernant les autres expressions d'une œuvre, ces renseignements se situeront dans un élément expression dédié à chaque œuvre associée.
-
+</p>
 
 ```xml
 <work>
@@ -1666,7 +1655,10 @@ Les œuvres associées sont, au sens du modèle FRBR, des expressions différent
 
 Autre option : 
 
+<p style="text-align:justify;"> 
  La collection concerne les manifestations dans le modèles FRBR. C'est une manifestation précise qui fait partie d'une "collection". Cela peut aussi être l'item ou la source.
+ </p>
+
 ```xml
 <sourceDesc>
 <source>
