@@ -325,7 +325,7 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 <a id="PPP_ref1"></a>
 
 ### Lieu de publication
-=====
+=============
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -335,8 +335,8 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 La balise &lt;imprint&gt; contient toutes les informations liées à la publication de la source. Le lieu de publication de la source s'y inscrit dans l'élément &lt;pubPlace&gt;. 
 </p>
 
-#### Pays
-
+Pays
+=============
 
 Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère avec [les attributs d'autorités](autorite.html).
 
@@ -355,6 +355,9 @@ La ville de publication s'écrit dans une balise &lt;settlement&gt; et se réfè
    Metz
 </settlement>
 ```
+
+
+Exemple complet
 
 ```xml
 <source recordtype="c">
