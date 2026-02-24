@@ -325,7 +325,6 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 <a id="PPP_ref1"></a>
 
 ### Lieu de publication
-=============
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -335,15 +334,13 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 La balise &lt;imprint&gt; contient toutes les informations liées à la publication de la source. Le lieu de publication de la source s'y inscrit dans l'élément &lt;pubPlace&gt;. 
 </p>
 
-Pays
-=============
+#### Pays
+
 
 Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère avec [les attributs d'autorités](autorite.html).
 
 ```xml
-<country auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="264091107">
-   France
-</country>
+<country auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="264091107">France</country>
 ```
 
 #### Ville, village ou agglomération
@@ -351,13 +348,11 @@ Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère a
 La ville de publication s'écrit dans une balise &lt;settlement&gt; et se réfère avec [les attributs d'autorités](autorite.html). Il peut s'agir d'un village ou d'une agglomérations identifiée comme une seule unité géopolitique ou administrative.
 
 ```xml
-<settlement auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="158480400">
-   Metz
-</settlement>
+<settlement auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="158480400">Metz</settlement>
 ```
 
 
-Exemple complet
+Exemple complet :
 
 ```xml
 <source recordtype="c">
@@ -394,23 +389,24 @@ Exemple complet
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de catalogue scientifique (abr.) [ex. BWV 551]|PC#, SCT et SCA|
 
 <p style="text-align:justify;"> 
- Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéros de catalogue sont indiqué dans une balise identifier avant un attribut label ou auth. Afin de pouvoir identifier automatiquement que la balise identifier contient un numéro de catalogue scientifique, il faut un attribut @type dont la valeur indique catalogue scientifique.
+ Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéros de catalogue sont indiqué dans une balise &lt;identifier&gt; avec un attribut @label ou @auth. Afin de pouvoir identifier automatiquement que la balise &lt;identifier&gt; contient un numéro de catalogue scientifique, il faut lui adjoindre un attribut @type dont la valeur indique catalogue scientifique.
 </p>
+
+<!-- Je ne sais pas quel valeur attribué à @type, à moins qu'on ne se base que sur auth / auth.uri pour identifier le catalogue comme dans l'exemple. -->
  
 ```xml
 <source>
    <biblStruct>
-      <identifier auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
+      <identifier type="" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="188308384">
          157
       </identifier>
    </biblStruct>
 </source>
 ```
 
-
-
-
 <a id="OVM_ref1"></a>
+
+<!-- Cette entrée n'est que le reflet d'une clef humdrum. Je ne saisis pas sa réalité dans le paradigme de l'édition en MEI
 
 ### Volume
 
@@ -434,7 +430,7 @@ Exemple complet
 </source>
 ```
 
-Autre option : 
+
 
 <p style="text-align:justify;"> 
  J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
@@ -455,7 +451,7 @@ Autre option :
    </biblStruct>
 </source>
 ```
-
+ -->
 <a id="YOY_ref1"></a>
 
 ### Année du copyright du document d'origine
@@ -464,42 +460,64 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Année du copyright originale|YOY|
 
+<p style="text-align:justify;"> 
+Toutes les informations concernant les droits d'utilisation de la source s'inscrivent dans l'élément &lt;useRestrict&gt; qui se retrouvent dans &lt;avaibility&gt;, lui-même dans &lt;imprint&gt;. S'il est besoin de renseigner une année de copyright, il convient de l'indiquer par une balise &lt;date&gt; avec l'attribut @type="copyright" comme suit :
+</p>
 
  
 ```xml
-<manifestationList>
-   <manifestation>
-      <availability>
-         <useRestrict>
-            <date isodate="...">...</date>
-         </useRestrict>
-      </availability>
-   </manifestation>
-</manifestationList>
+<source>
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <availability>
+               <useRestrict>
+                  <date type="copyright" isodate="1891-01-01">1891</date>
+               </useRestrict>
+            </availability>
+         </imprint>
+      </monogr>
+   </biblStruct>
+</source>
 ```
 
-```xml
-<manifestationList>
-   <manifestation>
-      <availability>
-         <useRestrict>
-            <date isodate="1891-01-01">1891</date>
-         </useRestrict>
-      </availability>
-   </manifestation>
-</manifestationList>
-```
-<a id="SML_ref1"></a>
+<p style="text-align:justify;">
+ Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension.
+</p>
 
-### Lieu de conservation du manuscrit
+
+<a id="SMA_ref1"></a>
+
+### Informations sur l'accès au manuscrit
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de conservation du manuscrit|SML|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Info sur l'accès au manuscrit|SMA|
 
+<p style="text-align:justify;"> 
+Toutes les informations concernant les conditions d'accès à la source s'inscrivent dans l'élément &lt;accessRestrict&gt; qui se retrouvent dans &lt;avaibility&gt;, lui-même dans &lt;imprint&gt;. On y trouve la localisation ainsi que l'identité du propriétaire actuelle du document.
+Il est possible de rédiger dans l'élément &lt;accessRestrict&gt; les conditions à remplir pour y accéder. Accès uniquement à des photocopies, 
+</p>
 
 ```xml
- <source recordtype="d">
+<source recordtype="d">
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <avaibility>
+               <accessRestrict>
+                  <p>Il n'y a aucune restriction d'accès à ce document.</p>
+               </accessRestrict>
+            </availability>
+         </imprint>
+      </monogr>
+   <biblStruct>
+</source>
+```
+
+<!-- 
+```xml
+<source recordtype="d">
   <biblStruct>
      <physLoc>
        <repository>
@@ -509,13 +527,81 @@ Autre option :
      </physLoc>
      <relatedItem>
        <biblStruct>
-          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/cc45158c">Français 146</identifier>
+          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval"cc45158c">Français 146</identifier>
           <abbr>Fr. 146</abbr>
           <title type="alternative">Roman de Fauvel</title>
           <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
+          <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
+          <availability>
+             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
+          </availability>
        </biblStruct>
-     </relatedItem>
+     </relatedItem>     
   </biblStruct>
+</source>
+```
+-->
+
+<a id="YOO_ref1"></a>
+
+### Propriétaire du document d'origine
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Propriétaire du document d'origine|YOO|
+
+<p style="text-align:justify;"> 
+Toutes les informations concernant les conditions d'accès à la source s'inscrivent dans l'élément &lt;accessRestrict&gt; qui se retrouvent dans &lt;avaibility&gt;, lui-même dans &lt;imprint&gt;. On y trouve la localisation ainsi que l'identité du propriétaire actuelle du document.
+L'identité du propriétaire peut y être inscrit via un élément &lt;corpName&gt; pour une institution ou &lt;persName&gt; pour un particulier.
+</p>
+ 
+ <!-- Il faudrait trouver un role adéquat, qui fasse consensus. Je propose curator pour l'instant. -->
+
+```xml
+<source recordtype="d">
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <avaibility>
+               <accessRestrict>
+                  <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="137156173" role="curator">Biibliothèque National de France</corpName>
+               </accessRestrict>
+            </availability>
+         </imprint>
+      </monogr>
+   <biblStruct>
+</source>
+```
+
+<a id="SML_ref1"></a>
+
+### Lieu de conservation du manuscrit
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de conservation du manuscrit|SML|
+
+<p style="text-align:justify;"> 
+Toutes les informations concernant la localisation actuelle de la source s'inscrivent dans l'élément &lt;accessRestrict&gt; qui se retrouvent dans &lt;avaibility&gt;, lui-même dans &lt;imprint&gt;. L'élément &lt;address&gt; permet l'emploi des éléments &lt;country&gt;, &lt;settlement&gt;, &lt;postCode&gt; et &lt;street&gt; pour renseigner l'adresse précise du lieu de conservation.
+</p>
+
+
+```xml
+<source recordtype="d">
+   <biblStruct>
+      <monogr>
+         <imprint>
+            <avaibility>
+               <accessRestrict>
+                  <corpName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="137156173" role="curator">Biibliothèque National de France</corpName>
+                  <address>  
+                     <street>Bibliothèque François Mitterand, Quai François Mauriac</street>, <postCode>75706</postCode> <settlement>Paris</settlement>. <country>France</country>
+                  </address>
+               </accessRestrict>
+            </availability>
+         </imprint>
+      </monogr>
+   <biblStruct>
 </source>
 ```
 
@@ -572,140 +658,7 @@ Autre option :
   </biblStruct>
 </source>
 ```
-
-<a id="SMA_ref1"></a>
-
-### Informations sur l'accès au manuscrit
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Info sur l'accès au manuscrit|SMA|
-
-
-```xml
- <source recordtype="d">
-  <biblStruct>
-     <physLoc>
-       <repository>
-          <corpName>bibliothèque nationale de France</corpName>
-          <abbr>BnF</abbr>
-       </repository>
-     </physLoc>
-     <relatedItem>
-       <biblStruct>
-          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
-          <abbr>Fr. 146</abbr>
-          <title type="alternative">Roman de Fauvel</title>
-          <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-          <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
-          <availability>
-             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
-          </availability>
-       </biblStruct>
-     </relatedItem>     
-  </biblStruct>
-</source>
-```
-
-```xml
-<manifestation recordtype="d">
-   <identifier>
-      <title>Le Roman de Fauvel</title>
-   </identifier>
-   <langUsage>
-      <language n="1">Français</language>
-      <language n="2">Latin</language>
-   </langUsage>   
-   <itemList>
-      <item recordtype="d">
-         <physLoc>
-            <repository>
-               <corpName>bibliothèque nationale de France</corpName>
-               <abbr>BnF</abbr>
-            </repository>
-         </physLoc>
-         <identifier>
-            <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
-            <abbr>Fr. 146</abbr>
-            <title type="alternative">Roman de Fauvel</title>
-            <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-         </identifier>  
-         <availability>
-            <accessRestrict>Non consultable en bibliothèque</accessRestrict>
-         </availability> 
-      </item>
-   </itemList>
-```
-
-```xml
-<source recordtype="d">
-  <biblStruct>
-     <physLoc>
-       <repository>
-          <corpName>bibliothèque nationale de France</corpName>
-          <abbr>BnF</abbr>
-       </repository>
-     </physLoc>
-     <relatedItem>
-       <biblStruct>
-          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval"cc45158c">Français 146</identifier>
-          <abbr>Fr. 146</abbr>
-          <title type="alternative">Roman de Fauvel</title>
-          <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-          <ref target="https://gallica.bnf.fr/ark:/12148/btv1b8454675g"/>
-          <availability>
-             <accessRestrict>Non consultable en bibliothèque</accessRestrict>
-          </availability>
-       </biblStruct>
-     </relatedItem>     
-  </biblStruct>
-</source>
-```
-
-<a id="YOO_ref1"></a>
-
-### Propriétaire du document d'origine
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Propriétaire du document d'origine|YOO|
-
- 
-
-!!! Il faut trouver un role adéquat
-```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-            <availability>
-               <useRestrict>
-                  <persName role="owner ou qqchose comme ça"></persName>
-               </useRestrict>
-            </availability>
-         </imprint>
-      </monogr>
-   </biblStruct>
-</source>
-```
-
-Autre option : 
-```xml
-<source>
-   <biblStruct>
-      <availability>
-         <useRestrict>
-            <persName role="owner ou qqchose comme ça"></persName>
-         </useRestrict>
-      </availability>
-   </biblStruct>
-</source>
-```
-
-<p style="text-align:justify;"> 
- recommandation d'utiliser bilblStruct qui est plus cadré, mais la question peut se poser. Dans le cas de multiples sources et de différentes natures, biblStruct est plus libre. À voir.
-</p>
-
+ <!--
 <a id="PPR_ref1"></a>
 
 ### Date et éditeur de la première publication
@@ -714,7 +667,7 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
 
- <!-- Est-ce bien nécessaire dans le cadre de la description d'une source? Ou seulement dans la partie plus FRBR que représente WorkList ?  -->
+ Est-ce bien nécessaire dans le cadre de la description d'une source? Ou seulement dans la partie plus FRBR que représente WorkList ?  
 ```xml
 <source>
    <biblStruct>
@@ -806,3 +759,4 @@ Autre option :
 </source>
 ```
 
+-->
