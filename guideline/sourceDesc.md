@@ -48,16 +48,16 @@ Structure d'une source.
    <strong>@level</strong> permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
 </p>
    
-   "**m**" dans le cas d'une monographie, 
+   "**m**" dans le cas d'une monographie,
 
 
-   "**u**" pour une ressource inédite, 
+   "**u**" pour une ressource inédite,
 
 
-   "**a**" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil.
+   "**a**" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil,
 
 
-   "**c**" pour une collection n'ayant pas, à l'origine, été publié, produit ou distribué ensemble comme un fonds d'archives ou un recueil factice.
+   "**c**" pour une collection n'ayant pas, à l'origine, été publiée, produite ou distribuée en tant que telle. Cela peut représenter, par exemple, un fonds d'archives ou un recueil factice.
 
  <p style="text-align:justify;"> 
    Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
@@ -67,22 +67,22 @@ Structure d'une source.
    <strong>@type</strong> permet de caractériser le titre selon :
 </p>
 
-   "**main**" pour le titre principale.
+   "**main**" pour le titre principale,
 
 
-   "**subordinate**" pour un sous-titre ou le titre d'une partie.
+   "**subordinate**" pour un sous-titre ou le titre d'une partie,
 
 
-   "**abbreviated**" pour la forme abrégée d'un titre.
+   "**abbreviated**" pour la forme abrégée d'un titre,
 
 
-   "**alternative**" pour un titre alternatif.
+   "**alternative**" pour un titre alternatif,
 
 
-   "**translated**"  pour une version traduite du titre.
+   "**translated**"  pour une version traduite du titre,
 
 
-   "**uniform**" pour un titre conventionnels ou normalisés.
+   "**uniform**" pour un titre conventionnels ou normalisés,
 
 
    "**desc**" pour un titre descriptif.
@@ -114,7 +114,7 @@ Exemple d'une lettre inédite.
 </source>
 ```
 
-
+<!-- 
 ```xml
 <source recordtype="d">
   <biblStruct>
@@ -134,14 +134,16 @@ Exemple d'une lettre inédite.
 </source>
 ``` 
 <a id="ONM_ref1"></a>
+-->
 
+<!--
 ### Numéro
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro|ONM|
 
-<!-- Je ne comprends pas de quoi il est question ici. Du numéro d'opus ? -->
+ Je ne comprends pas de quoi il est question ici. Du numéro d'opus ? -->
 
 
 ## b. Compositeur
@@ -219,10 +221,10 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
 
 <p style="text-align:justify;">
 La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Dans le cas d'une source non publiée, il est d'usage d'y entrer un élément &lt;unpub&gt;. 
-Cette balise limité à du texte permet de rédiger, s'il est besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
+Cette balise, limité à du texte, permet de rédiger, au besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
 </p>
 
-Exemple d'une source dont le projet de publication avorta.
+Exemple d'une source dont le projet de publication ne put aboutir.
 ```xml
 <source>
    <biblStruct>
@@ -253,6 +255,7 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
 </source>
 ```
 
+<!-- 
 ```xml
 <source recordtype="d">
   <biblStruct>
@@ -273,7 +276,7 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
   </biblStruct>
 </source>
 ```
-
+-->
 <a id="PED_ref1"></a>
 
 ### Éditeur de la source utilisée pour l'édition digitale
@@ -328,28 +331,28 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Lieu de publication|PPP|
 
 <p style="text-align:justify;">
-La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source. Le lieu de publication 
+La balise &lt;imprint&gt; contient toutes les informations liées à la publication de la source. Le lieu de publication de la source s'y inscrit dans l'élément &lt;pubPlace&gt;. 
 </p>
- 
+
+#### Pays
+
+
+Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère avec [les attributs d'autorités](autorite.html).
 
 ```xml
-<source recordtype="c">
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <composer>
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905/">Luca Marenzio</persName>
-      </composer>
-      <title type="main"> Il nono libro de madrigali</title>
-      <title type="subordinate">a cinque voci (1599)</title>
-      <imprint>
-         <corpName>Edizioni Suvini Zerboni</corpName>
-         <date isodate="2000">2000</date>
-         <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-      </imprint>
-      </monogr>
-   </biblStruct>
-</source>
+<country auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="264091107">
+   France
+</country>
+```
+
+#### Ville, village ou agglomération
+
+La ville de publication s'écrit dans une balise &lt;settlement&gt; et se réfère avec [les attributs d'autorités](autorite.html). Il peut s'agir d'un village ou d'une agglomérations identifiée comme une seule unité géopolitique ou administrative.
+
+```xml
+<settlement auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="158480400">
+   Metz
+</settlement>
 ```
 
 ```xml
@@ -357,16 +360,22 @@ La balise &lt;imprint&gt; contient toutes les informations lié à la publicatio
    <biblStruct>
       <monogr>
          <imprint>
-      <composer>
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905">Luca Marenzio</persName>
-      </composer>
-      <title type="main"> Il nono libro de madrigali</title>
-      <title type="subordinate">a cinque voci (1599)</title>
-      <imprint>
-         <corpName>Edizioni Suvini Zerboni</corpName>
+         <composer>
+            <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="2656905">Luca Marenzio</persName>
+         </composer>
+         <title type="main"> Il nono libro de madrigali</title>
+         <title type="subordinate">a cinque voci (1599)</title>
          <date isodate="2000">2000</date>
-         <settlement auth="GeoNames" auth.uri="https://www.geonames.org/" codedval="3173435">Milano</settlement>
-      </imprint>
+         <corpName>Edizioni Suvini Zerboni</corpName>
+         <pubPlace>
+            <country auth="VIAF" auth.uri="https://viaf.org/fr/viaf/" codedval="152361066" >
+               Italie
+            </country>
+            <settlement auth="VIAF" auth.uri="https://viaf.org/fr/viaf/" codedval="157818740">
+               Milan
+            </settlement>
+         </pubPlace>
+         </imprint>
       </monogr>
    </biblStruct>
 </source>
