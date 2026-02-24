@@ -325,6 +325,7 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
 <a id="PPP_ref1"></a>
 
 ### Lieu de publication
+=====
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
