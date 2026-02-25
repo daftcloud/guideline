@@ -60,11 +60,11 @@ Structure d'une source.
    "**c**" pour une collection n'ayant pas, à l'origine, été publiée, produite ou distribuée en tant que telle. Cela peut représenter, par exemple, un fonds d'archives ou un recueil factice.
 
  <p style="text-align:justify;"> 
-   Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
+   (Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html))
 </p>
    
 <p style="text-align:justify;"> 
-   <strong>@type</strong> permet de caractériser le titre selon :
+   <strong>@type</strong> permet, quant à lui, de caractériser le titre selon :
 </p>
 
    "**main**" pour le titre principale,
@@ -287,9 +287,10 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
 
 <p style="text-align:justify;">
 La balise &lt;imprint&gt; contient toutes les informations lié à la publication de la source.
-L'éditeur d'une source publiée peut être une personne ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas ou &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;editor&gt;.  
+L'éditeur d'une source publiée peut être une personne physique ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas ou &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;editor&gt;.  
 </p>
 
+Exemple d'un éditeur (personne physique).
 ```xml
 <source>
    <biblStruct>
@@ -303,7 +304,7 @@ L'éditeur d'une source publiée peut être une personne ou une structure, comme
    </biblStruct>
 </source>
 ```
-
+Exemple d'une structure d'édition.
 ```xml
 <source>
    <biblStruct>
@@ -496,7 +497,7 @@ Toutes les informations concernant les droits d'utilisation de la source s'inscr
 
 <p style="text-align:justify;"> 
 Toutes les informations concernant les conditions d'accès à la source s'inscrivent dans l'élément &lt;accessRestrict&gt; qui se retrouvent dans &lt;avaibility&gt;, lui-même dans &lt;imprint&gt;. On y trouve la localisation ainsi que l'identité du propriétaire actuelle du document.
-Il est possible de rédiger dans l'élément &lt;accessRestrict&gt; les conditions à remplir pour y accéder. Accès uniquement à des photocopies, 
+Il est possible de rédiger dans l'élément &lt;accessRestrict&gt; les conditions à remplir pour y accéder. Accès uniquement à des photocopies, par exemple.
 </p>
 
 ```xml
@@ -604,9 +605,7 @@ Toutes les informations concernant la localisation actuelle de la source s'inscr
    <biblStruct>
 </source>
 ```
-
-Autre option : 
-
+<!--
 ```xml
 <manifestation recordtype="d">
    <identifier>
@@ -658,6 +657,8 @@ Autre option :
   </biblStruct>
 </source>
 ```
+-->
+
  <!--
 <a id="PPR_ref1"></a>
 
