@@ -27,8 +27,8 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre|≈ OTL|
 
  <p style="text-align:justify;">
-   Tous les éléments de titre d'une manifestation se présentent dans la balise &lt;titleStmt&gt;
-   Le titre sous lequel le document est présenté se renseigne sous la balise &lt;title&gt; de l'élément &lt;monogr&gt;. 
+   Tous les éléments de titre d'une manifestation se présentent dans la balise &lt;titleStmt&gt;.
+   Le titre sous lequel le document est présenté se renseigne sous la balise &lt;title&gt;. 
    Il convient de faire bon usage des deux attributs principaux de la balise &lt;title&gt;, <strong>@level</strong> et <strong>@type</strong>.
    
    <strong>@level</strong> permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
@@ -76,10 +76,6 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 
 <!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
 
-<p style="text-align:justify;"> 
- Les deux exemples ci-dessous explicitent l'inscription du titre de l'œuvre dans un premier temps au niveau de l'œuvre elle-même, puis au niveau de son expression.
-</p>
-
 
 ```xml
 <manifestation xml:id="...">
@@ -90,7 +86,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 ```
 
 <p style="text-align:justify;"> 
- Dans le cas de sections ou de mouvements d'une œuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'œuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer `<titlePart>`. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
+ Dans le cas de sections ou de mouvements d'une œuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'œuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer &lt;titlePart&gt;. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
 </p>
 
 ### Titre d'un mouvement d'une œuvre 
@@ -121,7 +117,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 
 
 <p style="text-align:justify;"> 
- Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, @type dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") parmi lesquelles aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
+ Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, parmi les  dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") de l'attribut @type, aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
 </p>
 
 
@@ -197,69 +193,36 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
 ## b. Compositeur, librettiste, etc.
 
 <a id="COM_ref2"></a>
-
-### Compositeur de l'œuvre musicale
-
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM|
-
-
-Autre option : `<persName role="composer">`
-
-<p style="text-align:justify;"> 
- Le ou les compositeurs renseignés ici concernent l'œuvre que représente la balise manifestation. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer".
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName role="composer" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">...</persName>
-   </composer>
-</manifestation>
-```
-
-
-
 <a id="COA_ref2"></a>
+<a id="COS_ref1"></a>
 
-### Compositeur attribué
+### Compositeur indiqué sur la manifestation
+
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Désigne un compositeur attribué sur la base de preuves internes, externes ou par conjecture.  | COA |
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM, COA & COS|
 
 
-
-<p style="text-align:justify;"> 
- La provenance de l’attribution doit être précisée à l'aide de l'attribut @evidence et des valeurs suivantes="internal, external, conjecture".  
+<p style="text-align:justify;">
+Il est, ici, question de renseigner les différentes manifestations de l'œuvre édité par le fichier MEI. Le compositeur indiqué dans la balise &lt;manifestation&gt; représente donc le compositeur indiqué par la manifestation. Il convient donc de le préciser, à l'aide de l'attribut @evidence prenant la valeur "internal".  
+Si la valeur de rôle est libre, nous conseillons, dans un souci d'homogénéité, de lui attribuer la valeur "composer".
+Il est possible dès lors, que la manifestation indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" ; pour montrer le faible crédit que nous portons à cette information et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
 </p>
-
 
 ```xml
 <manifestation xml:id="...">
-   <composer xml:id="..." evidence="..." (internal, external or conjecture)>
+   <composer xml:id="..." evidence="internal">
          <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
    </composer>
 </manifestation>
 ```
-
-<a id="COS_ref1"></a>
 
 ### Compositeur soupçonné
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Désigne un compositeur soupçonné avec un niveau de certitude.|COS|
-
-
-
-<p style="text-align:justify;"> 
- Il est conseillé d’utiliser l’attribut @cert pour indiquer le degré de certitude. Les valeurs autorisées sont : high, 
-medium, low ou unknown. (?Est-il pertinent de mettre le degré de certitude dans la balise composer? Dans la balise persName, si on fait une récupération de tous les persName, on garde le niveau de certitude.)
-</p>
 
 
 ```xml
@@ -284,7 +247,7 @@ medium, low ou unknown. (?Est-il pertinent de mettre le degré de certitude dans
 Autre option : `<foreName>` et `<famName>`
 
 <p style="text-align:justify;"> 
- Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de `<foreName>`.
+ Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
 </p>
 
 
@@ -415,8 +378,9 @@ Autre option : `<persName role="librettist">`
  `<arranger>`
 
 Autre option : `<persName role="arranger">`
-
+<p style="text-align:justify;"> 
  Suivant les guidelines MEI pour `<arranger>`, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
+ </p>
 
 
 ```xml
@@ -443,9 +407,9 @@ Définition :
  `<arranger role="orchestrator">`
 
 Autre option : `<persName role="orchestrator">`
-
+<p style="text-align:justify;"> 
  Comme dit ci-dessus, `<arranger>` représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
-
+</p>
 
 ```xml
 <manifestation xml:id="...">
@@ -492,12 +456,11 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 
  `<langUsage>/<language>`
 
-Autre option : -
+<p style="text-align:justify;"> 
+ En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du &lt;ProfilDesc&gt; de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise &lt;langUsage&gt; trouve véritablement son sens en permettant de lister plusieurs langues. 
 
- En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du `<ProfilDesc>` de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise `<langUsage>` trouve véritablement son sens en permettant de lister plusieurs langues. 
-
-En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie `<music>`, dans `<verse>` ou `<syl>` à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
-
+En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie &lt;music&gt;, dans &lt;verse&gt; ou &lt;syl&gt; à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
+</p>
 
 ```xml
 <manifestation xml:id="...">
@@ -521,9 +484,9 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
 Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : `<contributor>`/`<persName>`
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : `<respStmt>`/`<persName>`
-
- Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<manifestationList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
-
+<p style="text-align:justify;"> 
+ Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
+</p>
 
 ```xml
 <manifestation xml:id="...">
@@ -536,10 +499,11 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
    </langUsage>          
 </manifestation>
 ```
- Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<manifestationList>`), via @resp. 
+<p style="text-align:justify;">
+ Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans &lt;fileDesc&gt;, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans &lt;manifestationList&gt;), via @resp. 
 
 Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
-
+</p>
 
 ```xml
 <fileDesc xml:id="...">
@@ -634,9 +598,6 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 </source>
 ```
 
-
-Autre option : 
-
 <p style="text-align:justify;"> 
  La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
@@ -710,9 +671,7 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro d'acte|OAC|
 
- 
 
-Autre option : 
 ```xml
 <body>
    <mdiv label="act" n="1">
@@ -869,9 +828,9 @@ Autre option :
 Autre option : 
 
 
-
+<p style="text-align:justify;">
  L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "sponsor"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
-
+</p>
 
 ```xml
 <biblStruc>
