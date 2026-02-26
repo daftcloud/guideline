@@ -26,13 +26,13 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | AMD | Classification du mode (Moyen âge et Renaissance) ||| [Dans la description de l'œuvre](guideline/manifestationList.html#AMD_ref1) |
  | AMT | Classification métrique ||| [Dans la description de l'œuvre](guideline/manifestationList.html#AMT_ref1) |
  | AST | Désignation du style/période/typologie de l'œuvre ||| [Dans la description de l'œuvre](guideline/manifestationList.html#AST_ref1) |
- | CBL | Lieu de naissance (et de décès) d'un compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
- | CDL | Lieu (de naissance et) de décès d'un compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
- | CDT | Dates de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CDT_ref1) |
+ | CBL | Dates et lieux de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
+ | CDL | Dates et lieux de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
+ | CDT | Dates et lieux de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
  | CNT | Nationalité du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CNT_ref1) |
- | COA | Compositeur attribué | [Dans la description du fichier](guideline/fileDesc.html#COA_ref1) || [Dans la description de l'œuvre](guideline/manifestationList.html#COA_ref2) |
+ | COA | Compositeur attribué | [Dans la description du fichier](guideline/fileDesc.html#COA_ref1) || [Dans la description de l'œuvre](guideline/manifestationList.html#COS_ref1) |
  | COL | Alias ou pseudonyme du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#COL_ref1) |
- | COM | Compositeur | [Dans la description du fichier](guideline/fileDesc.html#COM_ref1) |  [Dans la description de la source](guideline/sourceDesc.html#COM_ref3) | [Dans la description de l'œuvre](guideline/manifestationList.html#COM_ref2) |
+ | COM | Compositeur | [Dans la description du fichier](guideline/fileDesc.html#COM_ref1) |  [Dans la description de la source](guideline/sourceDesc.html#COM_ref3) | [Dans la description de l'œuvre](guideline/manifestationList.html#COS_ref1) |
  | COS | Compositeur soupçonné ||| [Dans la description de l'œuvre](guideline/manifestationList.html#COS_ref1) |
  | EEV | Version de l'édition électronique | [Dans la description du fichier](guideline/fileDesc.html#EEV_ref1) |||
  | EFL | Numéro du fichier électronique | [Dans la description du fichier](guideline/fileDesc.html#EFL_ref1) |||

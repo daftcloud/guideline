@@ -193,8 +193,6 @@ Autre option, en fonction du contexte : &lt;title type="subordinate"&gt;; &lt;ti
 
 ## b. Compositeur, librettiste, etc.
 
-<a id="COM_ref2"></a>
-<a id="COA_ref2"></a>
 <a id="COS_ref1"></a>
 
 ### Compositeur indiqué sur la manifestation
@@ -261,67 +259,18 @@ Autre option : &lt;foreName&gt; et &lt;famName&gt;
 </manifestation>
 ```
 
-<a id="CDT_ref1"></a>
+<a id="CBL_ref1"></a>
 
-### Dates de naissance et de décès du compositeur
+### Dates et lieux de naissance et de décès du compositeur
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
 
  &lt;persName&gt; avec les attributs @startdate et @enddate.
 
 <p style="text-align:justify;"> 
  Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName startdate="1685" enddate="1750" auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
-   </composer>
-</manifestation>
-```
-
-<a id="CNT_ref1"></a>
-
-### Nationalité du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
-
-
- &lt;annot&gt; 
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
-         <annot label="nationality">Français</annot>
-   </composer>
-</manifestation>
-```
-
-<a id="CBL_ref1"></a>
-<a id="CDL_ref1"></a>
-
-### Lieu de naissance et de décès d'un compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique le lieu de naissance et de décès d'un compositeur.|CBL et CDL|
-
- &lt;persName&gt; et &lt;date&gt; avec les attributs @startdate et @enddate.
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec un URI externe. Il est conseillé d'utiliser un URI, via @auth.uri, pour préciser le lieu. Nous préconisons l'usage d'un URI GeoNames.  
 </p>
 
 
@@ -335,6 +284,31 @@ Autre option : &lt;foreName&gt; et &lt;famName&gt;
          <date enddate="...">
             <country>XXX</country>
       </date>     
+   </composer>
+</manifestation>
+```
+
+<a id="CNT_ref1"></a>
+
+### Nationalité du compositeur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
+
+<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
+ &lt;annot&gt; 
+
+<p style="text-align:justify;"> 
+ Peut être omis si le compositeur est référencé avec une URI externe.
+</p>
+
+
+```xml
+<manifestation xml:id="...">
+   <composer xml:id="...">
+         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
+         <annot label="nationality">Français</annot>
    </composer>
 </manifestation>
 ```
