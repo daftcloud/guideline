@@ -103,6 +103,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
    </titleStmt>
 </manifestation>
 ```
+
 <p style="text-align:justify;"> 
  Il est à noter que le renseignement du titre, métadonnée de première importance, est paradoxalement négligé dans les guidelines MEI. Divers exemples suggèrent une distinction minimale des niveaux de titres et une certaine liberté dans leur troncation. La raison réside certainement dans l'ambiguïté qui dérive des différentes formes de titres et de leurs usages multiples. Bien que @type soit régi par les valeurs contrôlées listées ci-dessus, les guidelines illustrent à l'occasion l'usage non conventionnel de @type="subtitle" pour encoder un syntagme subordonné au titre principal. Nous nous limiterons ici aux seuls vocables contrôlés précisés précédemment.
 </p>
@@ -142,7 +143,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA|
 
 
-Autre option, en fonction du contexte : `<title type="subordinate">`; `<title type="abbreviated">`; `<title type="translated">`; `<title type="uniform">`; `<title type="desc">`
+Autre option, en fonction du contexte : &lt;title type="subordinate"&gt;; &lt;title type="abbreviated"&gt;; &lt;title type="translated"&gt;; &lt;title type="uniform"&gt;; &lt;title type="desc"&gt;
 
 <p style="text-align:justify;"> 
  Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
@@ -175,7 +176,7 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre globale dans le cas d'une section ou d'un mouvement.|OPR|
 
 <p style="text-align:justify;"> 
- Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de `<titlePart>`, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
+ Comme dit précédemment, si diverses formes de titre sont retenues dans l'édition, il est conseillé de structurer les différents niveaux à l'aide de &lt;titlePart&gt;, surtout si des valeurs semblables pour @type sont utilisées à la fois pour le titre du mouvement et pour le titre de l'œuvre d'appartenance. Dans l'exemple ci-dessous, la description minimale ne nécessite pas une telle distinction.  
 </p>
 
 
@@ -197,7 +198,6 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
 <a id="COS_ref1"></a>
 
 ### Compositeur indiqué sur la manifestation
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -237,14 +237,13 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 
 ### Alias ou pseudonyme du compositeur
 
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique un alias ou pseudonyme d’un compositeur.|COL|
 
- `<persName>` et `<foreName>`
+ &lt;persName&gt; et &lt;foreName&gt;
 
-Autre option : `<foreName>` et `<famName>`
+Autre option : &lt;foreName&gt; et &lt;famName&gt;
 
 <p style="text-align:justify;"> 
  Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
@@ -270,9 +269,7 @@ Autre option : `<foreName>` et `<famName>`
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT|
 
-
-
- `<persName>` avec les attributs @startdate et @enddate.
+ &lt;persName&gt; avec les attributs @startdate et @enddate.
 
 <p style="text-align:justify;"> 
  Peut être omis si le compositeur est référencé avec une URI externe.
@@ -291,14 +288,12 @@ Autre option : `<foreName>` et `<famName>`
 
 ### Nationalité du compositeur
 
-
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
 
 
- `<annot>` 
+ &lt;annot&gt; 
 
 <p style="text-align:justify;"> 
  Peut être omis si le compositeur est référencé avec une URI externe.
@@ -323,9 +318,7 @@ Autre option : `<foreName>` et `<famName>`
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique le lieu de naissance et de décès d'un compositeur.|CBL et CDL|
 
-
-
- `<persName>` et `<date>` avec les attributs @startdate et @enddate.
+ &lt;persName&gt; et &lt;date&gt; avec les attributs @startdate et @enddate.
 
 <p style="text-align:justify;"> 
  Peut être omis si le compositeur est référencé avec un URI externe. Il est conseillé d'utiliser un URI, via @auth.uri, pour préciser le lieu. Nous préconisons l'usage d'un URI GeoNames.  
@@ -354,9 +347,9 @@ Autre option : `<foreName>` et `<famName>`
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique le nom du librettiste de l'œuvre. |LIB|
 
- `<librettist>`
+ &lt;librettist&gt;
 
-Autre option : `<persName role="librettist">`
+Autre option : &lt;persName role="librettist"&gt;
 
 
 ```xml
@@ -375,11 +368,11 @@ Autre option : `<persName role="librettist">`
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom de l'arrangeur de l'œuvre. |LAR|
 
- `<arranger>`
+ &lt;arranger&gt;
 
-Autre option : `<persName role="arranger">`
+Autre option : &lt;persName role="arranger"&gt;
 <p style="text-align:justify;"> 
- Suivant les guidelines MEI pour `<arranger>`, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
+ Suivant les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
  </p>
 
 
@@ -400,15 +393,13 @@ Autre option : `<persName role="arranger">`
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}| Indique le nom de l'orchestrateur de l'œuvre. |LOR|
 
-
-
 Définition :
 
- `<arranger role="orchestrator">`
+ &lt;arranger role="orchestrator"&gt;
 
-Autre option : `<persName role="orchestrator">`
+Autre option : &lt;persName role="orchestrator"&gt;
 <p style="text-align:justify;"> 
- Comme dit ci-dessus, `<arranger>` représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ Comme dit ci-dessus, &lt;arranger&gt; représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 </p>
 
 ```xml
@@ -429,11 +420,11 @@ Autre option : `<persName role="orchestrator">`
 
 
 
- `<langUsage>/<language>`
+ &lt;langUsage>/<language&gt;
 
 Autre option : -
 
- `<langUsage>` contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
+ &lt;langUsage&gt; contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
 
 Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
 
@@ -454,7 +445,7 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
  | :--------------- |:---------------:| -----:|
  |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage){:target="_blank"}|Indique la langue de l'œuvre encodée, si différente de la langue originale (traduction, adaptation, etc). |TXL|
 
- `<langUsage>/<language>`
+ &lt;langUsage>/<language&gt;
 
 <p style="text-align:justify;"> 
  En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du &lt;ProfilDesc&gt; de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise &lt;langUsage&gt; trouve véritablement son sens en permettant de lister plusieurs langues. 
@@ -481,9 +472,9 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
 
  
 
-Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : `<contributor>`/`<persName>`
+Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &lt;contributor&gt;/&lt;persName&gt;
 
-Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : `<respStmt>`/`<persName>`
+Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : &lt;respStmt&gt;/&lt;persName&gt;
 <p style="text-align:justify;"> 
  Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
 </p>
@@ -502,7 +493,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
 <p style="text-align:justify;">
  Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans &lt;fileDesc&gt;, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans &lt;manifestationList&gt;), via @resp. 
 
-Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
+Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans &lt;language&gt; pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 </p>
 
 ```xml
@@ -553,7 +544,7 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 </source>
 ```
 
-Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<imprint>`. Des dates peuvent également être ajoutées pour `<editor>` pour plus de précisions.
+Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &lt;imprint&gt;. Des dates peuvent également être ajoutées pour &lt;editor&gt; pour plus de précisions.
 
  
 
@@ -599,7 +590,7 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant `<
 ```
 
 <p style="text-align:justify;"> 
- La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
 
 
@@ -695,7 +686,7 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
 ```
 
 <p style="text-align:justify;"> 
- S'il est bien question d'une précision au sein de `<music>` : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
+ S'il est bien question d'une précision au sein de &lt;music&gt; : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
 </p>
 
 ```
@@ -853,8 +844,6 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Collecteur de la musique|OCL|
 
-
-
  
 ```xml
 <biblStruc>
@@ -940,12 +929,12 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
 
 
 
- `<creation>/<date>`
+ &lt;creation>/<date&gt;
 
 Autre option : 
 
 <p style="text-align:justify;"> 
- La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+ La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
 
 ```xml
@@ -1030,21 +1019,25 @@ Autre option :
 
  
 ```xml
-<classification xml :id="…">
-   <termList xml:id="…">
-      <term>
-         <genre></genre>
-      </term>
-   </termList>
-</classification>
+<manifestation>
+   <classification xml :id="…">
+      <termList xml:id="…">
+         <term>
+            <genre></genre>
+         </term>
+      </termList>
+   </classification>
+</manifestation>
 ```
 
 ```xml
-<classification xml :id="…">
-   <termList xml:id="…">
-      <term label="music genre" xml:id="…">...</term>
-   </termList>
-</classification>
+<manifestation>
+   <classification xml :id="…">
+      <termList xml:id="…">
+         <term label="music genre" xml:id="…">...</term>
+      </termList>
+   </classification>
+</manifestation>
 ```
 
 <a id="AST_ref1"></a>
@@ -1057,14 +1050,16 @@ Autre option :
 
  
 ```xml
-<classification xml :id="…">
-   <termList xml:id="…">
-      <term>
-         <periodName>...</periodName>
-         <styleName>...</styleName>
-      </term>
-   </termList>
-</classification>  
+<manifestation>
+   <classification xml :id="…">
+      <termList xml:id="…">
+         <term>
+            <periodName>...</periodName>
+            <styleName>...</styleName>
+         </term>
+      </termList>
+   </classification> 
+</manifestation> 
 ```
 
 ```xml
@@ -1098,7 +1093,7 @@ Autre option :
 Autre option : 
 
 <p style="text-align:justify;"> 
- En MEI, le mode se désigne dans `<key>`, donc dans `<manifestation>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
+ En MEI, le mode se désigne dans &lt;key&gt;, donc dans &lt;manifestation&gt; ou &lt;expression&gt;, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
 </p>
 
 ```xml
@@ -1121,7 +1116,7 @@ Autre option :
 
  
 
-`<meter>`
+&lt;meter&gt;
 
 Autre option : 
 
@@ -1182,13 +1177,11 @@ Autre option :
 
 
 ```xml
-<manifestationList>
-   <manifestation>
-      <perfMedium>
-            <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
-      </perfMedium>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <perfMedium>
+         <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
+   </perfMedium>
+</manifestation>
 ```
 
 <a id="MPN_ref1"></a>
@@ -1200,7 +1193,6 @@ Autre option :
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium){:target="_blank"}|Nom de l'interprète|MPN|
 
 <p style="text-align:justify;">
-
 Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un intéprète. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
 </p>
 
@@ -1316,66 +1308,60 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
 
 
 ```xml
-<manifestationList>
-   <manifestation>
-      <title>...</title>
-      <history>
-         <eventList>
-            <event type="performance">
-               <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
-            </event>
-         </eventList>
-      </history>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <title>...</title>
+   <history>
+      <eventList>
+         <event type="performance">
+            <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
+         </event>
+      </eventList>
+   </history>
+</manifestation>
 ```
 
 Autre option : Dans le cas d'une œuvre dont il existe différentes expressions, dans le sens du modèle FRBR, il est possible de renseigner les informations concernants les exécutions/représentations de chaque expression distinctement.
 
 ```xml
-<manifestationList>
-   <manifestation>
-      <expressionList>
-         <expression>
-            <title>...</tite>
-            <history>
-               <eventList>
-                  <event type="performance">
-                      <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
-                  </event>
-               </eventList>
-            </history>
-         </expression>
-      </expressionList>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <expressionList>
+      <expression>
+         <title>...</tite>
+         <history>
+            <eventList>
+               <event type="performance">
+                     <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
+               </event>
+            </eventList>
+         </history>
+      </expression>
+   </expressionList>
+</manifestation>
 ```
 
 <p style="text-align:justify;"> 
  Selon la typologie du projet, on va indiquer les informations concernant la représentation dans WorkList ou dans expressionList.
-La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise `<date>` est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
+La date de composition peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
 
 
 ```xml
-<manifestationList>
-   <manifestation>
-      <history>   
-         <eventList>
-            <event type="premiere">
-               <date isodate="1811-11-28">1811-11-28</date>
-               <geogName>Leipzig</geogName>
-               <perfName>Direction : Johann Ohilipp Christian Schulz</perfName>
-            </event>
-         <event type="performance">
-            <date isodate="1812-02-12">1812-02-12</date>
-            <placeName>Vienne</placeName>
-            <perfRes>pianist : Carl Czerny</perfName>
+<manifestation>
+   <history>   
+      <eventList>
+         <event type="premiere">
+            <date isodate="1811-11-28">1811-11-28</date>
+            <geogName>Leipzig</geogName>
+            <perfName>Direction : Johann Ohilipp Christian Schulz</perfName>
          </event>
-         </eventList>
-      </history>
-  </manifestation>
-</manifestationList>
+      <event type="performance">
+         <date isodate="1812-02-12">1812-02-12</date>
+         <placeName>Vienne</placeName>
+         <perfRes>pianist : Carl Czerny</perfName>
+      </event>
+      </eventList>
+   </history>
+</manifestation>
 ```
 
 <a id="MLC_ref1"></a>
@@ -1388,63 +1374,55 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
 
  
 ```xml
-<manifestationList>
-   <manifestation>
-      <title>...</tite>
-      <history>
-         <eventList>
-            <event type="performance">
-               <geogName>Vienne</geogName>
-            </event>
-         </eventList>
-      </history>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <title>...</tite>
+   <history>
+      <eventList>
+         <event type="performance">
+            <geogName>Vienne</geogName>
+         </event>
+      </eventList>
+   </history>
+</manifestation>
 ```
 Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représentation, nous pouvons utiliser, à la place de l'élément geogName, l'élément adress.
 ```xml
-<manifestationList>
-   <manifestation>
-      <title>...</tite>
-      <history>
-         <eventList>
-            <event type="performance">
-               <address>
-                  <country>Pays</country>
-                  <settlement type="city">Ville</settlement>
-                  <postCode>Code Postal</postCode>
-                  <district type="arrondissement">Numéro de l'arrondissement</district>
-                  <street> <num>Numéro</num>, nom de la rue</street>
-               </address>
-            </event>
-         </eventList>
-      </history>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <title>...</tite>
+   <history>
+      <eventList>
+         <event type="performance">
+            <address>
+               <country>Pays</country>
+               <settlement type="city">Ville</settlement>
+               <postCode>Code Postal</postCode>
+               <district type="arrondissement">Numéro de l'arrondissement</district>
+               <street> <num>Numéro</num>, nom de la rue</street>
+            </address>
+         </event>
+      </eventList>
+   </history>
+</manifestation>
 ```
-
- 
 
 
 ```xml
-<manifestationList>
-   <manifestation>
-      <title>...</tite>
-      <history>
-         <eventList>
-            <event type="performance">
-               <address>
-                  <country>Autriche</country>
-                  <settlement type="city">Vienne</settlement>
-                  <postCode>1010</postCode>
-                  <district type="arrondissement">Ier</district>
-                  <street> <num>1</num>, Musikvereinsplatz</street>
-               </address>
-            </event>
-         </eventList>
-      </history>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <title>...</tite>
+   <history>
+      <eventList>
+         <event type="performance">
+            <address>
+               <country>Autriche</country>
+               <settlement type="city">Vienne</settlement>
+               <postCode>1010</postCode>
+               <district type="arrondissement">Ier</district>
+               <street> <num>1</num>, Musikvereinsplatz</street>
+            </address>
+         </event>
+      </eventList>
+   </history>
+</manifestation>
 ```
 
 <a id="MCN_ref1"></a>
@@ -1504,18 +1482,16 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
 
  
 ```xml
-<manifestationList>
-   <manifestation>
-      <title>...</title>
-      <history>
-         <eventList>
-            <event type="premiere">
-               <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
-            </event>
-         </eventList>
-      </history>
-   </manifestation>
-</manifestationList>
+<manifestation>
+   <title>...</title>
+   <history>
+      <eventList>
+         <event type="premiere">
+            <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
+         </event>
+      </eventList>
+   </history>
+</manifestation>
 ```
 Autre option : 
 
@@ -1525,18 +1501,16 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 </p>
 
 ```xml
-<manifestationList>
-  <manifestation>
-    <title>Pelléas et Mélisande</title>
-    <eventList>
-      <event type="premiere">
-        <date isodate="1902-04-30">1902-04-30</date>
-        <placeName>Opéra-Comique, Paris</placeName>
-        <perfName>Direction : André Messager</perfName>
-      </event>
-    </eventList>
-  </manifestation>
-</manifestationList>
+<manifestation>
+   <title>Pelléas et Mélisande</title>
+   <eventList>
+   <event type="premiere">
+      <date isodate="1902-04-30">1902-04-30</date>
+      <placeName>Opéra-Comique, Paris</placeName>
+      <perfName>Direction : André Messager</perfName>
+   </event>
+   </eventList>
+</manifestation>
 ```
 <p style="text-align:justify;"> 
  Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
