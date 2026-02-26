@@ -22,7 +22,7 @@ Cette première partie s'attache à décrire le fichier lui-même. C'est là que
 Il s'agit, dans cette partie, de renseigner toutes les informations concernant la ou les sources qui ont servi à l'élaboration du fichier Mei.
 </p>
 
-[Description de l'œuvre musicale &lt;workList&gt;](guideline/workList.html)
+[Description de l'œuvre musicale &lt;manifestationList&gt;](guideline/manifestationList.html)
  <p style="text-align:justify;"> 
 Cette dernière partie se rapproche des questions d'édition lié au modèle FRBR. C'est ici qu'on entrera le plus en détail sur l'œuvre autour du fichier édité dans l'édition MEI.
 </p>

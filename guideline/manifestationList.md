@@ -1,17 +1,17 @@
 ---
-title: Description de l'œuvre musicale &lt;workList&gt;
+title: Description de l'œuvre musicale &lt;manifestationList&gt;
 layout: default
 nav_order: 7
 parent: Guideline
-permalink: /guideline/workList
+permalink: /guideline/manifestationList
 ---
 
-# Description de l'œuvre musicale &lt;workList&gt
+# Description de l'œuvre musicale &lt;manifestationList&gt
 
 <p style="text-align:justify;"> 
-L'élément &lt;workList&gt; est à la racine de toute la description d'une ou de plusieurs œuvres. C'est ici que peut se déployer, au besoin, le modèle FRBR. À moins que votre projet ne nécessite de décrire plusieurs oeuvres, l'architecture sous l'élément &lt;workList&gt; ne devrait contenir qu'une balise &lt;work&gt;. C'est pourquoi, l'élément  &lt;work&gt; sera la racine de chaque exemple de cette page.
+L'élément &lt;manifestationList&gt; est à la racine de toute la description d'une ou de plusieurs œuvres. C'est ici que peut se déployer, au besoin, le modèle FRBR. À moins que votre projet ne nécessite de décrire plusieurs oeuvres, l'architecture sous l'élément &lt;manifestationList&gt; ne devrait contenir qu'une balise &lt;work&gt;. C'est pourquoi, l'élément  &lt;work&gt; sera la racine de chaque exemple de cette page.
 
- <!-- Développer la structure de workList -->
+ <!-- Développer la structure de manifestationList -->
 </p>
 
 Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ](FRBR.html) pour bien distinguer l'interprétation des différents niveaux de ce modèle.
@@ -515,7 +515,7 @@ Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : `
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : `<respStmt>`/`<persName>`
 
- Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<workList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
+ Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un `<contributor>` au sein de `<manifestationList>`. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue `<language>`.
 
 
 ```xml
@@ -529,7 +529,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
    </langUsage>          
 </work>
 ```
- Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<workList>`), via @resp. 
+ Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<manifestationList>`), via @resp. 
 
 Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans `<language>` pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 
@@ -545,14 +545,14 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 
 -------# plus bas
 
-<workList xml:id="...">
+<manifestationList xml:id="...">
    <work xml:id="...">
       <langUsage>
          <language xml:id="..." type="original">...</language>
          <language xml:id="Fr" resp="VV" type="translation">...</language>
      </langUsage>          
    </work>
-</workList>
+</manifestationList>
 ```
 ## c. Informations liées à l'œuvre
 
@@ -1242,13 +1242,13 @@ Autre option :
 
 
 ```xml
-<workList>
+<manifestationList>
    <work>
       <perfMedium>
             <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
       </perfMedium>
    </work>
-</workList>
+</manifestationList>
 ```
 
 <a id="MPN_ref1"></a>
@@ -1376,7 +1376,7 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
 
 
 ```xml
-<workList>
+<manifestationList>
    <work>
       <title>...</title>
       <history>
@@ -1387,13 +1387,13 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
          </eventList>
       </history>
    </work>
-</workList>
+</manifestationList>
 ```
 
 Autre option : Dans le cas d'une œuvre dont il existe différentes expressions, dans le sens du modèle FRBR, il est possible de renseigner les informations concernants les exécutions/représentations de chaque expression distinctement.
 
 ```xml
-<workList>
+<manifestationList>
    <work>
       <expressionList>
          <expression>
@@ -1408,7 +1408,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
          </expression>
       </expressionList>
    </work>
-</workList>
+</manifestationList>
 ```
 
 <p style="text-align:justify;"> 
@@ -1418,7 +1418,7 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
 
 
 ```xml
-<workList>
+<manifestationList>
    <work>
       <history>   
          <eventList>
@@ -1435,7 +1435,7 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
          </eventList>
       </history>
   </work>
-</workList>
+</manifestationList>
 ```
 
 <a id="MLC_ref1"></a>
@@ -1448,7 +1448,7 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
 
  
 ```xml
-<workList>
+<manifestationList>
    <work>
       <title>...</tite>
       <history>
@@ -1459,11 +1459,11 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
          </eventList>
       </history>
    </work>
-</workList>
+</manifestationList>
 ```
 Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représentation, nous pouvons utiliser, à la place de l'élément geogName, l'élément adress.
 ```xml
-<workList>
+<manifestationList>
    <work>
       <title>...</tite>
       <history>
@@ -1480,14 +1480,14 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
          </eventList>
       </history>
    </work>
-</workList>
+</manifestationList>
 ```
 
  
 
 
 ```xml
-<workList>
+<manifestationList>
    <work>
       <title>...</tite>
       <history>
@@ -1504,7 +1504,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
          </eventList>
       </history>
    </work>
-</workList>
+</manifestationList>
 ```
 
 <a id="MCN_ref1"></a>
@@ -1564,7 +1564,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
 
  
 ```xml
-<workList>
+<manifestationList>
    <work>
       <title>...</title>
       <history>
@@ -1575,17 +1575,17 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
          </eventList>
       </history>
    </work>
-</workList>
+</manifestationList>
 ```
 Autre option : 
 
 <p style="text-align:justify;"> 
- La date de la première exécution d'une œuvre est à situé, a minima, au niveau de workList, dans une balise &lt;event&gt; dont l'attribut @type prend pour valeur « premiere ». 
+ La date de la première exécution d'une œuvre est à situé, a minima, au niveau de manifestationList, dans une balise &lt;event&gt; dont l'attribut @type prend pour valeur « premiere ». 
 La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout dans le cas d'une date incertaine. En MEI, la date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 </p>
 
 ```xml
-<workList>
+<manifestationList>
   <work>
     <title>Pelléas et Mélisande</title>
     <eventList>
@@ -1596,7 +1596,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
       </event>
     </eventList>
   </work>
-</workList>
+</manifestationList>
 ```
 <p style="text-align:justify;"> 
  Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
