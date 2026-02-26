@@ -105,7 +105,7 @@ Exemple d'une lettre inédite.
 <source>
    <biblStruct>
       <monogr>
-         <title level="u" type="desc">Lettre daté du ...</title>
+         <title level="u" type="desc">Lettre datée du ...</title>
          <imprint>
             <unpub/>
          </imprint>
@@ -197,8 +197,12 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
       <composer xml:id="...">
          <monogr>
             <composer>
-               <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="low" evidence="internal" resp="#XYZ123">Nom erroné de la source</persName>
-               <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="high" evidence="external">Nom certifié par une preuve extérieur</persName>
+               <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="low" evidence="internal" 
+               resp="#XYZ123">
+                  Nom erroné de la source</persName>
+               <persName role="composer" auth="..." auth.uri="http://..." codedval="..." cert="high" evidence="external">
+                  Nom certifié par une preuve extérieur
+               </persName>
             </composer>
             <editor>
                <persName xml:id="XYZ123" role="editor" auth="..." auth.uri="http://..." codedval="...">

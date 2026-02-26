@@ -7,7 +7,7 @@ print: true
 ---
 
 <style>
- @media print {
+
 
     /*Musica2 en filigrane*/
   main::before {
@@ -20,6 +20,13 @@ print: true
   pointer-events: none;
   z-index: 0;
 }
+
+ pre, code {
+            font-size: 0.8em;
+            word-break: break-all;
+            white-space: pre-wrap;
+            font-family: 'Roboto Mono', monospace;
+        }
 
     html,
     body {
@@ -181,7 +188,7 @@ print: true
     .footer {
       display: none !important;
     }
-  }
+  
 
 
 </style>

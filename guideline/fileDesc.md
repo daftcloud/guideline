@@ -114,7 +114,8 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
          ...
       </title>
       <composer xml:id="...">
-         <persName evidence="(internal, external ou conjecture)" role="composer" auth="..." auth.uri="http://..." codedval="...">
+         <persName evidence="(internal, external ou conjecture)" role="composer" auth="..." auth.uri="http://..." 
+         codedval="...">
             ...
          </persName> 
       </composer>
@@ -132,7 +133,9 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
    <titleStmt xml:id="...">
       <title xml:id="...">...</title>
        <respStmt xml:id="...">
-          <persName xml:id="ID" role="scholar" auth="..." auth.uri="http://..." codedval="...">(Nom du responsable de l'attribution)</persName>
+          <persName xml:id="ID" role="scholar" auth="..." auth.uri="http://..." codedval="...">
+          (Nom du responsable de l'attribution)
+          </persName>
        </respStmt>
        <composer xml:id="...">
          <persName xml:id="..." evidence="conjecture" cert="high" resp="#ID">(Nom du compositeur)</persName>
@@ -224,7 +227,9 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
    <titleStmt>
       <title>...</title>
       <respStmt>
-         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="..." codedval="...">(Nom d'une personne ayant encodé le fichier MEI)</persName>
+         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="..." codedval="...">
+            (Nom d'une personne ayant encodé le fichier MEI)
+         </persName>
       </respStmt>
    </titleStmt>
 </fileDesc>
