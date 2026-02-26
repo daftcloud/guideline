@@ -6,10 +6,10 @@ parent: Guideline
 permalink: /guideline/manifestationList
 ---
 
-# Description de l'œuvre musicale &lt;manifestationList&gt
+# Description bibliographique de l'édition musicale &lt;manifestationList&gt;
 
 <p style="text-align:justify;"> 
-L'élément &lt;manifestationList&gt; est à la racine de toute la description d'une ou de plusieurs œuvres. C'est ici que peut se déployer, au besoin, le modèle FRBR. À moins que votre projet ne nécessite de décrire plusieurs oeuvres, l'architecture sous l'élément &lt;manifestationList&gt; ne devrait contenir qu'une balise &lt;work&gt;. C'est pourquoi, l'élément  &lt;work&gt; sera la racine de chaque exemple de cette page.
+L'élément &lt;manifestationList&gt; est à la racine de toute la description de l'œuvre édité par le fichier MEI. Il représente, dans le modèle FRBR, la liste des manifestations c'est-à-dire, les différentes éditions de l'œuvre. Chaque édition est donc représenté par une balise &lt;manifestation&gt;. Tous les exemples de ce chapitre prendront donc comme racine la balise &lt;manifestation&gt;.
 
  <!-- Développer la structure de manifestationList -->
 </p>
@@ -20,18 +20,61 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 
 <a id="OTL_ref2"></a>
 
-### Titre de l'œuvre musicale
+### Titre de la manifestation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre|≈ OTL|
 
+ <p style="text-align:justify;">
+   Tous les éléments de titre d'une manifestation se présentent dans la balise &lt;titleStmt&gt;
+   Le titre sous lequel le document est présenté se renseigne sous la balise &lt;title&gt; de l'élément &lt;monogr&gt;. 
+   Il convient de faire bon usage des deux attributs principaux de la balise &lt;title&gt;, <strong>@level</strong> et <strong>@type</strong>.
+   
+   <strong>@level</strong> permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
+</p>
+   
+   "**m**" dans le cas d'une monographie,
+
+
+   "**u**" pour une ressource inédite,
+
+
+   "**a**" pour une partie d'un objet bibliographique plus large, comme une pièce dans un recueil,
+
+
+   "**c**" pour une collection n'ayant pas, à l'origine, été publiée, produite ou distribuée en tant que telle. Cela peut représenter, par exemple, un fonds d'archives ou un recueil factice.
+
+ <p style="text-align:justify;"> 
+   (Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html))
+</p>
+   
+<p style="text-align:justify;"> 
+   <strong>@type</strong> permet, quant à lui, de caractériser le titre selon :
+</p>
+
+   "**main**" pour le titre principale,
+
+
+   "**subordinate**" pour un sous-titre ou le titre d'une partie,
+
+
+   "**abbreviated**" pour la forme abrégée d'un titre,
+
+
+   "**alternative**" pour un titre alternatif,
+
+
+   "**translated**"  pour une version traduite du titre,
+
+
+   "**uniform**" pour un titre conventionnels ou normalisés,
+
+
+   "**desc**" pour un titre descriptif.
+
 
 <!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
-
-`<title type=main>`/`<title type="subordinate">`
-
-Autre option : `<title>`
 
 <p style="text-align:justify;"> 
  Les deux exemples ci-dessous explicitent l'inscription du titre de l'œuvre dans un premier temps au niveau de l'œuvre elle-même, puis au niveau de son expression.
@@ -39,42 +82,11 @@ Autre option : `<title>`
 
 
 ```xml
-<work xml:id="...">
-   <title xml:id="...">...</title>
-</work>
-```
-
-```xml
-<work xml:id="...">
-   <title xml:id="...">  
-   <expressionList xml:id="...">  
-      <expression xml:id="...">
-      </expression>
-   </expressionList>
-   </title>
-</work>
-```
-
-<a id="OTL_ref3"></a>
-
-### Titre de l'œuvre 
-
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Titre de l'œuvre encodée.|OTL|
-
-<p style="text-align:justify;"> 
- Cette manière minimale de renseigner le titre convient surtout aux titres officiels et consensuels des œuvres - des titres qui ne font pas l'objet d'ambiguité. Pour le renseignement de titres alternatifs ou populaires, voir plus bas.
-</p>
-
-
-
-Titre simple d'une œuvre :
-```xml
-<work xml:id="...">
-   <title xml:id="...">Pavane pour une infante défunte</title>
-</work>
+<manifestation xml:id="...">
+   <titleStmt>
+      <title xml:id="...">...</title>
+   </titleStmt>   
+</manifestation>
 ```
 
 <p style="text-align:justify;"> 
@@ -84,14 +96,16 @@ Titre simple d'une œuvre :
 ### Titre d'un mouvement d'une œuvre 
 
 ```xml
-<work xml:id="...">
-   <title type="main">Rondo alla Turca</title>
-   <title type="subordinate" label="movement">Allegretto</title>
-   <titlePart>
-      <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
-      <title type="subordinate" label="Köchel">K. 331/300</title>
-   </titlePart>
-</work>
+<manifestation xml:id="...">
+   <titleStmt>
+      <title type="main">Rondo alla Turca</title>
+      <title type="subordinate" label="movement">Allegretto</title>
+      <titlePart>
+         <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
+         <title type="subordinate" label="Köchel">K. 331/300</title>
+      </titlePart>
+   </titleStmt>
+</manifestation>
 ```
 <p style="text-align:justify;"> 
  Il est à noter que le renseignement du titre, métadonnée de première importance, est paradoxalement négligé dans les guidelines MEI. Divers exemples suggèrent une distinction minimale des niveaux de titres et une certaine liberté dans leur troncation. La raison réside certainement dans l'ambiguïté qui dérive des différentes formes de titres et de leurs usages multiples. Bien que @type soit régi par les valeurs contrôlées listées ci-dessus, les guidelines illustrent à l'occasion l'usage non conventionnel de @type="subtitle" pour encoder un syntagme subordonné au titre principal. Nous nous limiterons ici aux seuls vocables contrôlés précisés précédemment.
@@ -112,7 +126,7 @@ Titre simple d'une œuvre :
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <title type="main">Rondo alla Turca</title>
    <title type="subordinate" label="movement">Allegretto</title>
    <title type="alternative">Marche Turque</title>
@@ -120,7 +134,7 @@ Titre simple d'une œuvre :
       <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
       <title type="subordinate" label="Köchel">K. 331/300</title>
    </titlePart>
-</work>
+</manifestation>
 ```
 
 <a id="OTA_ref1"></a>
@@ -140,18 +154,20 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
 
 
 ```xml
-<work xml:id="...">
-   <title type="main">Rondo alla Turca</title>
-   <title type="subordinate" label="movement">Allegretto</title>
-   <title type="abbreviated">Alla Turca</title>
-   <title type="alternative">Marche Turque</title>
-   <titlePart>
-      <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
-      <title type="subordinate" label="Köchel">K. 331/300</title>
-      <title type="translated" xml:lang="DE">Sonate Nr. 11 A-Dur</title>
-      <title type="desc">Sonate pour piano très connue de Mozart</title>
-   </titlePart>
-</work>
+<manifestation xml:id="...">
+<titleStmt>
+      <title type="main">Rondo alla Turca</title>
+      <title type="subordinate" label="movement">Allegretto</title>
+      <title type="abbreviated">Alla Turca</title>
+      <title type="alternative">Marche Turque</title>
+      <titlePart>
+         <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
+         <title type="subordinate" label="Köchel">K. 331/300</title>
+         <title type="translated" xml:lang="DE">Sonate Nr. 11 A-Dur</title>
+         <title type="desc">Sonate pour piano très connue de Mozart</title>
+      </titlePart>
+   </titleStmt>
+</manifestation>
 ```
 
 <a id="OPR_ref1"></a>
@@ -168,12 +184,14 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
 
 
 ```xml
-<work>
+<manifestation>
+<titleStmt>
    <title type="main">Rondo alla Turca</title>
    <title type="abbreviated">Alla Turca</title>
    <title type="alternative">Marche Turque</title>
    <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
-</work>
+   </titleStmt>
+</manifestation>
 ```
 
 ## b. Compositeur, librettiste, etc.
@@ -191,29 +209,18 @@ Autre option, en fonction du contexte : `<title type="subordinate">`; `<title ty
 Autre option : `<persName role="composer">`
 
 <p style="text-align:justify;"> 
- Le ou les compositeurs renseignés ici concernent l'œuvre que représente la balise work. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer".
+ Le ou les compositeurs renseignés ici concernent l'œuvre que représente la balise manifestation. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer".
 </p>
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="...">
          <persName role="composer" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">...</persName>
    </composer>
-</work>
+</manifestation>
 ```
 
-```xml
-<work xml:id="...">
-   <expressionList xml:id="...">  
-      <expression xml:id="...">
-         <composer xml:id="...">
-         <persName role="composer" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..." >...</persName>
-         </composer>
-      </expression>
-   </expressionList>
-</work>
-```
 
 
 <a id="COA_ref2"></a>
@@ -232,11 +239,11 @@ Autre option : `<persName role="composer">`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="..." evidence="..." (internal, external or conjecture)>
          <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
    </composer>
-</work>
+</manifestation>
 ```
 
 <a id="COS_ref1"></a>
@@ -256,11 +263,11 @@ medium, low ou unknown. (?Est-il pertinent de mettre le degré de certitude dans
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="..." >
          <persName role="composer" cert="low" auth="..." auth.uri="http://..." codedval="...">Nom soupçonné</persName>
    </composer>
-</work>
+</manifestation>
 ```
 
 <a id="COL_ref1"></a>
@@ -282,14 +289,14 @@ Autre option : `<foreName>` et `<famName>`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="...">
          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">Nom réel</persName>
          <persName>
          <foreName>Alias</foreName>
          </persName>  
    </composer>
-</work>
+</manifestation>
 ```
 
 <a id="CDT_ref1"></a>
@@ -310,11 +317,11 @@ Autre option : `<foreName>` et `<famName>`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="...">
          <persName startdate="1685" enddate="1750" auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
    </composer>
-</work>
+</manifestation>
 ```
 
 <a id="CNT_ref1"></a>
@@ -336,12 +343,12 @@ Autre option : `<foreName>` et `<famName>`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="...">
          <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
          <annot label="nationality">Français</annot>
    </composer>
-</work>
+</manifestation>
 ```
 
 <a id="CBL_ref1"></a>
@@ -363,7 +370,7 @@ Autre option : `<foreName>` et `<famName>`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <composer xml:id="...">
          <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
          <date stardate="...">
@@ -373,7 +380,7 @@ Autre option : `<foreName>` et `<famName>`
             <country>XXX</country>
       </date>     
    </composer>
-</work>
+</manifestation>
 ```
 
 <a id="LIB_ref1"></a>
@@ -390,11 +397,11 @@ Autre option : `<persName role="librettist">`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <librettist>
       <persName auth="..." auth.uri="..." codedval="..."></persName>
    </librettist>   
-</work>
+</manifestation>
 ```
 
 <a id="LAR_ref1"></a>
@@ -413,11 +420,11 @@ Autre option : `<persName role="arranger">`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <arranger>
       <persName auth="..." auth.uri="..." codedval="..."></persName>
    </arranger>   
-</work>
+</manifestation>
 ```
 
 <a id="LOR_ref1"></a>
@@ -441,11 +448,11 @@ Autre option : `<persName role="orchestrator">`
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <arranger>
       <persName role="orchestrator" auth="..." auth.uri="..." codedval="..."></persName>
    </arranger>   
-</work>
+</manifestation>
 ```
 
 <a id="TXO_ref1"></a>
@@ -468,11 +475,11 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <langUsage>
       <language xml:id="..." auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="fra" uri="ISO 639">French</language>
    </langUsage>         
-</work>
+</manifestation>
 ```
 
 <a id="TXL_ref1"></a>
@@ -493,12 +500,12 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <langUsage>
       <language xml:id="Lat" auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="lat" uri="ISO 639-3" type="original">Latin</language>
       <language xml:id="Fr" auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="fra" uri="ISO 639-3" type="translation">French</language>
    </langUsage>          
-</work>
+</manifestation>
 ```
 
 <a id="TRN_ref1"></a>
@@ -519,7 +526,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
 
 
 ```xml
-<work xml:id="...">
+<manifestation xml:id="...">
    <contributor>
       <persName xml:id="T1" role="translator" auth="..." auth.uri="..." codedval="...">XXX</persName>
    </contributor>   
@@ -527,7 +534,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
       <language xml:id="Lat" type="original">Latin</language>
       <language xml:id="Fr" resp="T1" type="translation">French</language>
    </langUsage>          
-</work>
+</manifestation>
 ```
  Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans `<fileDesc>`, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans `<manifestationList>`), via @resp. 
 
@@ -546,12 +553,12 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 -------# plus bas
 
 <manifestationList xml:id="...">
-   <work xml:id="...">
+   <manifestation xml:id="...">
       <langUsage>
          <language xml:id="..." type="original">...</language>
          <language xml:id="Fr" resp="VV" type="translation">...</language>
      </langUsage>          
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 ## c. Informations liées à l'œuvre
@@ -659,33 +666,7 @@ Autre option :
 ```
 
 
-<a id="OPS_ref1"></a>
 
-### Numéro d'opus
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro d'opus de l'œuvre d'appartenance de l'œuvre encodée.|OPS|
-
-
-
- `<title type="uniform">`/`<title type="subordinate" label="opus">`
-
-Autre option : `<identifier label="opus">`
-
-<p style="text-align:justify;"> 
- Nous envisageons le numéro d'opus comme un syntagme du titre de l'œuvre d'appartenance. Ainsi, nous recommandons de l'encoder à l'aide d'une balise `<title>` et du @type="subordinate", tout en précisant le @label pour plus de clarté. Toutefois, les guidelines MEI semblent privilégier `<identifier>`, utilisé comme élément enfant de `<title>`. Nous proposons cette possibilité comme une option alternative, bien que celle-ci apparaisse structurellement discutable, notamment au regard du sens particulièrement vague de l'élément `<identifier>` ("Examples include an International Standard Book/Music Number, Library of Congress Control Number, publisher’s number, a personal identification number, an entry in a bibliography or catalog, etc."). Nous conseillons a minima de bien préciser chaque fois @label="opus". 
-</p> 
-
-```xml
-<work>
-   <title type="main">Prélude en do majeur</title>
-   <titlePart>
-      <title type="uniform">Vingt-quatre Préludes pour piano</title>
-      <title type="subordinate" label="opus">28</title>
-   <titlePart>
-</work>
-```
 
 <a id="AIN_ref1"></a>
 
@@ -953,19 +934,19 @@ Autre option :
 
  
 ```xml
-<work>
+<manifestation>
    <creation>
       <dedicatee>
          <persName>...</persName>
       </dedicatee>
    </creation>
-</work>  
+</manifestation>  
 ```
 
 Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
 
 ```xml
-<work>
+<manifestation>
    <creation>
       <dedication>
          <quote>...</quote>
@@ -975,19 +956,19 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
          </dedicatee>
       </dedication>
    </creation>
-</work> 
+</manifestation> 
 ```
  
 
 
 ```xml
-<work>
+<manifestation>
    <creation>
       <dedicatee>
          <persName>...</persName>
       </dedicatee>
    </creation>
-</work>
+</manifestation>
 ```
 
 <a id="ODT_ref1"></a>
@@ -1009,11 +990,11 @@ Autre option :
 </p>
 
 ```xml
-<work>
+<manifestation>
    <creation>
       <date notbefore="1530-01-01" notafter="1550-01-01" cert="low">1540</date>
    </creation>
-</work>
+</manifestation>
 ```
 
 <a id="OCY_ref1"></a>
@@ -1041,12 +1022,12 @@ Autre option :
 
 
 ```xml
-<work>
+<manifestation>
    <creation>
       <date notbefore="1530" notafter="1550" cert="low">1540</date>
       <country>France</country>
    </creation>
-</work>
+</manifestation>
 ```
 
 <a id="OPC_ref1"></a>
@@ -1059,23 +1040,23 @@ Autre option :
 
  
 ```xml
-<work>
+<manifestation>
    <creation>
       <date notbefore="1530" notafter="1550" cert="low">1540</date>
       <country>France</country>
       <settlement>Paris</settlement>
    </creation>
-</work>
+</manifestation>
 ```
 
 ```xml
-<work>
+<manifestation>
    <creation>
       <date notbefore="1530" notafter="1550" cert="low">1540</date>
       <country>France</country>
       <settlement>Paris</settlement>
    </creation>
-</work>
+</manifestation>
 ```
 
 ## d. Éléments esthétiques
@@ -1128,12 +1109,12 @@ Autre option :
 ```
 
 ```xml
-<work>
+<manifestation>
    <creation xml:id="…">
       <periodName>Contemporary music</periodName>
       <styleName>Minimalist</styleName>
    </creation>
-</work>   
+</manifestation>   
 ```
 
 <a id="AMD_ref1"></a>
@@ -1147,28 +1128,28 @@ Autre option :
 
  
 ```xml
-<work>
+<manifestation>
    <key mode="dorian">
    <creation xml:id="…">
       <periodName>Contemporary music</periodName>
       <styleName>Minimalist</styleName>
    </creation>
-</work> 
+</manifestation> 
 ```
 Autre option : 
 
 <p style="text-align:justify;"> 
- En MEI, le mode se désigne dans `<key>`, donc dans `<work>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
+ En MEI, le mode se désigne dans `<key>`, donc dans `<manifestation>` ou `<expression>`, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
 </p>
 
 ```xml
-<work>
+<manifestation>
    <key mode="dorian">
    <creation xml:id="…">
       <periodName>Contemporary music</periodName>
       <styleName>Minimalist</styleName>
    </creation>
-</work>
+</manifestation>
 ```
 
 <a id="AMT_ref1"></a>
@@ -1243,11 +1224,11 @@ Autre option :
 
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <perfMedium>
             <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
       </perfMedium>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 
@@ -1265,23 +1246,23 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 </p>
 
 ```xml
-<work>
+<manifestation>
    <perfMedium>
       <perfRes>
          <persName auth="..." auth.uri="..." codedval="..." >Nom de l'interprète</persName>
          </perfRes>
    </perfMedium>
-</work>
+</manifestation>
 ```
  
 ```xml
-<work>
+<manifestation>
    <perfMedium>
       <perfRes>
          <persName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="302774677" role="violist">Guillaume Becker</persName>
          </perfRes>
    </perfMedium>
-</work>
+</manifestation>
 ```
 
 <a id="MPS_ref1"></a>
@@ -1297,25 +1278,25 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 </p>
 
 ```xml
-<work>
+<manifestation>
    <perfMedium>
       <perfRes>
          <persName auth="..." auth.uri="http://..." codedval="..." role="..." cert="high, medium, low ou unknown">Nom de l'interprète</persName>
       </perfRes>
    </perfMedium>
-</work>
+</manifestation>
 ```
  Le niveau de certitude accordé à l'interprète peut être précisé à l'aide de l'attribut @cert dont les valeurs sont "high", "medium", "low" et "unknown".
 
 
 ```xml
-<work>
+<manifestation>
    <perfMedium>
       <perfRes>
          <persName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="302774677" role="violist" cert="high">Guillaume Becker</persName>
          </perfRes>
    </perfMedium>
-</work>
+</manifestation>
 ```
 
 <strong>"internal"</strong> quand cette attribution provient d'une information interne à la source de votre édition.
@@ -1377,7 +1358,7 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
 
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <title>...</title>
       <history>
          <eventList>
@@ -1386,7 +1367,7 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
             </event>
          </eventList>
       </history>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 
@@ -1394,7 +1375,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
 
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <expressionList>
          <expression>
             <title>...</tite>
@@ -1407,7 +1388,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
             </history>
          </expression>
       </expressionList>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 
@@ -1419,7 +1400,7 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
 
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <history>   
          <eventList>
             <event type="premiere">
@@ -1434,7 +1415,7 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
          </event>
          </eventList>
       </history>
-  </work>
+  </manifestation>
 </manifestationList>
 ```
 
@@ -1449,7 +1430,7 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
  
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <title>...</tite>
       <history>
          <eventList>
@@ -1458,13 +1439,13 @@ La date de composition peut aussi être nuancée ou approchée à l'aide d'attri
             </event>
          </eventList>
       </history>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représentation, nous pouvons utiliser, à la place de l'élément geogName, l'élément adress.
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <title>...</tite>
       <history>
          <eventList>
@@ -1479,7 +1460,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
             </event>
          </eventList>
       </history>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 
@@ -1488,7 +1469,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
 
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <title>...</tite>
       <history>
          <eventList>
@@ -1503,7 +1484,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
             </event>
          </eventList>
       </history>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 
@@ -1565,7 +1546,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
  
 ```xml
 <manifestationList>
-   <work>
+   <manifestation>
       <title>...</title>
       <history>
          <eventList>
@@ -1574,7 +1555,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
             </event>
          </eventList>
       </history>
-   </work>
+   </manifestation>
 </manifestationList>
 ```
 Autre option : 
@@ -1586,7 +1567,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 
 ```xml
 <manifestationList>
-  <work>
+  <manifestation>
     <title>Pelléas et Mélisande</title>
     <eventList>
       <event type="premiere">
@@ -1595,7 +1576,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
         <perfName>Direction : André Messager</perfName>
       </event>
     </eventList>
-  </work>
+  </manifestation>
 </manifestationList>
 ```
 <p style="text-align:justify;"> 
@@ -1618,14 +1599,14 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 
  
 ```xml
-<work>
+<manifestation>
    <expressionList>
       <expression>
          <title>...</title>
          ...
       </expression>
    </expressionList>
-</work>
+</manifestation>
 ```
  
  <p style="text-align:justify;"> 
@@ -1633,7 +1614,7 @@ Les œuvres associées sont, au sens du modèle FRBR, des expressions différent
 </p>
 
 ```xml
-<work>
+<manifestation>
    <expressionList>
       <expression>
          <title auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="385145858128823022341">L'Après-midi d'un faune</title>
@@ -1646,7 +1627,7 @@ Les œuvres associées sont, au sens du modèle FRBR, des expressions différent
          </composer>
       </expression>
    </expressionList>
-</work>
+</manifestation>
 ```
 
 <a id="A-GCO_ref1"></a>

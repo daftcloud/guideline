@@ -16,12 +16,12 @@ Notre protocole de complétion des headers est présenté de manière logique en
 Historiquement, les besoins de l'édition critique textuelle se sont structurés à partir de deux modèles philologiques principaux : celui de Karl Lachmann dit méthode <em>stemmatique</em>, basé sur un processus d'élimination des erreurs communes entre les manuscrits, et celui de Bédier qui vise à l'usage d'un témoin unique. Ces méthodes et leurs dérivés convergent toutes vers la première étape nécessaire de la <em>recensio</em>, soit l'identification des sources. Dans le cadre de la présentation de notre protocole de renseignement des métadonnées au sein des headers MEI pour l'établissement d'éditions critiques, nous prenons donc appui sur la <em>recensio</em>, qui est renseignée soit de manière "classique" en MEI à travers <em>sourceDesc</em>, soit en suivant les différents états induits par le modèle FRBR. 
 </p>
 <p style="text-align:justify;">
-Les quatre états de l'œuvre en FRBR sont légérèment adaptés en MEI, puisque "manifestation" devient <em>source</em>, tandis que <em>work</em>, <em>expression</em> et <em>item</em> restent inchangés. Chacun de ces éléments possède des balises "enfants" permettant de lister les différentes instanciations :
+Les quatre états de l'œuvre en FRBR se retrouve en MEI. Chacun de ces éléments possède des balises "enfants" permettant de lister les différentes instanciations :
 </p>
 
 <p style="text-align:justify;">
    - <em>expressionList</em> : il s'agit de nommer et détailler les différentes expressions, cette étape correspondant dans notre protocole à la <em>recensio</em>. Nous avons fait le choix de nommer l'expression de tradition directe <em>expression 0</em>. On utilise 0 lorsque l'on est en presence de la source originale (normalement l'autographe de l'œuvre) et <em>omega</em> "⍵" lorsque la source originale de l'œuvre ne nous est pas parvenue, lorsqu'elle est <em>supposée</em>. Les expressions indirectes se déploient ensuite avec des chiffres (1,2 etc.) ou bien des noms en toutes lettres. Pour chaque expression il convient d'utiliser une instance de <em>expressionList</em> et pour chaque manifestation un <em>sourceList</em>. Dans le cadre de manuscrits, la manifestation et l'item ne font qu'un.
-   - <em>sourceList</em> : de manière similaire à <em>expressionList</em>, nous nommons le manuscrit autographe (ou l'<em>omega</em> issu du <em>stemma codicum</em> si l'on ne possède pas l'autographe) <em>source 0</em>. 
+   - <em>manifestationList</em> : de manière similaire à <em>expressionList</em>, nous nommons le manuscrit autographe (ou l'<em>omega</em> issu du <em>stemma codicum</em> si l'on ne possède pas l'autographe) <em>source 0</em>. 
    - <em>itemList</em> : il n'y a pas, pour des raisons de catalogage évidentes, d'<em>item 0</em> ; nous partons donc du principe que la dénomination des items fait appel au bon sens des chercheur·euse·s, de la tradition et des nomenclatures en usage.
 </p>
 
