@@ -27,7 +27,8 @@ const url = `file://${path.join(rootDir, "_site", "print.html")}`;
 
   await page.pdf({
   path: tempPdfPath, 
-  format: "A4",
+  width: 1123,  
+  height: 794,  
   printBackground: true,
   margin: {
     top: "2cm",

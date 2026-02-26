@@ -9,11 +9,12 @@ print: true
 <style>
 
 
-    /*Musica2 en filigrane*/
-  main::before {
-   content: "";
-  display: block;
+/*Musica2 en filigrane*/
+main::before {
+  content: "";
   position: absolute;
+  background-attachment: scroll;
+  background-position: center;
   inset: 0;
   background: url("/guideline/assets/images/musica2.png") center / 60% no-repeat;
   opacity: 0.08;
@@ -166,7 +167,7 @@ print: true
     }
 
     .language-xml {
-      font-size: 10pt;
+      font-size: 12pt;
       break-inside: avoid;
       page-break-inside: avoid;
     }
