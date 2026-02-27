@@ -345,6 +345,8 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 
  &lt;langUsage>/<language&gt;
 
+<!-- Faut-il faire une manifestation pour l'édition numérique ? -->
+
 <p style="text-align:justify;"> 
  En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du &lt;ProfilDesc&gt; de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise &lt;langUsage&gt; trouve véritablement son sens en permettant de lister plusieurs langues. 
 
@@ -444,8 +446,6 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &lt;imprint&gt;. Des dates peuvent également être ajoutées pour &lt;editor&gt; pour plus de précisions.
 
- 
-
 
 ```xml
 <source>
@@ -514,8 +514,6 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &l
    </biblStruct>
 </source>
 ```
-
-
 
 
 <a id="AIN_ref1"></a>
@@ -598,9 +596,6 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de scène|OSC|
-
-
-
  
 
 Autre option : 
@@ -641,9 +636,6 @@ Autre option :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}| Numéro de mouvement|OMV|
 
 
-
- 
-
 Autre option : 
 ```xml
 <body>
@@ -669,9 +661,6 @@ Autre option :
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désignation du mouvement ou nom du mouvement|OMD|
-
-
-
  
 
 Autre option : 
@@ -702,9 +691,6 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Commanditaire|OCO|
 
-
-
- 
 ```xml
 <biblStruc>
    <imprint>
@@ -735,8 +721,6 @@ Autre option :
 <a id="OCL_ref1"></a>
 
 ### Collecteur de la musique
-
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -861,11 +845,6 @@ Définition :
          <country>France</country>
       </creation>
 ```
-
-Autre option : 
-
- 
-
 
 ```xml
 <manifestation>
