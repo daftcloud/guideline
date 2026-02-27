@@ -236,59 +236,6 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 </manifestation>
 ```
 
-<a id="CBL_ref1"></a>
-
-### Dates et lieux de naissance et de décès du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
-
- &lt;persName&gt; avec les attributs @startdate et @enddate.
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date stardate="...">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</manifestation>
-```
-
-<a id="CNT_ref1"></a>
-
-### Nationalité du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
-
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
-         <annot label="nationality">Français</annot>
-   </composer>
-</manifestation>
-```
 
 <a id="LIB_ref1"></a>
 
