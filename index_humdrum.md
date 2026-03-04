@@ -26,9 +26,9 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | AMD | Classification du mode (Moyen âge et Renaissance) ||| [Dans la description de l'œuvre](guideline/manifestationList.html#AMD_ref1) |
  | AMT | Classification métrique ||| [Dans la description de l'œuvre](guideline/manifestationList.html#AMT_ref1) |
  | AST | Désignation du style/période/typologie de l'œuvre ||| [Dans la description de l'œuvre](guideline/manifestationList.html#AST_ref1) |
- | CBL | Dates et lieux de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
- | CDL | Dates et lieux de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
- | CDT | Dates et lieux de naissance et de décès du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CBL_ref1) |
+ | CBL | Dates et lieux de naissance et de décès du compositeur | [Dans la description du fichier](guideline/manifestationList.html#CBL_ref1) |||
+ | CDL | Dates et lieux de naissance et de décès du compositeur | [Dans la description du fichier](guideline/manifestationList.html#CBL_ref1) |||
+ | CDT | Dates et lieux de naissance et de décès du compositeur | [Dans la description du fichier](guideline/manifestationList.html#CBL_ref1) |||
  | CNT | Nationalité du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#CNT_ref1) |
  | COA | Compositeur attribué | [Dans la description du fichier](guideline/fileDesc.html#COA_ref1) || [Dans la description de l'œuvre](guideline/manifestationList.html#COS_ref1) |
  | COL | Alias ou pseudonyme du compositeur ||| [Dans la description de l'œuvre](guideline/manifestationList.html#COL_ref1) |

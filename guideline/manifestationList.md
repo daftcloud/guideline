@@ -1,5 +1,5 @@
 ---
-title: Description de l'œuvre musicale &lt;manifestationList&gt;
+title: Description bibliographique &lt;manifestationList&gt;
 layout: default
 nav_order: 7
 parent: Guideline
@@ -9,7 +9,7 @@ permalink: /guideline/manifestationList
 # Description bibliographique de l'édition musicale &lt;manifestationList&gt;
 
 <p style="text-align:justify;"> 
-L'élément &lt;manifestationList&gt; est à la racine de toute la description de l'œuvre édité par le fichier MEI. Il représente, dans le modèle FRBR, la liste des manifestations c'est-à-dire, les différentes éditions de l'œuvre. Chaque édition est donc représenté par une balise &lt;manifestation&gt;. Tous les exemples de ce chapitre prendront donc comme racine la balise &lt;manifestation&gt;.
+L'élément &lt;manifestationList&gt; est à la racine de toute la description bibliographiqu de l'œuvre édité par le fichier MEI. Il représente, dans le modèle FRBR, la liste des manifestations c'est-à-dire, les différentes éditions de l'œuvre. Chaque édition est donc représenté par une balise &lt;manifestation&gt;. Par conséquent, tous les exemples de ce chapitre prendront comme racine la balise &lt;manifestation&gt;.
 
  <!-- Développer la structure de manifestationList -->
 </p>
@@ -19,12 +19,13 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 ## a. Titre
 
 <a id="OTL_ref2"></a>
+<a id="OTA_ref1"></a>
 
 ### Titre de la manifestation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre|≈ OTL|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre| OTL & OTA|
 
  <p style="text-align:justify;">
    Tous les éléments de titre d'une manifestation se présentent dans la balise &lt;titleStmt&gt;.
@@ -89,6 +90,37 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
  Dans le cas de sections ou de mouvements d'une œuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'œuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer &lt;titlePart&gt;. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
 </p>
 
+
+
+### Titre alternatif de l'œuvre
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA|
+
+
+<p style="text-align:justify;"> 
+ Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
+</p>
+
+
+```xml
+<manifestation xml:id="...">
+<titleStmt>
+      <title type="main">Rondo alla Turca</title>
+      <title type="subordinate" label="movement">Allegretto</title>
+      <title type="abbreviated">Alla Turca</title>
+      <title type="alternative">Marche Turque</title>
+      <titlePart>
+         <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
+         <title type="subordinate" label="Köchel">K. 331/300</title>
+         <title type="translated" xml:lang="DE">Sonate Nr. 11 A-Dur</title>
+         <title type="desc">Sonate pour piano très connue de Mozart</title>
+      </titlePart>
+   </titleStmt>
+</manifestation>
+```
+
 ### Titre d'un mouvement d'une œuvre 
 
 ```xml
@@ -118,7 +150,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 
 
 <p style="text-align:justify;"> 
- Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, parmi les  dispose de valeurs contrôlées en MEI ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc") de l'attribut @type, aucune ne couvre l'acception d'un titre "populaire". Pour l'usage de ces valeurs, voir ci-dessous dans "Titre alternatif de l'œuvre"
+ Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, parmi les valeurs contrôlées de l'attribut @type ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc"), aucune ne couvre l'acception d'un titre « populaire ». Pour l'usage de ces valeurs, voir ci-dessous dans « Titre alternatif de l'œuvre ».
 </p>
 
 
@@ -134,38 +166,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 </manifestation>
 ```
 
-<a id="OTA_ref1"></a>
 
-### Titre alternatif de l'œuvre
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA|
-
-
-Autre option, en fonction du contexte : &lt;title type="subordinate"&gt;; &lt;title type="abbreviated"&gt;; &lt;title type="translated"&gt;; &lt;title type="uniform"&gt;; &lt;title type="desc"&gt;
-
-<p style="text-align:justify;"> 
- Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-<titleStmt>
-      <title type="main">Rondo alla Turca</title>
-      <title type="subordinate" label="movement">Allegretto</title>
-      <title type="abbreviated">Alla Turca</title>
-      <title type="alternative">Marche Turque</title>
-      <titlePart>
-         <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
-         <title type="subordinate" label="Köchel">K. 331/300</title>
-         <title type="translated" xml:lang="DE">Sonate Nr. 11 A-Dur</title>
-         <title type="desc">Sonate pour piano très connue de Mozart</title>
-      </titlePart>
-   </titleStmt>
-</manifestation>
-```
 
 <a id="OPR_ref1"></a>
 
@@ -194,12 +195,13 @@ Autre option, en fonction du contexte : &lt;title type="subordinate"&gt;; &lt;ti
 ## b. Compositeur, librettiste, etc.
 
 <a id="COS_ref1"></a>
+<a id="COL_ref1"></a>
 
 ### Compositeur indiqué sur la manifestation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM, COA & COS|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM, COA, COS & COL|
 
 
 <p style="text-align:justify;">
@@ -216,35 +218,10 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 </manifestation>
 ```
 
-### Compositeur soupçonné
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Désigne un compositeur soupçonné avec un niveau de certitude.|COS|
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="..." >
-         <persName role="composer" cert="low" auth="..." auth.uri="http://..." codedval="...">Nom soupçonné</persName>
-   </composer>
-</manifestation>
-```
-
-<a id="COL_ref1"></a>
-
-### Alias ou pseudonyme du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique un alias ou pseudonyme d’un compositeur.|COL|
-
- &lt;persName&gt; et &lt;foreName&gt;
-
-Autre option : &lt;foreName&gt; et &lt;famName&gt;
+ &lt;persName&gt; et &lt;foreName&gt;  &lt;foreName&gt; et &lt;famName&gt;
 
 <p style="text-align:justify;"> 
- Peut être utilisé pour les noms d’emprunt, les noms de plume ou les pseudonymes historiques. Il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins : famName, genName, addName, genName, nameLink, et roleName. Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
+ Lorsque la manifestation indique un nom d’emprunt, un nom de plume ou un pseudonyme historiques, il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins que &lt;persName&gt;. &lt;famName&gt;, &lt;genName&gt;, &lt;addName&gt;, &lt;genName&gt;, &lt;nameLink&gt; et &lt;roleName&gt;. Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
 </p>
 
 
@@ -259,59 +236,6 @@ Autre option : &lt;foreName&gt; et &lt;famName&gt;
 </manifestation>
 ```
 
-<a id="CBL_ref1"></a>
-
-### Dates et lieux de naissance et de décès du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
-
- &lt;persName&gt; avec les attributs @startdate et @enddate.
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date stardate="...">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</manifestation>
-```
-
-<a id="CNT_ref1"></a>
-
-### Nationalité du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
-
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
-         <annot label="nationality">Français</annot>
-   </composer>
-</manifestation>
-```
 
 <a id="LIB_ref1"></a>
 
@@ -421,6 +345,8 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 
  &lt;langUsage>/<language&gt;
 
+<!-- Faut-il faire une manifestation pour l'édition numérique ? -->
+
 <p style="text-align:justify;"> 
  En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du &lt;ProfilDesc&gt; de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise &lt;langUsage&gt; trouve véritablement son sens en permettant de lister plusieurs langues. 
 
@@ -520,8 +446,6 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &lt;imprint&gt;. Des dates peuvent également être ajoutées pour &lt;editor&gt; pour plus de précisions.
 
- 
-
 
 ```xml
 <source>
@@ -590,8 +514,6 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &l
    </biblStruct>
 </source>
 ```
-
-
 
 
 <a id="AIN_ref1"></a>
@@ -674,9 +596,6 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de scène|OSC|
-
-
-
  
 
 Autre option : 
@@ -717,9 +636,6 @@ Autre option :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}| Numéro de mouvement|OMV|
 
 
-
- 
-
 Autre option : 
 ```xml
 <body>
@@ -745,9 +661,6 @@ Autre option :
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désignation du mouvement ou nom du mouvement|OMD|
-
-
-
  
 
 Autre option : 
@@ -778,9 +691,6 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Commanditaire|OCO|
 
-
-
- 
 ```xml
 <biblStruc>
    <imprint>
@@ -811,8 +721,6 @@ Autre option :
 <a id="OCL_ref1"></a>
 
 ### Collecteur de la musique
-
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -937,11 +845,6 @@ Définition :
          <country>France</country>
       </creation>
 ```
-
-Autre option : 
-
- 
-
 
 ```xml
 <manifestation>
