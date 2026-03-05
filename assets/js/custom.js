@@ -68,7 +68,7 @@ topDiv.appendChild(footer);
   const nav = document.getElementById("site-nav");
   const musica2 = document.createElement('p');
   musica2.textContent = "Musica2";
-  header.insertBefore(nav, musica2);
+  header.insertBefore(musica2, nav);
  /*function moveLogos() {
   if (!logos || !target || !footerContent) return;
 
