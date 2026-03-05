@@ -69,7 +69,6 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | OTA | Titre alternatif ||| [Dans la description de l'œuvre](guideline/manifestationList.html#OTA_ref1) |
  | OTL | Titres | [Dans la description du fichier](guideline/fileDesc.html#OTL_ref1) |[Dans la description de la source](guideline/sourceDesc.html#PTL_ref1)|[Dans la description de l'œuvre](guideline/manifestationList.html#OTL_ref2)|
  | OTP | Titre courant ||| [Dans la description de l'œuvre](guideline/manifestationList.html#OTP_ref1) |
- | OVM | Volume || [Dans la description de la source](guideline/sourceDesc.html#OVM_ref1) ||
  | PC# | Numéro de catalogue || [Dans la description de la source](guideline/sourceDesc.html#SCA_ref1) ||
  | PDT | Date de publication || [Dans la description de la source](guideline/sourceDesc.html#PPR_ref1) |[Dans la description de l'œuvre](guideline/manifestationList.html#PPR_ref2)|
  | PED | Éditeur de la source || [Dans la description de la source](guideline/sourceDesc.html#PED_ref1) ||
