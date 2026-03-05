@@ -1044,7 +1044,7 @@ Autre option :
  
 ```xml
 <perfMedium>
-      <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
+   <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
 </perfMedium>
 ```
 
@@ -1056,7 +1056,7 @@ Autre option :
 ```xml
 <manifestation>
    <perfMedium>
-         <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
+      <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
    </perfMedium>
 </manifestation>
 ```
@@ -1078,7 +1078,7 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
    <perfMedium>
       <perfRes>
          <persName auth="..." auth.uri="..." codedval="..." >Nom de l'interprète</persName>
-         </perfRes>
+      </perfRes>
    </perfMedium>
 </manifestation>
 ```
@@ -1088,7 +1088,7 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
    <perfMedium>
       <perfRes>
          <persName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="302774677" role="violist">Guillaume Becker</persName>
-         </perfRes>
+      </perfRes>
    </perfMedium>
 </manifestation>
 ```
@@ -1122,7 +1122,7 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
    <perfMedium>
       <perfRes>
          <persName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="302774677" role="violist" cert="high">Guillaume Becker</persName>
-         </perfRes>
+      </perfRes>
    </perfMedium>
 </manifestation>
 ```
@@ -1207,7 +1207,7 @@ Autre option : Dans le cas d'une œuvre dont il existe différentes expressions,
          <history>
             <eventList>
                <event type="performance">
-                     <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
+                  <date isodate="aaaa-mm-jj">AAAA-MM-JJ</date>
                </event>
             </eventList>
          </history>
@@ -1325,7 +1325,6 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
    </event>
 </eventList>
 ```
- 
 
 
 ```xml
@@ -1381,11 +1380,11 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 <manifestation>
    <title>Pelléas et Mélisande</title>
    <eventList>
-   <event type="premiere">
-      <date isodate="1902-04-30">1902-04-30</date>
-      <placeName>Opéra-Comique, Paris</placeName>
-      <perfName>Direction : André Messager</perfName>
-   </event>
+      <event type="premiere">
+         <date isodate="1902-04-30">1902-04-30</date>
+         <placeName>Opéra-Comique, Paris</placeName>
+         <perfName>Direction : André Messager</perfName>
+      </event>
    </eventList>
 </manifestation>
 ```
@@ -1419,7 +1418,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 </manifestation>
 ```
  
- <p style="text-align:justify;"> 
+<p style="text-align:justify;"> 
 Les œuvres associées sont, au sens du modèle FRBR, des expressions différentes d'une œuvre. S'il est besoin de renseigner les informations concernant les autres expressions d'une œuvre, ces renseignements se situeront dans un élément expression dédié à chaque œuvre associée.
 </p>
 

@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 topDiv.appendChild(footer);
 
+  
   // Ajoute et gère le bouton Exporter en PDF. Il y a deux boutons, un en dessous de la nav-list (navbtn) pour la version ordinateur et un à côté du menu burger pour la version mobile (mobtn).
 
   const pdfUrl = "/guideline/assets/pdf/guideline.pdf";
@@ -61,6 +62,12 @@ topDiv.appendChild(footer);
   const target = document.querySelector(".d-md-block");
   const footerContent = document.querySelector(".footer-content");
 
+
+  // Ajoute "Musica2" sous le titre.
+
+  const musica2 = document.createElement('p')
+  musica2.textContent = "Musica2"
+  header.appendChild(musica2)
  /*function moveLogos() {
   if (!logos || !target || !footerContent) return;
 
