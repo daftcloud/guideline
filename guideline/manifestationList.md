@@ -75,7 +75,7 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
    "**desc**" pour un titre descriptif.
 
 
-<!-- Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
+<!-- NON !! Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
 
 
 ```xml
@@ -1050,7 +1050,7 @@ Autre option :
 
 Autre option : 
 
- <!-- Je ne crois pas que cela soit nécessaire dans un header d'une édition critique. -->
+ <!-- Je ne crois pas que cela soit nécessaire dans un header d'une édition critique. [ONgarde] -->
 
 
 ```xml

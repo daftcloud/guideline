@@ -136,15 +136,6 @@ Exemple d'une lettre inédite.
 <a id="ONM_ref1"></a>
 -->
 
-<!--
-### Numéro
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro|ONM|
-
- Je ne comprends pas de quoi il est question ici. Du numéro d'opus ? -->
-
 
 ## b. Compositeur
 
@@ -397,7 +388,7 @@ Exemple complet :
  Dans des projets comme "Bach Digital" ou "MoVi - The digital Mozart score Viewer", les numéros de catalogue sont indiqué dans une balise &lt;identifier&gt; avec un attribut @label ou @auth. Afin de pouvoir identifier automatiquement que la balise &lt;identifier&gt; contient un numéro de catalogue scientifique, il faut lui adjoindre un attribut @type dont la valeur indique catalogue scientifique.
 </p>
 
-<!-- Je ne sais pas quel valeur attribué à @type, à moins qu'on ne se base que sur auth / auth.uri pour identifier le catalogue comme dans l'exemple. -->
+<!-- Je ne sais pas quel valeur attribué à @type, à moins qu'on ne se base que sur auth / auth.uri pour identifier le catalogue comme dans l'exemple. A REVOIR ENSEMBLE-->
  
 ```xml
 <source>
@@ -409,54 +400,8 @@ Exemple complet :
 </source>
 ```
 
-<a id="OVM_ref1"></a>
-
-<!-- Cette entrée n'est que le reflet d'une clef humdrum. Je ne saisis pas sa réalité dans le paradigme de l'édition en MEI
-
-### Volume
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Volume|OVM|
 
 
-```xml
- <source>
-  <biblStruct>
-      <composer>
-          <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">XXX</persName>
-      </composer>
-      <title type="main">XXX</title>
-      <editor>
-          <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..."></persName>
-      </editor>
-      <biblStructScope label="volume">1</biblStructScope>
-   </biblStruct>
-</source>
-```
-
-
-
-<p style="text-align:justify;"> 
- J'imagine que cela concerne essentiellement des données bibliographiques. J'emprunte cette manière à la TEI. La même est possible pour le numéro. 
-</p>
-
-
-```xml
-<source>
-  <biblStruct>
-      <composer>
-          <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="...">XXX</persName>
-      </composer>
-      <title type="main">XXX</title>
-      <editor>
-          <persName auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="..."></persName>
-      </editor>
-      <biblStructScope label="volume">1</biblStructScope>
-   </biblStruct>
-</source>
-```
- -->
 <a id="YOY_ref1"></a>
 
 ### Année du copyright du document d'origine
@@ -560,7 +505,6 @@ Toutes les informations concernant les conditions d'accès à la source s'inscri
 L'identité du propriétaire peut y être inscrit via un élément &lt;corpName&gt; pour une institution ou &lt;persName&gt; pour un particulier.
 </p>
  
- <!-- Il faudrait trouver un role adéquat, qui fasse consensus. Je propose curator pour l'instant. -->
 
 ```xml
 <source recordtype="d">

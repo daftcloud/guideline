@@ -104,8 +104,6 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
 </p>
 
 
-<!-- ABC : J'ai choisi @role="composer" plutôt que @role="creator", pour permettre, en extrayant tous les <persName/> d'un fichier MEI d'avoir le rôle directement dans l'élément plutôt que dans son contexte (Sans cela, il faudrait remonter les balises parents pour récupérer cette information.) Pour la même raison, je préconise de toujours mettre les attributs d'evidence et de certitude sur le <persName/> -->
-
 
 ```xml
 <fileDesc xml:id="...">
@@ -211,8 +209,6 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
 L'identité de l'éditeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans le &lt;titleStmtt&gt; de &lt;fileDesc&gt;.
 </p>
 
-<!-- ABC : À l'instar de la balise <composer>, j'imagine qu'il est mieux de conserver la balise <editor>. -->
-
  ```xml
 <fileDesc>
   <titleStmt>
@@ -293,8 +289,6 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 ### Date d'encodage / de mise à disposition de l'édition électronique
 
-
-<!-- ABC : J'ai fusionné les concepts Humdrum de date d'encodage et celle de mise à disposition de l'édition électronique.  -->
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -401,7 +395,7 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
 <encodingDesc>
    <classDecls>
       <taxonomy auth="DOREMUS" auth.uri="http://data.doremus.org/vocabulary/diabolo/genre/">
-         <head>Vocabulaire controllé des genres</head>
+         <head>Vocabulaire controlé des genres</head>
          <desc>   
             Liste des genres musicaux provenant de Diabolo de Radio France.
          </desc>
