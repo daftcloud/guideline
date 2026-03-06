@@ -43,6 +43,7 @@ main::before {
   display: block;
   max-width: 100%;
   padding-right: 0.5rem;
+  padding-left: 1rem;
   font-size: 1.05rem;
   font-family: libre-baskerville, sans-serif;
   line-height: 1;
