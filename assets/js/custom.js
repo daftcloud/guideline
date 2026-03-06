@@ -72,7 +72,7 @@ topDiv.appendChild(footer);
   musica2.className = "musica2-title";
   divmusica2.className = "musica2-container";
   divmusica2.appendChild(musica2);
-  sidebar.insertBefore(sitenav, divmusica2);
+  sidebar.insertBefore(divmusica2, sitenav);
 
 
  /*function moveLogos() {
