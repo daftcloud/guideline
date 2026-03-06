@@ -49,6 +49,24 @@ main::before {
   color: #be362a;
 }
 
+.musica2-container{
+  margin: 0;
+  padding-top: 0em;
+  
+}
+
+.musica2-title{
+  max-width: 100%;
+  padding-right: 1.5rem;
+  font-size: 24px;
+  font-family: libre-baskerville, sans-serif;
+  line-height: 1;
+  color: #be362a;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em
+}
+
+
 /* Base des boutons */
 .export-button {
   cursor: pointer;
