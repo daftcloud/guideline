@@ -213,3 +213,7 @@ background-color: #f7ac47;
 .site-title:hover {
   background-image: none;
 }
+
+.site-nav {
+  padding-top: 1rem !important;
+}
