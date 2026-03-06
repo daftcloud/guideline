@@ -44,7 +44,7 @@ main::before {
   max-width: 100%;
   padding-right: 0.5rem;
   font-size: 1.05rem;
-  font-family: libre-baskerville, serif;
+  font-family: libre-baskerville, sans-serif;
   line-height: 1;
   color: #be362a;
 }
