@@ -15,4 +15,5 @@ kramdown:
 
 locale: fr_FR
 
-
+languages: ["fr", "en"]
+default_lang: "fr"

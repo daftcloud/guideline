@@ -8,7 +8,9 @@ nav_order: 3
 
 <p style="text-align:justify;">
 
-Lorsque nous renseignons une information telle que le nom d'une personnalité ou d'un concept, il est recommandé, dans un souci de standardisation, de faire appel au maximum à un fichier d'autorité. À travers ce guide, nous utilisons, [VIAF](https://www.oclc.org/fr/viaf.html) pour décliner les identités des personnalités ayant une responsabilité dans les sources et [ORCID](https://orcid.org/) pour identifier les chercheurs. Nous identifions les lieux avec [GeoNames](https://www.geonames.org/).
+Lorsque nous renseignons une information telle que le nom d'une personnalité ou d'un concept, il est recommandé, dans un souci de standardisation, de faire appel au maximum à un fichier d'autorité. À travers ce guide, nous utilisons, [VIAF](https://www.oclc.org/fr/viaf.html) pour décliner les identités des personnalités ayant une responsabilité dans les sources et [ORCID](https://orcid.org/) pour identifier les chercheurs. Nous identifions les lieux avec [GeoNames](https://www.geonames.org/). Nous vous invitons à identifier les instruments de musique avec [MIMO](https://mimo-international.com/MIMO/).
+Nous identifions les oeuvres avec [RISM](https://rism.info/)
+
 parler des vocabulaire controllés DOREMUS
 
 
