@@ -64,11 +64,17 @@ topDiv.appendChild(footer);
 
 
   // Ajoute "Musica2" sous le titre.
-
-  const nav = document.getElementById("site-nav");
+  const sidebar = document.querySelector(".side-bar");
+  const sitenav = document.querySelector(".site-nav")
   const musica2 = document.createElement('p');
+  const divmusica2 = document.createElement('div');
   musica2.textContent = "Musica2";
-  header.insertBefore(musica2, nav);
+  musica2.className = "musica2-title";
+  divmusica2.className = "musica2-container";
+  divmusica2.appendChild(musica2);
+  sidebar.insertBefore(divmusica2, sitenav);
+
+
  /*function moveLogos() {
   if (!logos || !target || !footerContent) return;
 

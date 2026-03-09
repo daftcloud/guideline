@@ -43,11 +43,31 @@ main::before {
   display: block;
   max-width: 100%;
   padding-right: 0.5rem;
+  padding-left: 1rem;
+  padding-top: 1.5rem ;
   font-size: 1.05rem;
-  font-family: libre-baskerville, serif;
+  font-family: libre-baskerville, sans-serif;
   line-height: 1;
   color: #be362a;
 }
+
+.musica2-container{
+  margin: 0;
+  padding-top: 0em;
+  
+}
+
+.musica2-title{
+  max-width: 100%;
+  padding-right: 1.5rem;
+  font-size: 24px;
+  font-family: libre-baskerville, sans-serif;
+  line-height: 1;
+  color: #be362a;
+  margin-top: 0.4em;
+  margin-bottom: 0.5em
+}
+
 
 /* Base des boutons */
 .export-button {
@@ -192,4 +212,8 @@ background-color: #f7ac47;
 
 .site-title:hover {
   background-image: none;
+}
+
+.site-nav {
+  padding-top: 1rem !important;
 }
