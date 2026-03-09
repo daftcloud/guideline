@@ -6,7 +6,7 @@ has_toc: false
 ---
 
 <p style="text-align:justify;"> 
-Les <emphase>guidelines</emphase> que nous proposons pour l'élaboration de métadonnées MEI interopérables se présente en trois parties. 
+Le <emphase>guide du header MEI</emphase> que nous proposons pour l'élaboration de métadonnées MEI interopérables se présente en trois parties. 
 </p>
 
 [Description du fichier MEI encodé &lt;fileDesc&gt;](guideline/fileDesc.html)

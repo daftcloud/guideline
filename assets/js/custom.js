@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchLabel = document.querySelector(".search-label .sr-only");
 
   if (searchInput) {
-    searchInput.placeholder = "Rechercher dans les guidelines MEI";
+    searchInput.placeholder = "Rechercher dans le guide du header MEI";
   }
 
   if (searchLabel) {
-    searchLabel.textContent = "Rechercher dans les guidelines MEI";
+    searchLabel.textContent = "Rechercher dans le guide du header MEI";
   }
 
   // Déplacement du footer pour qu'il soit enfant direct 

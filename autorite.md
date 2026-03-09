@@ -1,5 +1,5 @@
 ---
-title: L'autorité
+title: Référentiels d'autorités et thesauri
 layout: default
 nav_order: 3
 ---
@@ -8,7 +8,10 @@ nav_order: 3
 
 <p style="text-align:justify;">
 
-Lorsque nous renseignons une information telle que le nom d'une personnalité ou d'un concept, il est recommandé, dans un souci de standardisation, de faire appel au maximum à un fichier d'autorité. À travers ces guidelines, nous utilisons, par exemple, [VIAF](https://www.oclc.org/fr/viaf.html) pour décliner les identités des personnalités ayant une responsabilité dans les sources. 
+Lorsque nous renseignons une information telle que le nom d'une personnalité ou d'un concept, il est recommandé, dans un souci de standardisation, de faire appel au maximum à un fichier d'autorité. À travers ce guide, nous utilisons, [VIAF](https://www.oclc.org/fr/viaf.html) pour décliner les identités des personnalités ayant une responsabilité dans les sources et [ORCID](https://orcid.org/) pour identifier les chercheurs. Nous identifions les lieux avec [GeoNames](https://www.geonames.org/).
+parler des vocabulaire controllés DOREMUS
+
+
 Afin d'indiquer les autorité garantissant les informations que nous indiquons dans nos éditions, la MEI met à notre disposition trois attributs : @auth (pour les sigles des organismes d'autorité), @auth.uri (pour la base de l'uri utilisé par l'organisme) et @codedval (pour la valeur de la donnée liée.)
 
 Dans l'exemple ci-dessous, l'identité de Manuel García Matos est lié à l'URI [http://viaf.org/viaf/179852912](http://viaf.org/viaf/179852912). 
