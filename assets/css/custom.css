@@ -46,7 +46,8 @@ main::before {
   padding-left: 1rem;
   padding-top: 1.5rem ;
   font-size: 1.05rem;
-  font-family: libre-baskerville, sans-serif;
+  font-family: "Ramabhadra", sans-serif;
+  font-style: normal;
   line-height: 1;
   color: #be362a;
 }
@@ -61,7 +62,8 @@ main::before {
   max-width: 100%;
   padding-right: 1.5rem;
   font-size: 24px;
-  font-family: libre-baskerville, sans-serif;
+  font-family: "Ramabhadra", sans-serif;
+  font-style: normal;
   line-height: 1;
   color: #be362a;
   margin-top: 0.4em;
