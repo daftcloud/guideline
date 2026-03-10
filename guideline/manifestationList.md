@@ -208,12 +208,19 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 Il est, ici, question de renseigner les différentes manifestations de l'œuvre édité par le fichier MEI. Le compositeur indiqué dans la balise &lt;manifestation&gt; représente donc le compositeur indiqué par la manifestation. Il convient donc de le préciser, à l'aide de l'attribut @evidence prenant la valeur "internal".  
 Si la valeur de rôle est libre, nous conseillons, dans un souci d'homogénéité, de lui attribuer la valeur "composer".
 Il est possible dès lors, que la manifestation indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" ; pour montrer le faible crédit que nous portons à cette information et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
+
+--
+Il est possible dès lors, que la manifestation indique de manière erroné un compositeur. Nous proposons d'indiquer le nom correct avec une balise &lt;corr&gt; qui indique une correction
+
 </p>
 
 ```xml
 <manifestation xml:id="...">
    <composer xml:id="..." evidence="internal">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
+         <persName auth="..." auth.uri="http://..." codedval="...">
+            <corr>...
+            </corr>
+         </persName>
    </composer>
 </manifestation>
 ```
