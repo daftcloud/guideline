@@ -671,13 +671,11 @@ Autre option :
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Commanditaire|OCO|
 
 ```xml
-<biblStruc>
-   <imprint>
-      <resStmt>
-         <persName role="sponsor">...</persName>
-      </respStmt>
-   </imprint>
-</biblStruc>
+<work>
+   <resStmt>
+      <persName role="sponsor">...</persName>
+   </respStmt>
+</work>
 ```
 Autre option : 
 
@@ -689,7 +687,7 @@ Autre option :
 ```xml
 <biblStruc>
    <imprint>
-      <resStmt>
+      <respStmt>
          <persName role="sponsor" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="47837095">Franz von Walsegg</persName>
       </respStmt>
    </imprint>
