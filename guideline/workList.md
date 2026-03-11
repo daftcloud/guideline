@@ -1,35 +1,32 @@
 ---
-title: Description bibliographique &lt;manifestationList&gt;
+title: Description de l'œuvre &lt;work&gt;
 layout: default
 nav_order: 7
 parent: Guideline
-permalink: /guideline/manifestationList
+permalink: /guideline/work
 ---
 
-# Description bibliographique de l'édition musicale &lt;manifestationList&gt;
+# Description de l'œuvre éditée 
 
-<p style="text-align:justify;"> 
-L'élément &lt;manifestationList&gt; est à la racine de toute la description bibliographique de l'œuvre édité par le fichier MEI. Il représente, dans le modèle FRBR, la liste des manifestations c'est-à-dire, les différentes éditions de l'œuvre. Chaque édition est donc représenté par une balise &lt;manifestation&gt;. Par conséquent, tous les exemples de ce chapitre prendront comme racine la balise &lt;manifestation&gt;.
+<p style="text-align:justify;">
 
- <!-- Développer la structure de manifestationList -->
+L'élément &lt;workList&gt; est à la racine de toute la description de l'œuvre éditée par le fichier MEI. Il contient l'élément &lt;work&gt; qui contient les éléments de l'œuvre.
+Par conséquent, tous les exemples de ce chapitre prendront comme racine la balise &lt;work&gt;.
 </p>
-
-Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ](FRBR.html) pour bien distinguer l'interprétation des différents niveaux de ce modèle.
 
 ## a. Titre
 
 <a id="OTL_ref2"></a>
 <a id="OTA_ref1"></a>
 
-### Titre de la manifestation
+### Titre de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Titre de l'œuvre| OTL & OTA|
 
+   Le titre de l'œuvre se présente sous la balise &lt;title&gt;. 
  <p style="text-align:justify;">
-   Tous les éléments de titre d'une manifestation se présentent dans la balise &lt;titleStmt&gt;.
-   Le titre sous lequel le document est présenté se renseigne sous la balise &lt;title&gt;. 
    Il convient de faire bon usage des deux attributs principaux de la balise &lt;title&gt;, <strong>@level</strong> et <strong>@type</strong>.
    
    <strong>@level</strong> permet d'indiquer le niveau bibliographique du titre en prenant pour valeur :
@@ -79,11 +76,9 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 
 
 ```xml
-<manifestation xml:id="...">
-   <titleStmt>
-      <title xml:id="...">...</title>
-   </titleStmt>   
-</manifestation>
+<work>
+   <title>...</title>
+</work>
 ```
 
 <p style="text-align:justify;"> 
@@ -105,20 +100,20 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 
 
 ```xml
-<manifestation xml:id="...">
-<titleStmt>
-      <title type="main">Rondo alla Turca</title>
-      <title type="subordinate" label="movement">Allegretto</title>
-      <title type="abbreviated">Alla Turca</title>
-      <title type="alternative">Marche Turque</title>
+<work>
+   <title type="main">Rondo alla Turca</title>
+   <title type="subordinate" label="movement">Allegretto</title>
+   <title type="abbreviated">Alla Turca</title>
+   <title type="alternative">Marche Turque</title>
+   <title>
       <titlePart>
          <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
          <title type="subordinate" label="Köchel">K. 331/300</title>
          <title type="translated" xml:lang="DE">Sonate Nr. 11 A-Dur</title>
          <title type="desc">Sonate pour piano très connue de Mozart</title>
       </titlePart>
-   </titleStmt>
-</manifestation>
+   </title>
+</work>
 ```
 
 ### Titre d'un mouvement d'une œuvre 
