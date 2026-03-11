@@ -119,16 +119,14 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 ### Titre d'un mouvement d'une œuvre 
 
 ```xml
-<manifestation xml:id="...">
-   <titleStmt>
+<work>
       <title type="main">Rondo alla Turca</title>
       <title type="subordinate" label="movement">Allegretto</title>
       <titlePart>
          <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
          <title type="subordinate" label="Köchel">K. 331/300</title>
       </titlePart>
-   </titleStmt>
-</manifestation>
+</work>
 ```
 
 <p style="text-align:justify;"> 
@@ -150,7 +148,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 
 
 ```xml
-<manifestation xml:id="...">
+<work>
    <title type="main">Rondo alla Turca</title>
    <title type="subordinate" label="movement">Allegretto</title>
    <title type="alternative">Marche Turque</title>
@@ -158,7 +156,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
       <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
       <title type="subordinate" label="Köchel">K. 331/300</title>
    </titlePart>
-</manifestation>
+</work>
 ```
 
 
@@ -210,14 +208,14 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 </p>
 
 ```xml
-<manifestation xml:id="...">
+<work>
    <composer xml:id="..." evidence="internal">
          <persName auth="..." auth.uri="http://..." codedval="...">
             <corr>...
             </corr>
          </persName>
    </composer>
-</manifestation>
+</work>
 ```
 
  &lt;persName&gt; et &lt;foreName&gt;  &lt;foreName&gt; et &lt;famName&gt;
@@ -228,7 +226,7 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <composer xml:id="...">
          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">Nom réel</persName>
          <persName>
@@ -253,11 +251,11 @@ Autre option : &lt;persName role="librettist"&gt;
 
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <librettist>
       <persName auth="..." auth.uri="..." codedval="..."></persName>
    </librettist>   
-</manifestation>
+</work>
 ```
 
 <a id="LAR_ref1"></a>
@@ -277,11 +275,11 @@ Autre option : &lt;persName role="arranger"&gt;
 
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <arranger>
       <persName auth="..." auth.uri="..." codedval="..."></persName>
    </arranger>   
-</manifestation>
+</work>
 ```
 
 <a id="LOR_ref1"></a>
@@ -303,11 +301,11 @@ Autre option : &lt;persName role="orchestrator"&gt;
 </p>
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <arranger>
       <persName role="orchestrator" auth="..." auth.uri="..." codedval="..."></persName>
    </arranger>   
-</manifestation>
+</work>
 ```
 
 <a id="TXO_ref1"></a>
@@ -330,11 +328,11 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <langUsage>
       <language xml:id="..." auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="fra" uri="ISO 639">French</language>
    </langUsage>         
-</manifestation>
+</work>
 ```
 
 <a id="TXL_ref1"></a>
@@ -356,12 +354,12 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
 </p>
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <langUsage>
       <language xml:id="Lat" auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="lat" uri="ISO 639-3" type="original">Latin</language>
       <language xml:id="Fr" auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="fra" uri="ISO 639-3" type="translation">French</language>
    </langUsage>          
-</manifestation>
+</work>
 ```
 
 <a id="TRN_ref1"></a>
@@ -382,7 +380,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
 </p>
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <contributor>
       <persName xml:id="T1" role="translator" auth="..." auth.uri="..." codedval="...">XXX</persName>
    </contributor>   
@@ -390,7 +388,7 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
       <language xml:id="Lat" type="original">Latin</language>
       <language xml:id="Fr" resp="T1" type="translation">French</language>
    </langUsage>          
-</manifestation>
+</work>
 ```
 <p style="text-align:justify;">
  Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans &lt;fileDesc&gt;, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans &lt;manifestationList&gt;), via @resp. 
@@ -409,14 +407,13 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 
 -------# plus bas
 
-<manifestationList xml:id="...">
-   <manifestation xml:id="...">
+   <work xml:id="...">
       <langUsage>
          <language xml:id="..." type="original">...</language>
          <language xml:id="Fr" resp="VV" type="translation">...</language>
      </langUsage>          
-   </manifestation>
-</manifestationList>
+   </work>
+
 ```
 ## c. Informations liées à l'œuvre
 
@@ -430,63 +427,45 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
 
  
 ```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <editor xml:id="E1" n="1" precedes="#E2">
-         <persName></persName>
-      </editor>
-      <editor xml:id="E2" n="2" follows="#E1">
-         <persName></persName>
-      </editor>     
-      </imprint>
-      </monogr>
-   </biblStruct>
-</source>
+<work>
+   <editor xml:id="E1" n="1" precedes="#E2">
+      <persName></persName>
+   </editor>
+   <editor xml:id="E2" n="2" follows="#E1">
+      <persName></persName>
+   </editor>     
+</work>
 ```
 
 Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &lt;imprint&gt;. Des dates peuvent également être ajoutées pour &lt;editor&gt; pour plus de précisions.
 
 
 ```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
+<work>
       <editor xml:id="E1" n="1" precedes="#E2">
          <persName></persName>
       </editor>
       <editor xml:id="E2" n="2" follows="#E1">
          <persName></persName>
       </editor>  
-      </imprint>  
-      </monogr> 
-   </biblStruct>
-</source>
+</work>
 ```
 
 ```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <edition xml:id="E1" n="1" precedes="#E2">
-         <editor  n="1">
-            <persName></persName>
-         </editor>
-         <date isodate="1940">1940</date>
-      </edition>
-      <edition xml:id="E2" n="2" follows="#E1">   
-         <editor n="2">
-            <persName></persName>
-         </editor> 
-         <date isodate="1999">1999</date> 
-      </edition>   
-      </imprint>
-      </monogr>  
-   </biblStruct>
-</source>
+<work>
+   <edition xml:id="E1" n="1" precedes="#E2">
+      <editor  n="1">
+         <persName></persName>
+      </editor>
+      <date isodate="1940">1940</date>
+   </edition>
+   <edition xml:id="E2" n="2" follows="#E1">   
+      <editor n="2">
+         <persName></persName>
+      </editor> 
+      <date isodate="1999">1999</date> 
+   </edition>   
+</work>
 ```
 
 <p style="text-align:justify;"> 
@@ -495,26 +474,20 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &l
 
 
 ```xml
-<source>
-   <biblStruct>
-      <monogr>
-         <imprint>
-      <edition xml:id="E1" n="1" precedes="#E2">
-         <editor  n="1">
-            <persName></persName>
-         </editor>
-         <date isodate="1940">1940</date>
-      </edition>
-      <edition xml:id="E2" n="2" follows="#E1">   
-         <editor n="2">
-            <persName></persName>
-         </editor> 
-         <date isodate="1999">1999</date> 
-      </edition> 
-      </imprint>
-      </monogr>   
-   </biblStruct>
-</source>
+<work>
+   <edition xml:id="E1" n="1" precedes="#E2">
+      <editor  n="1">
+         <persName></persName>
+      </editor>
+      <date isodate="1940">1940</date>
+   </edition>
+   <edition xml:id="E2" n="2" follows="#E1">   
+      <editor n="2">
+         <persName></persName>
+      </editor> 
+      <date isodate="1999">1999</date> 
+   </edition> 
+</work>
 ```
 
 
@@ -528,11 +501,13 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &l
 
  
 ```xml
-<perfMedium>
-   <perfResList>
-      <perfRes>...</PerfRes>
-   </perfResList>
-</perfMedium>
+<work>
+   <perfMedium>
+      <perfResList>
+         <perfRes>...</PerfRes>
+      </perfResList>
+   </perfMedium>
+</work>
 ```
  
  
@@ -541,13 +516,15 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
 </p> 
 
 ```xml
-<perfMedium>
-<perfResList>
-<perfRes count="2">Violons</perfRes>
-<perfRes count="1">Alto</perfRes>
-<perfRes count="1">Violoncelle</perfRes>
-</perfResList>
-</perfMedium>
+<work>
+   <perfMedium>
+      <perfResList>
+         <perfRes count="2">Violons</perfRes>
+         <perfRes count="1">Alto</perfRes>
+         <perfRes count="1">Violoncelle</perfRes>
+      </perfResList>
+   </perfMedium>
+</work>
 ```
 
 ### Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
