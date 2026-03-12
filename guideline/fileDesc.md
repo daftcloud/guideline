@@ -238,7 +238,7 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 
 <p style="text--align:justify;">
-La date de l'encodage initial de votre édition électronique peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant.</p> [Modification du document électronique](EMD_ref1).
+La date de l'encodage initial de votre édition électronique peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant : [Modification du document électronique](EEV_ref1).</p>
 
 
 ```xml
