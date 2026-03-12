@@ -16,7 +16,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 
 ## a. Titre
 
-<a id="OTL_ref2"></a>
+<a id="OTL_ref3"></a>
 <a id="OTA_ref1"></a>
 
 ### Titre de l'œuvre
@@ -239,6 +239,62 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 
 <a id="LIB_ref1"></a>
 
+<a id="CBL_ref1"></a>
+
+### Dates et lieux de naissance et de décès du compositeur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
+
+<p style="text-align:justify;"> 
+Il est possible d'indiquer les informations concernant la naissance et le décès du compositeur directement dans la balise &lt;persName&gt; avec les attributs @startdate et @enddate. Ces informations peuvent omises si le compositeur est [référencé avec une URI externe](guideline/autorite.html).
+</p>
+
+<!-- Est-ce qu'on indique les dates de naissances et de décès en attribut dans le persName ou à l'intérieur de la balise composer? startdate et enddate pourrait plutot indiquer des changements de noms. Par exemple, changement de nom pour mariage. Il conviendrait donc plutot de donner ses dates avec la balise date, de précisé naissance et décès. Cela permet également de mettre kes balise country pour les lieux. -->
+
+```xml
+<manifestation xml:id="...">
+   <composer xml:id="...">
+         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
+         <date stardate="...">
+            <country auth="..." auth.uri="..." codedval="...">XXX</country>
+         </date>
+         <date enddate="...">
+            <country>XXX</country>
+      </date>     
+   </composer>
+</manifestation>
+```
+
+
+<a id="CNT_ref1"></a>
+
+### Nationalité du compositeur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
+
+<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
+ &lt;annot&gt; 
+
+<p style="text-align:justify;"> 
+ Peut être omis si le compositeur est référencé avec une URI externe.
+</p>
+
+
+```xml
+<manifestation xml:id="...">
+   <composer xml:id="...">
+         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
+         <annot label="nationality">Français</annot>
+   </composer>
+</manifestation>
+```
+
+
+<!-- Rajouter une ancre pour le librettiste. S'il n'y a pas de clé humdrum, faire un index en dehors de humdrum. -->
 ### Nom du librettiste
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |

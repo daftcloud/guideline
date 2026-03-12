@@ -26,24 +26,20 @@ L'élément &lt;fileDesc&gt; comprends toutes les informations qui concernent le
 
 <p style="text-align:justify;">
 Le titre est une information souvent ambiguë dans les éditions numériques en raison de la confusion qui règne entre le titre de l'œuvre complète, le titre de la partie encodée ou encore le titre de l'édition. D'ailleurs, le vocabulaire Humdrum ne dispose pas de clé spécifique pour cette dernière valeur (La clé « OTL » correspond au titre d'une œuvre, pas de son édition numérique). 
-En MEI, dans la partie &lt;fileDesc&gt;, on constate des usages nombreux et divergent. Pourtant, il est manifeste que la balise &lt;title&gt; à l'intérieur de &lt;fileDesc&gt; se réfère au titre de l'édition numérique, au « fichier » lui-même et qui peut être, en théorie, distinct du titre de l'œuvre qu'il encode, même si, en pratique, ces deux niveaux de titres se superposent souvent. Ainsi, pour distinguer le titre de l'édition de celui de la pièce (proprement encodé dans &lt;manifestationList&gt;), nous proposons d'observer l'un des conseils donnés dans les guidelines de music-encoding.org, tout en en uniformisant l'encodage. Le &lt;title&gt; principal, avec l'attribut @type="main", doit être suivi d'un &lt;title&gt; subordonné, avec un @type="subordinate",  précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
+En MEI, dans la partie &lt;fileDesc&gt;, on constate des usages nombreux et divergent. Pourtant, il est manifeste que la balise &lt;title&gt; à l'intérieur de &lt;fileDesc&gt; se réfère au titre de l'édition numérique, au « fichier » lui-même et qui peut être, en théorie, distinct du titre de l'œuvre qu'il encode, même si, en pratique, ces deux niveaux de titres se superposent souvent. Ainsi, pour distinguer le titre de l'édition de celui de la pièce (proprement encodé dans [&lt;work&gt;](guideline/workList.html#OTL_ref3)), nous proposons d'observer l'un des conseils donnés dans les guidelines de music-encoding.org, tout en en uniformisant l'encodage. Le &lt;title&gt; principal, avec l'attribut @type="main", doit être suivi d'un &lt;title&gt; subordonné, avec un @type="subordinate",  précisant que l'objet est ici l'édition numérique et non l'œuvre en elle-même.
 </p>
 
 ```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
-      <title type="main">
-         Pavane
-      </title>
-      <title type="subordinate">
-         A Digital Edition
-      </title>
+      <title type="main">Pavane</title>
+      <title type="subordinate">A Digital Edition</title>
    </titleStmt>
 </fileDesc>
 ```
 <p style="text-align:justify;">
 
-Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans &lt;manifestationList&gt;. Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir [Titre alternatif de l'œuvre](guideline/manifestationList.html#OTA_ref1)).
+Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans [&lt;work&gt;](guideline/workList.html#OTL_ref3). Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir [Titre alternatif de l'œuvre](guideline/manifestationList.html#OTA_ref1)).
 </p>
 
 ## b. Compositeur
@@ -141,59 +137,6 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
    </titleStmt>
 </fileDesc>
 ```
-<a id="CBL_ref1"></a>
-
-### Dates et lieux de naissance et de décès du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
-
- &lt;persName&gt; avec les attributs @startdate et @enddate.
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date stardate="...">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</manifestation>
-```
-
-<a id="CNT_ref1"></a>
-
-### Nationalité du compositeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
-
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
-
-<p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
-
-
-```xml
-<manifestation xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
-         <annot label="nationality">Français</annot>
-   </composer>
-</manifestation>
-```
 
 ## c. Informations liées à l'édition
 
@@ -206,7 +149,7 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de l'édition électronique |YEP|
  
 <p style="text-align:justify;">
-L'identité de l'éditeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans le &lt;titleStmtt&gt; de &lt;fileDesc&gt;.
+L'identité de l'éditeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans l'élément &lt;titleStmtt&gt; de &lt;fileDesc&gt;.
 </p>
 
  ```xml
@@ -289,8 +232,6 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 ### Date d'encodage / de mise à disposition de l'édition électronique
 
-
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date d'encodage de l'édition électronique|END & YER|
@@ -298,7 +239,6 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 <p style="text--align:justify;">
 La date de l'encodage initial de votre édition électronique peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant.</p> [Modification du document électronique](EMD_ref1).
-
 
 
 ```xml
@@ -363,10 +303,10 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 </p>
 
 ```xml
-   <seriesStmt @precedes="lien vers le fichier suivant" @follows="lien vers le fichier précédent">
-      <title>(titre de la série)</title>
-      <identifier>numéro du fichier éléctronique dans cette série</identifier>
-   </seriesStmt>
+<seriesStmt @precedes="lien vers le fichier suivant" @follows="lien vers le fichier précédent">
+   <title>(titre de la série)</title>
+   <identifier>numéro du fichier éléctronique dans cette série</identifier>
+</seriesStmt>
 ```
 
 <p style="text-align:justify;"> 
@@ -375,8 +315,9 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
 
 ```xml
 <seriesStmt @precedes="Bieber_Sonates_du_Rosaire/Ascension.mei" @follows="Bieber_Sonates_du_Rosaire/Crucifixion.mei">
-      <title>Les Sonates du Rosaire</title>
-      <identifier>11</identifier>
+   <title>Les Sonates du Rosaire</title>
+   <identifier>11</identifier>
+</seriesStmt>
 ```
 
 <a id="AFR_ref1"></a>
@@ -403,11 +344,11 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
    </classDecls>
 </encodingDesc>
 
-   <classification>
-      <termList>
-         <term class='https://data.doremus.org/vocabulary/diabolo/genre/opera'>Opéra</term>
-      </termList>
-   </classification>
+<classification>
+   <termList>
+      <term class='https://data.doremus.org/vocabulary/diabolo/genre/opera'>Opéra</term>
+   </termList>
+</classification>
 
 ```
 
@@ -426,8 +367,6 @@ Le pays dans lequel le document électronique a été créé, ou depuis lequel l
 
 Il est important de distinguer &lt;useRestrict&gt;, qui concerne les conditions d'utilisations, de &lt;acessRestrict&gt;, qui précise les modalités d'accès à une ressource.
 </p>
-
-
 
 ```xml
 <pubStmt>
