@@ -91,7 +91,6 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 </p>
 
 
-
 ### Titre alternatif de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
