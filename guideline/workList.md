@@ -17,7 +17,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 ## a. Titre
 
 <a id="OTL_ref3"></a>
-<a id="OTA_ref1"></a>
+
 
 ### Titre de l'œuvre
 
@@ -72,8 +72,6 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
    "**desc**" pour un titre descriptif.
 
 
-<!-- NON !! Faut-il exposer la manière de décrire de manière diplomatique un titre comme indiqué dans https://music-encoding.org/guidelines/v5/content/metadata.html#textTitlePages ? -->
-
 
 ```xml
 <work>
@@ -85,17 +83,20 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
  Dans le cas de sections ou de mouvements d'une œuvre, il est nécessaire de faire une distinction entre le titre de la partie encodée et l'œuvre globale. Pour cela, il est nécessaire d'utiliser l'attribut @type et la valeur "uniform". De même, afin de mieux catégoriser les différents niveaux de titres, il est conseillé d'employer &lt;titlePart&gt;. La valeur "subordinate" peut être pratique pour hiérarchiser les divers syntagmes d'un même niveau de titre, comme le mouvement ou numéro d'opus.
 </p>
 
+<a id="OTP_ref1"></a>
+<a id="OTA_ref1"></a>
 
-
-### Titre alternatif de l'œuvre
+### Titre courant et titre alternatif de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Autre titre de l'œuvre encodée, distinct du titre principal.|OTA & OTP|
 
 
 <p style="text-align:justify;"> 
  Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
+
+ Le titre courant peut facilement se confondre avec le titre alternatif. Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, parmi les valeurs contrôlées de l'attribut @type ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc"), aucune ne couvre l'acception d'un titre « populaire ».
 </p>
 
 
@@ -133,33 +134,6 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
  Il est à noter que le renseignement du titre, métadonnée de première importance, est paradoxalement négligé dans les guidelines MEI. Divers exemples suggèrent une distinction minimale des niveaux de titres et une certaine liberté dans leur troncation. La raison réside certainement dans l'ambiguïté qui dérive des différentes formes de titres et de leurs usages multiples. Bien que @type soit régi par les valeurs contrôlées listées ci-dessus, les guidelines illustrent à l'occasion l'usage non conventionnel de @type="subtitle" pour encoder un syntagme subordonné au titre principal. Nous nous limiterons ici aux seuls vocables contrôlés précisés précédemment.
 </p>
 
-<a id="OTP_ref1"></a>
-
-### Titre courant de l'œuvre
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- | - |Titre populaire de l'œuvre encodée.|OTP|
-
-
-<p style="text-align:justify;"> 
- Le titre courant peut facilement se confondre avec le titre alternatif (voir ci-dessous). Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, parmi les valeurs contrôlées de l'attribut @type ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc"), aucune ne couvre l'acception d'un titre « populaire ». Pour l'usage de ces valeurs, voir ci-dessous dans « Titre alternatif de l'œuvre ».
-</p>
-
-
-```xml
-<work>
-   <title type="main">Rondo alla Turca</title>
-   <title type="subordinate" label="movement">Allegretto</title>
-   <title type="alternative">Marche Turque</title>
-   <titlePart>
-      <title type="uniform">Sonate pour piano no. 11 en la majeur</title>
-      <title type="subordinate" label="Köchel">K. 331/300</title>
-   </titlePart>
-</work>
-```
-
-
 
 <a id="OPR_ref1"></a>
 
@@ -190,7 +164,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 <a id="COS_ref1"></a>
 <a id="COL_ref1"></a>
 
-### Compositeur indiqué sur la manifestation
+### Compositeur de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -198,31 +172,37 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 
 
 <p style="text-align:justify;">
-Il est, ici, question de renseigner les différentes manifestations de l'œuvre édité par le fichier MEI. Le compositeur indiqué dans la balise &lt;manifestation&gt; représente donc le compositeur indiqué par la manifestation. Il convient donc de le préciser, à l'aide de l'attribut @evidence prenant la valeur "internal".  
-Si la valeur de rôle est libre, nous conseillons, dans un souci d'homogénéité, de lui attribuer la valeur "composer".
-Il est possible dès lors, que la manifestation indique de manière erroné un compositeur. Nous proposons de l'indiquer avec l'emploi de l'attribut @cert="low" ; pour montrer le faible crédit que nous portons à cette information et l'attribut @resp renvoyant vers l'éditeur ou l'auteur de la source.
-
---
-Il est possible dès lors, que la manifestation indique de manière erroné un compositeur. Nous proposons d'indiquer le nom correct avec une balise &lt;corr&gt; qui indique une correction
-
+Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)).
 </p>
 
 ```xml
 <work>
-   <composer xml:id="..." evidence="internal">
-         <persName auth="..." auth.uri="http://..." codedval="...">
-            <corr>...
-            </corr>
-         </persName>
+   <composer xml:id="...">
+      <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
    </composer>
 </work>
 ```
-
- &lt;persName&gt; et &lt;foreName&gt;  &lt;foreName&gt; et &lt;famName&gt;
+<p style="text-align:justify;">
+C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du compositeur. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques : , ,   et 
 
 <p style="text-align:justify;"> 
- Lorsque la manifestation indique un nom d’emprunt, un nom de plume ou un pseudonyme historiques, il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins que &lt;persName&gt;. &lt;famName&gt;, &lt;genName&gt;, &lt;addName&gt;, &lt;genName&gt;, &lt;nameLink&gt; et &lt;roleName&gt;. Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
+ Lorsque la manifestation indique un nom d’emprunt, un nom de plume ou un pseudonyme historiques, il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins que &lt;persName&gt;. . Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
 </p>
+
+   **&lt;famName&gt;** pour un prénom,
+
+
+   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
+
+
+   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
+
+
+   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
+
+
+   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
+
 
 
 ```xml
@@ -248,23 +228,44 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
 
 <p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès du compositeur directement dans la balise &lt;persName&gt; avec les attributs @startdate et @enddate. Ces informations peuvent omises si le compositeur est [référencé avec une URI externe](guideline/autorite.html).
+Il est possible d'indiquer les informations concernant la naissance et le décès du compositeur dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+
+Ces informations peuvent être omises si le compositeur est [référencé avec une URI externe](guideline/autorite.html).
 </p>
 
-<!-- Est-ce qu'on indique les dates de naissances et de décès en attribut dans le persName ou à l'intérieur de la balise composer? startdate et enddate pourrait plutot indiquer des changements de noms. Par exemple, changement de nom pour mariage. Il conviendrait donc plutot de donner ses dates avec la balise date, de précisé naissance et décès. Cela permet également de mettre kes balise country pour les lieux. -->
+<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <composer xml:id="...">
          <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date stardate="...">
+         <date isodate="..." type="birth">
             <country auth="..." auth.uri="..." codedval="...">XXX</country>
          </date>
          <date enddate="...">
             <country>XXX</country>
       </date>     
    </composer>
-</manifestation>
+</work>
+```
+
+<p style="text-align:justify;"> 
+S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
+</p>
+
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
+         <date isodate="..." type="birth">
+            <country auth="..." auth.uri="..." codedval="...">XXX</country>
+         </date>
+         <date enddate="...">
+            <country>XXX</country>
+      </date>     
+   </composer>
+</work>
 ```
 
 

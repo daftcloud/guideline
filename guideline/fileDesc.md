@@ -59,13 +59,9 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
 ```xml
 <fileDesc xml:id="...">
    <titleStmt xml:id="...">
-      <title xml:id="...">
-         ...
-      </title>
+      <title xml:id="...">...</title>
        <composer xml:id="...">
-          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">
-            ...
-         </persName>
+          <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
        </composer>
    </titleStmt>
 </fileDesc>

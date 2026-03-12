@@ -12,11 +12,11 @@ permalink: guideline/sourceDesc
 # Description de la source &lt;SourceDesc&gt;
 
 <p style="text-align:justify;"> 
-   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il conviendra de séparer chaque source dans un élément &lt;source&gt; différent.
-   La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt;, dont le cadre plus strict favorise la normalisation des données.
+   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il convient de séparer chaque source dans un élément &lt;source&gt; différent.
+   La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt; dont le cadre plus strict favorise la normalisation des données.
 </p>
 
-Structure d'une source.
+## Structure d'une source
 ```xml
 <source xml:id="">
    <biblStruct xml:id="">
