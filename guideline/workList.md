@@ -223,7 +223,7 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit, présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
 </p>
 
 ```xml
@@ -242,9 +242,9 @@ Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit, présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
 </p>
-<a id="LIB_ref1"></a>
+
 
 <a id="CBL_ref1"></a>
 
@@ -314,21 +314,26 @@ S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâ
  &lt;annot&gt; 
 
 <p style="text-align:justify;"> 
- Peut être omis si le compositeur est référencé avec une URI externe.
-</p>
+La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
 
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+Cette information peut être omise si le compositeur est référencé avec une URI externe.
+</p>
+g
+<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
 
 ```xml
-<manifestation xml:id="...">
+<work xml:id="...">
    <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">Nom du compositeur</persName>
-         <annot label="nationality">Français</annot>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
    </composer>
-</manifestation>
+</work>
 ```
 
+<a id="LIB_ref1"></a>
 
-<!-- Rajouter une ancre pour le librettiste. S'il n'y a pas de clé humdrum, faire un index en dehors de humdrum. -->
 ### Nom du librettiste
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -347,6 +352,158 @@ Autre option : &lt;persName role="librettist"&gt;
    </librettist>   
 </work>
 ```
+<p style="text-align:justify;">
+Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)).
+</p>
+
+```xml
+<work>
+   <composer xml:id="...">
+      <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
+   </composer>
+</work>
+```
+<p style="text-align:justify;">
+C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du librettiste. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+</p>
+
+   **&lt;foreName&gt;** pour un prénom,
+
+
+   **&lt;famName&gt;** pour un nom de famille,
+
+
+   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
+
+
+   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
+
+
+   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
+
+
+   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
+
+
+<p style="text-align:justify;">
+Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+</p>
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName>Mozart</famName>
+            ,
+            <foreName type="baptismal">Johannes</foreName>
+            <foreName type="baptismal">Chrysostomus</foreName>
+            <foreName type="familiar">Wolfgangus</foreName>
+            <foreName type="baptismal">Theophilus</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<p style="text-align:justify;">
+Il est possible d'indiquer l'évolution du nom du librettiste avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+</p>
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
+            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
+            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
+            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
+            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+### Dates et lieux de naissance et de décès du librettiste
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du librettiste.|CDT, CBL et CDL|
+
+<p style="text-align:justify;"> 
+Il est possible d'indiquer les informations concernant la naissance et le décès du librettiste dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guideline/autorite.html).
+</p>
+
+<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
+         <date isodate="..." type="birth">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
+         </date>
+         <date isodate="..." type="death">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
+      </date>     
+   </composer>
+</work>
+```
+<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
+            <country type="birth" >Allemagne</country>.
+            </date>-->
+
+
+<p style="text-align:justify;"> 
+S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
+</p>
+
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
+         <date isodate="..." type="birth">
+            <country auth="..." auth.uri="..." codedval="...">XXX</country>
+         </date>
+         <date enddate="...">
+            <country>XXX</country>
+      </date>     
+   </composer>
+</work>
+```
+
+
+
+### Nationalité du libbretiste
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du librettiste.|CNT|
+
+<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
+ &lt;annot&gt; 
+
+<p style="text-align:justify;"> 
+La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
+
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+Cette information peut être omise si le librettiste est référencé avec une URI externe.
+</p>
+g
+<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+   </composer>
+</work>
+```
 
 <a id="LAR_ref1"></a>
 
@@ -356,19 +513,161 @@ Autre option : &lt;persName role="librettist"&gt;
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom de l'arrangeur de l'œuvre. |LAR|
 
- &lt;arranger&gt;
+ <p style="text-align:justify;">
+Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "arranger". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)).
 
-Autre option : &lt;persName role="arranger"&gt;
-<p style="text-align:justify;"> 
- Suivant les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens "classique" de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour "orchestrateur", voir ci-dessous.
- </p>
+ Suivant les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens « classique » de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour l'orchestrateur, voir [Nom de l'orchestrateur](guideline/workList.html#LOR_ref1).
 
+ Tous les exemples de cette section reprennent les exemples concernants la section sur les compositeurs.
+</p>
 
 ```xml
 <work xml:id="...">
    <arranger>
-      <persName auth="..." auth.uri="..." codedval="..."></persName>
+      <persName role="arranger" auth="..." auth.uri="..." codedval="..."></persName>
    </arranger>   
+</work>
+```
+
+<p style="text-align:justify;">
+S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité de l'arrangeur, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+</p>
+
+   **&lt;foreName&gt;** pour un prénom,
+
+
+   **&lt;famName&gt;** pour un nom de famille,
+
+
+   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
+
+
+   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
+
+
+   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
+
+
+   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
+
+
+<p style="text-align:justify;">
+Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+</p>
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName>Mozart</famName>
+            ,
+            <foreName type="baptismal">Johannes</foreName>
+            <foreName type="baptismal">Chrysostomus</foreName>
+            <foreName type="familiar">Wolfgangus</foreName>
+            <foreName type="baptismal">Theophilus</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<p style="text-align:justify;">
+Il est possible d'indiquer l'évolution du nom de l'arrangeur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+</p>
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
+            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
+            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
+            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
+            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+
+### Dates et lieux de naissance et de décès de l'arrangeur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès de l'arrangeur.|-|
+
+<p style="text-align:justify;"> 
+Il est possible d'indiquer les informations concernant la naissance et le décès de l'arrangeur dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guideline/autorite.html).
+</p>
+
+<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
+         <date isodate="..." type="birth">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
+         </date>
+         <date isodate="..." type="death">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
+      </date>     
+   </composer>
+</work>
+```
+<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
+            <country type="birth" >Allemagne</country>.
+            </date>-->
+
+
+<p style="text-align:justify;"> 
+S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
+</p>
+
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
+         <date isodate="..." type="birth">
+            <country auth="..." auth.uri="..." codedval="...">XXX</country>
+         </date>
+         <date enddate="...">
+            <country>XXX</country>
+      </date>     
+   </composer>
+</work>
+```
+
+
+### Nationalité de l'arrangeur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du librettiste.|-|
+
+<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
+ &lt;annot&gt; 
+
+<p style="text-align:justify;"> 
+La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
+
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+Cette information peut être omise si le librettiste est référencé avec une URI externe.
+</p>
+g
+<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+   </composer>
 </work>
 ```
 
@@ -387,7 +686,9 @@ Définition :
 
 Autre option : &lt;persName role="orchestrator"&gt;
 <p style="text-align:justify;"> 
- Comme dit ci-dessus, &lt;arranger&gt; représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ Comme dit ci-dessus, &lt;arranger&gt; représente uniquement le sens « classique » de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+
+ Tous les exemples de cette section reprennent les exemples concernants la section sur les compositeurs.
 </p>
 
 ```xml
@@ -397,6 +698,149 @@ Autre option : &lt;persName role="orchestrator"&gt;
    </arranger>   
 </work>
 ```
+
+
+<p style="text-align:justify;">
+S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité de l'orchestrateur, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+</p>
+
+   **&lt;foreName&gt;** pour un prénom,
+
+
+   **&lt;famName&gt;** pour un nom de famille,
+
+
+   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
+
+
+   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
+
+
+   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
+
+
+   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
+
+
+<p style="text-align:justify;">
+Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+</p>
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName>Mozart</famName>
+            ,
+            <foreName type="baptismal">Johannes</foreName>
+            <foreName type="baptismal">Chrysostomus</foreName>
+            <foreName type="familiar">Wolfgangus</foreName>
+            <foreName type="baptismal">Theophilus</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<p style="text-align:justify;">
+Il est possible d'indiquer l'évolution du nom de l'orchestrateur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+</p>
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
+            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
+            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
+            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
+            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+### Dates et lieux de naissance et de décès de l'orchestrateur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès de l'arrangeur.|-|
+
+<p style="text-align:justify;"> 
+Il est possible d'indiquer les informations concernant la naissance et le décès de l'orchestrateur dans la balise &lt;arranger&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guideline/autorite.html).
+</p>
+
+<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
+         <date isodate="..." type="birth">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
+         </date>
+         <date isodate="..." type="death">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
+      </date>     
+   </composer>
+</work>
+```
+<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
+            <country type="birth" >Allemagne</country>.
+            </date>-->
+
+
+<p style="text-align:justify;"> 
+S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
+</p>
+
+
+```xml
+<work xml:id="...">
+   <arranger role="orchestrator" xml:id="...">
+         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
+         <date isodate="..." type="birth">
+            <country auth="..." auth.uri="..." codedval="...">XXX</country>
+         </date>
+         <date enddate="...">
+            <country>XXX</country>
+      </date>     
+   </composer>
+</work>
+```
+
+
+### Nationalité de l'orchestrateur
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité de l'orchestrateur.|-|
+
+<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
+ &lt;annot&gt; 
+
+<p style="text-align:justify;"> 
+La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
+
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+Cette information peut être omise si l'orchestrateur est référencé avec une URI externe.
+</p>
+g
+<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
+
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+   </composer>
+</work>
+```
+
 
 <a id="TXO_ref1"></a>
 
