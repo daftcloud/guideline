@@ -223,14 +223,14 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 ```
 
 <p style="text-align:justify;">
- 
+Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit, présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
 </p>
 
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
-         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03">Mendelssohn</famName>
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -241,6 +241,9 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 </work>
 ```
 
+<p style="text-align:justify;">
+Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit, présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+</p>
 <a id="LIB_ref1"></a>
 
 <a id="CBL_ref1"></a>
@@ -254,7 +257,9 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 <p style="text-align:justify;"> 
 Il est possible d'indiquer les informations concernant la naissance et le décès du compositeur dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
 
-Ces informations peuvent être omises si le compositeur est [référencé avec une URI externe](guideline/autorite.html).
+Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
+
+L'ensemble de ces informations peuvent être omises si le compositeur est [référencé avec une URI externe](guideline/autorite.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -264,10 +269,10 @@ Ces informations peuvent être omises si le compositeur est [référencé avec u
    <composer xml:id="...">
          <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
          <date isodate="..." type="birth">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
          </date>
-         <date enddate="...">
-            <country>XXX</country>
+         <date isodate="..." type="death">
+            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
       </date>     
    </composer>
 </work>
