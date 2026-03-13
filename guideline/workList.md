@@ -96,8 +96,8 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 <p style="text-align:justify;"> 
  Comme dit plus haut, l'attribut "alternative" demeure le plus simple pour renseigner un titre différent du titre officiel de l'œuvre encodée. Toutefois, l'attribut @type dispose d'autres valeurs contrôlées, listées précédemment, qui peuvent affiner la nature du titre renseigné. Ainsi, dans l'exemple ci-dessous, apparaissent deux niveaux de titres (titre du mouvement encodé et titre de l'œuvre globale) ainsi que leurs diverses formes potentielles.
 
- Le titre courant peut facilement se confondre avec le titre alternatif. Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre "courant". Par ailleurs, parmi les valeurs contrôlées de l'attribut @type ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc"), aucune ne couvre l'acception d'un titre « populaire ».
 </p>
+ Le titre courant peut facilement se confondre avec le titre alternatif. Sur ce point, seuls les usages peuvent apporter des réponses. Dans le doute, il est préférable de privilégier le titre alternatif, moins restrictif que le sens sous-entendu par titre « courant ». Par ailleurs, parmi les valeurs contrôlées de l'attribut @type ("main", "subordinate", "abbreviated", "alternative", "translated", "uniform" et "desc"), aucune ne couvre l'acception d'un titre « populaire ».
 
 
 ```xml
@@ -183,13 +183,13 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
 </work>
 ```
 <p style="text-align:justify;">
-C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du compositeur. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques : , ,   et 
-
-<p style="text-align:justify;"> 
- Lorsque la manifestation indique un nom d’emprunt, un nom de plume ou un pseudonyme historiques, il est à noter que d'autres balises peuvent couvrir des sens de nomination plus fins que &lt;persName&gt;. . Leur gestion est sensiblement identique à celle de &lt;foreName&gt;.
+C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du compositeur. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
 </p>
 
-   **&lt;famName&gt;** pour un prénom,
+   **&lt;foreName&gt;** pour un prénom,
+
+
+   **&lt;famName&gt;** pour un nom de famille,
 
 
    **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
@@ -204,18 +204,42 @@ C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseigne
    **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
 
 
+<p style="text-align:justify;">
+Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+</p>
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName>Mozart</famName>
+            ,
+            <foreName type="baptismal">Johannes</foreName>
+            <foreName type="baptismal">Chrysostomus</foreName>
+            <foreName type="familiar">Wolfgangus</foreName>
+            <foreName type="baptismal">Theophilus</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<p style="text-align:justify;">
+ 
+</p>
 
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
-         <persName role="composer" auth="..." auth.uri="http://..." codedval="...">Nom réel</persName>
-         <persName>
-         <foreName>Alias</foreName>
-         </persName>  
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03">Mendelssohn</famName>
+            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
+            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
+            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
+            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
+            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
+         </persName>
    </composer>
-</manifestation>
+</work>
 ```
-
 
 <a id="LIB_ref1"></a>
 
@@ -248,6 +272,10 @@ Ces informations peuvent être omises si le compositeur est [référencé avec u
    </composer>
 </work>
 ```
+<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
+            <country type="birth" >Allemagne</country>.
+            </date>-->
+
 
 <p style="text-align:justify;"> 
 S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
