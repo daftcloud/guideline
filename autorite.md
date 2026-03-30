@@ -8,11 +8,10 @@ nav_order: 3
 
 <p style="text-align:justify;">
 
-Lorsque nous renseignons une information telle que le nom d'une personnalité ou d'un concept, il est recommandé, dans un souci de standardisation, de faire appel au maximum à un fichier d'autorité. À travers ce guide, nous utilisons, [VIAF](https://www.oclc.org/fr/viaf.html) pour décliner les identités des personnalités ayant une responsabilité dans les sources et [ORCID](https://orcid.org/) pour identifier les chercheurs. Nous identifions les lieux avec [GeoNames](https://www.geonames.org/). Nous vous invitons à identifier les instruments de musique avec [MIMO](https://mimo-international.com/MIMO/).
-Nous identifions les oeuvres avec [RISM](https://rism.info/)
+Pour standardiser les informations relatives aux personnalités, concepts ou lieux, il est recommandé de s’appuyer sur des fichiers d'autorité. Ces référentiels permettent d’assurer la cohérence et la fiabilité des données en fournissant des identifiants uniques et normalisés.
+Nous utilisons dans ce guide le site [VIAF](https://www.oclc.org/fr/viaf.html) pour décliner les identités des personnalités ayant une responsabilité dans les sources, comme les auteurs, artistes ou autres contributeurs. [ORCID](https://orcid.org/) permet, quant à lui, d’identifier de manière unique les chercheurs et les contributeurs scientifiques. [GeoNames](https://www.geonames.org/) est une base de données géographique qui permet d’identifier précisément des lieux, qu’il s’agisse de villes, de régions ou de sites naturels. [MIMO](https://mimo-international.com/MIMO/) est un référentiel dédié à l’identification des instruments de musique. Enfin, [RISM](https://rism.info/) permet d'identifier les œuvres musicales, notamment les manuscrits et les partitions, afin de standardiser leur référencement.
 
-parler des vocabulaire controllés DOREMUS
-
+Dans cet objectif de cohérence et de précision de la production de données, condition <i>sine qua none</i> pour assurer l'interopérabilité de nos corpus nous nous sommes appuyés sur des vocabulaires contrôlés reconnus, tels que ceux développés par le projet DOREMUS pour normaliser la valeur de certains attributs dont l'usage ne fait pas encore l'objet d'un consensus. Cette approche nous permet de garantir une standardisation rigoureuse des termes utilisés, en s’appuyant sur des référentiels spécialisés et multilingues, conçus pour répondre aux besoins spécifiques de nos domaines de recherche. 
 
 Afin d'indiquer les autorité garantissant les informations que nous indiquons dans nos éditions, la MEI met à notre disposition trois attributs : @auth (pour les sigles des organismes d'autorité), @auth.uri (pour la base de l'uri utilisé par l'organisme) et @codedval (pour la valeur de la donnée liée.)
 
