@@ -86,7 +86,7 @@ permalink: guideline/sourceDesc
    "**desc**" pour un titre descriptif.
 
 
-Exemple d'une monographie.
+*Exemple d'une monographie*
 ```xml
 <source>
    <biblStruct>
@@ -98,7 +98,7 @@ Exemple d'une monographie.
 </source>
 ```
 
-Exemple d'une lettre inédite.
+*Exemple d'une lettre inédite*
 ```xml
 <source>
    <biblStruct>
@@ -212,7 +212,7 @@ La balise &lt;imprint&gt; contient toutes les informations lié à la publicatio
 Cette balise, limité à du texte, permet de rédiger, au besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
 </p>
 
-Exemple d'une source dont le projet de publication ne put aboutir.
+*Exemple d'une source dont le projet de publication ne put aboutir*
 ```xml
 <source>
    <biblStruct>
@@ -229,7 +229,7 @@ Exemple d'une source dont le projet de publication ne put aboutir.
 </source>
 ```
 
-Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas vocation à être publiée.
+*Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas vocation à être publiée*
 ```xml
 <source>
    <biblStruct>
