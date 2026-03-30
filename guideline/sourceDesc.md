@@ -30,11 +30,9 @@ permalink: guideline/sourceDesc
 </source>
 ```
 
-## a. Titre
-
 <a id="PTL_ref1"></a>
 
-### Titre d'une source utilisée pour l'édition digitale (publication, manuscrit, etc.) 
+## Titre d'une source utilisée pour l'édition digitale (publication, manuscrit, etc.) 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -136,12 +134,9 @@ Exemple d'une lettre inédite.
 <a id="ONM_ref1"></a>
 -->
 
-
-## b. Compositeur
-
 <a id="COM_ref3"></a>
 
-### Compositeur de la source utilisée pour l'édition digitale
+## Compositeur de la source utilisée pour l'édition digitale
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -204,11 +199,9 @@ Il est possible que la source indique de manière erroné un compositeur. Nous p
 </source>
 ```
 
-## c. Informations liées à l'édition
-
 <a id="PUB_ref1"></a>
 
-### État de publication d'une source
+## État de publication d'une source
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -274,7 +267,7 @@ Exemple, avec balise auto-fermante, d'une lettre qui, par essence, n'avait pas v
 -->
 <a id="PED_ref1"></a>
 
-### Éditeur de la source utilisée pour l'édition digitale
+## Éditeur de la source utilisée pour l'édition digitale
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -320,7 +313,7 @@ Exemple d'une structure d'édition.
 
 <a id="PPP_ref1"></a>
 
-### Lieu de publication
+## Lieu de publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -330,7 +323,7 @@ Exemple d'une structure d'édition.
 La balise &lt;imprint&gt; contient toutes les informations liées à la publication de la source. Le lieu de publication de la source s'y inscrit dans l'élément &lt;pubPlace&gt;. 
 </p>
 
-#### Pays
+### Pays
 
 
 Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère avec [les attributs d'autorités](autorite.html).
@@ -378,7 +371,7 @@ Exemple complet :
 
 <a id="SCA_ref1"></a>
 
-### Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117] ou de l'éditeur (ex. cotage)
+## Numéro de catalogue scientifique [ex. BWV 551 ou Koechel 117] ou de l'éditeur (ex. cotage)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -404,7 +397,7 @@ Exemple complet :
 
 <a id="YOY_ref1"></a>
 
-### Année du copyright du document d'origine
+## Année du copyright du document d'origine
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -438,7 +431,7 @@ Toutes les informations concernant les droits d'utilisation de la source s'inscr
 
 <a id="SMA_ref1"></a>
 
-### Informations sur l'accès au manuscrit
+## Informations sur l'accès au manuscrit
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -494,7 +487,7 @@ Il est possible de rédiger dans l'élément &lt;accessRestrict&gt; les conditio
 
 <a id="YOO_ref1"></a>
 
-### Propriétaire du document d'origine
+## Propriétaire du document d'origine
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -524,7 +517,7 @@ L'identité du propriétaire peut y être inscrit via un élément &lt;corpName&
 
 <a id="SML_ref1"></a>
 
-### Lieu de conservation du manuscrit
+## Lieu de conservation du manuscrit
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|

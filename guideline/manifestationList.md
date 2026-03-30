@@ -16,12 +16,11 @@ L'élément &lt;manifestationList&gt; est à la racine de toute la description b
 
 Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ](FRBR.html) pour bien distinguer l'interprétation des différents niveaux de ce modèle.
 
-## a. Titre
 
 <a id="OTL_ref2"></a>
 <a id="OTA_ref1"></a>
 
-### Titre de la manifestation
+## Titre de la manifestation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -191,12 +190,10 @@ Nous vous invitons à lire [Les possibilités supplémentaires du modèle FRBR ]
 </manifestation>
 ```
 
-## b. Compositeur, librettiste, etc.
-
 <a id="COS_ref1"></a>
 <a id="COL_ref1"></a>
 
-### Compositeur indiqué sur la manifestation
+## Compositeur indiqué sur la manifestation
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -245,7 +242,7 @@ Il est possible dès lors, que la manifestation indique de manière erroné un c
 
 <a id="LIB_ref1"></a>
 
-### Nom du librettiste
+## Nom du librettiste
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -266,7 +263,7 @@ Autre option : &lt;persName role="librettist"&gt;
 
 <a id="LAR_ref1"></a>
 
-### Nom de l'arrangeur 
+## Nom de l'arrangeur 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -290,7 +287,7 @@ Autre option : &lt;persName role="arranger"&gt;
 
 <a id="LOR_ref1"></a>
 
-### Nom de l'orchestrateur 
+## Nom de l'orchestrateur 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -316,7 +313,7 @@ Autre option : &lt;persName role="orchestrator"&gt;
 
 <a id="TXO_ref1"></a>
 
-### Langue originale de la pièce
+## Langue originale de la pièce
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -370,7 +367,7 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
 
 <a id="TRN_ref1"></a>
 
-### Traducteur du texte
+## Traducteur du texte
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -422,11 +419,10 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
    </manifestation>
 </manifestationList>
 ```
-## c. Informations liées à l'œuvre
 
 <a id="PPR_ref2"></a>
 
-### Date et éditeur de la première publication
+## Date et éditeur de la première publication
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -524,7 +520,7 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &l
 
 <a id="AIN_ref1"></a>
 
-### Effectif
+## Effectif
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -554,7 +550,7 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
 </perfMedium>
 ```
 
-### Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
+## Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
 
 <a id="OAC_ref1"></a>
 
@@ -597,7 +593,7 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
 
 <a id="OSC_ref1"></a>
 
-### Numéro de scène (<music?>)
+## Numéro de scène (<music?>)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -635,7 +631,7 @@ Autre option :
 
 <a id="OMV_ref1"></a>
 
-### Numéro de mouvement (<music?>)
+## Numéro de mouvement (<music?>)
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -662,7 +658,7 @@ Autre option :
 
 <a id="OMD_ref1"></a>
 
-### Désignation du mouvement ou nom du mouvement
+## Désignation du mouvement ou nom du mouvement
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -691,7 +687,7 @@ Autre option :
 
 <a id="OCO_ref1"></a>
 
-### Commanditaire
+## Commanditaire
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -726,7 +722,7 @@ Autre option :
 
 <a id="OCL_ref1"></a>
 
-### Collecteur de la musique
+## Collecteur de la musique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -762,7 +758,7 @@ Autre option :
 
 <a id="ODE_ref1"></a>
 
-### Dédicace
+## Dédicace
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -809,7 +805,7 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
 
 <a id="ODT_ref1"></a>
 
-### Date de composition
+## Date de composition
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -835,7 +831,7 @@ Autre option :
 
 <a id="OCY_ref1"></a>
 
-### Pays de composition de l'œuvre encodée
+## Pays de composition de l'œuvre encodée
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -890,11 +886,9 @@ Définition :
 </manifestation>
 ```
 
-## d. Éléments esthétiques
-
 <a id="AGN_ref1"></a>
 
-### Désignation du genre musical
+## Désignation du genre musical
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -925,7 +919,7 @@ Définition :
 
 <a id="AST_ref1"></a>
 
-### Désignation du style/période/typologie de l'œuvre
+## Désignation du style/période/typologie de l'œuvre
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -956,7 +950,7 @@ Définition :
 
 <a id="AMD_ref1"></a>
 
-### Classification du mode (Moyen âge et Renaissance)
+## Classification du mode (Moyen âge et Renaissance)
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -991,7 +985,7 @@ Autre option :
 
 <a id="AMT_ref1"></a>
 
-### Classification métrique
+## Classification métrique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -1010,7 +1004,7 @@ Autre option :
 
 <a id="ONB_ref1"></a>
 
-### Note de format libre / Nota bene
+## Note de format libre / Nota bene
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -1037,7 +1031,7 @@ Autre option :
 
 ```
 
-## e. Interprétation de l'œuvre
+## Interprétation de l'œuvre
 
 <a id="MGN_ref1"></a>
 
