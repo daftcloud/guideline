@@ -3,7 +3,7 @@ title: Description de l'œuvre &lt;work&gt;
 layout: default
 nav_order: 7
 parent: Guideline
-permalink: /guideline/work
+permalink: /guide/work
 ---
 
 # Description de l'œuvre éditée 
@@ -168,7 +168,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 
 
 <p style="text-align:justify;">
-Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)).
+Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
 </p>
 
 ```xml
@@ -255,7 +255,7 @@ Il est possible d'indiquer les informations concernant la naissance et le décè
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-L'ensemble de ces informations peuvent être omises si le compositeur est [référencé avec une URI externe](guideline/autorite.html).
+L'ensemble de ces informations peuvent être omises si le compositeur est [référencé avec une URI externe](guide/thesauri.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -316,7 +316,7 @@ Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-cou
 
 Cette information peut être omise si le compositeur est référencé avec une URI externe.
 </p>
-g
+
 <!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
 
 ```xml
@@ -349,7 +349,7 @@ Autre option : &lt;persName role="librettist"&gt;
 </work>
 ```
 <p style="text-align:justify;">
-Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)).
+Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
 </p>
 
 ```xml
@@ -429,7 +429,7 @@ Il est possible d'indiquer les informations concernant la naissance et le décè
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guideline/autorite.html).
+L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guide/thesauri.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -510,9 +510,9 @@ g
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom de l'arrangeur de l'œuvre. |LAR|
 
  <p style="text-align:justify;">
-Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "arranger". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guideline/autorite.html)).
+Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "arranger". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
 
- Suivant les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens « classique » de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour l'orchestrateur, voir [Nom de l'orchestrateur](guideline/workList.html#LOR_ref1).
+ Suivant les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens « classique » de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour l'orchestrateur, voir [Nom de l'orchestrateur](guide/workList.html#LOR_ref1).
 
  Tous les exemples de cette section reprennent les exemples concernants la section sur les compositeurs.
 </p>
@@ -596,7 +596,7 @@ Il est possible d'indiquer les informations concernant la naissance et le décè
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guideline/autorite.html).
+L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guide/thesauri.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -766,7 +766,7 @@ Il est possible d'indiquer les informations concernant la naissance et le décè
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guideline/autorite.html).
+L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guide/thesauri.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -1129,12 +1129,6 @@ Autre option :
 </body>
 ```
  
-
-
-```
-
-```
-
 <a id="OMV_ref1"></a>
 
 ### Numéro de mouvement (<music?>)
@@ -1187,9 +1181,6 @@ Autre option :
  S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans &lt;music&gt; à l'aide de &lt;mdiv&gt;. 
 </p>
 
-```
-
-```
 
 <a id="OCO_ref1"></a>
 
@@ -1341,9 +1332,6 @@ Autre option :
  | :--------------- |:---------------:| -----:|
  | [3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Pays dans lequel l'œuvre encodée à été composée. |OCY|
 
-Définition :
-
-
 
 ```xml
  <creation>
@@ -1471,7 +1459,6 @@ Définition :
    </creation>
 </manifestation> 
 ```
-Autre option : 
 
 <p style="text-align:justify;"> 
  En MEI, le mode se désigne dans &lt;key&gt;, donc dans &lt;manifestation&gt; ou &lt;expression&gt;, avec @mode. L'information peut également se retrouver dans la définition des portées. Il y a trois vocabulaires contrôlés MEI pour les modes. Voir data.mode.
@@ -1499,12 +1486,6 @@ Autre option :
 
 &lt;meter&gt;
 
-Autre option : 
-
-
-```
-
-```
 
 <a id="ONB_ref1"></a>
 
@@ -1547,22 +1528,42 @@ Autre option :
 
  
 ```xml
-<perfMedium>
-   <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
-</perfMedium>
+<work>
+   <perfMedium>
+      <perfResList>
+         <perfRes>
+            <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
+            <persName auth="..." auth.uri="..." codedval="..." >Nom de l'interprète</persName>
+         </perfRes>
+      </perfResList>
+   </perfMedium>
+</work>
 ```
 
-Autre option : 
+<p style="text-align:justify;"> 
+L'instrumentation d'une œuvre se définit au sein de l'élément &lt;perfMedium&gt;. Il contient entre une et plusieurs balise &lt;perfResList&gt; regroupant et décrivant plusieurs ressources instrumentales ou vocales considérées comme un ensemble cohérent comme un chœur ou une section de cordes.
+Chaque instrument ou voix doit être contenu dans son propre élément &gt;perfRes&lt;. 
+
+Afin de permettre l'interopérabilité de ces informations, nous vous invitons à suivre les recommandations du chapitre sur les [Référentiels d'autorités et thesauri](guide/thesauri.html) en utisilant le thesaurus MIMO comme dans notre exemple.
+</p>
 
  <!-- Je ne crois pas que cela soit nécessaire dans un header d'une édition critique. [ONgarde] -->
 
 
 ```xml
-<manifestation>
+<work>
    <perfMedium>
-      <corpName auth="VIAF "auth.uri="http://viaf.org/viaf/" codedval="157575652" role="quatuor">Quatuor Voce</corpName>
+      <perfResList>
+      <head>Samhyeon yukgak</head>
+         <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="5228" >Haegeum</perfRes>
+         <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="4240" >P'iri</perfRes>
+         <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="4025" >Daegeum</perfRes>
+         <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="4240" >P'iri</perfRes>
+         <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="2524" >Janggu</perfRes>
+         <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="2707" >Puk</perfRes>
+      </perfResList>
    </perfMedium>
-</manifestation>
+</work>
 ```
 
 <a id="MPN_ref1"></a>
@@ -1577,14 +1578,16 @@ Autre option :
 Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un intéprète. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
 </p>
 
+<!-- ça ne devrait pas rester dans workList. Plutôt une manifestation, un concert ou un CD. À déplacer donc. -->
+
 ```xml
-<manifestation>
+<work>
    <perfMedium>
       <perfRes>
          <persName auth="..." auth.uri="..." codedval="..." >Nom de l'interprète</persName>
       </perfRes>
    </perfMedium>
-</manifestation>
+</work>
 ```
  
 ```xml
@@ -1608,7 +1611,7 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
  <p style="text-align:justify;">
 Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un intéprète. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
 </p>
-
+<!-- ça ne devrait pas rester dans workList. Plutôt une manifestation, un concert ou un CD. À déplacer donc. -->
 ```xml
 <manifestation>
    <perfMedium>
@@ -1687,7 +1690,7 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
  | :--------------- |:---------------:| -----:|
  |[3.6.5. Work History](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkHistory){:target="_blank"}|Date d'exécution/représentation|MRD|
 
-
+<!-- ça ne devrait pas rester dans workList. Plutôt une manifestation, un concert ou un CD. À déplacer donc. -->
 ```xml
 <manifestation>
    <title>...</title>
@@ -1814,7 +1817,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
  | :--------------- |:---------------:| -----:|
  |[3.6.7 Performance Medium](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkMedium){:target="_blank"}|Nom du responsable de l'exécution/représentation (chef d'orchestre){:target="_blank"}|MCN|
 
-   
+   <!-- event ne peut pas contenir perfMedium -->
 ```xml
 <eventList>
    <event type="premiere">
@@ -1873,7 +1876,7 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
    </history>
 </manifestation>
 ```
-Autre option : 
+
 
 <p style="text-align:justify;"> 
  La date de la première exécution d'une œuvre est à situé, a minima, au niveau de manifestationList, dans une balise &lt;event&gt; dont l'attribut @type prend pour valeur « premiere ». 
@@ -1893,7 +1896,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 </manifestation>
 ```
 <p style="text-align:justify;"> 
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
+ Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
 </p>
 
 ```xml
@@ -1966,9 +1969,6 @@ Autre option :
 
 ```
 
-```
-
-```
 
 <a id="GTL_ref1"></a>
 

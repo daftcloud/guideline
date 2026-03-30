@@ -17,5 +17,5 @@ L'édition critique pose un nombre significatif de problèmes, notamment dans le
 Dans le cas précis de l'édition musicale, les problématiques d'arrangement, de transcription d'une formation instrumentale à une autre ainsi que la reconstruction des voix posent des problèmes conséquents qui justifient une approche détaillée bien que parfois redondante.
 </p>
 
-<!-- Préciser la logique : Texte libre dans les balises pour le projet conduisant à l'édition numérique qu'est le fichier MEI, les attributs pour assurrer l'intéropérabilité des données. -->
+<!-- Préciser la logique : Texte libre dans les balises pour le projet conduisant à l'édition numérique qu'est le fichier MEI, les attributs pour assurer l'intéropérabilité des données. -->
 

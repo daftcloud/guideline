@@ -3,7 +3,7 @@ title: Description bibliographique &lt;manifestationList&gt;
 layout: default
 nav_order: 8
 parent: Guideline
-permalink: /guideline/manifestationList
+permalink: /guide/manifestationList
 ---
 
 # Description bibliographique de l'édition musicale &lt;manifestationList&gt;
@@ -1031,8 +1031,6 @@ Autre option :
 
 ```
 
-## Interprétation de l'œuvre
-
 <a id="MGN_ref1"></a>
 
 ### Nom du groupe des interprètes
@@ -1047,8 +1045,6 @@ Autre option :
    <corpName auth="..." auth.uri="http://..." codedval="..." role="...">Nom du groupe des interprètes</corpName>
 </perfMedium>
 ```
-
-Autre option : 
 
  <!-- Je ne crois pas que cela soit nécessaire dans un header d'une édition critique. [ONgarde] -->
 
@@ -1389,7 +1385,7 @@ La date peut aussi être nuancée ou approchée à l'aide d'attributs, surtout d
 </manifestation>
 ```
 <p style="text-align:justify;"> 
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
+ Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
 </p>
 
 ```xml

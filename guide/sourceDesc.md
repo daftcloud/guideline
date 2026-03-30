@@ -3,7 +3,7 @@ title: Description de la source  &lt;SourceDesc&gt;
 layout: default
 nav_order: 6
 parent: Guideline
-permalink: guideline/sourceDesc
+permalink: guide/sourceDesc
 
 ---
 
@@ -212,7 +212,7 @@ La balise &lt;imprint&gt; contient toutes les informations lié à la publicatio
 Cette balise, limité à du texte, permet de rédiger, au besoin, une explication sur les raisons de la non-publication de la source. Dans le cas contraire, il est possible de laisser cette balise &lt;unpub&gt; vide sous la forme d'une balise auto-fermante. (&lt;unpub/&gt;)
 </p>
 
-*Exemple d'une source dont le projet de publication ne put aboutir*
+*Exemple d'une source dont le projet de publication a été abandonné*
 ```xml
 <source>
    <biblStruct>
@@ -278,7 +278,7 @@ La balise &lt;imprint&gt; contient toutes les informations lié à la publicatio
 L'éditeur d'une source publiée peut être une personne physique ou une structure, comme une maison d'édition. Cette information s'inscrit soit par une balise &lt;persName&gt; pour le premier cas ou &lt;corpName&gt; pour le second. Quoiqu'il en soit, cette information se situe au niveau de l'élément &lt;editor&gt;.  
 </p>
 
-Exemple d'un éditeur (personne physique).
+*Exemple d'un éditeur (personne physique)*
 ```xml
 <source>
    <biblStruct>
@@ -292,7 +292,8 @@ Exemple d'un éditeur (personne physique).
    </biblStruct>
 </source>
 ```
-Exemple d'une structure d'édition.
+
+*Exemple d'une structure d'édition*
 ```xml
 <source>
    <biblStruct>
@@ -326,7 +327,7 @@ La balise &lt;imprint&gt; contient toutes les informations liées à la publicat
 ### Pays
 
 
-Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère avec [les attributs d'autorités](autorite.html).
+Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère avec [les attributs d'autorités](thesauri.html).
 
 ```xml
 <country auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="264091107">France</country>
@@ -334,14 +335,14 @@ Le pays de publication s'écrit dans une balise &lt;country&gt; et se réfère a
 
 #### Ville, village ou agglomération
 
-La ville de publication s'écrit dans une balise &lt;settlement&gt; et se réfère avec [les attributs d'autorités](autorite.html). Il peut s'agir d'un village ou d'une agglomérations identifiée comme une seule unité géopolitique ou administrative.
+La ville de publication s'écrit dans une balise &lt;settlement&gt; et se réfère avec [les attributs d'autorités](thesauri.html). Il peut s'agir d'un village ou d'une agglomérations identifiée comme une seule unité géopolitique ou administrative.
 
 ```xml
 <settlement auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="158480400">Metz</settlement>
 ```
 
 
-Exemple complet :
+*Exemple complet*
 
 ```xml
 <source recordtype="c">
@@ -425,7 +426,7 @@ Toutes les informations concernant les droits d'utilisation de la source s'inscr
 ```
 
 <p style="text-align:justify;">
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;datec&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension.
+ Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension.
 </p>
 
 
