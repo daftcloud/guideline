@@ -13,11 +13,9 @@ permalink: guideline/fileDesc
 L'élément &lt;fileDesc&gt; comprends toutes les informations qui concernent le fichier MEI lui-même.
 </p>
 
-## a. Titre
-
 <a id="OTL_ref1"></a>
 
-### Titre de l'édition MEI
+## Titre de l'édition MEI
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -42,11 +40,9 @@ En MEI, dans la partie &lt;fileDesc&gt;, on constate des usages nombreux et dive
 Dans &lt;fileDesc&gt;, il n'est pas nécessaire que le titre dispose d'une granularité fine comparable au renseignement du titre de l'œuvre dans [&lt;work&gt;](guideline/workList.html#OTL_ref3). Il n'existe cependant aucune restriction. Le plus important est de rester vigilant quant à la hiérarchie des titres spécifiée à l'aide de l'attribut @title dont les valeurs sont contrôlées (pour plus d'information sur les niveaux de titres, voir [Titre alternatif de l'œuvre](guideline/manifestationList.html#OTA_ref1)).
 </p>
 
-## b. Compositeur
-
 <a id="COM_ref1"></a>
 
-### Compositeur de l'édition MEI encodée
+## Compositeur de l'édition MEI encodée
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -134,11 +130,9 @@ Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheu
 </fileDesc>
 ```
 
-## c. Informations liées à l'édition
-
 <a id="YEP_ref1"></a>
 
-### Éditeur de l'édition électronique 
+## Éditeur de l'édition électronique 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -163,7 +157,7 @@ L'identité de l'éditeur de l'édition numérique est à inscrire dans la balis
 
 <a id="ENC_ref1"></a>
 
-### Encodeur de l'édition électronique
+## Encodeur de l'édition électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -189,7 +183,7 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 <a id="YER_ref1"></a>
 
 
-### Date d'encodage / de mise à disposition de l'édition électronique
+## Date d'encodage / de mise à disposition de l'édition électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -222,7 +216,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 <a id="EEV_ref1"></a>
 
 
-### Modification / Version du document électronique
+## Modification / Version du document électronique
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -251,7 +245,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 
 <a id="EFL_ref1"></a>
 
-### Numéro du fichier électronique
+## Numéro du fichier électronique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -281,7 +275,7 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
 
 <a id="AFR_ref1"></a>
 
-### Désignation de la forme
+## Désignation de la forme
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -313,7 +307,7 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
 
 <a id="YEM_ref1"></a>
 
-### License et pays du copyright
+## License et pays du copyright
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
