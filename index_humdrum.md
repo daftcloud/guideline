@@ -60,7 +60,6 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | ODT | Date de composition ||| [Dans la description de l'œuvre](guide/manifestationList.html#ODT_ref1) |
  | OMV | Numéro de mouvement ||| [Dans la description de l'œuvre](guide/manifestationList.html#OMV_ref1) |
  | OMD | Désignation du mouvement ||| [Dans la description de l'œuvre](guide/manifestationList.html#OMD_ref1) |
- | ONB | Nota bene ||| [Dans la description de l'œuvre](guide/manifestationList.html#ONM_ref1) |
  | ONM | Numéro || [Dans la description de la source](guide/sourceDesc.html#ONM_ref1) ||
  | OPR | Titre de l'œuvre d'appartenance ||| [Dans la description de l'œuvre](guide/manifestationList.html#OPR_ref1) |
  | OPC | Ville de composition ||| [Dans la description de l'œuvre](guide/manifestationList.html#OPC_ref1) |

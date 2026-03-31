@@ -178,8 +178,9 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
    </composer>
 </work>
 ```
+
 <p style="text-align:justify;">
-C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du compositeur. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du compositeur. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes et pseudonymes historique. 
 </p>
 
    **&lt;foreName&gt;** pour un prénom,
@@ -201,8 +202,10 @@ C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseigne
 
 
 <p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
 </p>
+
+*Exemple du nom complet de Mozart*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -219,9 +222,10 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate.
 </p>
 
+*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -236,11 +240,6 @@ Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs
    </composer>
 </work>
 ```
-
-<p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
-</p>
-
 
 <a id="CBL_ref1"></a>
 
@@ -260,6 +259,7 @@ L'ensemble de ces informations peuvent être omises si le compositeur est [réf�
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
 
+
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -278,26 +278,6 @@ L'ensemble de ces informations peuvent être omises si le compositeur est [réf�
             </date>-->
 
 
-<p style="text-align:justify;"> 
-S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
-</p>
-
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
-         <date isodate="..." type="birth">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</work>
-```
-
-
 <a id="CNT_ref1"></a>
 
 ### Nationalité du compositeur
@@ -305,9 +285,6 @@ S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâ
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du compositeur.|CNT|
-
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
 
 <p style="text-align:justify;"> 
 La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
@@ -317,13 +294,14 @@ Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-cou
 Cette information peut être omise si le compositeur est référencé avec une URI externe.
 </p>
 
-<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
+<!--<annot label="nationality">français</annot> ? Est-ce mieux que country ? -->
 
+*Exemple de l'indication de la nationalité de Beethoven*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
    </composer>
 </work>
 ```
@@ -336,27 +314,15 @@ Cette information peut être omise si le compositeur est référencé avec une U
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique le nom du librettiste de l'œuvre. |LIB|
 
- &lt;librettist&gt;
-
-Autre option : &lt;persName role="librettist"&gt;
-
-
-```xml
-<work xml:id="...">
-   <librettist>
-      <persName auth="..." auth.uri="..." codedval="..."></persName>
-   </librettist>   
-</work>
-```
 <p style="text-align:justify;">
-Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
+Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "librettist". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
 </p>
 
 ```xml
 <work>
-   <composer xml:id="...">
-      <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
-   </composer>
+   <librettist xml:id="...">
+      <persName role="librettist" auth="..." auth.uri="http://..." codedval="...">...</persName>
+   </librettist>
 </work>
 ```
 <p style="text-align:justify;">
@@ -382,8 +348,10 @@ C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseigne
 
 
 <p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
 </p>
+
+*Exemple du nom complet de Mozart*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -400,9 +368,10 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du librettiste avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+Il est possible d'indiquer l'évolution du nom du librettiste avec les attributs @startdate et @enddate. 
 </p>
 
+*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -425,7 +394,7 @@ Il est possible d'indiquer l'évolution du nom du librettiste avec les attributs
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du librettiste.|CDT, CBL et CDL|
 
 <p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès du librettiste dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+Il est possible d'indiquer les informations concernant la naissance et le décès du librettiste dans la balise &lt;librettist&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
@@ -434,9 +403,10 @@ L'ensemble de ces informations peuvent être omises si le librettiste est [réf�
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
 
+
 ```xml
 <work xml:id="...">
-   <composer xml:id="...">
+   <librettist xml:id="...">
          <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
          <date isodate="..." type="birth">
             <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
@@ -444,33 +414,12 @@ L'ensemble de ces informations peuvent être omises si le librettiste est [réf�
          <date isodate="..." type="death">
             <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
       </date>     
-   </composer>
+   </librettist>
 </work>
 ```
 <!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
             <country type="birth" >Allemagne</country>.
             </date>-->
-
-
-<p style="text-align:justify;"> 
-S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
-</p>
-
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
-         <date isodate="..." type="birth">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</work>
-```
-
 
 
 ### Nationalité du librettiste
@@ -479,9 +428,6 @@ S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâ
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du librettiste.|CNT|
 
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
-
 <p style="text-align:justify;"> 
 La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
 
@@ -489,14 +435,15 @@ Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-cou
 
 Cette information peut être omise si le librettiste est référencé avec une URI externe.
 </p>
-g
+
 <!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
 
+*Exemple de la nationalié de Beethoven*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
    </composer>
 </work>
 ```
@@ -510,9 +457,9 @@ g
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom de l'arrangeur de l'œuvre. |LAR|
 
  <p style="text-align:justify;">
-Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "arranger". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
+Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. La valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "arranger". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
 
- Suivant les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens « classique » de la fonction - celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour l'orchestrateur, voir [Nom de l'orchestrateur](guide/workList.html#LOR_ref1).
+ Selon les guidelines MEI pour &lt;arranger&gt;, il est uniquement question du sens « classique » de la fonction, celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour l'orchestrateur, voir [Nom de l'orchestrateur](guide/workList.html#LOR_ref1).
 
  Tous les exemples de cette section reprennent les exemples concernants la section sur les compositeurs.
 </p>
@@ -548,8 +495,11 @@ S'il est besoin, dans votre projet d'édition numérique de rentrer dans les dé
 
 
 <p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
+
 </p>
+
+*Exemple du nom complet de Mozart*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -566,9 +516,10 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom de l'arrangeur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+Il est possible d'indiquer l'évolution du nom de l'arrangeur avec les attributs @startdate et @enddate. 
 </p>
 
+*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -592,11 +543,11 @@ Il est possible d'indiquer l'évolution du nom de l'arrangeur avec les attributs
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès de l'arrangeur.|-|
 
 <p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès de l'arrangeur dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+Il est possible d'indiquer les informations concernant la naissance et le décès de l'arrangeur dans la balise &lt;arranger&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guide/thesauri.html).
+L'ensemble de ces informations peuvent être omises si l'arrangeur est [référencé avec une URI externe](guide/thesauri.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -619,50 +570,27 @@ L'ensemble de ces informations peuvent être omises si le librettiste est [réf�
             </date>-->
 
 
-<p style="text-align:justify;"> 
-S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
-</p>
-
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
-         <date isodate="..." type="birth">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</work>
-```
-
-
 ### Nationalité de l'arrangeur
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du librettiste.|-|
 
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
-
 <p style="text-align:justify;"> 
 La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-Cette information peut être omise si le librettiste est référencé avec une URI externe.
+Cette information peut être omise si l'arrangeur est référencé avec une URI externe.
 </p>
-g
-<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
+
+<!-- <annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
 
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
    </composer>
 </work>
 ```
@@ -676,13 +604,8 @@ g
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}| Indique le nom de l'orchestrateur de l'œuvre. |LOR|
 
-Définition :
-
- &lt;arranger role="orchestrator"&gt;
-
-Autre option : &lt;persName role="orchestrator"&gt;
 <p style="text-align:justify;"> 
- Comme dit ci-dessus, &lt;arranger&gt; représente uniquement le sens « classique » de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+Selon les guidelines MEI, il n'existe pas d'élément correspondant à la fonction d'orchestrateur. La balise &lt;arranger&gt; comprend uniquement la question du sens « classique » de la fonction, celui qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Pour pallier ce manque, il est nécessaire de préciser à l'aide de @role la qualité spécifique de l'orchestrateur. Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire DOREMUS des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" [voir le Vocabulaire DoReMus](https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 
  Tous les exemples de cette section reprennent les exemples concernants la section sur les compositeurs.
 </p>
@@ -719,8 +642,10 @@ S'il est besoin, dans votre projet d'édition numérique de rentrer dans les dé
 
 
 <p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &gt;persName&lt;. 
+Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
 </p>
+
+*Exemple du nom complet de Mozart*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -737,9 +662,10 @@ Il convient alors de les intégrer dans l'élément &gt;persName&lt;.
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom de l'orchestrateur avec les attributs @startdate et @enddate. L'exemple qui suit présente l'évolution du nom de Fanny Mendelssohn durant sa vie.
+Il est possible d'indiquer l'évolution du nom de l'orchestrateur avec les attributs @startdate et @enddate. 
 </p>
 
+*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
@@ -789,34 +715,11 @@ L'ensemble de ces informations peuvent être omises si le librettiste est [réf�
             </date>-->
 
 
-<p style="text-align:justify;"> 
-S'il est besoin de jaloner l'usage des noms dans le temps, il est possible, grâce aux attributs @startdate et @enddate, d'indiquer les plages chronologiques de l'usage de certains noms.
-</p>
-
-
-```xml
-<work xml:id="...">
-   <arranger role="orchestrator" xml:id="...">
-         <famName startdate="" enddate="" auth="..." auth.uri="http://..." codedval="...">Nom de famille après un mariage, par exemple.</persName>
-         <date isodate="..." type="birth">
-            <country auth="..." auth.uri="..." codedval="...">XXX</country>
-         </date>
-         <date enddate="...">
-            <country>XXX</country>
-      </date>     
-   </composer>
-</work>
-```
-
-
 ### Nationalité de l'orchestrateur
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité de l'orchestrateur.|-|
-
-<!-- Est-ce bien nécessaire ? Annot est très vague. Peut-être plutôt geogName ?  -->
- &lt;annot&gt; 
 
 <p style="text-align:justify;"> 
 La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
@@ -825,18 +728,284 @@ Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-cou
 
 Cette information peut être omise si l'orchestrateur est référencé avec une URI externe.
 </p>
-g
+
 <!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
 
 ```xml
 <work xml:id="...">
    <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemand</country>
+         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
+         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
    </composer>
 </work>
 ```
 
+<a id="OCO_ref1"></a>
+
+### Commanditaire
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Commanditaire|OCO|
+
+<p style="text-align:justify;">
+ L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire DOREMUS des fonctions et donc de choisir "sponsor" [voir les différentes fonctions du vocabulaire DOREMUS](https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+</p>
+
+```xml
+<work>
+   <respStmt>
+      <persName role="sponsor" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="47837095">Franz von Walsegg</persName>
+   </respStmt>
+</work>
+```
+
+<p style="text-align:justify;">
+S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité du commanditaire, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+</p>
+
+   **&lt;foreName&gt;** pour un prénom,
+
+
+   **&lt;famName&gt;** pour un nom de famille,
+
+
+   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
+
+
+   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
+
+
+   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
+
+
+   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
+
+
+<p style="text-align:justify;">
+Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
+</p>
+
+*Exemple du nom complet de Mozart*
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName>Mozart</famName>
+            ,
+            <foreName type="baptismal">Johannes</foreName>
+            <foreName type="baptismal">Chrysostomus</foreName>
+            <foreName type="familiar">Wolfgangus</foreName>
+            <foreName type="baptismal">Theophilus</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<p style="text-align:justify;">
+Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate et @enddate. 
+</p>
+
+*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
+            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
+            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
+            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
+            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+
+<a id="OCL_ref1"></a>
+
+## Collecteur de la musique
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Collecteur de la musique|OCL|
+
+<p style="text-align:justify;"> 
+ Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément &lt;persName&gt; déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire DOREMUS des fonctions et donc de choisir "collector_of_field_material"  [voir les fonctions dans le vocabulaire DOREMUS](https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ </p>
+ 
+```xml
+<biblStruc>
+   <imprint>
+      <resStmt>
+         <persName role="collector_of_field_material" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="179852912">Manuel García Matos</persName>
+      </respStmt>
+   </imprint>
+</biblStruc>
+```
+<p style="text-align:justify;">
+S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité du collecteur de la musique, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+</p>
+
+   **&lt;foreName&gt;** pour un prénom,
+
+
+   **&lt;famName&gt;** pour un nom de famille,
+
+
+   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
+
+
+   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
+
+
+   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
+
+
+   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
+
+
+<p style="text-align:justify;">
+Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
+</p>
+
+*Exemple du nom complet de Mozart*
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
+            <famName>Mozart</famName>
+            ,
+            <foreName type="baptismal">Johannes</foreName>
+            <foreName type="baptismal">Chrysostomus</foreName>
+            <foreName type="familiar">Wolfgangus</foreName>
+            <foreName type="baptismal">Theophilus</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<p style="text-align:justify;">
+Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate et @enddate. 
+</p>
+
+*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
+```xml
+<work xml:id="...">
+   <composer xml:id="...">
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
+            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
+            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
+            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
+            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
+         </persName>
+   </composer>
+</work>
+```
+
+<a id="ODE_ref1"></a>
+
+## Dédicace
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Dédicace|ODE|
+
+ 
+```xml
+<manifestation>
+   <creation>
+      <dedicatee>
+         <persName>...</persName>
+      </dedicatee>
+   </creation>
+</manifestation>  
+```
+
+Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
+
+```xml
+<manifestation>
+   <creation>
+      <dedication>
+         <quote>...</quote>
+         <eventList>...</eventList>
+         <dedicatee>
+            <persName>...</persName>
+         </dedicatee>
+      </dedication>
+   </creation>
+</manifestation> 
+```
+ 
+
+
+```xml
+<manifestation>
+   <creation>
+      <dedicatee>
+         <persName>...</persName>
+      </dedicatee>
+   </creation>
+</manifestation>
+```
+
+<a id="TRN_ref1"></a>
+
+## Traducteur du texte
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'œuvre. |TRN|
+
+ 
+
+Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &lt;contributor&gt;/&lt;persName&gt;
+
+Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : &lt;respStmt&gt;/&lt;persName&gt;
+<p style="text-align:justify;"> 
+ Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de DOREMUS. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
+</p>
+
+```xml
+<work xml:id="...">
+   <contributor>
+      <persName xml:id="T1" role="translator" auth="..." auth.uri="..." codedval="...">XXX</persName>
+   </contributor>   
+   <langUsage>
+      <language xml:id="Lat" type="original">Latin</language>
+      <language xml:id="Fr" resp="T1" type="translation">French</language>
+   </langUsage>          
+</work>
+```
+<p style="text-align:justify;">
+ Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans &lt;fileDesc&gt;, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans &lt;manifestationList&gt;), via @resp. 
+
+Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans &lt;language&gt; pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
+</p>
+
+```xml
+<fileDesc xml:id="...">
+   <titleStmt xml:id="...">
+       <respStmt xml:id="...">
+          <persName xml:id="VV" role="translator" auth="..." auth.uri="http://..." codedval="...">...</persName>
+       </respStmt>
+   </titleStmt>
+</fileDesc>
+
+-------# plus bas
+
+   <work xml:id="...">
+      <langUsage>
+         <language xml:id="..." type="original">...</language>
+         <language xml:id="Fr" resp="VV" type="translation">...</language>
+     </langUsage>          
+   </work>
+
+```
 
 <a id="TXO_ref1"></a>
 
@@ -846,11 +1015,6 @@ g
  | :--------------- |:---------------:| -----:|
  [3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage){:target="_blank"}|Indique la langue originale de l'œuvre encodée. |TXO|
 
-
-
- &lt;langUsage>/<language&gt;
-
-Autre option : -
 
  &lt;langUsage&gt; contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
 
@@ -890,60 +1054,6 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
       <language xml:id="Fr" auth="..." auth.uri="https://iso639-3.sil.org/code/" codedval="fra" uri="ISO 639-3" type="translation">French</language>
    </langUsage>          
 </work>
-```
-
-<a id="TRN_ref1"></a>
-
-## Traducteur du texte
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'œuvre. |TRN|
-
- 
-
-Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &lt;contributor&gt;/&lt;persName&gt;
-
-Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : &lt;respStmt&gt;/&lt;persName&gt;
-<p style="text-align:justify;"> 
- Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
-</p>
-
-```xml
-<work xml:id="...">
-   <contributor>
-      <persName xml:id="T1" role="translator" auth="..." auth.uri="..." codedval="...">XXX</persName>
-   </contributor>   
-   <langUsage>
-      <language xml:id="Lat" type="original">Latin</language>
-      <language xml:id="Fr" resp="T1" type="translation">French</language>
-   </langUsage>          
-</work>
-```
-<p style="text-align:justify;">
- Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans &lt;fileDesc&gt;, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans &lt;manifestationList&gt;), via @resp. 
-
-Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans &lt;language&gt; pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
-</p>
-
-```xml
-<fileDesc xml:id="...">
-   <titleStmt xml:id="...">
-       <respStmt xml:id="...">
-          <persName xml:id="VV" role="translator" auth="..." auth.uri="http://..." codedval="...">...</persName>
-       </respStmt>
-   </titleStmt>
-</fileDesc>
-
--------# plus bas
-
-   <work xml:id="...">
-      <langUsage>
-         <language xml:id="..." type="original">...</language>
-         <language xml:id="Fr" resp="VV" type="translation">...</language>
-     </langUsage>          
-   </work>
-
 ```
 
 <a id="PPR_ref2"></a>
@@ -1056,247 +1166,7 @@ Pour être précis dans le nombre de musicien, on utilise l'attribut @count dans
 </work>
 ```
 
-## Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
 
-<a id="OAC_ref1"></a>
-
-### Numéro d'acte (<music?>)
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro d'acte|OAC|
-
-
-```xml
-<body>
-   <mdiv label="act" n="1">
-      <mdiv label="scene" n="1">
-         <score></score>
-      </mdiv>
-      <mdiv label="scene" n="2">
-         <score></score>
-      </mdiv>
-   </mdiv>
-   <mdiv label="act" n="2">
-      <mdiv label="scene" n="1">
-         <score></score>
-      </mdiv>
-      <mdiv label="scene" n="2">
-         <score></score>
-      </mdiv>
-   </mdiv>
-</body>
-
-```
-
-<p style="text-align:justify;"> 
- S'il est bien question d'une précision au sein de &lt;music&gt; : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
-</p>
-
-```
-
-```
-
-<a id="OSC_ref1"></a>
-
-### Numéro de scène (<music?>)
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de scène|OSC|
- 
-
-Autre option : 
-
-```xml
-<body>
-   <mdiv label="act" n="1">
-      <mdiv label="scene" n="1">
-         <score></score>
-      </mdiv>
-      <mdiv label="scene" n="2">
-         <score></score>
-      </mdiv>
-   </mdiv>
-   <mdiv label="act" n="2">
-      <mdiv label="scene" n="1">
-         <score></score>
-      </mdiv>
-      <mdiv label="scene" n="2">
-         <score></score>
-      </mdiv>
-   </mdiv>
-</body>
-```
- 
-<a id="OMV_ref1"></a>
-
-### Numéro de mouvement (<music?>)
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}| Numéro de mouvement|OMV|
-
-
-Autre option : 
-```xml
-<body>
-   <mdiv label="Allegro" n="1">
-      <score></score>
-   </mdiv>
-   <mdiv label="Menuet" n="2">
-      <score></score>
-   </mdiv>
-</body>
-```
- Même commentaire que ci-dessous. Pour le numéro, nous pourrions ajouter dans les différents éléments @n.
-
-
-```
-
-```
-
-<a id="OMD_ref1"></a>
-
-### Désignation du mouvement ou nom du mouvement
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désignation du mouvement ou nom du mouvement|OMD|
- 
-
-Autre option : 
-```xml
-<body>
-   <mdiv label="Allegro">
-      <score></score>
-   </mdiv>
-   <mdiv label="Menuet">
-      <score></score>
-   </mdiv>
-</body> 
-```
-
-<p style="text-align:justify;"> 
- S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans &lt;music&gt; à l'aide de &lt;mdiv&gt;. 
-</p>
-
-
-<a id="OCO_ref1"></a>
-
-### Commanditaire
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Commanditaire|OCO|
-
-```xml
-<work>
-   <resStmt>
-      <persName role="sponsor">...</persName>
-   </respStmt>
-</work>
-```
-Autre option : 
-
-
-<p style="text-align:justify;">
- L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "sponsor"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
-</p>
-
-```xml
-<biblStruc>
-   <imprint>
-      <respStmt>
-         <persName role="sponsor" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="47837095">Franz von Walsegg</persName>
-      </respStmt>
-   </imprint>
-</biblStruc>
-
-```
-
-<a id="OCL_ref1"></a>
-
-## Collecteur de la musique
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Collecteur de la musique|OCL|
-
- 
-```xml
-<biblStruc>
-   <imprint>
-      <resStmt>
-         <persName role="collector_of_field_material">...</persName>
-      </respStmt>
-   </imprint>
-</biblStruc>
-```
-Autre option : 
-
-<p style="text-align:justify;"> 
- Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
- </p>
-
-
-```xml
-<biblStruc>
-   <imprint>
-      <resStmt>
-         <persName role="collector_of_field_material" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="179852912">Manuel García Matos</persName>
-      </respStmt>
-   </imprint>
-</biblStruc>
-
-```
-
-<a id="ODE_ref1"></a>
-
-## Dédicace
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Dédicace|ODE|
-
- 
-```xml
-<manifestation>
-   <creation>
-      <dedicatee>
-         <persName>...</persName>
-      </dedicatee>
-   </creation>
-</manifestation>  
-```
-
-Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
-
-```xml
-<manifestation>
-   <creation>
-      <dedication>
-         <quote>...</quote>
-         <eventList>...</eventList>
-         <dedicatee>
-            <persName>...</persName>
-         </dedicatee>
-      </dedication>
-   </creation>
-</manifestation> 
-```
- 
-
-
-```xml
-<manifestation>
-   <creation>
-      <dedicatee>
-         <persName>...</persName>
-      </dedicatee>
-   </creation>
-</manifestation>
-```
 
 <a id="ODT_ref1"></a>
 
@@ -1487,34 +1357,6 @@ Autre option :
 &lt;meter&gt;
 
 
-<a id="ONB_ref1"></a>
-
-### Note de format libre / Nota bene
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.4.1.5 Notes Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerNotesStatement){:target="_blank"}|Note de format libre / Nota bene|ONB|
-
-
- 
-```xml
-<notesStmt>
-   <annot>...</annot>
-   <annot>...</annot>
-</notesStmt>
-```
-Autre option : 
-
-<p style="text-align:justify;"> 
- Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
-</p>
-
-```xml
-<notesStmt>
-   <annot>This is the encoding of the 1st movement of K. 157 according to the Neue Mozart-Ausgabe VIII/20/1/1.</annot>
-</notesStmt>
-
-```
 
 ## Interprétation de l'œuvre
 
@@ -1554,7 +1396,7 @@ Afin de permettre l'interopérabilité de ces informations, nous vous invitons �
 <work>
    <perfMedium>
       <perfResList>
-      <head>Samhyeon yukgak</head>
+      <head>Samhyeon Yukgak</head>
          <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="5228" >Haegeum</perfRes>
          <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="4240" >P'iri</perfRes>
          <perfRes auth="MIMO" auth.uri="http://www.mimo-db.eu/InstrumentsKeywords/" codedval="4025" >Daegeum</perfRes>
@@ -1987,5 +1829,129 @@ Autre option :
 <title>
 ```
 
+## Dans la partie <music> (il faut dire que ce genre d'usage n'est pas recommandé) 
+
+<a id="OAC_ref1"></a>
+
+### Numéro d'acte (<music?>)
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro d'acte|OAC|
+
+
+```xml
+<body>
+   <mdiv label="act" n="1">
+      <mdiv label="scene" n="1">
+         <score></score>
+      </mdiv>
+      <mdiv label="scene" n="2">
+         <score></score>
+      </mdiv>
+   </mdiv>
+   <mdiv label="act" n="2">
+      <mdiv label="scene" n="1">
+         <score></score>
+      </mdiv>
+      <mdiv label="scene" n="2">
+         <score></score>
+      </mdiv>
+   </mdiv>
+</body>
+
+```
+
+<p style="text-align:justify;"> 
+ S'il est bien question d'une précision au sein de &lt;music&gt; : "The score and parts elements are placed here and not directly within the body element because score and part characteristics may change from mdiv to mdiv. For example, the 2nd movement of a symphony may require different performing forces (and therefore different score and part layout) than the other movements. The mdiv element may be recursively nested in order to represent music which exhibits this kind of structure. For example, an opera is normally divided into acts, which are in turn divided into scenes." https://music-encoding.org/guidelines/v5/elements/mdiv.html
+</p>
+
+```
+
+```
+
+<a id="OSC_ref1"></a>
+
+### Numéro de scène (<music?>)
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Numéro de scène|OSC|
+ 
+
+Autre option : 
+
+```xml
+<body>
+   <mdiv label="act" n="1">
+      <mdiv label="scene" n="1">
+         <score></score>
+      </mdiv>
+      <mdiv label="scene" n="2">
+         <score></score>
+      </mdiv>
+   </mdiv>
+   <mdiv label="act" n="2">
+      <mdiv label="scene" n="1">
+         <score></score>
+      </mdiv>
+      <mdiv label="scene" n="2">
+         <score></score>
+      </mdiv>
+   </mdiv>
+</body>
+```
+ 
+<a id="OMV_ref1"></a>
+
+### Numéro de mouvement (<music?>)
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}| Numéro de mouvement|OMV|
+
+
+Autre option : 
+```xml
+<body>
+   <mdiv label="Allegro" n="1">
+      <score></score>
+   </mdiv>
+   <mdiv label="Menuet" n="2">
+      <score></score>
+   </mdiv>
+</body>
+```
+ Même commentaire que ci-dessous. Pour le numéro, nous pourrions ajouter dans les différents éléments @n.
+
+
+```
+
+```
+
+<a id="OMD_ref1"></a>
+
+### Désignation du mouvement ou nom du mouvement
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Désignation du mouvement ou nom du mouvement|OMD|
+ 
+
+Autre option : 
+```xml
+<body>
+   <mdiv label="Allegro">
+      <score></score>
+   </mdiv>
+   <mdiv label="Menuet">
+      <score></score>
+   </mdiv>
+</body> 
+```
+
+<p style="text-align:justify;"> 
+ S'il s'agit d'un seul mouvement encodé au sein du fichier MEI, alors il me semble que le renseignement est similaire à celui renseigné pour "titre de l'œuvre d'appartenance". Sil s'agit de plusieurs mouvements encodés au sein d'un même fichier MEI (peu recommandé), dans ce cas il faudrait indiquer cette information dans &lt;music&gt; à l'aide de &lt;mdiv&gt;. 
+</p>
 
 

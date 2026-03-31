@@ -300,7 +300,7 @@ Définition :
 
 Autre option : &lt;persName role="orchestrator"&gt;
 <p style="text-align:justify;"> 
- Comme dit ci-dessus, &lt;arranger&gt; représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ Comme dit ci-dessus, &lt;arranger&gt; représente uniquement le sens "classique" de la fonction : la personne qui transcrit la pièce pour une nomenclature musicale différente de l'originale. Il est donc nécessaire de préciser à l'aide de @role la qualité spécifique de l'arrangeur.  Dans la mesure où "orchestrator" n'est pas présent dans les Marc Relators, nous proposons de nous appuyer sur le vocabulaire DOREMUS des fonctions, comprenant "arranger" ainsi que de nombreuses sous-fonctions comme "orchestrator", "creator_of_musical_harmonization" ou encore "creator_of_musical_paraphrase" (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 </p>
 
 ```xml
@@ -379,7 +379,7 @@ Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : &lt;respStmt&gt;/&lt;persName&gt;
 <p style="text-align:justify;"> 
- Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de Doremus. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
+ Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de DOREMUS. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
 </p>
 
 ```xml
@@ -706,7 +706,7 @@ Autre option :
 
 
 <p style="text-align:justify;">
- L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "sponsor"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ L'identité de la personne ayant commandé la création ou la publication d’une œuvre peut être indiqué dans un élément persName avec un attribut @role adéquat. Pour remplir l'attribut @role, nous proposons de nous appuyer sur le vocabulaire DOREMUS des fonctions et donc de choisir "sponsor"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
 </p>
 
 ```xml
@@ -741,7 +741,7 @@ Autre option :
 Autre option : 
 
 <p style="text-align:justify;"> 
- Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire Doremus des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
+ Dans le cas d'une musique de tradition orale, le collecteur de la musique peut être indiqué en ajoutant un attribut @role à l'élément persName déclinant son identité. Nous proposons de nous appuyer sur le vocabulaire DOREMUS des fonctions et donc de choisir "collector_of_field_material"  (https://github.com/DOREMUS-ANR/knowledge-base/blob/master/vocabularies/function.ttl).
  </p>
 
 
@@ -1002,34 +1002,7 @@ Autre option :
 
 ```
 
-<a id="ONB_ref1"></a>
 
-## Note de format libre / Nota bene
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.4.1.5 Notes Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerNotesStatement){:target="_blank"}|Note de format libre / Nota bene|ONB|
-
-
- 
-```xml
-<notesStmt>
-   <annot>...</annot>
-   <annot>...</annot>
-</notesStmt>
-```
-Autre option : 
-
-<p style="text-align:justify;"> 
- Selon les besoins, un élément notesStmt peut se trouver dans les éléments « expression », « fileDesc », « item », « manifestation » ou « work ».
-</p>
-
-```xml
-<notesStmt>
-   <annot>This is the encoding of the 1st movement of K. 157 according to the Neue Mozart-Ausgabe VIII/20/1/1.</annot>
-</notesStmt>
-
-```
 
 <a id="MGN_ref1"></a>
 
