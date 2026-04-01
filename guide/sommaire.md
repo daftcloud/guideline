@@ -1,5 +1,5 @@
 ---
-title: Guideline
+title: Le guide
 layout: default
 nav_order: 4
 has_toc: false

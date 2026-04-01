@@ -2,7 +2,7 @@
 title: Description bibliographique &lt;manifestationList&gt;
 layout: default
 nav_order: 8
-parent: Guideline
+parent: Le guide
 permalink: /guide/manifestationList
 ---
 

@@ -941,9 +941,6 @@ Contient une déclaration dédicatoire." Je suis d'avis qu'il s'agit plutôt de 
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'œuvre. |TRN|
 
- Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &lt;contributor&gt;/&lt;persName&gt;
-
-Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : &lt;respStmt&gt;/&lt;persName&gt;
 <p style="text-align:justify;"> 
  Renseigner la personne responsable de la traduction d'une œuvre dépend avant tout du statut de cette dernière. S'il s'agit d'un traducteur historique (dans le cas où la traduction est une manifestation de l'œuvre), celui-ci est renseigné comme un &lt;contributor&gt; au sein de &lt;manifestationList&gt;. Sa fonction précise est indiquée à l'aide de @role="translator" - le terme "translator" fait partie des Marc Relators ainsi que du vocabulaire des fonctions de DOREMUS. L'identifiant du traducteur (@xml:id) doit être ajouté dans la définition de la langue &lt;language&gt;.
 </p>
@@ -959,10 +956,11 @@ Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou 
    </langUsage>          
 </work>
 ```
+
 <p style="text-align:justify;">
  Si, à l'inverse, il s'agit d'un traducteur ad hoc dont la traduction n'a qu'une valeur éditoriale, il est préférable de renseigner son identité dans &lt;fileDesc&gt;, avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Le fonctionnement reste cependant le même que précédemment, dans la mesure où l'identifiant du traducteur doit à nouveau être indiqué dans la définition de la langue concernée (dans &lt;manifestationList&gt;), via @resp. 
 
-Il est à noter que bien localiser la place du traducteur et de renseigner son identifiant dans &lt;language&gt; pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
+ Localiser avec précision la place du traducteur et renseigner son identifiant dans &lt;language&gt; pallie l'absence de différence explicite en MEI entre un texte traduit constitutif de l'œuvre (traduction historique) et un texte traduit pour les besoins de l'édition (traduction éditoriale). 
 </p>
 
 ```xml

@@ -2,7 +2,7 @@
 title: Description de la source  &lt;SourceDesc&gt;
 layout: default
 nav_order: 6
-parent: Guideline
+parent: Le guide
 permalink: guide/sourceDesc
 
 ---
