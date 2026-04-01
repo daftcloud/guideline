@@ -230,7 +230,7 @@ Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs
 <work xml:id="...">
    <composer xml:id="...">
          <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -274,7 +274,7 @@ L'ensemble de ces informations peuvent être omises si le compositeur est [réf�
 </work>
 ```
 <!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth" >Allemagne</country>.
+            <country type="birth">Allemagne</country>.
             </date>-->
 
 
@@ -376,7 +376,7 @@ Il est possible d'indiquer l'évolution du nom du librettiste avec les attributs
 <work xml:id="...">
    <composer xml:id="...">
          <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -418,7 +418,7 @@ L'ensemble de ces informations peuvent être omises si le librettiste est [réf�
 </work>
 ```
 <!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth" >Allemagne</country>.
+            <country type="birth">Allemagne</country>.
             </date>-->
 
 
@@ -524,7 +524,7 @@ Il est possible d'indiquer l'évolution du nom de l'arrangeur avec les attributs
 <work xml:id="...">
    <composer xml:id="...">
          <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -566,7 +566,7 @@ L'ensemble de ces informations peuvent être omises si l'arrangeur est [référe
 </work>
 ```
 <!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth" >Allemagne</country>.
+            <country type="birth">Allemagne</country>.
             </date>-->
 
 
@@ -670,7 +670,7 @@ Il est possible d'indiquer l'évolution du nom de l'orchestrateur avec les attri
 <work xml:id="...">
    <composer xml:id="...">
          <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -711,7 +711,7 @@ L'ensemble de ces informations peuvent être omises si le librettiste est [réf�
 </work>
 ```
 <!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth" >Allemagne</country>.
+            <country type="birth">Allemagne</country>.
             </date>-->
 
 
@@ -811,7 +811,7 @@ Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate e
 <work xml:id="...">
    <composer xml:id="...">
          <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -865,7 +865,7 @@ S'il est besoin, dans votre projet d'édition numérique de rentrer dans les dé
 
    **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
 
-
+ 
 <p style="text-align:justify;">
 Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
 </p>
@@ -895,7 +895,7 @@ Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate e
 <work xml:id="...">
    <composer xml:id="...">
          <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth" >Mendelssohn</famName>
+            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
             <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
             <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
             <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
@@ -912,45 +912,25 @@ Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate e
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Dédicace|ODE|
+ |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/elements/dedicatee.html#mayContain_class_tab){:target="_blank"}|Dédicace|ODE|
 
+<p style="text-align:justify;"> 
+ Lorsque l'œuvre éditée fait l'objet d'une dédicace. Nous pouvons indiquer la cible de cette dédicace dans l'élément &lt;dedicatee&gt; qui se situe dans la balise &lt;creation&gt;. Selon les besoins, &lt;dedicatee&gt; peut prendre des sujets divers : une personne physique (&lt;persName&gt;), morale (&lt;corpName&gt;), une délimitation géographique plus ou moins étendu (&lt;country&gt;, &lt;geogFeat&gt;, &lt;geogName&gt;, &lt;region&gt;, &lt;settlement&gt; ou &lt;street&gt;), un style (&lt;styleName&gt;) ou une période (&lt;periodName&gt;). La liste exhaustive se trouve dans la description de l'élément [&lt;dedicatee&gt;](https://music-encoding.org/guidelines/v5/elements/dedicatee.html#mayContain_class_tab).
+</p>
  
+<!-- il peut se trouver, entre c<creation> et <dedicatee>, l'élément <dedication> dont la définition est "Contains a dedicatory statement./
+Contient une déclaration dédicatoire." Je suis d'avis qu'il s'agit plutôt de rapporter une dédicace précise, dans une démarche de description diplomatique. C'est pourquoi je fais le choix de ne pas rajouter cette couche. C'est à débattre. -->
+
 ```xml
-<manifestation>
+<work>
    <creation>
       <dedicatee>
-         <persName>...</persName>
+         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="7543434" role="dedicatee" >
+            <foreName>Ferdinand</foreName> <famName>Gonzague</famName>, <roleName>duc</roleName> <nameLink>de</nameLink> <settlement>Mantoue</settlement> et <nameLink>de</nameLink> <settlement>Montferrat</settlement>
+         </persName>
       </dedicatee>
    </creation>
 </manifestation>  
-```
-
-Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicace elle-même et son contexte:
-
-```xml
-<manifestation>
-   <creation>
-      <dedication>
-         <quote>...</quote>
-         <eventList>...</eventList>
-         <dedicatee>
-            <persName>...</persName>
-         </dedicatee>
-      </dedication>
-   </creation>
-</manifestation> 
-```
- 
-
-
-```xml
-<manifestation>
-   <creation>
-      <dedicatee>
-         <persName>...</persName>
-      </dedicatee>
-   </creation>
-</manifestation>
 ```
 
 <a id="TRN_ref1"></a>
@@ -961,9 +941,7 @@ Autre option : Ou si nous souhaitons ajouter plus d'informations sur la dédicac
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique, le cas échéant, l'identité de la personne responsable de la traduction de l'œuvre. |TRN|
 
- 
-
-Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &lt;contributor&gt;/&lt;persName&gt;
+ Balise (dans le cas d'un traducteur historique, propre à l'œuvre encodée) : &lt;contributor&gt;/&lt;persName&gt;
 
 Autre option (dans le cas d'un traducteur ad hoc, pour l'édition numérique ou l'édition moderne utilisée comme source) : &lt;respStmt&gt;/&lt;persName&gt;
 <p style="text-align:justify;"> 
@@ -1004,7 +982,6 @@ Il est à noter que bien localiser la place du traducteur et de renseigner son i
          <language xml:id="Fr" resp="VV" type="translation">...</language>
      </langUsage>          
    </work>
-
 ```
 
 <a id="TXO_ref1"></a>
@@ -1314,7 +1291,6 @@ Autre option :
 
 ## Classification du mode (Moyen âge et Renaissance)
 
-
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter){:target="_blank"}|Classification du mode (Moyen âge et Renaissance){:target="_blank"}|AMD|
@@ -1351,8 +1327,6 @@ Autre option :
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.6.3. Key, Tempo, and Meter](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkKeyTempoMeter){:target="_blank"}|Classification métrique|AMT|
-
- 
 
 &lt;meter&gt;
 
@@ -1815,7 +1789,6 @@ Autre option :
 <a id="GTL_ref1"></a>
 
 ### Titre de la collection
-
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
