@@ -115,7 +115,7 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 </work>
 ```
 
-### Titre d'un mouvement d'une œuvre 
+### Titre d'un mouvement
 
 ```xml
 <work>
@@ -707,19 +707,17 @@ Pour des informations plus détaillées sur la manière de renseigner de manièr
 </p>
 
 
-<a id="TXO_ref1"></a>
+<a id="TXL_ref1"></a>
 
 ## Langue originale de la pièce
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
- [3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage){:target="_blank"}|Indique la langue originale de l'œuvre encodée. |TXO|
+ [3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage){:target="_blank"}|Indique la langue originale de l'œuvre encodée. |TXO & TXL|
 
-
- &lt;langUsage&gt; contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Pour la distinction de plusieurs langues dans le cas de traductions ou d'adaptations, voir ci-dessous. 
-
-Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
-
+<p style="text-align:justify;">
+ L'élément &lt;langUsage&gt; contient l'ensemble des langues devant être décrites dans le fichier MEI. Dans le cas d'une seule langue renseignée, ici la langue originale, il n'apparait pas nécessaire de s'encombrer d'un attribut le précisant (comme dans l'exemple ci-dessous). Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter l'identifiant ISO de la langue renseignée à l'aide des attributs @auth.uri et @uri.
+</p>
 
 ```xml
 <work xml:id="...">
@@ -729,20 +727,10 @@ Il est cependant conseillé, pour des questions d'interopérabilité, d'ajouter 
 </work>
 ```
 
-<a id="TXL_ref1"></a>
-
 ### Langue de la pièce encodée (si différente de la langue originale)
 
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6.6 Language Usage](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkLanguage){:target="_blank"}|Indique la langue de l'œuvre encodée, si différente de la langue originale (traduction, adaptation, etc). |TXL|
-
- &lt;langUsage>/<language&gt;
-
-<!-- Faut-il faire une manifestation pour l'édition numérique ? -->
-
 <p style="text-align:justify;"> 
- En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence du &lt;ProfilDesc&gt; de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise &lt;langUsage&gt; trouve véritablement son sens en permettant de lister plusieurs langues. 
+ En cas de langue traduite utilisée au sein du fichier, il semble que la seule possibilité en MEI (en raison de l'absence de l'élément &lt;ProfilDesc&gt; de la TEI) est de préciser la nature des langues à l'aide d'un @type (type="original", type="translation"). C'est à ce niveau que la balise &lt;langUsage&gt; trouve véritablement son sens en permettant de lister plusieurs langues. 
 
 En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre à chaque langue afin de pouvoir renseigner ce même identifiant dans la partie &lt;music&gt;, dans &lt;verse&gt; ou &lt;syl&gt; à l'aide de @xml:lang - précisant ainsi la langue utilisée pour chaque entité textuelle présente dans l'édition numérique.  
 </p>

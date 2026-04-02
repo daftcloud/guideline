@@ -311,7 +311,7 @@ Autre option : &lt;persName role="orchestrator"&gt;
 </manifestation>
 ```
 
-<a id="TXO_ref1"></a>
+<a id="TXL_ref1"></a>
 
 ## Langue originale de la pièce
 

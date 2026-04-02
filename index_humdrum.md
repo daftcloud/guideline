@@ -82,7 +82,7 @@ Nous avons entrepris, dans l'index ci-dessous, de répertorier les équivalences
  | SMS | Titre du manuscrit || [Dans la description de la source](guide/sourceDesc.html#PTL_ref1) ||
  | TRN | Traducteur ||| [Dans la description de l'œuvre](guide/manifestationList.html#TRN_ref1) |
  | TXL | Langue de la pièce ||| [Dans la description de l'œuvre](guide/manifestationList.html#TXL_ref1) |
- | TXO | Langue originale ||| [Dans la description de l'œuvre](guide/manifestationList.html#TXO_ref1) |
+ | TXO | Langue originale ||| [Dans la description de l'œuvre](guide/manifestationList.html#TXL_ref1) |
  | YEC | Copyright (édition électronique) | [Dans la description du fichier](guide/fileDesc.html#YEC_ref1) |||
  | YEM | Licence | [Dans la description du fichier](guide/fileDesc.html#YEM_ref1) |||
  | YEN | Pays de copyright | [Dans la description du fichier](guide/fileDesc.html#YEM_ref1) |||
