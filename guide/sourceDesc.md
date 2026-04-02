@@ -112,28 +112,6 @@ permalink: guide/sourceDesc
 </source>
 ```
 
-<!-- 
-```xml
-<source recordtype="d">
-  <biblStruct>
-       <repository>
-          <corpName>bibliothèque nationale de France</corpName>
-          <abbr>BnF</abbr>
-       </repository>
-     <relatedItem>
-       <biblStruct>
-          <identifier auth="BnF" auth.uri="https://archivesetmanuscrits.bnf.fr/ark:/12148/" codedval="cc45158c">Français 146</identifier>
-          <abbr>Fr. 146</abbr>
-          <title type="alternative">Roman de Fauvel</title>
-          <locus label="folio" from="1r" to="2r">ff. 1r-2r</locus>
-       </biblStruct>
-     </relatedItem>
-  </biblStruct>
-</source>
-``` 
-<a id="ONM_ref1"></a>
--->
-
 <a id="COM_ref3"></a>
 
 ## Compositeur de la source utilisée pour l'édition digitale
