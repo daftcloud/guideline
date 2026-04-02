@@ -2,7 +2,7 @@
 title: Description de l'œuvre &lt;work&gt;
 layout: default
 nav_order: 7
-parent: Guideline
+parent: Le guide
 permalink: /guide/work
 ---
 
