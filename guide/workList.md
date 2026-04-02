@@ -178,9 +178,16 @@ Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans 
    </composer>
 </work>
 ```
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+</p>
+
+<a id="nom_exhaustif"></a>
+
+## Renseigner un nom de façon exhaustive
 
 <p style="text-align:justify;">
-C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du compositeur. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes et pseudonymes historique. 
+ La MEI nous propose différentes balises pour indiquer avec précision les noms ainsi que noms d’emprunts, noms de plumes et pseudonymes historique. 
 </p>
 
    **&lt;foreName&gt;** pour un prénom,
@@ -222,7 +229,7 @@ Il convient alors de les intégrer dans l'élément &lt;persName&gt;.
 ```
 
 <p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du compositeur avec les attributs @startdate et @enddate.
+Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate et @enddate.
 </p>
 
 *Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
@@ -325,67 +332,10 @@ Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans 
    </librettist>
 </work>
 ```
-<p style="text-align:justify;">
-C'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous les renseignements qu'on juge utile de noter sur l'identité du librettiste. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
-</p>
-
-   **&lt;foreName&gt;** pour un prénom,
-
-
-   **&lt;famName&gt;** pour un nom de famille,
-
-
-   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
-
-
-   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
-
-
-   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
-
-
-   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
-
 
 <p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
 </p>
-
-*Exemple du nom complet de Mozart*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
-            <famName>Mozart</famName>
-            ,
-            <foreName type="baptismal">Johannes</foreName>
-            <foreName type="baptismal">Chrysostomus</foreName>
-            <foreName type="familiar">Wolfgangus</foreName>
-            <foreName type="baptismal">Theophilus</foreName>
-         </persName>
-   </composer>
-</work>
-```
-
-<p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom du librettiste avec les attributs @startdate et @enddate. 
-</p>
-
-*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
-            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
-            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
-            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
-            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
-            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
-         </persName>
-   </composer>
-</work>
-```
 
 ### Dates et lieux de naissance et de décès du librettiste
 
@@ -473,67 +423,8 @@ Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le
 ```
 
 <p style="text-align:justify;">
-S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité de l'arrangeur, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
 </p>
-
-   **&lt;foreName&gt;** pour un prénom,
-
-
-   **&lt;famName&gt;** pour un nom de famille,
-
-
-   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
-
-
-   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
-
-
-   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
-
-
-   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
-
-
-<p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
-
-</p>
-
-*Exemple du nom complet de Mozart*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
-            <famName>Mozart</famName>
-            ,
-            <foreName type="baptismal">Johannes</foreName>
-            <foreName type="baptismal">Chrysostomus</foreName>
-            <foreName type="familiar">Wolfgangus</foreName>
-            <foreName type="baptismal">Theophilus</foreName>
-         </persName>
-   </composer>
-</work>
-```
-
-<p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom de l'arrangeur avec les attributs @startdate et @enddate. 
-</p>
-
-*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
-            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
-            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
-            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
-            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
-            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
-         </persName>
-   </composer>
-</work>
-```
 
 
 ### Dates et lieux de naissance et de décès de l'arrangeur
@@ -618,68 +509,9 @@ Selon les guidelines MEI, il n'existe pas d'élément correspondant à la foncti
 </work>
 ```
 
-
 <p style="text-align:justify;">
-S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité de l'orchestrateur, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
 </p>
-
-   **&lt;foreName&gt;** pour un prénom,
-
-
-   **&lt;famName&gt;** pour un nom de famille,
-
-
-   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
-
-
-   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
-
-
-   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
-
-
-   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
-
-
-<p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
-</p>
-
-*Exemple du nom complet de Mozart*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
-            <famName>Mozart</famName>
-            ,
-            <foreName type="baptismal">Johannes</foreName>
-            <foreName type="baptismal">Chrysostomus</foreName>
-            <foreName type="familiar">Wolfgangus</foreName>
-            <foreName type="baptismal">Theophilus</foreName>
-         </persName>
-   </composer>
-</work>
-```
-
-<p style="text-align:justify;">
-Il est possible d'indiquer l'évolution du nom de l'orchestrateur avec les attributs @startdate et @enddate. 
-</p>
-
-*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
-            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
-            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
-            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
-            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
-            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
-         </persName>
-   </composer>
-</work>
-```
 
 ### Dates et lieux de naissance et de décès de l'orchestrateur
 
@@ -761,66 +593,8 @@ Cette information peut être omise si l'orchestrateur est référencé avec une 
 ```
 
 <p style="text-align:justify;">
-S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité du commanditaire, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
 </p>
-
-   **&lt;foreName&gt;** pour un prénom,
-
-
-   **&lt;famName&gt;** pour un nom de famille,
-
-
-   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
-
-
-   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
-
-
-   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
-
-
-   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
-
-
-<p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
-</p>
-
-*Exemple du nom complet de Mozart*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
-            <famName>Mozart</famName>
-            ,
-            <foreName type="baptismal">Johannes</foreName>
-            <foreName type="baptismal">Chrysostomus</foreName>
-            <foreName type="familiar">Wolfgangus</foreName>
-            <foreName type="baptismal">Theophilus</foreName>
-         </persName>
-   </composer>
-</work>
-```
-
-<p style="text-align:justify;">
-Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate et @enddate. 
-</p>
-
-*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
-            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
-            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
-            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
-            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
-            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
-         </persName>
-   </composer>
-</work>
-```
 
 
 <a id="OCL_ref1"></a>
@@ -845,66 +619,8 @@ Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate e
 </biblStruc>
 ```
 <p style="text-align:justify;">
-S'il est besoin, dans votre projet d'édition numérique de rentrer dans les détails de l'identité du collecteur de la musique, c'est dans l'élément &lt;work&gt; qu'il convient d'indiquer tous ces renseignements. À cet effet, la MEI nous propose différentes balises pour indiquer les noms d’emprunts, noms de plumes ou pseudonymes historiques. 
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
 </p>
-
-   **&lt;foreName&gt;** pour un prénom,
-
-
-   **&lt;famName&gt;** pour un nom de famille,
-
-
-   **&lt;genName&gt;** pour une composante de nom indiquant la génération, par exemple « Jr » ou « Sr »,
-
-
-   **&lt;addName&gt;** pour un élément supplémentaire comme un surnom, une épithète ou un alias,
-
-
-   **&lt;nameLink&gt;** pour une particule patronymique comme « de », « von » ou « van der » par exemple,
-
-
-   **&lt;roleName&gt;**  pour la composante de nom indiquant un titre ou un rang comme « Sir ».
-
- 
-<p style="text-align:justify;">
-Il convient alors de les intégrer dans l'élément &lt;persName&gt;. 
-</p>
-
-*Exemple du nom complet de Mozart*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://d-nb.info/gnd" authority="GND" codedval="118584596" role="composer">
-            <famName>Mozart</famName>
-            ,
-            <foreName type="baptismal">Johannes</foreName>
-            <foreName type="baptismal">Chrysostomus</foreName>
-            <foreName type="familiar">Wolfgangus</foreName>
-            <foreName type="baptismal">Theophilus</foreName>
-         </persName>
-   </composer>
-</work>
-```
-
-<p style="text-align:justify;">
-Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate et @enddate. 
-</p>
-
-*Exemple de l'évolution du nom de Fanny Mendelssohn durant sa vie*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName authURI="http://viaf.org/viaf/" authority="VIAF" codedval="2535006" role="composer">
-            <famName startdate="1805-11-14" enddate="1829-10-03" type="birth">Mendelssohn</famName>
-            <famName startdate="1816-03-21" enddate="1829-10-03" type="baptismal">Bartholdy</famName>
-            <famName startdate="1829-10-03" enddate="1847-05-14" type="married">Hensel</famName>
-            <foreName startdate="1805-11-14" enddate="1829-10-03" type="birth">Fanny</foreName>
-            <foreName startdate="1805-11-14" enddate="1816-03-21" type="birth">Zippora</foreName>
-            <foreName startdate="1816-03-21" enddate="1847-05-14" type="baptismal">Cäcilie</foreName>
-         </persName>
-   </composer>
-</work>
-```
 
 <a id="ODE_ref1"></a>
 
@@ -932,6 +648,10 @@ Contient une déclaration dédicatoire." Je suis d'avis qu'il s'agit plutôt de 
    </creation>
 </manifestation>  
 ```
+
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+</p>
 
 <a id="TRN_ref1"></a>
 
@@ -981,6 +701,11 @@ Contient une déclaration dédicatoire." Je suis d'avis qu'il s'agit plutôt de 
      </langUsage>          
    </work>
 ```
+
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+</p>
+
 
 <a id="TXO_ref1"></a>
 
@@ -1104,6 +829,9 @@ Autre option : Même logique s'il s'agit de la maison d'édition en utilisant &l
 </work>
 ```
 
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+</p>
 
 <a id="AIN_ref1"></a>
 
@@ -1414,6 +1142,10 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 </manifestation>
 ```
 
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+</p>
+
 <a id="MPS_ref1"></a>
 
 ### Interprète soupçonné (?)
@@ -1668,6 +1400,10 @@ Autre option : Si nous possédons l'adresse exacte du lieu d'exécution/représe
       </event>
 </history>
 ```
+
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+</p>
 
 <a id="MPD_ref1"></a>
 
