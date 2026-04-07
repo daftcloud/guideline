@@ -157,34 +157,11 @@ Par conséquent, tous les exemples de ce chapitre prendront comme racine la bali
 </manifestation>
 ```
 
-<a id="COS_ref1"></a>
-<a id="COL_ref1"></a>
-
-## Compositeur de l'œuvre
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM, COA, COS & COL|
-
-
-<p style="text-align:justify;">
-Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
-</p>
-
-```xml
-<work>
-   <composer xml:id="...">
-      <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
-   </composer>
-</work>
-```
-<p style="text-align:justify;">
-Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
-</p>
-
 <a id="nom_exhaustif"></a>
 
-## Renseigner un nom de façon exhaustive
+## Saisir les métadonnées biographiques d’une personne
+
+### Renseigner un nom de façon exhaustive
 
 <p style="text-align:justify;">
  La MEI nous propose différentes balises pour indiquer avec précision les noms ainsi que noms d’emprunts, noms de plumes et pseudonymes historique. 
@@ -250,7 +227,7 @@ Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate e
 
 <a id="CBL_ref1"></a>
 
-### Dates et lieux de naissance et de décès du compositeur
+### Les dates et lieux de naissance et de décès d'une personne
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -287,7 +264,7 @@ L'ensemble de ces informations peuvent être omises si le compositeur est [réf�
 
 <a id="CNT_ref1"></a>
 
-### Nationalité du compositeur
+### Indiquer la nationalité
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -315,7 +292,32 @@ Cette information peut être omise si le compositeur est référencé avec une U
 
 <a id="LIB_ref1"></a>
 
-## Nom du librettiste
+<a id="COS_ref1"></a>
+<a id="COL_ref1"></a>
+
+## Compositeur de l'œuvre
+
+ |Chapitre des Guidelines | Définition | Clé HUMDRUM |
+ | :--------------- |:---------------:| -----:|
+ |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique le nom du compositeur de l'œuvre.|COM, COA, COS & COL|
+
+
+<p style="text-align:justify;">
+Le ou les compositeurs renseignés ici ne concernent que l'œuvre encodée dans le fichier MEI et non une œuvre tierce. À noter également que la valeur de rôle est libre, mais dans un souci d'homogéneité, nous conseillons de lui attribuer la valeur "composer". Pour finir, nous préconisons de renseigner un URI identifiant l'individu concerné sur le web afin d'améliorer l'interopérabilité des métadonnées. (pour plus d'information sur la gestion des URI d'autorité, voir [le chapitre sur l'autorité](guide/thesauri.html)).
+</p>
+
+```xml
+<work>
+   <composer xml:id="...">
+      <persName role="composer" auth="..." auth.uri="http://..." codedval="...">...</persName>
+   </composer>
+</work>
+```
+<p style="text-align:justify;">
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif). En ce qui concerne ses dates et lieux de naissances, voir [Renseigner un nom de façon exhaustive](guide/workList.html#CBL_ref1). Enfin, pour ce qui concerne sa nationalité, voir [Indiquer la nationalité](guide/workList.html#CNT_ref1)
+</p>
+
+## Librettiste
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -334,73 +336,13 @@ Le ou les librettistes renseignés ici ne concernent que l'œuvre encodée dans 
 ```
 
 <p style="text-align:justify;">
-Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif). En ce qui concerne ses dates et lieux de naissances, voir [Renseigner un nom de façon exhaustive](guide/workList.html#CBL_ref1). Enfin, pour ce qui concerne sa nationalité, voir [Indiquer la nationalité](guide/workList.html#CNT_ref1)
 </p>
 
-### Dates et lieux de naissance et de décès du librettiste
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du librettiste.|CDT, CBL et CDL|
-
-<p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès du librettiste dans la balise &lt;librettist&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
-
-Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
-
-L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guide/thesauri.html).
-</p>
-
-<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
-
-
-```xml
-<work xml:id="...">
-   <librettist xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date isodate="..." type="birth">
-            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
-         </date>
-         <date isodate="..." type="death">
-            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
-      </date>     
-   </librettist>
-</work>
-```
-<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth">Allemagne</country>.
-            </date>-->
-
-
-### Nationalité du librettiste
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du librettiste.|CNT|
-
-<p style="text-align:justify;"> 
-La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
-
-Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
-
-Cette information peut être omise si le librettiste est référencé avec une URI externe.
-</p>
-
-<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
-
-*Exemple de la nationalié de Beethoven*
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
-   </composer>
-</work>
-```
 
 <a id="LAR_ref1"></a>
 
-## Nom de l'arrangeur 
+## Arrangeur 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -423,72 +365,12 @@ Le ou les arrangeurs renseignés ici ne concernent que l'œuvre encodée dans le
 ```
 
 <p style="text-align:justify;">
-Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif). En ce qui concerne ses dates et lieux de naissances, voir [Renseigner un nom de façon exhaustive](guide/workList.html#CBL_ref1). Enfin, pour ce qui concerne sa nationalité, voir [Indiquer la nationalité](guide/workList.html#CNT_ref1)
 </p>
-
-
-### Dates et lieux de naissance et de décès de l'arrangeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès de l'arrangeur.|-|
-
-<p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès de l'arrangeur dans la balise &lt;arranger&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
-
-Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
-
-L'ensemble de ces informations peuvent être omises si l'arrangeur est [référencé avec une URI externe](guide/thesauri.html).
-</p>
-
-<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date isodate="..." type="birth">
-            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
-         </date>
-         <date isodate="..." type="death">
-            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
-      </date>     
-   </composer>
-</work>
-```
-<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth">Allemagne</country>.
-            </date>-->
-
-
-### Nationalité de l'arrangeur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité du librettiste.|-|
-
-<p style="text-align:justify;"> 
-La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
-
-Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
-
-Cette information peut être omise si l'arrangeur est référencé avec une URI externe.
-</p>
-
-<!-- <annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
-   </composer>
-</work>
-```
 
 <a id="LOR_ref1"></a>
 
-## Nom de l'orchestrateur 
+## Orchestrateur 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -510,67 +392,9 @@ Selon les guidelines MEI, il n'existe pas d'élément correspondant à la foncti
 ```
 
 <p style="text-align:justify;">
-Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif). En ce qui concerne ses dates et lieux de naissances, voir [Renseigner un nom de façon exhaustive](guide/workList.html#CBL_ref1). Enfin, pour ce qui concerne sa nationalité, voir [Indiquer la nationalité](guide/workList.html#CNT_ref1)
 </p>
 
-### Dates et lieux de naissance et de décès de l'orchestrateur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès de l'arrangeur.|-|
-
-<p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès de l'orchestrateur dans la balise &lt;arranger&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
-
-Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
-
-L'ensemble de ces informations peuvent être omises si le librettiste est [référencé avec une URI externe](guide/thesauri.html).
-</p>
-
-<!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName auth="..." auth.uri="http://..." codedval="...">...</persName>
-         <date isodate="..." type="birth">
-            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
-         </date>
-         <date isodate="..." type="death">
-            <country auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">Allemagne</country>
-      </date>     
-   </composer>
-</work>
-```
-<!-- <date type="birth" isodate="1805-11-14">Née le 14 Novembre 1085 en
-            <country type="birth">Allemagne</country>.
-            </date>-->
-
-
-### Nationalité de l'orchestrateur
-
- |Chapitre des Guidelines | Définition | Clé HUMDRUM |
- | :--------------- |:---------------:| -----:|
- |[3.6 Work Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerWorkDescription){:target="_blank"}|Indique la nationalité de l'orchestrateur.|-|
-
-<p style="text-align:justify;"> 
-La MEI ne propose pas de balise spécifique à la nationalité d'une personne. Dans le cas où cette information est intéressante dans votre édition, nous vous proposons de l'indiquer via un élément &lt;country&gt; avec un attribut @type="nationality".
-
-Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
-
-Cette information peut être omise si l'orchestrateur est référencé avec une URI externe.
-</p>
-
-<!--<annot label="nationality">Français</annot> ? Est-ce mieux que country ? -->
-
-```xml
-<work xml:id="...">
-   <composer xml:id="...">
-         <persName auth="VIAF" auth.uri="https://viaf.org/viaf/" codedval="32182557">Ludwig van Beethoven</persName>,
-         <country type="nationality" auth="ISO 3166" auth.uri="https://www.iso.org/obp/ui/#iso:code:3166:" codedval="DE">allemand</country>
-   </composer>
-</work>
-```
 
 <a id="OCO_ref1"></a>
 
@@ -593,9 +417,8 @@ Cette information peut être omise si l'orchestrateur est référencé avec une 
 ```
 
 <p style="text-align:justify;">
-Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif). En ce qui concerne ses dates et lieux de naissances, voir [Renseigner un nom de façon exhaustive](guide/workList.html#CBL_ref1). Enfin, pour ce qui concerne sa nationalité, voir [Indiquer la nationalité](guide/workList.html#CNT_ref1)
 </p>
-
 
 <a id="OCL_ref1"></a>
 
@@ -619,7 +442,7 @@ Pour des informations plus détaillées sur la manière de renseigner de manièr
 </biblStruc>
 ```
 <p style="text-align:justify;">
-Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif)
+Pour des informations plus détaillées sur la manière de renseigner de manière exhaustive un nom (noms réels, noms d’emprunt, pseudonymes, etc.) voir [Renseigner un nom de façon exhaustive](guide/workList.html#nom_exhaustif). En ce qui concerne ses dates et lieux de naissances, voir [Renseigner un nom de façon exhaustive](guide/workList.html#CBL_ref1). Enfin, pour ce qui concerne sa nationalité, voir [Indiquer la nationalité](guide/workList.html#CNT_ref1)
 </p>
 
 <a id="ODE_ref1"></a>

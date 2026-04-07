@@ -6,23 +6,28 @@ has_toc: false
 ---
 
 <p style="text-align:justify;"> 
-Le <emphase>guide du header MEI</emphase> que nous proposons pour l'élaboration de métadonnées MEI interopérables se présente en trois parties. 
+Le <emphase>guide du header MEI</emphase> que nous proposons pour l’élaboration de métadonnées MEI interopérables s’articule en quatre parties distinctes. Chacune d’elles aborde un aspect clé de la description des fichiers MEI, afin de garantir leur cohérence et leur interopérabilité. 
 </p>
 
-[Description du fichier MEI encodé &lt;fileDesc&gt;](guide/fileDesc.html)
+[Description du fichier MEI encodé &lt;fileDesc&gt;](fileDesc.html)
 
 <p style="text-align:justify;"> 
-Cette première partie s'attache à décrire le fichier lui-même. C'est là que l'on rentre les informations sur les encodeurs et le projet derrière la création du fichier MEI  
+Cette première partie est consacrée à la description du fichier MEI lui-même. Elle permet de renseigner les informations essentielles sur les encodeurs à l'initiative de la création du fichier MEI ainsi que sur le projet ou le contexte ayant motivé sa création.
 </p>
 
-
-[Description de la source &lt;SourceDesc&gt;](guide/sourceDesc.html)
+[Description du fichier MEI encodé &lt;work&gt;](workList.html)
 
 <p style="text-align:justify;"> 
-Il s'agit, dans cette partie, de renseigner toutes les informations concernant la ou les sources qui ont servi à l'élaboration du fichier Mei.
+Cette section se concentre sur l’œuvre musicale qui fait l’objet de l’édition numérique. Elle vise à fournir une identification claire et précise de l’œuvre.
 </p>
 
-[Description de l'œuvre musicale &lt;manifestationList&gt;](guide/manifestationList.html)
+[Description de la source &lt;SourceDesc&gt;](sourceDesc.html)
+
+<p style="text-align:justify;"> 
+Ici, l’objectif est de documenter les sources (manuscrites, imprimées, numériques) utilisées pour élaborer le fichier MEI. Cette partie est cruciale pour assurer la traçabilité et la fiabilité des données encodées.
+</p>
+
+[Description de l'œuvre musicale &lt;manifestationList&gt;](manifestationList.html)
  <p style="text-align:justify;"> 
-Cette dernière partie se rapproche des questions d'édition lié au modèle FRBR. C'est ici qu'on entrera le plus en détail sur l'œuvre autour du fichier édité dans l'édition MEI.
+Cette dernière partie s’inspire du modèle FRBR (Functional Requirements for Bibliographic Records) pour aborder les questions liées à l’édition. Elle permet de détailler 
 </p>
