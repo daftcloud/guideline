@@ -12,13 +12,13 @@ const tempPdfPath = path.join(outputDir, "temp_guideline.pdf");
 const url = `file://${path.join(rootDir, "_site", "print.html")}`;
 
 (async () => {
-  
+
   fs.mkdirSync(outputDir, { recursive: true });
 
   const browser = await puppeteer.launch({
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
-    
+
   });
 
   const page = await browser.newPage();
@@ -31,10 +31,10 @@ const url = `file://${path.join(rootDir, "_site", "print.html")}`;
   height: 794,  
   printBackground: true,
   margin: {
-    top: "1cm",
-    bottom: "1cm",
-    left: "1cm",
-    right: "1cm"
+    top: "2cm",
+    bottom: "2cm",
+    left: "2cm",
+    right: "2cm"
   },
 });
 
