@@ -234,11 +234,11 @@ Il est possible d'indiquer l'évolution d'un nom avec les attributs @startdate e
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Indique les dates de naissance et de décès du compositeur.|CDT, CBL et CDL|
 
 <p style="text-align:justify;"> 
-Il est possible d'indiquer les informations concernant la naissance et le décès du compositeur dans la balise &lt;composer&gt; en ajoutant une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
+Il est possible d'indiquer les informations concernant la naissance et le décès d'une personne en ajoutant, après l'élément &lt;persName&gt; une balise &lt;date&gt; avec l'attribut @isodate et un élément de lieu.
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-L'ensemble de ces informations peuvent être omises si le compositeur est [référencé avec une URI externe](guide/thesauri.html).
+L'ensemble de ces informations peuvent être omises si la personne est [référencée avec une URI externe](guide/thesauri.html).
 </p>
 
 <!-- J'hésite entre les attributs @type et @role pour faire mention de birth and death. Ou alors on utilise @startdate et @enddate ? -->
@@ -275,7 +275,7 @@ La MEI ne propose pas de balise spécifique à la nationalité d'une personne. D
 
 Nous conseillons d'utiliser la norme [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) pour identifier les pays indiqués.
 
-Cette information peut être omise si le compositeur est référencé avec une URI externe.
+Cette information peut être omise si la personne est référencée avec une URI externe.
 </p>
 
 <!--<annot label="nationality">français</annot> ? Est-ce mieux que country ? -->
@@ -398,7 +398,7 @@ Pour des informations plus détaillées sur la manière de renseigner de manièr
 
 <a id="OCO_ref1"></a>
 
-### Commanditaire
+## Commanditaire
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
