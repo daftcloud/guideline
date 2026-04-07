@@ -29,10 +29,10 @@ const url = `file://${path.join(rootDir, "_site", "print.html")}`;
   format : a4, 
   printBackground: true,
   margin: {
-    top: "2cm",
-    bottom: "2cm",
-    left: "2cm",
-    right: "2cm"
+    top: "1cm",
+    bottom: "1cm",
+    left: "1cm",
+    right: "1cm"
   },
 });
 
