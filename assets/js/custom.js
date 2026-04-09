@@ -36,7 +36,9 @@ topDiv.appendChild(footer);
   const navList = document.querySelector("#site-nav > .nav-list");
   if (navList) navList.appendChild(li);
 
+
   /* Bouton Mobile */
+  /*
   const header = document.querySelector(".site-header");
   const mobBtn = document.createElement("button");
   const burger = header.querySelector("#menu-button");
@@ -55,7 +57,7 @@ topDiv.appendChild(footer);
   if (header && burger) {
     header.insertBefore(mobBtn, burger);
   }
-
+*/
   // Ajout des logos des institutions en dessous de la side bar.
 
   const logos = document.querySelector(".footer-logos");
