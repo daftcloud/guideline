@@ -575,7 +575,9 @@ En plus de l'identifiant ISO, il est conseillé de préciser un @xml:id propre �
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Premier éditeur|PPR|
 
- 
+<p style="text-align:justify;"> 
+ Les informations autour de la première édition de l'oeuvre éditée se renseigne dans l'élément &lt;editor&gt;    
+</p>
 ```xml
 <work>
    <editor xml:id="E1" n="1" precedes="#E2">
