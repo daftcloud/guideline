@@ -10,7 +10,6 @@ Dans le souci de proposer un guide aussi complet que possible, fondé sur des ca
 
 # Référentiels d’autorité
 ## Individus
-
 <p style="text-align:justify;">
 Les référentiels d’autorité consacrés aux individus sont sans doute les plus nombreux. Dans nos recommandations, plusieurs solutions peuvent être envisagées selon la nature des personnes dont l’identité doit être encodée. Pour les personnalités historiques (compositeur.ice, musicien.ne, auteur.ice, éditeur.ice, etc.), nous privilégions l’utilisation de référentiels tels que [VIAF](https://viaf.org/fr), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) ou l’[ISNI](https://isni.org/). Ces ressources présentent l’avantage d’être largement diffusées à l’échelle internationale. Elles jouent un rôle central dans l’écosystème des données liées (Linked Open Data) en servant de nœuds d’interconnexion entre de nombreux catalogues, bases de données et institutions patrimoniales. Elles permettent ainsi de facilement désambiguïser les individus, de relier efficacement les différentes variantes d’un même nom et de faciliter l’interopérabilité des données entre de nombreux projets et institutions. 
 </p>
@@ -19,7 +18,6 @@ Lorsque la personne à renseigner est directement liée à la réalisation de l�
 </p>
 
 ## Lieux
-
 <p style="text-align:justify;">
 Pour l’identification des lieux, nous préconisons l’utilisation du référentiel [GeoNames](https://www.geonames.org/). Développé comme une base de données géographique ouverte et collaborative, GeoNames recense plusieurs millions d’entités géographiques à travers le monde, qu’il s’agisse de pays, de régions, de villes, de cours d’eau, de reliefs ou encore de sites patrimoniaux. Chaque lieu y est associé à un identifiant unique et pérenne, ainsi qu’à un ensemble d’informations normalisées telles que les coordonnées géographiques, les variantes linguistiques du nom ou encore les relations administratives.
 </p>
@@ -28,7 +26,6 @@ L’utilisation de GeoNames permet ainsi de désambiguïser les toponymes, de re
 </p>
 
 ## Sources musicales
-
 <p style="text-align:justify;">
 Pour l’identification des sources musicales, nous recommandons naturellement le recours au [RISM](https://rism.info/) (Répertoire International des Sources Musicales). Fondé en 1952, ce projet international a pour objectif de recenser et de décrire les sources musicales conservées dans les bibliothèques, archives, musées et collections privées du monde entier. Il constitue aujourd’hui l’un des principaux outils de référence pour la localisation et l’identification des manuscrits et imprimés musicaux, en fournissant des notices normalisées et des identifiants pérennes largement reconnus par la communauté scientifique.
 </p>
@@ -41,7 +38,6 @@ Il convient toutefois de souligner que le RISM intègre désormais un nombre cro
 
 # Thésauri
 ## Instruments de musique
-
 <p style="text-align:justify;">
 Pour l’identification et la désignation des instruments de musique, nous recommandons l’utilisation du thésaurus développé par le projet [MIMO](https://vocabulary.mimo-international.com/InstrumentsKeywords/fr/) (Musical Instrument Museums Online). Conçu dans le cadre d’une collaboration internationale entre plusieurs musées et institutions patrimoniales, ce référentiel propose une nomenclature normalisée des instruments de musique fondée sur la classification organologique de Hornbostel et Sachs. Chaque terme est associé à un identifiant pérenne et s’inscrit dans une structure hiérarchique permettant de relier les instruments à leurs familles et sous-familles respectives.
 </p>
@@ -50,24 +46,26 @@ L’intérêt principal du thésaurus MIMO réside dans sa capacité à harmonis
 </p>
 
 ## Genres musicaux
-
 <p style="text-align:justify;">
 Pour l’identification des genres musicaux, nous préconisons le vocabulaire de l'IAML enrichi dans le cadre du projet Doremus : [List of musical genres according to IAML](https://data.doremus.org/vocabulary/iaml/genre/). Conçu en collaboration avec plusieurs grandes institutions de conservation et bibliothèques, ce référentiel fournit une liste structurée de genres musicaux permettant de décrire de manière cohérente des répertoires très variés. Son utilisation favorise l’harmonisation des métadonnées et facilite les recherches transversales entre catalogues et bases de données. Dans le contexte d’une édition critique, il permet notamment de normaliser la description des œuvres tout en conservant un haut niveau d’interopérabilité avec les autres infrastructures de données musicales.
 </p>
 
 ## Adaptations et dérivations
-
 <p style="text-align:justify;"> 
 Pour caractériser les relations de dérivation entre œuvres, nous recommandons l’utilisation du vocabulaire [List of Types of Derivation](https://data.doremus.org/vocabulary/derivation/) du projet Doremus. Ce thésaurus propose une typologie normalisée permettant de décrire les différentes formes de transformations qu’une œuvre peut subir au cours de sa transmission ou de sa réception : arrangement, orchestration, paraphrase, etc. L’emploi de ce vocabulaire permet d’expliciter avec précision la nature des liens existant entre plusieurs états ou versions d’une même œuvre et favorise l’interopérabilité des données entre catalogues, bibliothèques et éditions numériques.
 </p>
 
 ## Fonctions 
-
 <p style="text-align:justify;">
 Il existe différents répertoires définissant les fonctions ou rôles exercés par des individus dans le processus de création, de transmission, etc. La Music Ontology constitue à ce titre un cadre conceptuel pour la description de l’objet musical et de son environnement documentaire, notamment dans le domaine des ressources enregistrées. Toutefois, son approche demeure principalement centrée sur la ressource musicale elle-même et ne permet pas toujours d’exprimer de manière explicite les relations entre les individus et les différentes matérialités musicales traditionnelles.
 Pour la description des fonctions, nous recommandons prioritairement l’usage du vocabulaire Doremus [Relationship Designators for Agents](https://data.doremus.org/vocabulary/function/). Ce thésaurus comprend 103 concepts spécifiquement conçus pour qualifier les rôles des personnes intervenant dans le cycle de vie d’une œuvre ou d’une source. Une telle granularité s’avère particulièrement précieuse dans le cadre d’une édition critique où plusieurs acteurs peuvent intervenir à différents niveaux de la chaîne de production musicale et documentaire.
 </p>
 <p style="text-align:justify;"> 
 Il convient de noter que les guidelines de la MEI préconisent l’emploi des [MARC Relators](https://www.loc.gov/marc/relators/relacode.html) publiés par la Library of Congress, notamment à travers l’attribut @role. Cependant, certaines définitions proposées par ce référentiel peuvent paraître peu adaptées aux besoins de la musicologie. Ainsi, le concept fondamental de 'composer' y est défini comme « A person, family, or organization responsible for creating or contributing to a musical resource by adding music to a work that originally lacked it or supplements it ». Une telle formulation, davantage orientée vers les problématiques bibliothéconomiques, s’éloigne de l’acception commune retenue en musicologie. Pour cette raison, nous privilégions le vocabulaire Doremus dont les définitions apparaissent plus directement alignées sur les pratiques de description et d’analyse partagées en musicologie.
+</p>
+
+## Concepts artistiques connexes 
+<p style="text-align:justify;">
+Pour la description des concepts, des techniques, des objets culturels ou encore de certaines notions liées à la création artistique, nous recommandons l’utilisation de l’[Art & Architecture Thesaurus](https://www.getty.edu/research/tools/vocabularies/aat/) développé par le Getty Research Institute. Ce vocabulaire contrôlé rassemble plusieurs dizaines de milliers de concepts relatifs aux arts, à l’architecture, au patrimoine culturel et aux pratiques artistiques. Organisé de manière hiérarchique et multilingue, il permet d’employer une terminologie normalisée tout en facilitant les rapprochements entre disciplines et projets de recherche. Dans le cadre d’une édition critique musicale, l’AAT peut être particulièrement utile pour décrire des contextes culturels et patrimoniaux associés aux oeuvres musicales.
 </p>
 
