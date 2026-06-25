@@ -21,19 +21,19 @@ Chaque notice est par ailleurs accompagnée d’un ou plusieurs exemples XML ill
 Cette première partie est consacrée à la description du fichier MEI lui-même. Elle permet de renseigner les informations essentielles sur les encodeurs à l'initiative de la création du fichier MEI ainsi que sur le projet, ou le contexte, ayant motivé sa création.
 </p>
 
-## [Partie 2 : Description de l'oeuvre encodé &lt;work&gt;](workList.html)
+## [Partie 2 : Description de l'oeuvre encodée &lt;work&gt;](workList.html)
 
 <p style="text-align:justify;"> 
 Cette section se concentre sur l’œuvre musicale qui fait l’objet de l’édition numérique. Elle vise à fournir une identification claire et précise de l’œuvre, de son contexte de création ou encore de ses caractéristiques musicales.
 </p>
 
-## [Partie 3 : Description de la source &lt;SourceDesc&gt;](sourceDesc.html)
+## [Partie 3 : Description des sources &lt;SourceDesc&gt;](sourceDesc.html)
 
 <p style="text-align:justify;"> 
 Ici, l’objectif est de documenter les sources (manuscrites, imprimées, numériques, discographiques, etc.) utilisées pour élaborer le fichier MEI. Cette partie est cruciale pour assurer la traçabilité et la fiabilité des données encodées.
 </p>
 
-## [Partie 4 : Description de l'œuvre musicale &lt;manifestationList&gt;](manifestationList.html)
+## [Partie 4 : Description de l'œuvre comme manifestation &lt;manifestationList&gt;](manifestationList.html)
  <p style="text-align:justify;"> 
 Cette dernière partie s’inspire du modèle FRBR (Functional Requirements for Bibliographic Records) pour aborder des questions liées à l’édition. La MEI intègre cette logique dans ses headers afin de distinguer les différents niveaux de représentation d’une œuvre musicale et de préciser les relations entre œuvres, expressions, manifestations et exemplaires. Elle permet ainsi de détailler le positionnement ontologique de sources musicales dont le statut peut être complexe, notamment dans le cadre des traditions manuscrites ou encore des arrangements.
 </p>
