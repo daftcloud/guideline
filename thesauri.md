@@ -3,12 +3,11 @@ title: Référentiels d'autorités et thesauri
 layout: default
 nav_order: 3
 ---
-
+# Référentiels d’autorité et thesauri
 <p style="text-align:justify;">
 Dans le souci de proposer un guide aussi complet que possible, fondé sur des cas concrets issus des pratiques éditoriales numériques actuelles, nous présentons ci-dessous une sélection de référentiels et de vocabulaires contrôlés susceptibles d’être mobilisés dans le cadre d’une édition critique musicale. Organisée par type d’entité, cette liste n’a pas vocation à être exhaustive ni prescriptive. Elle rassemble avant tout les référentiels que nous recommandons en raison de leur diffusion, de leur stabilité et de leur intérêt pour l’interopérabilité des données. Les différents vocabulaires présentés seront évoqués et contextualisés au fil du guide, en fonction des problématiques éditoriales auxquelles ils répondent.
 </p>
 
-# Référentiels d’autorité
 ## Individus
 <p style="text-align:justify;">
 Les référentiels d’autorité consacrés aux individus sont sans doute les plus nombreux. Dans nos recommandations, plusieurs solutions peuvent être envisagées selon la nature des personnes dont l’identité doit être encodée. Pour les personnalités historiques (compositeur.ice, musicien.ne, auteur.ice, éditeur.ice, etc.), nous privilégions l’utilisation de référentiels tels que [VIAF](https://viaf.org/fr), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) ou l’[ISNI](https://isni.org/). Ces ressources présentent l’avantage d’être largement diffusées à l’échelle internationale. Elles jouent un rôle central dans l’écosystème des données liées (Linked Open Data) en servant de nœuds d’interconnexion entre de nombreux catalogues, bases de données et institutions patrimoniales. Elles permettent ainsi de facilement désambiguïser les individus, de relier efficacement les différentes variantes d’un même nom et de faciliter l’interopérabilité des données entre de nombreux projets et institutions. 
@@ -36,7 +35,7 @@ Dans certains contextes, des référentiels plus spécialisés peuvent naturelle
 Il convient toutefois de souligner que le RISM intègre désormais un nombre croissant de données issues d’autres catalogues, inventaires et projets numériques. Grâce à sa large diffusion internationale et à sa capacité d’agrégation, il tend de plus en plus à jouer le rôle de point d’accès central au patrimoine musical écrit. Dans une perspective d’interopérabilité et de pérennisation des données, il demeure ainsi le référentiel à privilégier chaque fois qu’un identifiant RISM est disponible.
 </p>
 
-# Thésauri
+# Thesauri
 ## Instruments de musique
 <p style="text-align:justify;">
 Pour l’identification et la désignation des instruments de musique, nous recommandons l’utilisation du thésaurus développé par le projet [MIMO](https://vocabulary.mimo-international.com/InstrumentsKeywords/fr/) (Musical Instrument Museums Online). Conçu dans le cadre d’une collaboration internationale entre plusieurs musées et institutions patrimoniales, ce référentiel propose une nomenclature normalisée des instruments de musique fondée sur la classification organologique de Hornbostel et Sachs. Chaque terme est associé à un identifiant pérenne et s’inscrit dans une structure hiérarchique permettant de relier les instruments à leurs familles et sous-familles respectives.
