@@ -67,6 +67,7 @@ Le, la ou les compositeur.ices renseigné.es ici ne concernent que l'œuvre enco
 ### Oeuvre anonyme 
 <p style="text-align:justify;">
 Dans le cas d'une oeuvre anonyme, nous conseillons de garder la structure précédente, pour des questions d'interopérabilité, tout en signalant, pour valeur de l'élément &lt;persName&gt;, "Anonymous". Bien entendu, aucun URI relié à un individu ne peut être ajouté. Ainsi, les attributs concernés n'ont plus de raison d'être.
+</p>
 
 ```xml
 <fileDesc>
@@ -79,7 +80,6 @@ Dans le cas d'une oeuvre anonyme, nous conseillons de garder la structure préc�
 </fileDesc>
 ```
 
-
 <a id="COA_ref1"></a>
 
 ### Compositeur attribué
@@ -90,7 +90,7 @@ Dans le cas d'une oeuvre anonyme, nous conseillons de garder la structure préc�
 
 
 <p style="text-align:justify;">
-Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un compositeur. Nous vous préconisons de renseigner cette information dans la balise &lt;persName&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
+Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un. compositeur.ice. Nous vous préconisons de renseigner cette information dans la balise &lt;composer&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
 </p>
 
 
@@ -104,20 +104,17 @@ Dans certains cas, il apparaît important d'insister sur la provenance de l'attr
 
 
 <p style="text-align:justify;">
-Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible. Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
+Par ailleurs, le niveau de certitude accordé à cette attribution peut également être précisé à l'aide de l'attribut @cert dont les valeurs contrôlées vont de "high", pour le plus grand degré de confiance, à "low" pour le niveau de certitude le plus faible, en passant par "medium". Il est également possible d'indiquer "unknown" quand cette évaluation est impossible.
 </p>
 
-
-
 ```xml
-<fileDesc xml:id="...">
-   <titleStmt xml:id="...">
-      <title xml:id="...">
+<fileDesc>
+   <titleStmt>
+      <title>
          ...
       </title>
-      <composer xml:id="...">
-         <persName evidence="(internal, external ou conjecture)" role="composer" auth="..." auth.uri="http://..." 
-         codedval="...">
+      <composer evidence="internal" cert="high">
+         <persName role="composer" auth="VIAF" auth.uri="[http://viaf.org/fr/viaf/32197206](https://viaf.org/fr/viaf/32197206)">Wolfgang Amadeus Mozart</persName>
             ...
          </persName> 
       </composer>
@@ -126,21 +123,22 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
 ```
 
 <p style="text-align:justify;">
-Lorsque l'attribution est faite par conjecture, il est important de renseigner l'identité du responsable de cette attribution. Il convient donc de renseigner son identité dans &lt;respStmt&gt; contenu dans &lt;titleStmt&gt; avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Une fois cela fait, nous pouvons le relier à l'identité du compositeur qu'il attribue en inscrivant dans @resp la valeur de l'attribut @xml:id.
-Dans l'exemple ci-dessous, nous avons attribué "ID" pour le @xml:id du chercheur qui a attribué le compositeur. On a donc reporté son "ID" précédé d'un "#" dans l'attribut @resp du compositeur.
+Lorsque l'attribution est faite par conjecture, il est important de renseigner l'identité du responsable de cette attribution. Il convient donc de renseigner son identité dans &lt;respStmt&gt; contenu dans &lt;titleStmt&gt; avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Une fois cela fait, nous pouvons le relier à l'identité du ou de la compositeur.ice attribué.e en inscrivant dans @resp la valeur de l'attribut @xml:id.
+Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheur qui a attribué le compositeur. On a donc reporté son ID précédé d'un "#" dans l'attribut @resp du compositeur. Attention, chaque @xml:id doit être unique dans tout le document MEI et doit commencer par une lettre (A-Z, a-z). Dans les exemples proposés, sauf si nécessaire, nous avons omis de renseigner des @xml:id pour tous les éléments pour des questions de lisibilité. Bien entendu, leur présence, souvent générée automatiquement (et aléatoirement), est nécessaire pour créer du lien dans une édition MEI !
+ 
 </p>
 
 ```xml
-<fileDesc xml:id="...">
-   <titleStmt xml:id="...">
-      <title xml:id="...">...</title>
-       <respStmt xml:id="...">
-          <persName xml:id="ID" role="scholar" auth="..." auth.uri="http://..." codedval="...">
-          (Nom du responsable de l'attribution)
+<fileDesc">
+   <titleStmt>
+      <title>...</title>
+       <respStmt>
+          <persName xml:id="KR" role="editor" auth="ORCID" auth.uri="[http://...](https://orcid.org/0000-0003-1013-7978)">
+          Kévin Roger
           </persName>
        </respStmt>
-       <composer xml:id="...">
-         <persName xml:id="..." evidence="conjecture" cert="high" resp="#ID">(Nom du compositeur)</persName>
+       <composer evidence="conjecture" cert="high" resp="#KR">
+         <persName role="composer" auth="VIAF" auth.uri="[http://viaf.org/fr/viaf/32197206](https://viaf.org/fr/viaf/32197206)">Wolfgang Amadeus Mozart</persName>
        </composer>
    </titleStmt>
 </fileDesc>
