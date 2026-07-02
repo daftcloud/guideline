@@ -58,7 +58,7 @@ Le, la ou les compositeur.ices renseigné.es ici ne concernent que l'œuvre enco
    <titleStmt>
       <title>...</title>
        <composer>
-          <persName role="composer" auth="VIAF" auth.uri="[http://viaf.org/fr/viaf/32197206](https://viaf.org/fr/viaf/32197206)">Wolfgang Amadeus Mozart</persName>
+          <persName role="composer" auth="VIAF" auth.uri="https://viaf.org/fr/viaf/32197206">Wolfgang Amadeus Mozart</persName>
        </composer>
    </titleStmt>
 </fileDesc>
@@ -114,7 +114,7 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
          ...
       </title>
       <composer evidence="internal" cert="high">
-         <persName role="composer" auth="VIAF" auth.uri="[http://viaf.org/fr/viaf/32197206](https://viaf.org/fr/viaf/32197206)">Wolfgang Amadeus Mozart</persName>
+         <persName role="composer" auth="VIAF" auth.uri="https://viaf.org/fr/viaf/32197206">Wolfgang Amadeus Mozart</persName>
             ...
          </persName> 
       </composer>
@@ -124,7 +124,7 @@ Par ailleurs, le niveau de certitude accordé à cette attribution peut égaleme
 
 <p style="text-align:justify;">
 Lorsque l'attribution est faite par conjecture, il est important de renseigner l'identité du responsable de cette attribution. Il convient donc de renseigner son identité dans &lt;respStmt&gt; contenu dans &lt;titleStmt&gt; avec l'ensemble des personnes disposant d'une responsabilité éditoriale. Une fois cela fait, nous pouvons le relier à l'identité du ou de la compositeur.ice attribué.e en inscrivant dans @resp la valeur de l'attribut @xml:id.
-Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheur qui a attribué le compositeur. On a donc reporté son ID précédé d'un "#" dans l'attribut @resp du compositeur. Attention, chaque @xml:id doit être unique dans tout le document MEI et doit commencer par une lettre (A-Z, a-z). Dans les exemples proposés, sauf si nécessaire, nous avons omis de renseigner des @xml:id pour tous les éléments pour des questions de lisibilité. Bien entendu, leur présence, souvent générée automatiquement (et aléatoirement), est nécessaire pour créer du lien dans une édition MEI !
+Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheur qui a attribué le compositeur. On a donc reporté son ID précédé d'un "#" dans l'attribut @resp du compositeur. Attention, chaque @xml:id doit être unique dans tout le document MEI et doit commencer par une lettre (A-Z, a-z). Dans les exemples proposés, sauf si nécessaire, nous avons décidé de ne pas renseigner des @xml:id pour tous les éléments pour des questions de lisibilité. Bien entendu, leur présence, souvent générée automatiquement (et aléatoirement), est nécessaire pour créer du lien dans une édition MEI !
  
 </p>
 
@@ -133,11 +133,11 @@ Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheu
    <titleStmt>
       <title>...</title>
        <respStmt>
-          <persName xml:id="KR" role="encoder" auth="Orcid" auth.uri="[http://...](https://orcid.org/0000-0003-1013-7978)">
+          <persName xml:id="KR" role="encoder" auth="Orcid" auth.uri="https://orcid.org/0000-0003-1013-7978">
           Kévin Roger</persName>
        </respStmt>
        <composer evidence="conjecture" cert="high" resp="#KR">
-         <persName role="composer" auth="VIAF" auth.uri="[http://viaf.org/fr/viaf/32197206](https://viaf.org/fr/viaf/32197206)">Wolfgang Amadeus Mozart</persName>
+         <persName role="composer" auth="VIAF" auth.uri="https://viaf.org/fr/viaf/32197206">Wolfgang Amadeus Mozart</persName>
        </composer>
    </titleStmt>
 </fileDesc>
@@ -161,7 +161,7 @@ L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la b
    <title>...</title>
     <respStmt>
       <editor>
-       <persName xml:id="KR" role="editor" auth="Orcid" auth.uri="[http://...](https://orcid.org/0000-0003-1013-7978)">Kévin Roger</persName>
+       <persName xml:id="KR" role="editor" auth="Orcid" auth.uri="https://orcid.org/0000-0003-1013-7978">Kévin Roger</persName>
       </editor>
    </respStmt>
   </titleStmt>
