@@ -133,9 +133,8 @@ Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheu
    <titleStmt>
       <title>...</title>
        <respStmt>
-          <persName xml:id="KR" role="editor" auth="ORCID" auth.uri="[http://...](https://orcid.org/0000-0003-1013-7978)">
-          Kévin Roger
-          </persName>
+          <persName xml:id="KR" role="encoder" auth="Orcid" auth.uri="[http://...](https://orcid.org/0000-0003-1013-7978)">
+          Kévin Roger</persName>
        </respStmt>
        <composer evidence="conjecture" cert="high" resp="#KR">
          <persName role="composer" auth="VIAF" auth.uri="[http://viaf.org/fr/viaf/32197206](https://viaf.org/fr/viaf/32197206)">Wolfgang Amadeus Mozart</persName>
@@ -146,14 +145,14 @@ Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheu
 
 <a id="YEP_ref1"></a>
 
-## Éditeur de l'édition électronique 
+## Éditeur de l'édition numérique 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de l'édition électronique |YEP|
  
 <p style="text-align:justify;">
-L'identité de l'éditeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans l'élément &lt;titleStmtt&gt; de &lt;fileDesc&gt;.
+L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans l'élément  &lt;editor&gt; dans &lt;titleStmtt&gt. Attention, il s'agit donc ici de renseigner l'éditeur.ice de l'édition MEI et non un.e éditeur.ice "historique". Comme dans l'exemple précédent, l'identité de la personne peut être précisée à l'aide d'un identifiant pérenne (URI). Pour les personnes oeuvrant dans le cadre de l'édition MEI, nous préconisons l'usage d'Orcid. À ce propos, voir le chapitre "Référentiels d'autorités et thesauri".
 </p>
 
  ```xml
@@ -162,8 +161,8 @@ L'identité de l'éditeur de l'édition numérique est à inscrire dans la balis
    <title>...</title>
     <respStmt>
       <editor>
-       <persName xml:id="VB" role="editor" auth="Orcid" auth.uri="..." codedval="...">XXX</persName>
-       </editor>
+       <persName xml:id="KR" role="editor" auth="Orcid" auth.uri="[http://...](https://orcid.org/0000-0003-1013-7978)">Kévin Roger</persName>
+      </editor>
    </respStmt>
   </titleStmt>
 </fileDesc> 
