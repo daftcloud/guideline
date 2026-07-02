@@ -170,14 +170,14 @@ L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la b
 
 <a id="ENC_ref1"></a>
 
-## Encodeur de l'édition électronique
+## Encodeur de l'édition numérique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Encodeur de l'édition électronique|ENC|
 
 <p style="text-align:justify;">
-L'identité de l'encodeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans le &lt;titleStmtt&gt; de &lt;fileDesc&gt;, nous préconisons l'emploi du terme "encoder" dans l'attribut @role.
+L'identité de l'encodeur de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans le &lt;titleStmtt&gt; de &lt;fileDesc&gt;, nous préconisons l'emploi du terme "encoder" dans l'attribut @role. Remarquez qu'il n'existe pas d'élément "encoder" en MEI. Ainsi, la précision de cette fonction ne peut se passer de l'attribut @role dont la valeur est ici "encoder". À noter également que si l'éditeur du fichier est également l'encodeur, il est toujours préférable de le signaler explicitement en renseignant à nouveau son identité en tant qu'encodeur. 
 </p>
 
 ```xml
@@ -185,8 +185,8 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
    <titleStmt>
       <title>...</title>
       <respStmt>
-         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="..." codedval="...">
-            (Nom d'une personne ayant encodé le fichier MEI)
+         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="XXX">
+            Vittorio Bellini 
          </persName>
       </respStmt>
    </titleStmt>
@@ -196,7 +196,7 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 <a id="YER_ref1"></a>
 
 
-## Date d'encodage / de mise à disposition de l'édition électronique
+## Date d'encodage/de mise à disposition de l'édition numérique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
@@ -204,7 +204,7 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
 
 
 <p style="text--align:justify;">
-La date de l'encodage initial de votre édition électronique peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant : [Modification du document électronique](EEV_ref1).</p>
+La date de l'encodage initial de votre édition peut être inscrite dans la balise &lt;pubStmt&gt;. Pour tout ce qui concerne ses mises à jour, nous vous invitons à consulter le point suivant : [Modification du document électronique](EEV_ref1).</p>
 
 
 ```xml
@@ -216,7 +216,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 ```
 
 <p style="text-align:justify;">
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
+Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert abordé précédemment. Pour rappel, ses valeurs vont de "high", pour le plus grand degré de confiance, à "medium" puis "low" pour le niveau de certitude le plus faible.
 </p>
 
 
@@ -229,7 +229,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 <a id="EEV_ref1"></a>
 
 
-## Modification / Version du document électronique
+## Modification/version du document numérique
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
@@ -237,7 +237,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
  |[3.4.3 Revision Description](https://music-encoding.org/guidelines/v5/content/metadata.html#headerRevisionDescription){:target="_blank"}|Modification du document électronique|EMD & EEV|
 
 <p style="text-align:justify;">
- À chaque nouvelle édition du fichier après sa publication initiale, il est recommandé de dresser une description des changements comprenant la date de la nouvelle édition, un paragraphe indiquant les changements ayant eu lieu et en liant les personnes ou logiciels impliqué dans ces changements. Chaque changement prend un numéro et il est également recommandé qu'ils soient présentés dans un ordre anti-chronologique.
+ À chaque nouvelle édition du fichier après sa publication initiale, il est recommandé de dresser une description des changements comprenant la date de la nouvelle édition, un paragraphe indiquant les changements ayant eu lieu et les personnes ou logiciels impliqués dans ces changements. Tous les changements acceptent un numéro et il est également recommandé qu'ils soient présentés dans un ordre anti-chronologique.
  Le noms des différents agents responsable de ces modifications doivent être reliés à leurs identités déclarés dans &lt;respStmt&gt; en rajoutant un "#" au @xml:id correspondant.
 </p>
 
@@ -250,7 +250,7 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
       </change>
    <change n="1">
       <p>Creation of metadata by extraction from Gallica</p>
-      <date isodate="2023-08-22"/>
+      <date isodate="2023-08-20"/>
       <resp>GallicOvuM</resp>
    </change>
 </revisionDesc>
@@ -258,25 +258,25 @@ La date de l'encodage initial de votre édition électronique peut être inscrit
 
 <a id="EFL_ref1"></a>
 
-## Numéro du fichier électronique
+## Numéro du fichier numérique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Numéro du fichier électronique|EFL|
 
 <p style="text-align:justify;"> 
- Lorsque le fichier mei que nos encodons fait partie d'une suite de fichier, nous recommandons d'indiquer les informations concernant cette suite dans l'élément &lt;seriesStmt&gt; inclus dans &lt;fileDesc&gt; comme suit :
+ Lorsque le fichier MEI que nos encodons fait partie d'une suite de fichier (un mouvement par fichier, oeuvre cyclique, etc.), nous recommandons d'indiquer les informations concernant cette suite dans l'élément &lt;seriesStmt&gt; inclus dans &lt;fileDesc&gt; comme suit :
 </p>
 
 ```xml
 <seriesStmt @precedes="lien vers le fichier suivant" @follows="lien vers le fichier précédent">
    <title>(titre de la série)</title>
-   <identifier>numéro du fichier éléctronique dans cette série</identifier>
+   <identifier>numéro du fichier électronique dans cette série</identifier>
 </seriesStmt>
 ```
 
 <p style="text-align:justify;"> 
-Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onzième sonate de Bieber, comprises dans la série "Les Sonates du Rosaire".
+Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la Sonate No. 11 de Heinrich Bieber, comprise dans la série "Les Sonates du Rosaire".
 </p>
 
 ```xml
@@ -320,18 +320,18 @@ Voici un exemple (fictif) qu'on retrouverait dans un fichier MEI encodant la onz
 
 <a id="YEM_ref1"></a>
 
-## License et pays du copyright
+## License et pays du copyright de l'édition numérique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.4.1.3 Publication, Distribution, etc.](https://music-encoding.org/guidelines/v5/content/metadata.html#headerPublicationDistribution){:target="_blank"}|License|YEM|
  
  <p style="text-align:justify;"> 
-Votre édition électronique peut être soumise à des restrictions d'utilisation, telles que des limitations concernant sa reproduction, sa publication ou la citation de son contenu, notamment pour des raisons liées aux droits d’auteur. Dans ce cas, vous pouvez indiquer ces restrictions dans la balise &lt;useRestrict&gt;, intégrée à l'élément &lt;avaibility&gt; de &lt;pubStmt&gt;. À l'inverse, l'absence de restrictions peut également y être signalée, par exemple lorsque les droits sont tombés dans le domaine public.
+Votre édition peut être soumise à des restrictions d'utilisation, telles que des limitations concernant sa reproduction, sa publication ou la citation de son contenu, notamment pour des raisons liées aux droits d’auteur. Dans ce cas, vous pouvez indiquer ces restrictions dans la balise &lt;useRestrict&gt;, intégrée à l'élément &lt;avaibility&gt; de &lt;pubStmt&gt;. À l'inverse, l'absence de restrictions peut également y être signalée, par exemple lorsque les droits sont tombés dans le domaine public.
 
-Le pays dans lequel le document électronique a été créé, ou depuis lequel le droit d'auteur a été établi, correspond au pays selon la législation duquel la déclaration de droit doit être interprétée. Cette information est renseignée au moyen de la balise &lt;country&gt;, placée à l'intérieur de &lt;useRestrict&gt;.
+Le pays dans lequel le document électronique a été créé, ou depuis lequel le droit d'auteur a été établi, correspond au pays selon la législation duquel la déclaration de droit doit être interprétée. Cette information est renseignée au moyen de la balise &lt;country&gt;, placée à l'intérieur de &lt;useRestrict&gt;. À noter que dans le cadre d'éditions numériques, les licences [Creative Commons](https://creativecommons.org/cc-licenses/) peuvent être particulièrement pratiques.
 
-Il est important de distinguer &lt;useRestrict&gt; qui concerne les conditions d'utilisations, de l'élément &lt;acessRestrict&gt; qui précise les modalités d'accès à une ressource.
+Pour finir, il est important de distinguer &lt;useRestrict&gt; qui concerne les conditions d'utilisations, de l'élément &lt;accessRestrict&gt; qui précise les modalités d'accès à une ressource.
 </p>
 
 ```xml
@@ -341,53 +341,53 @@ Il est important de distinguer &lt;useRestrict&gt; qui concerne les conditions d
          <persName>...</persName>
          <corpName>...</corpName>
          <country>France</country>
-         <date isodate="2024">2024</date>
+         <date>...</date>
          <head>Licence</head>
          <p>CC-BY-NC</p>
      </useRestrict>
+     <accessRestrict>
+         <p>Access to this MEI file requires a user account in the AXY Database</p>
+     </accessRestrict>
    </availability>
 </pubStmt>
 ```
 
-<p style="text-align:justify;"> 
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
-</p>
-
-```xml
-<date isodate="2022">2022</date>
-<date isodate="2022-02">Février 2022</date>
-<date isodate="2022-02-22">22 Février 2022</date>
-```
-
 <a id="YEC_ref1"></a>
 
-### Date et propriétaire du copyright de l'édition électronique
+### Date et propriétaire du copyright de l'édition numérique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
  |[3.3.2. Responsibility Attribution](https://music-encoding.org/guidelines/v5/content/metadata.html#headerrespstatement){:target="_blank"}|Date et propriétaire du copyright de l'édition électronique|YEC|
 
 <p style="text-align:justify;">
-Dans le cas d'une édition électronique sous copyright, toutes les informations relevant de cette restriction juridique sont à inscrire dans la balise &lt;useRestrict&gt; contenu dans &lt;avaibility&gt; de &lt;pubStmt&gt;.
+
+Toutes les informations relevant de la restriction juridique sont à inscrire dans la balise &lt;useRestrict&gt; contenu dans &lt;avaibility&gt; de &lt;pubStmt&gt;. Le propriétaire du copyright, qu'il soit question d'une personne ou d'une institution, doit être renseigné dans &lt;persName&gt; ou &lt;corpName&gt;. À nouveau, il est préférable de préciser les individus ou établissements concernés à l'aide d'un identifiant pérenne, comme ci-dessous : 
 </p>
 
 ```xml
 <fileDesc>
    ...
    <pubStmt>
-      <availability>
-         <useRestrict>
-            <persName/>
-            <corpName/>
-            <date isodate="...">...</date>
-         </useRestrict>
-      </availability>
-   </pubStmt>
-</fileDesc>
+   <availability>
+     <useRestrict>
+         <persName auth="Orcid" auth.uri="https://orcid.org/0000-0001-5618-8602">Vincent Besson</persName>
+         <corpName auth="ROR" auth.uri="https://ror.org/03cv31q28">CESR</corpName>
+         <country>France</country>
+         <date>2024</date>
+         <head>Licence</head>
+         <p>CC-BY-NC</p>
+     </useRestrict>
+     <accessRestrict>
+         <p>No access restrictions</p>
+     </accessRestrict>
+   </availability>
+</pubStmt>
 ```
 
 <p style="text-align:justify;">
- Toutes les dates inscrites dans le fichier MEI peuvent être nuancées ou approchées à l'aide d'attributs, surtout dans le cas de dates incertaines. En MEI, une date renseignée dans les attributs doit suivre la norme ISO 8601 (AAAA-MM-JJ). La valeur de la balise &lt;date&gt; est libre pour sa part. Plusieurs usages se rencontrent d'ailleurs dans les guidelines ("June 1987"; "2011"). Nous conseillons toutefois de suivre au maximum la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour assurer sa bonne compréhension. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high", pour le plus grand degré de confiance, à "medium", puis "low" pour le niveau de certitude le plus faible.
+ 
+Pour rappel, toutes les dates inscrites dans le fichier MEI peuvent être approchées à l'aide d'attributs. Une date doit suivre la norme ISO 8601 (AAAA-MM-JJ), bien que la valeur de la balise &lt;date&gt; soit libre. Nous conseillons toutefois de suivre la norme ISO (AAAA ; AAAA-MM ou AAAA-MM-JJ) pour garantir sa bonne compréhension et réutilisation. Par ailleurs, le niveau de certitude accordé à une date peut également être précisé à l'aide de l'attribut @cert dont les valeurs vont de "high" à "low" en passant par "medium".
 </p>
 
 ```xml
