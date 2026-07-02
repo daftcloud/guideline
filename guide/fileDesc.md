@@ -90,7 +90,7 @@ Dans le cas d'une oeuvre anonyme, nous conseillons de garder la structure préc�
 
 
 <p style="text-align:justify;">
-Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un. compositeur.ice. Nous vous préconisons de renseigner cette information dans la balise &lt;composer&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
+Dans certains cas, il apparaît important d'insister sur la provenance de l'attribution d'un.e compositeur.ice. Nous vous préconisons de renseigner cette information dans la balise &lt;composer&gt; à l'aide de l'attribut @evidence. Cet attribut peut recevoir les valeurs suivantes :
 </p>
 
 
@@ -152,8 +152,10 @@ Dans l'exemple ci-dessous, nous avons attribué "KR" pour le @xml:id du chercheu
  |[3.3.1. Title Statement](https://music-encoding.org/guidelines/v5/content/metadata.html#headerTitleStatement){:target="_blank"}|Éditeur de l'édition électronique |YEP|
  
 <p style="text-align:justify;">
-L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans l'élément  &lt;editor&gt; dans &lt;titleStmtt&gt. Attention, il s'agit donc ici de renseigner l'éditeur.ice de l'édition MEI et non un.e éditeur.ice "historique". Comme dans l'exemple précédent, l'identité de la personne peut être précisée à l'aide d'un identifiant pérenne (URI). Pour les personnes oeuvrant dans le cadre de l'édition MEI, nous préconisons l'usage d'Orcid. À ce propos, voir le chapitre "Référentiels d'autorités et thesauri".
+L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la balise &lt;respStmt&gt; qui se trouve dans l'élément  &lt;editor&gt; dans &lt;titleStmt&gt;. Attention, il s'agit donc ici de renseigner l'éditeur.ice de l'édition MEI et non un.e éditeur.ice "historique". Comme dans l'exemple précédent, l'identité de la personne peut être précisée à l'aide d'un identifiant pérenne (URI). Pour les personnes oeuvrant dans le cadre de l'édition MEI, nous préconisons l'usage d'Orcid. À ce propos, voir le chapitre "Référentiels d'autorités et thesauri". 
 </p>
+<p style="text-align:justify;">
+L'éditeur peut également être un établissement ou une institution, notamment dans le cadre d'éditions menées au sein de projets de recherche. Bien que nous conseillons de renseigner les individus concernés pour des raisons éthiques, l'élément &lt;corpName&gt; peut également être utilisé. Dans ce cas, nous conseillons également d'indiquer un identifiant issu, de préférence, du référentiel [ROR](https://ror.org/).
 
  ```xml
 <fileDesc>
@@ -162,6 +164,7 @@ L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la b
     <respStmt>
       <editor>
        <persName xml:id="KR" role="editor" auth="Orcid" auth.uri="https://orcid.org/0000-0003-1013-7978">Kévin Roger</persName>
+       <corpName xml:id="corp_edit" role="editor" auth="ROR" auth.uri="https://ror.org/00xngy573">CRULH</corpName>
       </editor>
    </respStmt>
   </titleStmt>
@@ -169,6 +172,39 @@ L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la b
 ```
 
 <a id="ENC_ref1"></a>
+
+### Contributeur, financement et sponsoring
+
+<p style="text-align:justify;">
+Dans &lt;titleStmt&gt;, il est également possible d'aller plus loin dans la description du contexte de réalisation de l'édition, notamment lorsque celle-ci est financée ou menée dans le cadre d'un laboratoire, d'une équipe de recherche ou d'un projet scientifique. La MEI permet  de renseigner des éléments tels que &lt;contributor&gt;, &lt;funder&gt; ou encore &lt;sponsor&gt;. Il est recommandé de documenter ces informations afin de garantir la transparence de la production scientifique, de valoriser les différents acteurs impliqués dans le projet et de favoriser la réutilisation des métadonnées. À cet égard, une distinction peut être opérée entre les différents rôles. L'élément &lt;contributor&gt; désigne les personnes ou les institutions ayant apporté une contribution intellectuelle, scientifique ou technique à l'édition, sans pour autant en assumer la responsabilité principale. L'élément &lt;funder&gt; identifie les organismes ou les personnes ayant assuré le financement du projet, qu'il s'agisse d'agences de financement, d'universités, de fondations ou d'autres institutions. Enfin, &lt;sponsor&gt; désigne une personne ou un organisme qui soutient ou parraine le projet à travers son autorité intellectuelle.
+</p>
+
+```xml
+<fileDesc>
+  <titleStmt>
+   <title>...</title>
+    <respStmt>
+      <editor>
+       <persName xml:id="KR" role="editor" auth="Orcid" auth.uri="https://orcid.org/0000-0003-1013-7978">Kévin Roger</persName>
+      </editor>
+   </respStmt>
+   <contributor>
+       <persName xml:id="VB auth="Orcid" auth.uri="https://orcid.org/0000-0001-5618-8602"">
+            Vincent Besson
+       </persName>
+      <funder>
+         <corpName xml:id="corp_anr" uri="ROR" auth.uri="https://ror.org/02feahw73">
+            Agence nationale de la recherche
+         </corpName>
+      </funder>
+      <sponsor>
+         <corpName xml:id="corp_humanum" uri="ROR" auth.uri="https://ror.org/03z6jp965">
+            Huma-Num
+         </corpName>
+      </sponsor>
+   </titleStmt>
+```
+
 
 ## Encodeur de l'édition numérique
 
@@ -185,8 +221,8 @@ L'identité de l'encodeur de l'édition numérique est à inscrire dans la balis
    <titleStmt>
       <title>...</title>
       <respStmt>
-         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="XXX">
-            Vittorio Bellini 
+         <persName xml:id="VB" role="encoder" auth="Orcid" auth.uri="https://orcid.org/0000-0001-5618-8602">
+            Vincent Besson 
          </persName>
       </respStmt>
    </titleStmt>
