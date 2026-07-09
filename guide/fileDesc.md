@@ -7,7 +7,7 @@ permalink: guide/fileDesc
 
 ---
 
-# Description du fichier MEI encodé &lt;fileDesc&gt;
+# Description du fichier MEI : &lt;fileDesc&gt;
 
 <p style="text-align:justify;"> 
 L'élément &lt;fileDesc&gt; comprends toutes les informations qui concernent le fichier MEI en tant que tel (i. e. un fichier XML dédié à de l'encodage musical)
