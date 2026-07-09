@@ -390,7 +390,7 @@ Pour finir, il est important de distinguer &lt;useRestrict&gt; qui concerne les 
 
 <a id="YEC_ref1"></a>
 
-### Date et propriétaire du copyright de l'édition numérique
+## Date et propriétaire du copyright de l'édition numérique
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
  | :--------------- |:---------------:| -----:|
