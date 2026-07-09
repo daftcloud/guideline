@@ -9,30 +9,35 @@ permalink: guide/sourceDesc
 
 <a id="YOR_ref1"></a>
 
-# Description de la source &lt;SourceDesc&gt;
+# Description des sources : &lt;SourceDesc&gt;
 
 <p style="text-align:justify;"> 
-   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition électronique que représente le fichier MEI. Dans le cas où il y aurait plusieurs sources différentes, il convient de séparer chaque source dans un élément &lt;source&gt; différent.
-   La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt; dont le cadre plus strict favorise la normalisation des données.
+   L'élément &lt;sourceDesc&gt; contient toutes les informations qui concernent la ou les sources à l'origine de l'édition numérique que représente le fichier MEI. Dans le cas où il y aurait des sources différentes, il convient de les séparer à l'aide éléments &lt;source&gt; différents.
+   La MEI permet deux méthodes pour la description des sources. L’une d’elles, fondée sur l’usage de la balise &lt;bibl&gt;, présente une grande souplesse de structuration. Si cette flexibilité peut être considérée comme un atout, elle complique toutefois la mise en œuvre d’une méthodologie visant l’interopérabilité des corpus. Nous privilégions dès lors l’élément &lt;biblStruct&gt; dont le cadre plus strict favorise la normalisation des données. &lt;monogr&gt; désigne ici le "conteneur" monographique afin d'introduire convenablement un item bibliographique - il ne s'agit pas d'une oeuvre monographique à proprement parler. 
 </p>
 
-## Structure d'une source
+## Structure d'une source à l'aide de &lt;biblStruct&gt; et &lt;monogr&gt;
 ```xml
-<source xml:id="">
-   <biblStruct xml:id="">
+<source>
+   <biblStruct>
       <monogr>
-         <title level="" type="">
+         <title type="main">Polyphonic Music of the Fourteenth Century</title>
+         <title type="subordinate">The Roman de Fauvel ; The Works of Philippe de Vitry ; French cycles of the Ordinarium Missae</title>
+         <editor>Leo Schrade</editor>
+         <identifier>1</identifier>
          <imprint>
-            
+            <pubPlace>Monaco</pubPlace>
+            <publisher>L'Oiseau-Lyre</publisher>
+            <date>1956</date>
          </imprint>
-      </mongr>
+      </monogr>
    </biblStruct>
 </source>
 ```
 
 <a id="PTL_ref1"></a>
 
-## Titre d'une source utilisée pour l'édition digitale (publication, manuscrit, etc.) 
+## Titre d'une source utilisée pour l'édition numérique (partition imprimée, manuscrit, etc.) 
 
 
  |Chapitre des Guidelines | Définition | Clé HUMDRUM |
