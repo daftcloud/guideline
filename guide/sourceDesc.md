@@ -63,7 +63,7 @@ permalink: guide/sourceDesc
    "**c**" pour une collection n'ayant pas, à l'origine, été publiée, produite ou distribuée en tant que telle. Cela peut représenter, par exemple, un fonds d'archives ou un recueil factice.
 
  <p style="text-align:justify;"> 
-   (Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html))
+   Pour l'ensemble des valeurs que peut prendre l'attribut @level, nous vous invitons à étudier la [déclaration de la balise &lt;title&gt; sur music-encoding.org](https://music-encoding.org/guidelines/v5/elements/title.html)
 </p>
    
 <p style="text-align:justify;"> 
@@ -73,7 +73,7 @@ permalink: guide/sourceDesc
    "**main**" pour le titre principale,
 
 
-   "**subordinate**" pour un sous-titre ou le titre d'une partie,
+   "**subordinate**" pour un sous-titre, un sous-ensemble du titre ou le titre d'une partie,
 
 
    "**abbreviated**" pour la forme abrégée d'un titre,
@@ -91,13 +91,26 @@ permalink: guide/sourceDesc
    "**desc**" pour un titre descriptif.
 
 
-*Exemple d'une monographie*
+*Exemple d'une source avec titre monographique*
 ```xml
 <source>
    <biblStruct>
       <monogr>
-         <title level="m" type="main">Il nono libro de madrigali</title>
-         <title type="subordinate">a cinque voci</title> 
+         <title level="m" type="main" xml:lang="it">Il nono libro de madrigali a cinque voci</title>
+         <title level="m" type="translated" xml:lang="fr">Neuvième livre de madrigaux à cinq voix</title>
+         <title level="m" type="subordinate" xml:lang="it">Novamente composto, et date in luce</title>
+         <title level="m" type="subordinate" xml:lang="it">Quinto</title>
+         <author>
+            <persName auth="VIAF" auth.uri="https://viaf.org/fr/viaf/2656905">Lucas Marenzio</persName>
+         </author>
+         <imprint>
+            <respStmt>
+               <persName role="printer" auth="VIAF" auth.uri="https://viaf.org/fr/viaf/22992323">Angelo Gardano</persName>
+            </respStmt>
+            <pubPlace>Venise</pubPlace>
+            <publisher>Lucas Marenzio</publisher>
+            <date>1599</date>
+         </imprint>
       </monogr> 
    </biblStruct>
 </source>
@@ -108,7 +121,7 @@ permalink: guide/sourceDesc
 <source>
    <biblStruct>
       <monogr>
-         <title level="u" type="desc">Lettre datée du ...</title>
+         <title level="u" type="desc">Lettre datée du 12 janvier 1924</title>
          <imprint>
             <unpub/>
          </imprint>
