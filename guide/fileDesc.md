@@ -156,6 +156,7 @@ L'identité de l'éditeur.ice de l'édition numérique est à inscrire dans la b
 </p>
 <p style="text-align:justify;">
 L'éditeur peut également être un établissement ou une institution, notamment dans le cadre d'éditions menées au sein de projets de recherche. Bien que nous conseillons de renseigner les individus concernés pour des raisons éthiques, l'élément &lt;corpName&gt; peut également être utilisé. Dans ce cas, nous conseillons également d'indiquer un identifiant issu, de préférence, du référentiel [ROR](https://ror.org/).
+</p>
 
  ```xml
 <fileDesc>
